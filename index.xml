@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on All about Quality!</title>
-    <link>http://vaishalidesarda.com/</link>
+    <link>https://www.vaishalidesarda.com/</link>
     <description>Recent content in Blog on All about Quality!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Jul 2021 16:43:07 +0530</lastBuildDate><atom:link href="http://vaishalidesarda.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 16:43:07 +0530</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>about</title>
-      <link>http://vaishalidesarda.com/about/</link>
+      <link>https://www.vaishalidesarda.com/about/</link>
       <pubDate>Sat, 31 Jul 2021 16:43:07 +0530</pubDate>
       
-      <guid>http://vaishalidesarda.com/about/</guid>
+      <guid>https://www.vaishalidesarda.com/about/</guid>
       <description>Some details</description>
     </item>
     
     <item>
       <title>Intuition can&#39;t be found in tools</title>
-      <link>http://vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</link>
+      <link>https://www.vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</link>
       <pubDate>Sat, 31 Jul 2021 16:43:07 +0530</pubDate>
       
-      <guid>http://vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</guid>
+      <guid>https://www.vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</guid>
       <description>Intuition.
 We name it Intuition when : We apply gut feeling We are certain that this path is important (even if it’s not spoken of in acceptance criteria/specifications), We apply judgement - things we cannot determine directly nor measure, or even wish to go against the measure/data. We sense something is not valid when we test.
 While you test, there comes a scenario, you know something is not right. You do not have the confirmation, but again your gut instinct tells you to explore further.</description>
@@ -29,10 +29,10 @@ While you test, there comes a scenario, you know something is not right. You do 
     
     <item>
       <title>Should we check static UI elements with Automation Tests</title>
-      <link>http://vaishalidesarda.com/automation/should_we_check_static_ui_elements_with_automation_tests/</link>
+      <link>https://www.vaishalidesarda.com/automation/should_we_check_static_ui_elements_with_automation_tests/</link>
       <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://vaishalidesarda.com/automation/should_we_check_static_ui_elements_with_automation_tests/</guid>
+      <guid>https://www.vaishalidesarda.com/automation/should_we_check_static_ui_elements_with_automation_tests/</guid>
       <description>Recently, I came across a scenario where all the Xamarin forms for the app had an update. This resulted in issues like static text being cut off, not being visible, changes in colors for a few buttons’ state, etc on different kinds of devices.
 Will automation catch such changes?
 Before we conclude, let’s pause and reflect - “Is this the purpose of automation?” “Do we write automation to detect such issues?</description>
@@ -40,10 +40,10 @@ Before we conclude, let’s pause and reflect - “Is this the purpose of automa
     
     <item>
       <title>When Should We Stop Testing</title>
-      <link>http://vaishalidesarda.com/quality/when-should-we-stop-testing/</link>
+      <link>https://www.vaishalidesarda.com/quality/when-should-we-stop-testing/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://vaishalidesarda.com/quality/when-should-we-stop-testing/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/when-should-we-stop-testing/</guid>
       <description>After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
 No, my friend.
 There is more to this.

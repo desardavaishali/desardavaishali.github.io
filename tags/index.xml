@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on All about Quality!</title>
-    <link>http://vaishalidesarda.com/tags/</link>
+    <link>https://www.vaishalidesarda.com/tags/</link>
     <description>Recent content in Tags on All about Quality!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Jul 2021 16:43:07 +0530</lastBuildDate><atom:link href="http://vaishalidesarda.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 16:43:07 +0530</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>testing</title>
-      <link>http://vaishalidesarda.com/tags/testing/</link>
+      <link>https://www.vaishalidesarda.com/tags/testing/</link>
       <pubDate>Sat, 31 Jul 2021 16:43:07 +0530</pubDate>
       
-      <guid>http://vaishalidesarda.com/tags/testing/</guid>
+      <guid>https://www.vaishalidesarda.com/tags/testing/</guid>
       <description></description>
     </item>
     

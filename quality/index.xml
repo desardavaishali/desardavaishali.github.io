@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quality on All about Quality!</title>
-    <link>http://vaishalidesarda.com/quality/</link>
+    <link>https://www.vaishalidesarda.com/quality/</link>
     <description>Recent content in Quality on All about Quality!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://vaishalidesarda.com/quality/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/quality/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>When Should We Stop Testing</title>
-      <link>http://vaishalidesarda.com/quality/when-should-we-stop-testing/</link>
+      <link>https://www.vaishalidesarda.com/quality/when-should-we-stop-testing/</link>
       <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://vaishalidesarda.com/quality/when-should-we-stop-testing/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/when-should-we-stop-testing/</guid>
       <description>After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
 No, my friend.
 There is more to this.
