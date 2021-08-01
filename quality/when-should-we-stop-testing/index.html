@@ -6,9 +6,14 @@
   <link rel="icon" href="favicon.svg">
 
   <title>
-    Categories - All about Quality!
+    When Should We Stop Testing - All about Quality!
   </title>
-  <meta name="description" content="Modern blog theme for your Hugo site." /><meta name="generator" content="Hugo 0.86.1" /><link
+  <meta name="description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.86.1" /><link
     rel="stylesheet"
     href="http://vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
     integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
@@ -16,18 +21,32 @@
   
   
 
-  <meta property="og:title" content="Categories" />
-<meta property="og:description" content="Modern blog theme for your Hugo site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://vaishalidesarda.com/categories/" />
+  <meta property="og:title" content="When Should We Stop Testing" />
+<meta property="og:description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://vaishalidesarda.com/quality/when-should-we-stop-testing/" /><meta property="article:section" content="Quality" />
+<meta property="article:published_time" content="2020-07-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-11T00:00:00+00:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Modern blog theme for your Hugo site."/>
+<meta name="twitter:title" content="When Should We Stop Testing"/>
+<meta name="twitter:description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met."/>
 
-  <meta itemprop="name" content="Categories">
-<meta itemprop="description" content="Modern blog theme for your Hugo site.">
+  <meta itemprop="name" content="When Should We Stop Testing">
+<meta itemprop="description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met."><meta itemprop="datePublished" content="2020-07-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-07-11T00:00:00+00:00" />
+<meta itemprop="wordCount" content="798">
+<meta itemprop="keywords" content="testing," />
   
   
 </head>
@@ -85,15 +104,52 @@
 </header>
 <main>
 
-  <h1 class="container px-6 pt-6 mx-auto text-3xl font-bold">Categories</h1>
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="/19.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      July 11, 2020
+    </div>
+  </div>
+  
 
-  
-  <div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-    
-  </div><div class="grid place-items-center mb-8">
-  
-</div>
-<div class="bg-blue-100 dark:bg-gray-900">
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">When Should We Stop Testing</h1>
+
+    <p>After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”</p>
+<p>No, my friend.</p>
+<p>There is more to this.</p>
+<p>To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met. This validation is via Test Cases.</p>
+<p>The typical understanding of Testing is - a Test Case of “what is expected” is documented in a spreadsheet or a Test Automation/Documentation tool, and a human verifies whether an application build behaves as described in the Test Cases.</p>
+<p>However, Testing is much more than a comparison of the application with a Test Case. Testing and writing Test Cases are two very different things! Test Cases are a means to achieve some part of the goals of Testing, while Testing has much broader objectives!</p>
+<p>I have moved on from writing and verifying Test Cases, to the richer and more unknown world of Exploratory Testing.</p>
+<p>Matching Expected to Actual doesn’t necessarily mean you are done with Testing.</p>
+<p>Also, running Automated scripts repeatedly to try and achieve Continuous Testing, showing green in the pipeline does not imply that you are done with testing. We will discuss Automated Tests in a future article.</p>
+<p>Testing doesn’t or rather shouldn’t stop when your Expected matches Actual in your automated test case. There is more to look for when you test a Product.</p>
+<p>E.g. :</p>
+<p>You are testing an audio call. What’s the expectation - is it just that audio is available and your expected matches actual? Or you check how loud or how low volume is? Do you see if it gets quite in between? What about the background sound? Not all users work in quiet corporate office setups.
+Or say you are testing face recognition - do you check all sorts of general races/ethnicities/skin colour, if the eyes are closed, under various lighting conditions? What about when people have makeup or face piercings or injuries/scars or Face Masks these days?
+Or when it comes to voice, how many accents do you check? There have been many well known unfortunate scenarios where the application misidentifies people of various ethnicities or simply doesn’t recognise a global range of accents. While specific apps have failed due to the lack of diversity in the test data set, a skilled and imaginative Tester would have identified such issues before the general public would have.
+You are testing the app, have you given a thought on how the app behaves when offline, is it supposed to or not? And if not, how does it fail gracefully?
+Or is there a difference in the behaviour of an app when backgrounded, closed, killed or switched from!
+How about when a user accesses the app by using biometrics and the user has disabled the biometrics? How does the user get access to the app?
+Also, Can a user add items to a cart after getting to the payment page and be billed for a smaller set of items but receive a larger set of items added via another tab after getting to the payment page?
+What kinds of business scenarios have the clients themselves not thought about?</p>
+<p>To discover the unknown, one should Explore!</p>
+<p>We testers don’t guarantee quality. We can’t necessarily reach a defect-free product. But yes, we can almost reach to the highest quality of the product. We can identify User Experience issues. We can help polish the perception, improve the rankings and ratings, help make features more discoverable, identify business process gaps, spot losses, detect a leak of information, identify billing issues - each of which alone can make or break a product!</p>
+<p>So, testing is enough when:</p>
+<p>You have explored all contexts.
+You have taken into account Quality risk from Team and customers point of view.
+You have checked nothing has eluded you while you performed Testing.
+Alpha, Beta testing is successful.
+All open defects are reviewed by the team and agreed upon. The team here means- Dev, Testers, PO, UI/UX, Content, Sales team etc.
+Analytics logs are known and accepted and don’t risk Quality.
+The Business team will definitely have its reason not to delay the release. If so, you can release incrementally in smaller chunks where you have confidence in above-mentioned areas to avoid unhappy customer.</p>
+<p>The intuition that you have explored enough, Product looks right to you rather feels right, Quality risk, considering Team and customer is taken care of - that should be enough to release the product.</p>
+<p>Testing shall continue :)</p>
+
+  </article><div class="bg-blue-100 dark:bg-gray-900">
   <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     <div>
       <div class="text-2xl font-bold mb-2">Follow me</div>

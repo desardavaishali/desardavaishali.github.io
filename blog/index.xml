@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent Posts on All about Quality!</title>
+    <link>http://vaishalidesarda.com/blog/</link>
+    <description>Recent content in Recent Posts on All about Quality!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Jul 2021 16:43:07 +0530</lastBuildDate><atom:link href="http://vaishalidesarda.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intuition can&#39;t be found in tools</title>
+      <link>http://vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</link>
+      <pubDate>Sat, 31 Jul 2021 16:43:07 +0530</pubDate>
+      
+      <guid>http://vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</guid>
+      <description>Intuition.
+We name it Intuition when : We apply gut feeling We are certain that this path is important (even if it’s not spoken of in acceptance criteria/specifications), We apply judgement - things we cannot determine directly nor measure, or even wish to go against the measure/data. We sense something is not valid when we test.
+While you test, there comes a scenario, you know something is not right. You do not have the confirmation, but again your gut instinct tells you to explore further.</description>
+    </item>
+    
+  </channel>
+</rss>

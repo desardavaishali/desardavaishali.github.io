@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on All about Quality!</title>
-    <link>http://vaishalidesarda.com/</link>
-    <description>Recent content in Blog on All about Quality!</description>
+    <title>testing on All about Quality!</title>
+    <link>http://vaishalidesarda.com/tags/testing/</link>
+    <description>Recent content in testing on All about Quality!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Jul 2021 16:43:07 +0530</lastBuildDate><atom:link href="http://vaishalidesarda.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>about</title>
-      <link>http://vaishalidesarda.com/about/</link>
-      <pubDate>Sat, 31 Jul 2021 16:43:07 +0530</pubDate>
-      
-      <guid>http://vaishalidesarda.com/about/</guid>
-      <description>Some details</description>
-    </item>
-    
+    <lastBuildDate>Sat, 31 Jul 2021 16:43:07 +0530</lastBuildDate><atom:link href="http://vaishalidesarda.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intuition can&#39;t be found in tools</title>
       <link>http://vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</link>
