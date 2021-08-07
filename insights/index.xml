@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Insights on All about Quality!</title>
+    <link>https://www.vaishalidesarda.com/insights/</link>
+    <description>Recent content in Insights on All about Quality!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/insights/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Practical issues of implementing Conference-time advice</title>
+      <link>https://www.vaishalidesarda.com/insights/practical_issues/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/practical_issues/</guid>
+      <description>It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.
+In all these forums,
+We chat about testing as a craft. How to be agile, how to explore &amp;amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases.</description>
+    </item>
+    
+    <item>
+      <title>Awareness and Observation in Life and Testing</title>
+      <link>https://www.vaishalidesarda.com/insights/awareness/</link>
+      <pubDate>Sun, 20 Dec 2020 18:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/awareness/</guid>
+      <description>Some actions/events are so natural that we do not realise if we are in the moment or not!
+While repeatedly working on the same thing, that walk to the grocery store or brushing the teeth maybe or making the bed for that matter.
+Does this kill awareness or observation power?
+What happens once we automate the test cases/scenarios/ideas?
+Do we look back? Do we regularly go through with our eyes at least once just to make sure there is nothing extra we should add even if asserts are passing?</description>
+    </item>
+    
+    <item>
+      <title>When Should We Stop Testing</title>
+      <link>https://www.vaishalidesarda.com/insights/when-should-we-stop-testing/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/when-should-we-stop-testing/</guid>
+      <description>After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met.</description>
+    </item>
+    
+    <item>
+      <title>Should you build for the unhappy path?</title>
+      <link>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</link>
+      <pubDate>Thu, 05 Mar 2020 10:15:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</guid>
+      <description>Why are Error scenarios more important than a happy path?
+At the time of designing, developing, testing, releasing we all tend to check if a user can launch, login, navigate around, play, watch, submit and consume whatever features we have provided.
+We end up giving extra focus on the happy path. Of course, it is important to set completion goals for the team and the stakeholders.
+There are teams who design for a few unhappy paths too.</description>
+    </item>
+    
+    <item>
+      <title>Releasing a build that has defects!...</title>
+      <link>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</link>
+      <pubDate>Sun, 06 Oct 2019 11:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</guid>
+      <description>Sounds weird right?! QA signing off on known defects for a release!
+Should it happen?
+If yes, when?
+If no, what might happen?
+This is quite a frequent scenario in these days of quick releases, early-to-market approaches.
+Also, keeping the QA position aside, one needs to understand that it is impossible to create and release new software that works 100% of the time.
+Finding a defect in Production by the customer is expected, and we - as in the project team / client - already have a process around on how to deal with it.</description>
+    </item>
+    
+    <item>
+      <title>Why a QA should know the business domain and the architecture.</title>
+      <link>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</link>
+      <pubDate>Sat, 21 Sep 2019 17:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</guid>
+      <description>Whenever I get started on a new project, I first learn the business domain and the architecture, and only then start to look into the stories.
+Some of the managers I worked with find it unnecessary, thinking “ What would a QA do with an understanding of the architecture?? QA should just go to User story and sign it off after validating the Acceptance Criteria (AC)”.
+In my experience, knowing the architecture and the business domain helps a QA identify much more hidden errors in the whole end to end flow, can give you more understanding and confidence on the product when you know it all.</description>
+    </item>
+    
+    <item>
+      <title>How to be a good QA!</title>
+      <link>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</link>
+      <pubDate>Sun, 24 Mar 2019 10:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</guid>
+      <description>I know.. You must be thinking that we are good; if we would have been bad, we would have been in some other profession by this time. We do all the assigned work, we follow agile, we automate everything, we create beautiful bug reports, we send the daily &amp;amp; weekly status, we finish the story points in time.. Well, there is more to know and keep in mind.
+Believe me, everyone has got different circumstances.</description>
+    </item>
+    
+    <item>
+      <title>Why should you pay for a QA when you have automated tests?</title>
+      <link>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</link>
+      <pubDate>Sun, 13 Jan 2019 16:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</guid>
+      <description>Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”
+These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects.</description>
+    </item>
+    
+    <item>
+      <title>Exploratory Testing – should we or shouldn’t we?</title>
+      <link>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</link>
+      <pubDate>Tue, 08 Jan 2019 19:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</guid>
+      <description>In time with need of frequent releases, test automation accelerates verification as the team needs to get quick feedback on the status of the System Under Test (SUT) for the changes done. The automation suite covers only the known. So, how we deal with the unknown?
+We do so via Exploratory testing.
+Why:
+The challenge is to find NEW defects, not to look for the same thing over and over and over again.</description>
+    </item>
+    
+  </channel>
+</rss>

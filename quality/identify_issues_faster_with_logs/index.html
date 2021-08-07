@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="favicon.svg">
+
+  <title>
+    Identify issues faster with logs! - All about Quality!
+  </title>
+  <meta name="description" content="You are in the midst of exploring the mobile app when it suddenly crashes.
+You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!
+Things going on in your mind :
+How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?" />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.86.1" /><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
+    integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
+  />
+  
+  
+
+  <meta property="og:title" content="Identify issues faster with logs!" />
+<meta property="og:description" content="You are in the midst of exploring the mobile app when it suddenly crashes.
+You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!
+Things going on in your mind :
+How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/" /><meta property="article:section" content="Quality" />
+<meta property="article:published_time" content="2020-12-05T14:35:00+00:00" />
+<meta property="article:modified_time" content="2020-12-05T14:35:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Identify issues faster with logs!"/>
+<meta name="twitter:description" content="You are in the midst of exploring the mobile app when it suddenly crashes.
+You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!
+Things going on in your mind :
+How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?"/>
+
+  <meta itemprop="name" content="Identify issues faster with logs!">
+<meta itemprop="description" content="You are in the midst of exploring the mobile app when it suddenly crashes.
+You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!
+Things going on in your mind :
+How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?"><meta itemprop="datePublished" content="2020-12-05T14:35:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-05T14:35:00+00:00" />
+<meta itemprop="wordCount" content="883">
+<meta itemprop="keywords" content="testing," />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    All about Quality!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../18.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      December 5, 2020
+    </div>
+  </div>
+  
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">Identify issues faster with logs!</h1>
+
+    <p>You are in the midst of exploring the mobile app when it suddenly crashes.</p>
+<p>You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!</p>
+<p>Things going on in your mind :</p>
+<p>How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?</p>
+<p>What should you decide?</p>
+<p>Ignore the crash? Keep on trying to execute a similar behaviour on a different device or as a different user? Reinstall the app?</p>
+<p>If you ignore it or consider that the crash was a rare one - you ignore the risk.</p>
+<p>But what if 10% of the live customer base were to encounter this crash?</p>
+<p>The app can still end up with bad ratings!</p>
+<p>Looking into logs/logging :</p>
+<p>Have you ever had a look at the log files for your application? Do you notice which events are mostly fired in the production environment? This is especially relevant if users are facing any issue very frequently in the production environment. Which errors or what exactly in the device is causing that crash - was it a camera or a biometric event or an API call or the network!? Was it an unhandled exception within that new version of a third-party library?</p>
+<p>Did the system recover on its own after the exception occurred? Incidentally, that could be a root cause of a critical issue later on.</p>
+<p>Logging/logs can be the saviour here. A Logfile helps you piece together this information.</p>
+<p>Never miss the chance to review the logs and to monitor alerts.</p>
+<p>What’s all the buzz about logging!?:</p>
+<p>Logs point out the Problems or threats/suspicious activity if any.</p>
+<p>As soon as the crash happens - you can check the space where logs get generated (if the user gave permission).</p>
+<p>If written well and with the right planning, logs can give you the exact crash details, the steps you followed and the errors that the app may have gone through before crashing.</p>
+<p>What Logs contain or should contain:</p>
+<p>The debug/info/error logs, or the crash logs should give a clue about :</p>
+<p>what went wrong
+Which exact place the crash/error happened
+The network at that time
+The device, the OS,
+Browser,
+The device language
+The country
+Error code, if any
+Request/Response JSON
+If it was an API error or whether the app failed
+Timestamp
+Backend error message/code/response
+Events before and after the error/crash.
+The start event and the end event.
+Such information makes it easy to analyse the issue.</p>
+<p>If your application’s logs are high level with just a crash message and no diagnostic info or messages being logged (this can be verified by changing the logging level to debug, error, info, warn), then you will be limited in what info you can provide to the devs. You can always ask Devs for extra logging and diagnostic information which will help you analyse the logs and speed up the root cause identification process. Nowadays, there are libraries, OS facilities as well as third-party tools that devs can leverage to log diagnostic data. E.g. Firebase, BugSnag, AppCenter for AzureDevOps, Google Analytics, Oracle Infinity and so on..</p>
+<p>Benefits Log Files serve:</p>
+<p>The sequence of steps that we follow in generating the crash is important and logs help us understand the same.</p>
+<p>You can check the timings between the events fired and the response received. This will help identify the minimum time required by all systems - whether the app, API based services, 3rd party services, other backend systems are responding successfully or not, and whether any of these is taking more time in some specific scenario. This is especially important when we need to ensure that the entire workflow completes within an agreed-upon SLA for a workload.
+Not only for crashes but for any sort of intermittent issues, logs help to make it easy to identify the issue’s root cause.
+This also helps avoid situations where Devs tell you that they cannot reproduce the issue&hellip; One can share logs and it becomes easy for devs to actually see the issue occurring, reproduce it and find the way to fix it.
+When the team has different environments, comparing logs between environments can give a clue about why an issue occurs only in a particular environment.
+In the Live env, even just monitoring production crashes and errors can give you a better insight on how users are really using the app and what’s causing the errors so you can take it up, fix it and provide users with an error-free experience on the app.
+Event logging can help to analyse the way users use a particular screen or journey in a certain way. A few events may not get logged ever, or a few may be very frequent.
+With well-written logs you don’t have to remember what you did, logs capture it all for you. Logs help you find the root cause of the bugs. To understand the user in a real way. To get real-time feedback. To improve the testing.</p>
+<p>Use logs as a tool to ease up the Testing and to work with users and devs to arrive at the root-cause and get a fix sooner!</p>
+
+  </article><div class="bg-blue-100 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://github.com/desardavaishali"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2021 - Vaishali Desarda · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>
