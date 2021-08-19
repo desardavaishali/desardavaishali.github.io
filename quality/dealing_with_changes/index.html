@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Dealing with changes in requirements! - Conversation with a Tester!
+  </title>
+  <meta name="description" content="This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&hellip;
+General scenarios when one ends up in this situation :
+You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.
+OR You just signed off the story. It’s about to be released as an update." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.86.1" /><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
+    integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
+  />
+  
+  
+
+  <meta property="og:title" content="Dealing with changes in requirements!" />
+<meta property="og:description" content="This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&hellip;
+General scenarios when one ends up in this situation :
+You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.
+OR You just signed off the story. It’s about to be released as an update." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vaishalidesarda.com/quality/dealing_with_changes/" /><meta property="article:section" content="Quality" />
+<meta property="article:published_time" content="2020-01-12T16:30:00+00:00" />
+<meta property="article:modified_time" content="2020-01-12T16:30:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dealing with changes in requirements!"/>
+<meta name="twitter:description" content="This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&hellip;
+General scenarios when one ends up in this situation :
+You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.
+OR You just signed off the story. It’s about to be released as an update."/>
+
+  <meta itemprop="name" content="Dealing with changes in requirements!">
+<meta itemprop="description" content="This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&hellip;
+General scenarios when one ends up in this situation :
+You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.
+OR You just signed off the story. It’s about to be released as an update."><meta itemprop="datePublished" content="2020-01-12T16:30:00+00:00" />
+<meta itemprop="dateModified" content="2020-01-12T16:30:00+00:00" />
+<meta itemprop="wordCount" content="746">
+<meta itemprop="keywords" content="#testing,#agiletesting,#qa,#requirementchange,#requirement,#dealingwithachange," />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Conversation with a Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+<a href="https://www.vaishalidesarda.com/tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/50.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      January 12, 2020
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/#testing/">#testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/#agiletesting/">#agiletesting</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/#qa/">#qa</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/#requirementchange/">#requirementchange</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/#requirement/">#requirement</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/#dealingwithachange/">#dealingwithachange</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Dealing with changes in requirements!</h1>
+	
+    <p>This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&hellip;</p>
+<p><strong>General scenarios when one ends up in this situation :</strong></p>
+<p>You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.</p>
+<p>OR You just signed off the story. It’s about to be released as an update. And your Product owner comes up with the changes in requirements - could be due to content, UI/UX, or legal.</p>
+<p>Sounds like a daily thing right? It is so much of rework starting form test case design till sign off. Plus the release dates are unmoved!</p>
+<p>How do you deal with it? And how do you avoid this from happening again and again?</p>
+<p><strong>How to avoid such changes:</strong> Well, most of the times, it’s unavoidable!</p>
+<p>Changes are part of a successful Project. The team learns from the experience though.</p>
+<p>But one should have control on changing requirements while at the same time being flexible in requirements.</p>
+<p>Business, legal, content, beta testing - these are the few things which may lead to changes in requirements which we can’t avoid addressing at a priority.</p>
+<p><strong>When you are asked to introduce a change before go-live :</strong></p>
+<ol>
+<li>
+<p>See if this change can be taken in the next release and doesn’t harm user/business. Sometimes, some changes don&rsquo;t add much value, but the act of introducing the change may have an undesired impact on time and budget without much of a benefit to the business.</p>
+</li>
+<li>
+<p>Avoid the change if the impact is a big one in case of time required to build and test and sign off considering no harm to business/user.</p>
+</li>
+</ol>
+<p><strong>Project management practices during development :</strong></p>
+<ol>
+<li>Give much more attention during the Planning phase. Plan for the Planning phase to be more of brainstorming with the earlier experience of change, and think more about customer and business. For any little doubt, BA/PO can go to business and get queries clarified or suggest better ideas. This way, changes are identified in the planning phase itself instead of late during the development phase.</li>
+<li>Have all the team in Planning/ requirement specification phase including QA.</li>
+<li>Have OKR specified. Convert them to Goals, hypothesis and work on them before pulling them into Sprints.</li>
+<li>Have a business review at the end of every sprint for the sprint deliverables. So, if there has to be any change, it’s just that sprint’s work addition/ modification.</li>
+</ol>
+<p><strong>Changes happen&hellip; Deal with it…</strong> So let’s see how to maintain the quality irrespective of changing requirements :</p>
+<ol>
+<li>Analyse the impact, see the benefits and the priority to implement it.</li>
+<li>Check if it helps meet any of the OKR (Objective Key Results).</li>
+<li>Analyse the regression required. Sometimes, the change may be just a one-liner in code but may end up in full rigorous regression.</li>
+<li>Analyse how to fit in timelines or if timelines can be moved.</li>
+<li>Implement the changes locally and check what all unit test cases and automated test cases break to get to the impact analysis quicker and right.</li>
+<li>Implement, test, beta test and release!</li>
+</ol>
+<p><strong>Learnings</strong> to be taken if the reasons were any of the below:</p>
+<ol>
+<li>If the requirement was missed - communication to be improved and be made more effective between BA/PO/customer &amp; Team</li>
+<li>If a bug was found by the customer - Peer reviews and BA reviews of the demo to be more stringent</li>
+<li>Actual requirement change by the customer in Beta testing - what customer had originally told the team to implement, and would now like a change. - Try to get the Beta test done by the end of every Sprint or two for the customer to try and understand the new solution earlier.</li>
+<li>Legal laws/ rule changes - see the date to have the changes live and whether the change can be taken to the next sprint or it’s a critical change that needs to go live now.</li>
+<li>Business/user’s benefit - analyse the value. If it’s of smaller value, you can deal with it in the next sprint.</li>
+<li>Changes in external conditions - gain an understanding of these kinds of situations for future planning.</li>
+<li>Increased knowledge of what exactly the customer wants - plan a demo to the customer by the end of each sprint starting from the early days, to help gain understanding. Keep these demos going regularly.</li>
+</ol>
+<p>Changes happen&hellip; Learn to deal with it!!</p>
+
+  </article><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://github.com/desardavaishali"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2021 © Conversation with a Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

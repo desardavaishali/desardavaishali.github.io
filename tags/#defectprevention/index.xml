@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#defectprevention on Conversation with a Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/#defectprevention/</link>
+    <description>Recent content in #defectprevention on Conversation with a Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Nov 2018 17:30:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/#defectprevention/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding Defects V s Preventing Defects</title>
+      <link>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</link>
+      <pubDate>Wed, 07 Nov 2018 17:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</guid>
+      <description>Finding defects involves verifying after the software is created. Fixing defects involves re-doing the faulty code and then re-testing everything to ensure that the fix is in place and that nothing else got broken. This takes time and money. Preventing defects is easier, and needn&amp;rsquo;t take a lot of upfront analysis either if certain practices are followed.
+Prevention is better than cure. Preventing the defects before the product is built (coding phase) helps deliver business value earlier.</description>
+    </item>
+    
+  </channel>
+</rss>

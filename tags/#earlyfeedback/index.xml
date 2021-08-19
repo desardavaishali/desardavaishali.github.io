@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#earlyfeedback on Conversation with a Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/#earlyfeedback/</link>
+    <description>Recent content in #earlyfeedback on Conversation with a Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Sep 2019 17:00:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/#earlyfeedback/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why a QA should know the business domain and the architecture.</title>
+      <link>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</link>
+      <pubDate>Sat, 21 Sep 2019 17:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</guid>
+      <description>Whenever I get started on a new project, I first learn the business domain and the architecture, and only then start to look into the stories.
+Some of the managers I worked with find it unnecessary, thinking “ What would a QA do with an understanding of the architecture?? QA should just go to User story and sign it off after validating the Acceptance Criteria (AC)”.
+In my experience, knowing the architecture and the business domain helps a QA identify much more hidden errors in the whole end to end flow, can give you more understanding and confidence on the product when you know it all.</description>
+    </item>
+    
+  </channel>
+</rss>

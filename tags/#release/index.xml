@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#release on Conversation with a Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/#release/</link>
+    <description>Recent content in #release on Conversation with a Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Oct 2019 11:00:30 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/#release/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Releasing a build that has defects!...</title>
+      <link>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</link>
+      <pubDate>Sun, 06 Oct 2019 11:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</guid>
+      <description>Sounds weird right?! QA signing off on known defects for a release!
+Should it happen?
+If yes, when?
+If no, what might happen?
+This is quite a frequent scenario in these days of quick releases, early-to-market approaches.
+Also, keeping the QA position aside, one needs to understand that it is impossible to create and release new software that works 100% of the time.
+Finding a defect in Production by the customer is expected, and we - as in the project team / client - already have a process around on how to deal with it.</description>
+    </item>
+    
+  </channel>
+</rss>
