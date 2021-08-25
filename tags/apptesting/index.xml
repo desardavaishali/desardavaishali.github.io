@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apptesting on Becoming a better Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/apptesting/</link>
+    <description>Recent content in apptesting on Becoming a better Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jan 2020 13:40:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/apptesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Going live with your app ... and then?</title>
+      <link>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</link>
+      <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</guid>
+      <description>The mobile app market is drastically changing and everyone focuses on being noticed. After the app is launched, you have to be ready for continuous optimisation and improvement. Hence, highly frequent testing.
+The QA role doesn’t stop once the app is live. Instead, the responsibilities continue in terms of regression and automation testing, signing off hotfixes and new releases - that too quicker, as customers don’t like to wait!
+In the Pre-Launch phase, the business does the following :</description>
+    </item>
+    
+  </channel>
+</rss>

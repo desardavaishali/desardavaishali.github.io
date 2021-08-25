@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="favicon.svg">
+
+  <title>
+    When Should We Stop Testing - Becoming a better Tester!
+  </title>
+  <meta name="description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.86.1" /><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
+    integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
+  />
+  
+  
+
+  <meta property="og:title" content="When Should We Stop Testing" />
+<meta property="og:description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vaishalidesarda.com/insights/when-should-we-stop-testing/" /><meta property="article:section" content="Insights" />
+<meta property="article:published_time" content="2020-07-11T19:30:00+00:00" />
+<meta property="article:modified_time" content="2020-07-11T19:30:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="When Should We Stop Testing"/>
+<meta name="twitter:description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met."/>
+
+  <meta itemprop="name" content="When Should We Stop Testing">
+<meta itemprop="description" content="After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”
+No, my friend.
+There is more to this.
+To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met."><meta itemprop="datePublished" content="2020-07-11T19:30:00+00:00" />
+<meta itemprop="dateModified" content="2020-07-11T19:30:00+00:00" />
+<meta itemprop="wordCount" content="798">
+<meta itemprop="keywords" content="testing,exploratorytesting," />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/19.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      July 11, 2020
+<br>
+
+⌚ : 4 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Tags:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/exploratorytesting/">exploratorytesting</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">When Should We Stop Testing</h1>
+	
+    <p>After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”</p>
+<p>No, my friend.</p>
+<p>There is more to this.</p>
+<p>To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met. This validation is via Test Cases.</p>
+<p>The typical understanding of Testing is - a Test Case of “what is expected” is documented in a spreadsheet or a Test Automation/Documentation tool, and a human verifies whether an application build behaves as described in the Test Cases.</p>
+<p>However, Testing is much more than a comparison of the application with a Test Case. Testing and writing Test Cases are two very different things! Test Cases are a means to achieve some part of the goals of Testing, while Testing has much broader objectives!</p>
+<p>I have moved on from writing and verifying Test Cases, to the richer and more unknown world of Exploratory Testing.</p>
+<p>Matching Expected to Actual doesn’t necessarily mean you are done with Testing.</p>
+<p>Also, running Automated scripts repeatedly to try and achieve Continuous Testing, showing green in the pipeline does not imply that you are done with testing. We will discuss Automated Tests in a future article.</p>
+<p>Testing doesn’t or rather shouldn’t stop when your Expected matches Actual in your automated test case. There is more to look for when you test a Product.</p>
+<p>E.g. :</p>
+<ul>
+<li>You are testing an audio call. What’s the expectation - is it just that audio is available and your expected matches actual? Or you check how loud or how low volume is? Do you see if it gets quite in between? What about the background sound? Not all users work in quiet corporate office setups.</li>
+<li>Or say you are testing face recognition - do you check all sorts of general races/ethnicities/skin colour, if the eyes are closed, under various lighting conditions? What about when people have makeup or face piercings or injuries/scars or Face Masks these days?</li>
+<li>Or when it comes to voice, how many accents do you check? There have been many well known unfortunate scenarios where the application misidentifies people of various ethnicities or simply doesn’t recognise a global range of accents. While specific apps have failed due to the lack of diversity in the test data set, a skilled and imaginative Tester would have identified such issues before the general public would have.</li>
+<li>You are testing the app, have you given a thought on how the app behaves when offline, is it supposed to or not? And if not, how does it fail gracefully?</li>
+<li>Or is there a difference in the behaviour of an app when backgrounded, closed, killed or switched from!</li>
+<li>How about when a user accesses the app by using biometrics and the user has disabled the biometrics? How does the user get access to the app?</li>
+<li>Also, Can a user add items to a cart after getting to the payment page and be billed for a smaller set of items but receive a larger set of items added via another tab after getting to the payment page?</li>
+</ul>
+<p>What kinds of business scenarios have the clients themselves not thought about?</p>
+<p>To discover the unknown, one should <a href="https://www.vaishalidesarda.com/quality/conducting_exploratory/">Explore!</a></p>
+<p>We testers don’t guarantee quality. We can’t necessarily reach a defect-free product. But yes, we can almost reach to the highest quality of the product. We can identify User Experience issues. We can help polish the perception, improve the rankings and ratings, help make features more discoverable, identify business process gaps, spot losses, detect a leak of information, identify billing issues - each of which alone can make or break a product!</p>
+<p>So, testing is enough when:</p>
+<ul>
+<li>You have explored all contexts.</li>
+<li>You have taken into account Quality risk from Team and customers point of view.</li>
+<li>You have checked nothing has eluded you while you performed Testing.</li>
+<li>Alpha, Beta testing is successful.</li>
+<li>All open defects are reviewed by the team and agreed upon. The team here means- Dev, Testers, PO, UI/UX, Content, Sales team etc.</li>
+<li>Analytics logs are known and accepted and don’t risk Quality.</li>
+</ul>
+<p>The Business team will definitely have its reason not to delay the release. If so, you can release incrementally in smaller chunks where you have confidence in above-mentioned areas to avoid unhappy customer.</p>
+<p>The intuition that you have explored enough, Product looks right to you rather feels right, Quality risk, considering Team and customer is taken care of - that should be enough to release the product.</p>
+<p>Testing shall continue :)</p>
+
+  </article>
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/"> &lt;&lt; Should you build for the unhappy path?</a> </div></ul>
+                <ul class="flex justify-right gap-8"> 
+      <a class="next" href="https://www.vaishalidesarda.com/insights/awareness/"> Awareness and Observation in Life and Testing >></a></div>     
+     </ul></ul></div></div>
+<br><div class="bg-blue-100 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    Copyright © 2021 - Vaishali Desarda · All rights reserved
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>
