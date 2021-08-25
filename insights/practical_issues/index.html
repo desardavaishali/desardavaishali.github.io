@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Practical issues of implementing Conference-time advice - Becoming a better Tester!
+  </title>
+  <meta name="description" content="It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.
+In all these forums,
+ We chat about testing as a craft. How to be agile, how to explore &amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.86.1" /><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
+    integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
+  />
+  
+  
+
+  <meta property="og:title" content="Practical issues of implementing Conference-time advice" />
+<meta property="og:description" content="It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.
+In all these forums,
+ We chat about testing as a craft. How to be agile, how to explore &amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vaishalidesarda.com/insights/practical_issues/" /><meta property="article:section" content="Insights" />
+<meta property="article:published_time" content="2020-12-31T13:35:00+00:00" />
+<meta property="article:modified_time" content="2020-12-31T13:35:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Practical issues of implementing Conference-time advice"/>
+<meta name="twitter:description" content="It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.
+In all these forums,
+ We chat about testing as a craft. How to be agile, how to explore &amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases."/>
+
+  <meta itemprop="name" content="Practical issues of implementing Conference-time advice">
+<meta itemprop="description" content="It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.
+In all these forums,
+ We chat about testing as a craft. How to be agile, how to explore &amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases."><meta itemprop="datePublished" content="2020-12-31T13:35:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-31T13:35:00+00:00" />
+<meta itemprop="wordCount" content="1361">
+<meta itemprop="keywords" content="testing,exploratory,automation,craft," />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/10.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      December 31, 2020
+<br>
+
+⌚ : 6 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/exploratory/">exploratory</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/automation/">automation</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/craft/">craft</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Practical issues of implementing Conference-time advice</h1>
+	
+    <p>It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.</p>
+<p>In all these forums,</p>
+<ul>
+<li>We chat about testing as a craft.</li>
+<li>How to be agile, how to explore &amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing.</li>
+<li>We prefer test ideas over test cases, or we write minimal test cases.</li>
+<li>The importance of asking questions.</li>
+<li>How it’s all about risks, shift left, shift right, production-based user scenarios.</li>
+<li>Green pipelines &amp; the Myth of defect-free products.</li>
+<li>There is no bug-free product.</li>
+</ul>
+<p>Once we’re back in the real world, we want all the buzzwords to be implemented in our project. We try to apply the lessons from the talks when things get warmed up in the project, but as things speed up; the reality strikes!</p>
+<p><strong>E.g. :</strong></p>
+<p><strong>Keep the bugs in the backlog for the next (or a future) sprint:</strong> Either the unit test coverage was not complete, or testers were not involved in requirement discussion or tester thought from a user perspective and they found the defects. When the team thinks testers bring value to the table, these kinds of bugs would be captured in AC itself. Make it a practice to add a new AC while Requirements are getting groomed.</p>
+<p><strong>Timelines are stringent.</strong> You are asked to test all the user stories in just 2 days and provide the sign-off.</p>
+<p>This is because the client thinks we automate everything and sign off can be given even in 1 day. Client/team doesn’t know whether automation within the same sprint is possible or not. Or things are missed because of the delivery pressure. Or the team slogs for extra hours in the evening or over the weekend.</p>
+<p><strong>Test cases have been declared as passed, right? Then surely we can release! :</strong> Everyone in the team just waits to see that green pipeline to merge the code. Yes, smoke/ regression test cases do cover the risk that is checked via automation. But if the various Acceptance Criteria have not been verified via Automation, or if the team has performed none of the exploratory or user-based testings, then it’s quite a high risk to just go on a green pipeline.</p>
+<p><strong>We missed telling you, but yes, “we” (dev and PO) discussed, and this is the recent change.:</strong> You are in the middle of testing; you managed some automation too but suddenly the automation fails on the new build. Upon investigating, you come to know that there is a change and that the testing team was not involved in the discussion. This brings frustration, and while you want to finish adding this new change, you don’t get time to think about what could go wrong aside from the ACs listed.</p>
+<p>If a change were communicated to both Testers and Devs together, preferably well ahead of time, then Testers would have the opportunity to think about and identify new risks earlier.</p>
+<p><strong>We don’t have time to add those element IDs, keep it in the backlog.:</strong> Devs have a lot of pressure to finish the user story, and they might miss adding the elementId for automation. This delays the in-sprint automation and adds extra work for the next sprint.</p>
+<p>When such support for Automation is eventually added, Testers who should have been experimenting with the product or analyzing the events instead now have to work on automating tests for earlier requirements to finish the automation coverage.</p>
+<p>If we add this as an Acceptance Criteria in the User story itself, we can have more time to do craft-related activities later.</p>
+<p><strong>When you newly join the company/project, the first expectation on you is: “Create the automation framework from scratch”:</strong> They say- “Take all the manual cases and change to automation. We want everything to be automated”. Have you ever assessed your product? Does the new person know what complexity the product contains? Should the person first have some hands-on experience on the product and understand what to be automated rather than rush to focus on manual to automated test conversion!?</p>
+<p><strong>What do you even test!?:</strong> “Everything is working fine, there were no bugs logged in regression. Why did you take so much time to do the regression? What do you even test when everything is fine!?” Well, Tester performs a lot of different tests while testing. Just because no bugs were found doesn&rsquo;t mean the tester isn’t testing. The Tester is not there to introduce new bugs, the Tester is there to identify the risks, if any, in the product. Finding zero bugs therefore in no way implies that you don’t need testers in the team.</p>
+<p><strong>We want AI in automation. :</strong> With all sorts of marketing, this has become a bigger misunderstanding to resolve than “100% Automation”. This point warrants a future article.</p>
+<p><strong>Testers are gatekeepers:</strong>  This is usually said when one finds a bug in production. Have teams ever considered whether the testers are authorised to stop the release when we call them gatekeepers?</p>
+<p>Teams usually just look for a sign-off from a Tester in order to go live, and as someone to blame when bugs are found in production. When most of the time, teams ignore the risks raised by testers stating “Users won’t do this”. The reasons for such a short-sighted position are all the points listed above.</p>
+<p><strong>We want 100% automation:</strong> Clients believe that they are paying for the automation which in future will save on budget and time to release to the market.</p>
+<p>However, the customer rarely knows - or they forget - that there is more to find out by testing which can’t be found via automation.</p>
+<p><strong>Point to note here about Automation</strong> - we have never explained this to the customer. This requires a lot of effort to explain the focus and boundaries of automation and the idea of and need for exploratory testing.</p>
+<p>The Testing team’s company (if outsourced), the team and everyone has to take the responsibility to understand what Automated Tests actually do and then agree on how to cover the review and verification needs.</p>
+<p>This should start right from the time when bid discussions begin.</p>
+<p><strong>Why do we see a difference between testing as a craft vs what happens in reality?</strong></p>
+<p>The reality is culture-based and can’t be changed overnight. The product needs to be shipped every week.</p>
+<p>We have to state the importance of critical thinking, analysing power, solution-based mindset, user-based thinking, the craft, the risks.</p>
+<p><strong>How do we embed the testing as a craft knowledge while being pragmatic :</strong></p>
+<p>This will require support from higher management who understand testing as critical thinking and not as just “100% automation”. In the meantime,</p>
+<ol>
+<li>Set aside time for exploring &amp; experimenting with the product.</li>
+<li>Then add the notes/bugs/ideas from the exploratory session to the automation suite.</li>
+<li>Add the expected analytics/events (UI, workflow) in the user story Acceptance Criteria.</li>
+<li>Set aside some time to look at the production logs for any error you can recreate and which the team can fix.</li>
+<li>Raise the risk when you see it.</li>
+<li>Test the app as a user will test.</li>
+<li>Add the user experience as test cases/tests ideas.</li>
+<li>Keep a test/verification suite which can’t really be automated but necessary as part of the regression. E.g. mobile app - backgrounding, switching, full RAM, full ROM, specific 3rd party libraries, etc.</li>
+<li>See if those error messages make sense when you read it. As a user, will it give you enough indications on what has gone wrong?</li>
+<li>Figure out how to be part of requirement discussions and try to prevent the issues before they get developed as per your experience. Yes, this is easier said than done. People and culture are both a larger part of the problem. But if understood and wielded well, they can also be the most effective tools you could use to make good happen.</li>
+</ol>
+<p><em>Conferences are reminders of what ‘Good’ looks like.</em> In the future, we should avoid criticising devs, the limitation of automation etc and start focussing more on scenarios and solutions that would be best suited for the community and for the clients.</p>
+
+  </article>
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/insights/awareness/"> &lt;&lt; Awareness and Observation in Life and Testing</a> </div></ul>
+                <ul class="flex justify-right gap-8">  
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2021 © Becoming a better Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

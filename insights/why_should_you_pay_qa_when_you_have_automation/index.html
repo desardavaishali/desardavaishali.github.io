@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Why should you pay for a QA when you have automated tests? - Becoming a better Tester!
+  </title>
+  <meta name="description" content="Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”
+These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.86.1" /><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
+    integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
+  />
+  
+  
+
+  <meta property="og:title" content="Why should you pay for a QA when you have automated tests?" />
+<meta property="og:description" content="Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”
+These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/" /><meta property="article:section" content="Insights" />
+<meta property="article:published_time" content="2019-01-13T16:00:30+00:00" />
+<meta property="article:modified_time" content="2019-01-13T16:00:30+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Why should you pay for a QA when you have automated tests?"/>
+<meta name="twitter:description" content="Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”
+These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects."/>
+
+  <meta itemprop="name" content="Why should you pay for a QA when you have automated tests?">
+<meta itemprop="description" content="Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”
+These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects."><meta itemprop="datePublished" content="2019-01-13T16:00:30+00:00" />
+<meta itemprop="dateModified" content="2019-01-13T16:00:30+00:00" />
+<meta itemprop="wordCount" content="575">
+<meta itemprop="keywords" content="continuousdelivery,agileqa,agiletesting ,testing,agilesoftwaredevelopment,whyqa," />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/34.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      January 13, 2019
+<br>
+
+⌚ : 3 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/continuousdelivery/">continuousdelivery</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agileqa/">agileqa</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agiletesting/">agiletesting</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agilesoftwaredevelopment/">agilesoftwaredevelopment</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/whyqa/">whyqa</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Why should you pay for a QA when you have automated tests?</h1>
+	
+    <p><strong>Customer/Client:</strong> “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”</p>
+<p>These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects.</p>
+<p>Developers may think their code is flawless because it compiles and runs, thinking testing unnecessary.</p>
+<p>Hence, one may think there is no need for a QA!</p>
+<p>During the course of regular software development, developers work on just a section of code at a time, and not on the entire application’s end to end functionality. Even if developers work on the entire application, no single person works on each and every part of the application. Someone or the other would have finished certain functionality.</p>
+<p>Even if a team understands the merits of writing tests, some may consider that writing all tests may make development slow, so developers may skip writing certain or all tests.</p>
+<p>Also, when you work on something intently for a long span of time, it can be easy to miss things that would otherwise stand out. The same thing can happen during software development. You need a second pair of eyes.</p>
+<p><strong>Myths about QA:</strong></p>
+<ul>
+<li>QAs are negative.</li>
+<li>QAs just find the flaws.</li>
+<li>QA&rsquo;s job is to break the application.</li>
+<li>QAs ask too many questions.</li>
+<li>Cosmetics issues found by QA are not really Issues.</li>
+<li>QAs run unnecessary extra tests which are not mentioned in Acceptance Criteria (AC).</li>
+<li>Improvement features found by QA should be deferred.</li>
+</ul>
+<p>﻿<strong>What QAs actually do :</strong></p>
+<ul>
+<li>QAs are part of requirement specification meeting, helping the team to build a number of comprehensive acceptance criteria i.e. Provides input on what to take care of when developing the software.</li>
+<li>Investigate a product</li>
+<li>Always be asking “Why?”</li>
+<li>Thinks outside the box- scripted/unscripted/manual test.</li>
+<li>Provides feedback</li>
+<li>Provides ideas for product improvement</li>
+</ul>
+<p>A day in the life of a QA :</p>
+<p><img src="../../images/QA_spectrum.jpg" alt="Qa_spectrum" title="caption"></p>
+<ul>
+<li>Ensure all ACs are validated by referring to User stories.</li>
+<li><a href="https://vaishalidesarda.com//quality/finding_defects_preventing_defects/">Prevent &amp; Find the defects</a> and report and provide feedback.</li>
+<li>Brainstorm with the team(BA, PO, Dev) to have significant and comprehensive ACs.</li>
+<li>Ask questions and make suggestions for improvement to the product.</li>
+<li>Test and retest the new features added to the current code base in all test phases.</li>
+<li>Find ways to stress a system.</li>
+<li>Find the security loopholes.</li>
+<li>Provide a safety net for all small, misunderstood or missed aspects of business or technical plot.</li>
+<li>Provide confidence in the product.</li>
+<li>Make the product user-friendly.</li>
+<li>Ensure whatever is working is as intended.</li>
+<li>Use imagination to understand what customer might do.</li>
+</ul>
+<p>In addition to ensuring that the product works as expected, QA often suggest scenarios that could help improve the product. This is because a good QA often ends up understanding the product better than the business and product owners, and almost as well as experienced product users.</p>
+<p>Where a developer or programmer’s role is to create, a QA tester job is to break down, analyze, identify edge cases that should become ACs, find the broken pieces, and provide feedback so the product can be created and improved.</p>
+<p>Well, that doesn’t mean you rely on QA and skip automated Unit Testing!</p>
+<blockquote>
+<p>Remember – No amount of Tests can prove software right. But a single test/test idea can help identify severe flaws!</p>
+</blockquote>
+
+  </article>
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/"> &lt;&lt; Exploratory Testing – should we or shouldn’t we?</a> </div></ul>
+                <ul class="flex justify-right gap-8"> 
+      <a class="next" href="https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/"> How to be a good QA! >></a></div>     
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2021 © Becoming a better Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logging on Becoming a better Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/logging/</link>
+    <description>Recent content in logging on Becoming a better Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Dec 2020 14:35:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Identify issues faster with logs!</title>
+      <link>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</link>
+      <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</guid>
+      <description>You are in the midst of exploring the mobile app when it suddenly crashes.
+You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!
+Things going on in your mind :
+How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?</description>
+    </item>
+    
+  </channel>
+</rss>

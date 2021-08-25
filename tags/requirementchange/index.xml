@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>requirementchange on Becoming a better Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/requirementchange/</link>
+    <description>Recent content in requirementchange on Becoming a better Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jan 2020 16:30:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/requirementchange/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dealing with changes in requirements!</title>
+      <link>https://www.vaishalidesarda.com/quality/dealing_with_changes/</link>
+      <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/dealing_with_changes/</guid>
+      <description>This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&amp;hellip;
+General scenarios when one ends up in this situation :
+You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.
+OR You just signed off the story. It’s about to be released as an update.</description>
+    </item>
+    
+  </channel>
+</rss>

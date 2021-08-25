@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Offline Testing of an Online App - What, why and how!? - Becoming a better Tester!
+  </title>
+  <meta name="description" content="Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?
+Like I’d written recently, Testing is much more than merely validating Business Acceptance Criteria. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.
+Having a great experience online and offline is one of the key points of engaging users in-app." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.86.1" /><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
+    integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
+  />
+  
+  
+
+  <meta property="og:title" content="Offline Testing of an Online App - What, why and how!?" />
+<meta property="og:description" content="Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?
+Like I’d written recently, Testing is much more than merely validating Business Acceptance Criteria. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.
+Having a great experience online and offline is one of the key points of engaging users in-app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vaishalidesarda.com/mobile-app/offline_testing_of_online_app/" /><meta property="article:section" content="Mobile App" />
+<meta property="article:published_time" content="2020-07-16T14:40:00+00:00" />
+<meta property="article:modified_time" content="2020-07-16T14:40:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Offline Testing of an Online App - What, why and how!?"/>
+<meta name="twitter:description" content="Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?
+Like I’d written recently, Testing is much more than merely validating Business Acceptance Criteria. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.
+Having a great experience online and offline is one of the key points of engaging users in-app."/>
+
+  <meta itemprop="name" content="Offline Testing of an Online App - What, why and how!?">
+<meta itemprop="description" content="Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?
+Like I’d written recently, Testing is much more than merely validating Business Acceptance Criteria. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.
+Having a great experience online and offline is one of the key points of engaging users in-app."><meta itemprop="datePublished" content="2020-07-16T14:40:00+00:00" />
+<meta itemprop="dateModified" content="2020-07-16T14:40:00+00:00" />
+<meta itemprop="wordCount" content="1673">
+<meta itemprop="keywords" content="testing,mobileapptesting,offline,agiletesting,automatedtesting," />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/32.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      July 16, 2020
+<br>
+
+⌚ : 8 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/mobileapptesting/">mobileapptesting</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/offline/">offline</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agiletesting/">agiletesting</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/automatedtesting/">automatedtesting</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Offline Testing of an Online App - What, why and how!?</h1>
+	
+    <p>Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?</p>
+<p>Like I’d written recently, Testing is <a href="https://www.vaishalidesarda.com/insights/when-should-we-stop-testing/">much more than merely validating Business Acceptance Criteria</a>. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.</p>
+<p>Having a great experience online and offline is one of the key points of engaging users in-app.</p>
+<p>So, the user is on a holiday or as users keep roaming around having different cellular ranges, trying to get something done with the help of the app. And the spinner is spinning endlessly. Maybe it’s a poor network. The app is making the user wait for longer times. What happens next&hellip; The user keeps trying or waiting but in vain. Fed up, the user closes the app or uninstalls it, switches to another similar app or the website where they can get their work done with their network connectivity constraints. And this results in 1-star reviews on Stores. Also, when online, the user can check on the website as well and decide why to waste the space for the app! Such poor experiences often result in the permanent loss of a potential customer!</p>
+<p>If it happens to be an Enterprise app (from a third party or developed in-house), there may be other frustrations and internal dissatisfaction culture building up which could impact their actual effectiveness and productivity.</p>
+<p>Unlike the website, the app should work offline (cached data, maybe) and online both. There is no added value of having an App if you already happen to have a fully functional website and your app does not support offline display, saving of data etc. You might as well make your website mobile-responsive and with offline-mode capabilities and continue with the business.</p>
+<p>There are two ways when the user is offline.</p>
+<ol>
+<li>
+<p>When a user does it knowingly e.g. Aeroplane mode or switching internet off, or not allowing on either Mobile data or WiFi.</p>
+</li>
+<li>
+<p>When it happens to a user unknowingly. For e.g.: forgot to exit Airplane mode, server-side API taking longer to respond, Backend is down, Server-side slowness, the third party API being offline, mobile OS slowness, app slow-ness, RAM not available.</p>
+</li>
+</ol>
+<p><strong>What being ‘Offline’ while using the app means:</strong></p>
+<ul>
+<li>Poor network - just 1 bar - the spinner spins endlessly. Important - you may very well be connected to the Internet but actually having really poor connectivity! This is one of those non-binary conditions that we don’t consider!</li>
+<li>The transition between ‘No network and network’. For example When on the train/ underground transport/ Tube the mobile OS is trying to look for a network.</li>
+<li>Aeroplane/Airplane mode - the user may have activated this when in flight or when at a meeting and then forgot to switch out of it.</li>
+<li>Connected to Free-WiFi - On Airports, in Hotels.. - You have a connection but only to the local Wifi system and not to the Internet. The Internet can’t be accessed unless you sign up, but you realise this only when you try to surf a website and not when you use the app directly without surfing the website.</li>
+<li>The App’s Server Side or Third Party may not be accessible via a particular network for various reasons (blocked, network congestion, networking mistake)</li>
+<li>The App is trying to fetch the data and spinning up - User wants to switch to another app while this one loads the data. When the user wants to return to this app, the user feels it is unresponsive and has to kill the app.</li>
+<li>Switching between mobile data and WiFi. What happens when the app transitions between different bandwidths and public IP addresses?</li>
+<li>Apps having no access to use the network when on Mobile Data - (For example, I usually don’t allow downloads, updates, Prime/Netflix streaming on Mobile Data).</li>
+</ul>
+<p>Making the User wait is a bad idea! We should not expect a network connection to be always fast and stable.</p>
+<p>So, always test your App offline!</p>
+<p><strong>Some suggestions on what to check when offline and how to make the app Fail gracefully:</strong></p>
+<ul>
+<li>Ensure that the app doesn’t crash upon going offline or when the user performs any action on the app while being offline. This may seem obvious, but we are habituated to testing an app when online. As Testers, we’re supposed to explore the unknown!</li>
+<li>An unexpected exit may seem like a crash to the user if the app closes itself when it detects no network.</li>
+<li>Similarly, check if the app happens to close itself when it detects that it’s offline whether at startup or during use. Depending upon how the app has been coded or the libraries that it uses, such an unexpected exit is possible.</li>
+<li>Suppose a user is using the app offline, and guess what, the dev caught the ‘Network Connection Exception’ but happened to ignore it and moved to the next screen. This leads to a business logic bypass!</li>
+<li>Keep an eye out for all the workflows in the App which matter to the User. Assess what happens or how those processes behave when the app goes offline.</li>
+<li>The User performs an action, and the app is waiting for a response and then gets disconnected. What happens to the transaction?</li>
+<li>Consider disabling certain controls in the absence of network connectivity and indicate poor/zero network connectivity. This may reduce frustration and error-reports.</li>
+<li>Does the app show a visual progress indicator when “pull to refresh” is in progress?</li>
+<li>If your app is network dependent, - then Fail nicely when offline. Meaning - show the right Error or “Retrying” messages rather than just showing a spinner.</li>
+<li>Check that nothing unexpected happens when the user is trying a ‘pull to refresh’ or navigate around the app while offline. E.g. bad UI, overlapping content, half displayed sections, showing wrong data to user from hard-coded default values or from a stale cache, or a test URL (for example since Prod is not accessible during testing).</li>
+<li>When Offline, when the user is trying a pull to refresh- Does the app wipe out all data on the screen and return a sorry message, thereby making the user fill in the form all over again? Or do you prefer showing data from the local cache (if any!)? What are the repercussions of such a decision?</li>
+<li>Consider displaying data quickly (from local storage) while the app displays the “Internet not available snack bar”, so that the user still has access to the cached data. Ensure that the user has something to look at always, Offline or online!</li>
+<li>While you display cached data, do show a small snack bar to the user stating Network not available/check your internet connection, etc.</li>
+<li>Show the right message to the user while data loading happens or when there is poor network /no network or when data loading fails - instead of a blank page or just the “Sorry” message.</li>
+<li>Consider asking the devs to use Shorter timeouts to detect loss of Network Connectivity. This will help prevent uncertainty.</li>
+<li>How are network retries decided? To spread out the server-side load while the app keeps on retrying in case of poor network, the app should consider using exponential timeouts/backoffs so that the connection retries from various users are spread and doesn’t cause a surge in the load on the server-side (thundering herd problem).</li>
+</ul>
+<p><strong>Somethings to examine when the App returns Online :</strong></p>
+<ul>
+<li>Does the app continue to work smoothly when network connectivity is restored?</li>
+<li>How correctly is the app syncing the data and getting the updates/updated data? When online, avoid displaying stale data to the user.</li>
+<li>Does the app allow Saving the data/posts offline just in case so that the user can see it and work on it until the network returns? For e.g., Google Docs allows us to mark certain documents for offline availability.</li>
+<li>Should app have an offline mode similar to how Google Maps lets us save and view Maps offline?</li>
+<li>When the network returns, what happened to all the local addition, modification and deletion of the data that you did when offline?</li>
+<li>What happened to the transactions that you initiated when online earlier but which the app didn’t get to show the status of when connectivity was lost?</li>
+<li>Does the user continue to have access to all the offline saved comments, images, notes in the app? Did the app preserve those or wipe all of those out upon a reconnection?</li>
+<li>Does your test plan account for duplicate data when the network connectivity is restored?</li>
+<li>Do the image and the name/caption that you saved while offline match the online version?</li>
+<li>What happens to offline saved data when the user does “pull to refresh”? Does it take away all offline data?</li>
+<li>Also, when the network reconnects on its own, the app should pull new data (like Gmail does on its own) rather than making the user gesture a pull to refresh (Scroll the screen to get the new data). You can have in-app visual (and audio, for those who need it) indicators to inform the user that the app is online /offline.</li>
+<li>What happens when the mobile OS finishes switching between cellular data and Wifi? Does the change in public IP result in traffic/API calls being blocked? Is there a difference in the response times or the data load times? Do the workflows continue or is the traffic from a different IP treated as a security issue by the server-side?</li>
+<li>Do the authenticated sessions persist across online-offline-online states?</li>
+</ul>
+<p>When planning your testing, assess the business needs, check the risk to the business of making or not making some features available offline, brainstorm with the team on what / how to respond when offline to avoid the user seeking alternatives.</p>
+<p>Offline operations and behaviour isn’t just a nice-to-have feature but instead serves as behind-the-scene support for polished and data-safe user experience. It may not give the app 5-star reviews but it will definitely lessen down the 1-star reviews and unhappy/potential customers.</p>
+
+  </article>
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/"> &lt;&lt; Going live with your app ... and then?</a> </div></ul>
+                <ul class="flex justify-right gap-8">  
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2021 © Becoming a better Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>
