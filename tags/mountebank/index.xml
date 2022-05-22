@@ -7,5 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Apr 2019 18:00:30 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/mountebank/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stubs, Mocks, Virtualization – What’s in a name!</title>
+      <link>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</link>
+      <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</guid>
+      <description>Tests are specifications detailing about how to test, what to test, how much to test, how frequently to test. You derive them from Acceptance Criteria (AC).
+To achieve good quality code and test coverage, we opt for TDD- Test Driven Development. You write a test for AC, then you write the code to pass that test then you write another test and repeat till the AC conditions are fulfilled!
+We usually tend to verify-</description>
+    </item>
+    
   </channel>
 </rss>

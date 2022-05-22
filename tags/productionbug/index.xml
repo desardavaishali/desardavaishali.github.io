@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>productionbug on Becoming a better Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/productionbug/</link>
+    <description>Recent content in productionbug on Becoming a better Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Dec 2021 21:34:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/productionbug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aftermath of Production bug</title>
+      <link>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</link>
+      <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</guid>
+      <description>Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.
+And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.
+Well the production bug could be because we missed:
+ some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself.</description>
+    </item>
+    
+  </channel>
+</rss>

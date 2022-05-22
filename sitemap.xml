@@ -2,8 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</loc>
+    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.vaishalidesarda.com/</loc>
-    <lastmod>2021-07-31T17:45:00+00:00</lastmod>
+    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/bug/</loc>
+    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/productionbug/</loc>
+    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/</loc>
+    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/</loc>
+    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
+    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/article_in_infoq/</loc>
+    <lastmod>2021-11-04T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/canary/</loc>
+    <lastmod>2021-11-04T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/devops/</loc>
+    <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/craft/</loc>
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
@@ -12,15 +39,6 @@
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/intution/</loc>
-    <lastmod>2021-07-31T17:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/</loc>
-    <lastmod>2021-07-31T17:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/</loc>
-    <lastmod>2021-07-31T17:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/automatedtesting/</loc>
@@ -44,10 +62,13 @@
     <loc>https://www.vaishalidesarda.com/tags/ui/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
+    <loc>https://www.vaishalidesarda.com/activities/</loc>
+    <lastmod>2021-06-05T16:05:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.vaishalidesarda.com/tags/failqonf/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/failqonf_ebook/</loc>
+    <loc>https://www.vaishalidesarda.com/activities/failqonf_ebook/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/exploratory/</loc>
@@ -67,9 +88,6 @@
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/observations/</loc>
     <lastmod>2020-12-20T18:00:30+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/bug/</loc>
-    <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/defect/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
@@ -110,7 +128,7 @@
     <loc>https://www.vaishalidesarda.com/tags/testflix/</loc>
     <lastmod>2020-11-28T16:55:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/testflix_talk/</loc>
+    <loc>https://www.vaishalidesarda.com/activities/testflix_talk/</loc>
     <lastmod>2020-11-28T16:55:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/risks/</loc>
@@ -268,5 +286,11 @@
   </url><url>
     <loc>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</loc>
     <lastmod>2018-11-07T17:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/bg-blue-100/</loc>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/copyright-2022-vaishali-desarda-all-rights-reserved/</loc>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/favicon.svg/</loc>
   </url>
 </urlset>

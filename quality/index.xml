@@ -7,5 +7,126 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Jul 2021 16:53:14 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/quality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should we check static UI elements with Automation Tests</title>
+      <link>https://www.vaishalidesarda.com/quality/should_we_check_static_ui_elements_with_automation_tests/</link>
+      <pubDate>Sun, 11 Jul 2021 16:53:14 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/should_we_check_static_ui_elements_with_automation_tests/</guid>
+      <description>Recently, I came across a scenario where all the Xamarin forms for the app had an update. This resulted in issues like static text being cut off, not being visible, changes in colors for a few buttons’ state, etc on different kinds of devices.
+Will automation catch such changes?
+Before we conclude, let’s pause and reflect - “Is this the purpose of automation?” “Do we write automation to detect such issues?</description>
+    </item>
+    
+    <item>
+      <title>When the bug is &#39;non-reproducible&#39;​...</title>
+      <link>https://www.vaishalidesarda.com/quality/when_the_bug/</link>
+      <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/when_the_bug/</guid>
+      <description>Murphy’s Law states - “Anything that can go wrong, will go wrong!” - but do you know how it’s going wrong? What if it doesn’t go wrong again? What if you can’t make it go wrong again?
+You find a bug, head over to the dev team and you say - “This is a bug. This is not the ideal user experience. Are we okay with this behaviour? This is not as per the Acceptance criteria.</description>
+    </item>
+    
+    <item>
+      <title>Identify issues faster with logs!</title>
+      <link>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</link>
+      <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</guid>
+      <description>You are in the midst of exploring the mobile app when it suddenly crashes.
+You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!
+Things going on in your mind :
+How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?</description>
+    </item>
+    
+    <item>
+      <title>When Devs tell you how to test their code!</title>
+      <link>https://www.vaishalidesarda.com/quality/when_devs_tell_you/</link>
+      <pubDate>Fri, 27 Nov 2020 18:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/when_devs_tell_you/</guid>
+      <description>Developers pouring ideas on how to test! Sounds familiar? How does it get perceived? Does such input make you feel - Upset, responsible, frustrated, offended?
+As a Tester, you might think “Why should someone supervise or control on how you prepare for your task or how to do the testing?”
+I find it alright if Devs or anyone from the team is suggesting how to experiment or what to Test.</description>
+    </item>
+    
+    <item>
+      <title>Rethink how you test your API</title>
+      <link>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</link>
+      <pubDate>Mon, 06 Jul 2020 20:35:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</guid>
+      <description>In the current digital world, with the increased demand for having everything on a click or at one’s fingertips, has forced companies to change the way they interact with or give an experience to users. The user expects real-time data at any given point of time and anywhere!
+APIs bridge the gap between app/product and the backend legacy systems (including Mainframe) that most of the time maintain all the data.</description>
+    </item>
+    
+    <item>
+      <title>Dealing with changes in requirements!</title>
+      <link>https://www.vaishalidesarda.com/quality/dealing_with_changes/</link>
+      <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/dealing_with_changes/</guid>
+      <description>This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&amp;hellip;
+General scenarios when one ends up in this situation :
+You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.
+OR You just signed off the story. It’s about to be released as an update.</description>
+    </item>
+    
+    <item>
+      <title>Conducting Effective Exploratory Testing!</title>
+      <link>https://www.vaishalidesarda.com/quality/conducting_exploratory/</link>
+      <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/conducting_exploratory/</guid>
+      <description>With the interest to know more, for the curiosity to discover, we explore&amp;hellip; Roads, Code, Apps.. Exploratory testing is all about discovering the unknown. I have written before on why we should conduct exploratory testing.
+Let’s discuss what to bear in mind when conducting effective Exploratory Testing!
+There are quite a few misconceptions when it comes to how Exploratory testing is conducted. It’s not the same as exploring the roads. We are not wanderers when we explore the app.</description>
+    </item>
+    
+    <item>
+      <title>Stubs, Mocks, Virtualization – What’s in a name!</title>
+      <link>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</link>
+      <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</guid>
+      <description>Tests are specifications detailing about how to test, what to test, how much to test, how frequently to test. You derive them from Acceptance Criteria (AC).
+To achieve good quality code and test coverage, we opt for TDD- Test Driven Development. You write a test for AC, then you write the code to pass that test then you write another test and repeat till the AC conditions are fulfilled!
+We usually tend to verify-</description>
+    </item>
+    
+    <item>
+      <title>Service Virtualization - When integration points are a dependency for development</title>
+      <link>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</link>
+      <pubDate>Fri, 16 Nov 2018 17:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</guid>
+      <description>Being dependent on is nothing but relying upon. One has to wait for that other thing to get the task at hand started/completed.
+If Dependencies are not resolved or not made available, the task cannot be started/completed.
+If dependencies are made available, much of the testing from QA &amp;amp; Dev at a component level, Unit level, can “shift left,” or be moved earlier in the SDLC. This is because each component can be tested individually instead of waiting for complete assembly.</description>
+    </item>
+    
+    <item>
+      <title>Why Acceptance Criteria!</title>
+      <link>https://www.vaishalidesarda.com/quality/why_acceptance_criteria/</link>
+      <pubDate>Sun, 11 Nov 2018 17:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/why_acceptance_criteria/</guid>
+      <description>The Final product should work as expected.
+Everyone wants to create the product that customers (and their customers) love. The product should be:
+ As per customer’s expectation - Solution Fit &amp;amp; Market Fit Defect-free Early to market / without delays Within budget Changes post-go-live should be based on further feedback from customers  Is it possible to achieve all above? Yes - With the help of acceptance criteria!!
+Acceptance criteria =</description>
+    </item>
+    
+    <item>
+      <title>Finding Defects V s Preventing Defects</title>
+      <link>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</link>
+      <pubDate>Wed, 07 Nov 2018 17:30:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</guid>
+      <description>Finding defects involves verifying after the software is created. Fixing defects involves re-doing the faulty code and then re-testing everything to ensure that the fix is in place and that nothing else got broken. This takes time and money. Preventing defects is easier, and needn&amp;rsquo;t take a lot of upfront analysis either if certain practices are followed.
+Prevention is better than cure. Preventing the defects before the product is built (coding phase) helps deliver business value earlier.</description>
+    </item>
+    
   </channel>
 </rss>

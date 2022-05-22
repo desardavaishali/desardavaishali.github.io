@@ -6,6 +6,39 @@
     <description>Recent content in Recent Posts on Becoming a better Tester!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Jul 2021 17:45:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2021 21:34:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aftermath of Production bug</title>
+      <link>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</link>
+      <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</guid>
+      <description>Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.
+And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.
+Well the production bug could be because we missed:
+ some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself.</description>
+    </item>
+    
+    <item>
+      <title>Are Canary Releases an Alternative to Testers?</title>
+      <link>https://www.vaishalidesarda.com/blog/article_in_infoq/</link>
+      <pubDate>Thu, 04 Nov 2021 07:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/blog/article_in_infoq/</guid>
+      <description>My first article at InfoQ is published. Thanks to Hrishikesh Barua for the review and the support.
+Article URL : Are Canary Releases an Alternative to Testers?</description>
+    </item>
+    
+    <item>
+      <title>Intuition can&#39;t be found in tools</title>
+      <link>https://www.vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</link>
+      <pubDate>Sat, 31 Jul 2021 17:45:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</guid>
+      <description>Intuition.
+We name it Intuition when : We apply gut feeling We are certain that this path is important (even if it’s not spoken of in acceptance criteria/specifications), We apply judgement - things we cannot determine directly nor measure, or even wish to go against the measure/data. We sense something is not valid when we test.
+While you test, there comes a scenario, you know something is not right. You do not have the confirmation, but again your gut instinct tells you to explore further.</description>
+    </item>
+    
   </channel>
 </rss>

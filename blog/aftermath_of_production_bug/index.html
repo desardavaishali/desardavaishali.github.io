@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Aftermath of Production bug - Becoming a better Tester!
+  </title>
+  <meta name="description" content="Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.
+And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.
+Well the production bug could be because we missed:
+ some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.92.2" /><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.e81b6e77805113bca7b1e9f462afaa46d6e118b774a63c6b322a23900da3667c.css"
+    integrity="sha256-6Btud4BRE7ynsen0Yq+qRtbhGLd0pjxrMiojkA2jZnw="
+  />
+  
+  
+
+  <meta property="og:title" content="Aftermath of Production bug" />
+<meta property="og:description" content="Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.
+And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.
+Well the production bug could be because we missed:
+ some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-05-22T21:34:00+00:00" />
+<meta property="article:modified_time" content="2022-05-22T21:34:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Aftermath of Production bug"/>
+<meta name="twitter:description" content="Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.
+And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.
+Well the production bug could be because we missed:
+ some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself."/>
+
+  <meta itemprop="name" content="Aftermath of Production bug">
+<meta itemprop="description" content="Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.
+And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.
+Well the production bug could be because we missed:
+ some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself."><meta itemprop="datePublished" content="2022-05-22T21:34:00+00:00" />
+<meta itemprop="dateModified" content="2022-05-22T21:34:00+00:00" />
+<meta itemprop="wordCount" content="1231">
+<meta itemprop="keywords" content="testing,productionbug,bug," />
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/activities/">Activities</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/aftermath.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      May 22, 2022
+<br>
+
+⌚ : 6 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/productionbug/">productionbug</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/bug/">bug</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Aftermath of Production bug</h1>
+	
+    <p>Yes, the aftermath. That’s where the game resumes.
+The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. 
+“Production issue” they call it.</p>
+<p>And even before we know the root cause, the famous ritual of  ‘Why did the Tester not find it’ starts.</p>
+<p><strong>Well the production bug could be because</strong> we missed:</p>
+<ol>
+<li>some configs</li>
+<li>the redirect URLs</li>
+<li>Cache clearing after logout</li>
+<li>Time-zone consideration</li>
+<li>Performance handling</li>
+<li>Some change of a code to fix a regression issue 
+And many more unrelated to business functionality itself.</li>
+</ol>
+<p>When it comes to business functionality not working as expected, the question “Why did not the testers didn’t find these issues”  leads to discovering time spent  going back and forth when the functionality was groomed, debating what was groomed, what was designed, and what and where the functionality was executed. A lot of time and money spent, really. 
+Sometimes, unnecessarily.</p>
+<p>Before we start blaming the testers, did we check whether Testers are really the bottleneck as being portrayed?</p>
+<p><strong>Do we have have a process in place for the Quality check by Developers &amp; Product Owners?</strong></p>
+<p>Did we try checking the kind of first build Testers are receiving. How much time does it take to test the acceptance criteria? Are all your testers focused on only finding acceptance criteria issues? If so, this is a big concern that no - one other than testers are performing a quality check.
+Quality is everyone’s responsibility. The Devs, the POs, the Testers. All stakeholders should be accountable for whatever they delivering to be of good Quality. No one should wait for the Testers to find the bug and later blame tester when a defect is spotted  in the Production environment. Read this section again.</p>
+<p><strong>Are we asking for just Acceptance Criteria (AC) testing?</strong>
+Are we asking testers to just do the AC testing as mentioned in the story. Are we asking Testing to then “cover everything else in the regression”!?
+Is this even a proper test?</p>
+<p><strong>Are we conducting an impact analysis of the features?</strong>
+We need to remember that the requirement stated in the story is not a stand alone action. It is surrounded by the product having multiple other features and requirements.
+Did we get a chance to think through and list down all that in Acceptance criteria?</p>
+<p><strong>Are we planning a regression to give extra time for those features to get tested thoroughly, thinking about the product?</strong></p>
+<p>When regression testing starts - some manual &amp; some automated -  do we design the tests accordingly? Did we give enough time to test the new features considering the whole product altogether?
+I believe, conducting only acceptance testing within the sprint and leaving everything else to the regression phase will leave a major chance for the customer to face issues in the live environment.</p>
+<p><strong>An important reason is Time lapse.</strong> The time is different and the memory &amp; the context too between when you designed and when you tested.
+During the regression testing just before a release, you may not have the same focus or the context you had while the specific feature was tested standalone.
+(Question: How is “regression” here different from or related to exploratory testing? You may want to consider writing something about that)</p>
+<p><strong>Are we taking a thorough responsibility for rejected bugs?</strong>
+When the bugs are rejected or asked to be addressed in the next sprint - have we conducted a risk assessment of how the bug will impact the current users in the live environment? Deliberately continuing with a bug results in  KNOWN ISSUES and then side effects are often ignored in production.</p>
+<p><strong>Are we asking testers to “not go overboard with testing stories” because of the time constraints?</strong></p>
+<p>An Estimate is not the deadlines. Let me make that clear. 
+If the developer takes extra time, we are comfortable, thinking there must have been some complexity. How do you react when the tester says they need one more day, or a few more hours?
+Some points for organisations to think about:
+Why do we always question Testers' ability and competence, when they are actually trying to review and test some uncovered scenarios? Why do we keep on showing continuous mistrust and questioning every other move tester makes?</p>
+<p>This builds a poor culture for testers,  one that they they do not want to work in.
+If this is the case in your team, maybe just change the Testers  in your team and get a few you trust. This way the environment can be a little friendly and motivating for everyone to carry on. A friendly environment is the beginning, but the various questions still need to be answered. History does have a tendency to repeat itself, after all.</p>
+<p><strong>Are the stories too big to estimate and you do not allow QA to estimate higher than the developers?</strong>
+After working on projects where we’ve started from scratch as well as where I have joined projects already underway, I have never understood why Testers’ estimates are expected or even required (!)  to be less than Dev estimates. 
+E.g. A Dev may just have to switch off one main switch - so their efforts are just 1 (i.e. less efforts)</p>
+<p>But when it comes to Testing - that one switch may affect 10 rooms. The Tester will then have to go to each room to check if the power is off or not. The effort has to be more. The Tester will try switching on and off the buttons as well and will not just stop after having a look if the power is off. They will also see if there are appliances that should not be switched off, and alert that special provisions may need to be made. Etc, etc. Such reviews help identify missed requirements or help one understand the domain better.</p>
+<p>As you can see, this testing effort is far more than “just wiring a switch” and can lead to one understanding use cases, identifying new scenarios and refining existing scenarios better.
+Points help indicate estimation of effort and must be capped based on which role is estimating.</p>
+<p><strong>How testers can help themselves to avoid these pains and pitfalls:</strong></p>
+<ol>
+<li>Help your lead understand what you are testing.</li>
+<li>Make mind maps to capture the known and unknown in refinement, design, and testing sessions.</li>
+<li>Build the tests that uncover how user will use  the behaviour.</li>
+<li>In addition to Acceptance Criteria written in the story, build the tests considering the product surrounding the feature. Explain that, after all, a feature does not work in isolation.
+Automate all the knowns as early as possible. This will enable you to devote time to explore the unknown.</li>
+<li>Check with the design team just after the first build  if the UI &amp; UX built is as per their expectations.</li>
+</ol>
+<p>Well there are times, when testers might have missed it, but then so have the Developers and the Product Owner.</p>
+<p>The questions should focus on why the team missed it instead of asking why just the Tester missed it. This will helps us conduct better Root Cause Analysis and we would improve our processes to lead to less production issues or issues from the customer in the live environment.</p>
+<p>This would in turn saving the money and more importantly ensure and improve the reputation of the product and of the organisation!</p>
+
+  </article>
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/blog/article_in_infoq/"> &lt;&lt; Are Canary Releases an Alternative to Testers?</a> </div></ul>
+                <ul class="flex justify-right gap-8">  
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2022 © Becoming a better Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-203743070-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

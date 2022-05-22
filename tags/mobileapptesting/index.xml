@@ -7,5 +7,59 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Dec 2020 11:00:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/mobileapptesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When the bug is &#39;non-reproducible&#39;​...</title>
+      <link>https://www.vaishalidesarda.com/quality/when_the_bug/</link>
+      <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/when_the_bug/</guid>
+      <description>Murphy’s Law states - “Anything that can go wrong, will go wrong!” - but do you know how it’s going wrong? What if it doesn’t go wrong again? What if you can’t make it go wrong again?
+You find a bug, head over to the dev team and you say - “This is a bug. This is not the ideal user experience. Are we okay with this behaviour? This is not as per the Acceptance criteria.</description>
+    </item>
+    
+    <item>
+      <title>Offline Testing of an Online App - What, why and how!?</title>
+      <link>https://www.vaishalidesarda.com/mobile-app/offline_testing_of_online_app/</link>
+      <pubDate>Thu, 16 Jul 2020 14:40:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/mobile-app/offline_testing_of_online_app/</guid>
+      <description>Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?
+Like I’d written recently, Testing is much more than merely validating Business Acceptance Criteria. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.
+Having a great experience online and offline is one of the key points of engaging users in-app.</description>
+    </item>
+    
+    <item>
+      <title>Should you build for the unhappy path?</title>
+      <link>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</link>
+      <pubDate>Thu, 05 Mar 2020 10:15:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</guid>
+      <description>Why are Error scenarios more important than a happy path?
+At the time of designing, developing, testing, releasing we all tend to check if a user can launch, login, navigate around, play, watch, submit and consume whatever features we have provided.
+We end up giving extra focus on the happy path. Of course, it is important to set completion goals for the team and the stakeholders.
+There are teams who design for a few unhappy paths too.</description>
+    </item>
+    
+    <item>
+      <title>Going live with your app ... and then?</title>
+      <link>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</link>
+      <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</guid>
+      <description>The mobile app market is drastically changing and everyone focuses on being noticed. After the app is launched, you have to be ready for continuous optimisation and improvement. Hence, highly frequent testing.
+The QA role doesn’t stop once the app is live. Instead, the responsibilities continue in terms of regression and automation testing, signing off hotfixes and new releases - that too quicker, as customers don’t like to wait!
+In the Pre-Launch phase, the business does the following :</description>
+    </item>
+    
+    <item>
+      <title>Mobile App Testing - Emulator/Simulators or Real Device</title>
+      <link>https://www.vaishalidesarda.com/mobile-app/emulator_simulator_real_devices/</link>
+      <pubDate>Thu, 19 Dec 2019 13:45:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/mobile-app/emulator_simulator_real_devices/</guid>
+      <description>Now that everyone has a smartphone and access to many free and paid apps, users and customers expect a certain level of professional and polished behaviour on their mobile devices. They know what to expect, what their devices are capable of, and expect to be delighted in terms of user experience, stability and interactions.
+With new devices getting launched every month supporting different screen sizes, different resolutions, themes, Modified OS, combinations of OS and form factors, OS version updates, new features, it gets quite difficult to provide the Quality assurance and give the sign-off.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -7,5 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 06 Jul 2020 20:35:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/apidesign/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rethink how you test your API</title>
+      <link>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</link>
+      <pubDate>Mon, 06 Jul 2020 20:35:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</guid>
+      <description>In the current digital world, with the increased demand for having everything on a click or at one’s fingertips, has forced companies to change the way they interact with or give an experience to users. The user expects real-time data at any given point of time and anywhere!
+APIs bridge the gap between app/product and the backend legacy systems (including Mainframe) that most of the time maintain all the data.</description>
+    </item>
+    
   </channel>
 </rss>
