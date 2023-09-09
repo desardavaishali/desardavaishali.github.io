@@ -32,10 +32,22 @@
     <loc>https://www.vaishalidesarda.com/tags/devops/</loc>
     <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/product/</loc>
+    <lastmod>2021-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/requirements/</loc>
+    <lastmod>2021-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</loc>
+    <lastmod>2021-09-09T13:32:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.vaishalidesarda.com/tags/craft/</loc>
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/intuition_cant_be_found_in_tools/</loc>
+    <loc>https://www.vaishalidesarda.com/insights/</loc>
+    <lastmod>2021-07-31T17:45:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</loc>
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/intution/</loc>
@@ -72,9 +84,6 @@
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/exploratory/</loc>
-    <lastmod>2020-12-31T13:35:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/</loc>
     <lastmod>2020-12-31T13:35:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/insights/practical_issues/</loc>
@@ -292,5 +301,7 @@
     <loc>https://www.vaishalidesarda.com/copyright-2022-vaishali-desarda-all-rights-reserved/</loc>
   </url><url>
     <loc>https://www.vaishalidesarda.com/favicon.svg/</loc>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/insights/hearing/</loc>
   </url>
 </urlset>

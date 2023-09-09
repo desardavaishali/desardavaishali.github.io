@@ -6,7 +6,18 @@
     <description>Recent content in Insights on Becoming a better Tester!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2020 13:35:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/insights/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 17:45:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/insights/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intuition can&#39;t be found in tools</title>
+      <link>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</link>
+      <pubDate>Sat, 31 Jul 2021 17:45:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</guid>
+      <description>Intuition.
+We name it Intuition when : We apply gut feeling We are certain that this path is important (even if it’s not spoken of in acceptance criteria/specifications), We apply judgement - things we cannot determine directly nor measure, or even wish to go against the measure/data. We sense something is not valid when we test.
+While you test, there comes a scenario, you know something is not right. You do not have the confirmation, but again your gut instinct tells you to explore further.</description>
+    </item>
+    
     <item>
       <title>Practical issues of implementing Conference-time advice</title>
       <link>https://www.vaishalidesarda.com/insights/practical_issues/</link>
@@ -111,6 +122,17 @@ These days Developers build automated tests and integrate code-based tests as we
 We do so via Exploratory testing.
 Why:
  The challenge is to find NEW defects, not to look for the same thing over and over and over again.</description>
+    </item>
+    
+    <item>
+      <title>Hear to discover the Unseen</title>
+      <link>https://www.vaishalidesarda.com/insights/hearing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/insights/hearing/</guid>
+      <description>Yes, you read it right. I’m talking about “Hearing, and not listening”. While the world is focusing on listening as a skill, I want to draw attention to hear. The basic ability of ours. While listening requires focused attention, anything you overhear can be beneficial too!
+Being a tester, the information I have is never enough. I always end up seeking new details.
+While I was attentive in meetings, my basic hearing ability has been of a lot of use post meetings.</description>
     </item>
     
   </channel>

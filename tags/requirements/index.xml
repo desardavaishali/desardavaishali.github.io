@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>requirements on Becoming a better Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/requirements/</link>
+    <description>Recent content in requirements on Becoming a better Tester!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Sep 2021 13:32:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/requirements/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>So, who should review a feature</title>
+      <link>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</link>
+      <pubDate>Thu, 09 Sep 2021 13:32:00 +0000</pubDate>
+      
+      <guid>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</guid>
+      <description>“Why is that even a question!?”, you wonder. Well, it very much is a question, and the answer is “All stakeholders”.
+ The one who signed the contract The one who turned it into a high-level idea The one who approved the idea The one who made business requirements out of it The one who did design One who wireframed it The one turning it into acceptance criteria The one who built it The one who tested and signed off The one who understood the risks before giving a Go One who funded it and the one who sold it on paper  These and many more stakeholders.</description>
+    </item>
+    
+  </channel>
+</rss>
