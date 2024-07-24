@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>virtualization on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/virtualization/</link>
-    <description>Recent content in virtualization on Becoming a better Tester!</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 16 Nov 2018 17:30:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
+    <title>Virtualization on Becoming a better Tester!</title>
+    <link>http://localhost:1313/tags/virtualization/</link>
+    <description>Recent content in Virtualization on Becoming a better Tester!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 16 Nov 2018 17:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Service Virtualization - When integration points are a dependency for development</title>
-      <link>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</link>
+      <link>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</link>
       <pubDate>Fri, 16 Nov 2018 17:30:00 +0000</pubDate>
-      
-      <guid>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</guid>
-      <description>Being dependent on is nothing but relying upon. One has to wait for that other thing to get the task at hand started/completed.
-If Dependencies are not resolved or not made available, the task cannot be started/completed.
-If dependencies are made available, much of the testing from QA &amp;amp; Dev at a component level, Unit level, can “shift left,” or be moved earlier in the SDLC. This is because each component can be tested individually instead of waiting for complete assembly.</description>
+      <guid>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</guid>
+      <description>Being dependent on is nothing but relying upon. One has to wait for that other thing to get the task at hand started/completed.&#xA;If Dependencies are not resolved or not made available, the task cannot be started/completed.&#xA;If dependencies are made available, much of the testing from QA &amp;amp; Dev at a component level, Unit level, can “shift left,” or be moved earlier in the SDLC. This is because each component can be tested individually instead of waiting for complete assembly.</description>
     </item>
-    
   </channel>
 </rss>

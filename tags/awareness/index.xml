@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>awareness on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/awareness/</link>
-    <description>Recent content in awareness on Becoming a better Tester!</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 20 Dec 2020 18:00:30 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/awareness/index.xml" rel="self" type="application/rss+xml" />
+    <title>Awareness on Becoming a better Tester!</title>
+    <link>http://localhost:1313/tags/awareness/</link>
+    <description>Recent content in Awareness on Becoming a better Tester!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Dec 2020 18:00:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/awareness/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Awareness and Observation in Life and Testing</title>
-      <link>https://www.vaishalidesarda.com/insights/awareness/</link>
+      <link>http://localhost:1313/insights/awareness/</link>
       <pubDate>Sun, 20 Dec 2020 18:00:30 +0000</pubDate>
-      
-      <guid>https://www.vaishalidesarda.com/insights/awareness/</guid>
-      <description>Some actions/events are so natural that we do not realise if we are in the moment or not!
-While repeatedly working on the same thing, that walk to the grocery store or brushing the teeth maybe or making the bed for that matter.
-Does this kill awareness or observation power?
-What happens once we automate the test cases/scenarios/ideas?
- Do we look back? Do we regularly go through with our eyes at least once just to make sure there is nothing extra we should add even if asserts are passing?</description>
+      <guid>http://localhost:1313/insights/awareness/</guid>
+      <description>Some actions/events are so natural that we do not realise if we are in the moment or not!&#xA;While repeatedly working on the same thing, that walk to the grocery store or brushing the teeth maybe or making the bed for that matter.&#xA;Does this kill awareness or observation power?&#xA;What happens once we automate the test cases/scenarios/ideas?&#xA;Do we look back? Do we regularly go through with our eyes at least once just to make sure there is nothing extra we should add even if asserts are passing?</description>
     </item>
-    
   </channel>
 </rss>

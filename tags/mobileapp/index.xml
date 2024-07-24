@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mobileapp on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/mobileapp/</link>
-    <description>Recent content in mobileapp on Becoming a better Tester!</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 13 Dec 2020 11:00:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/mobileapp/index.xml" rel="self" type="application/rss+xml" />
+    <title>Mobileapp on Becoming a better Tester!</title>
+    <link>http://localhost:1313/tags/mobileapp/</link>
+    <description>Recent content in Mobileapp on Becoming a better Tester!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 13 Dec 2020 11:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mobileapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>When the bug is &#39;non-reproducible&#39;​...</title>
-      <link>https://www.vaishalidesarda.com/quality/when_the_bug/</link>
+      <link>http://localhost:1313/quality/when_the_bug/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      
-      <guid>https://www.vaishalidesarda.com/quality/when_the_bug/</guid>
-      <description>Murphy’s Law states - “Anything that can go wrong, will go wrong!” - but do you know how it’s going wrong? What if it doesn’t go wrong again? What if you can’t make it go wrong again?
-You find a bug, head over to the dev team and you say - “This is a bug. This is not the ideal user experience. Are we okay with this behaviour? This is not as per the Acceptance criteria.</description>
+      <guid>http://localhost:1313/quality/when_the_bug/</guid>
+      <description>Murphy’s Law states - “Anything that can go wrong, will go wrong!” - but do you know how it’s going wrong? What if it doesn’t go wrong again? What if you can’t make it go wrong again?&#xA;You find a bug, head over to the dev team and you say - “This is a bug. This is not the ideal user experience. Are we okay with this behaviour? This is not as per the Acceptance criteria.</description>
     </item>
-    
   </channel>
 </rss>

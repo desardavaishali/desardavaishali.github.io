@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>devops on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/devops/</link>
-    <description>Recent content in devops on Becoming a better Tester!</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 04 Nov 2021 07:00:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <title>Devops on Becoming a better Tester!</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <description>Recent content in Devops on Becoming a better Tester!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 Nov 2021 07:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Are Canary Releases an Alternative to Testers?</title>
-      <link>https://www.vaishalidesarda.com/blog/article_in_infoq/</link>
+      <link>http://localhost:1313/blog/article_in_infoq/</link>
       <pubDate>Thu, 04 Nov 2021 07:00:00 +0000</pubDate>
-      
-      <guid>https://www.vaishalidesarda.com/blog/article_in_infoq/</guid>
-      <description>My first article at InfoQ is published. Thanks to Hrishikesh Barua for the review and the support.
-Article URL : Are Canary Releases an Alternative to Testers?</description>
+      <guid>http://localhost:1313/blog/article_in_infoq/</guid>
+      <description>My first article at InfoQ is published. Thanks to Hrishikesh Barua for the review and the support.&#xA;Article URL : Are Canary Releases an Alternative to Testers?</description>
     </item>
-    
   </channel>
 </rss>

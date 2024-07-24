@@ -2,306 +2,310 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2023-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/product/</loc>
+    <lastmod>2023-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2023-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/requirements/</loc>
+    <lastmod>2023-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/so-who-should-review-a-feature/</loc>
+    <lastmod>2023-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2023-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/testing/</loc>
+    <lastmod>2023-09-09T13:32:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/exploratory/</loc>
+    <lastmod>2022-04-10T18:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/insights/hearing/</loc>
+    <lastmod>2022-04-10T18:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/insights/</loc>
+    <lastmod>2022-04-10T18:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/aftermath_of_production_bug/</loc>
     <lastmod>2021-12-22T21:34:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/</loc>
+    <loc>http://localhost:1313/tags/bug/</loc>
     <lastmod>2021-12-22T21:34:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/bug/</loc>
+    <loc>http://localhost:1313/tags/productionbug/</loc>
     <lastmod>2021-12-22T21:34:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/productionbug/</loc>
-    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/</loc>
-    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/</loc>
-    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
-    <lastmod>2021-12-22T21:34:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/article_in_infoq/</loc>
+    <loc>http://localhost:1313/blog/article_in_infoq/</loc>
     <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/canary/</loc>
+    <loc>http://localhost:1313/tags/canary/</loc>
     <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/devops/</loc>
+    <loc>http://localhost:1313/tags/devops/</loc>
     <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/product/</loc>
-    <lastmod>2021-09-09T13:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/requirements/</loc>
-    <lastmod>2021-09-09T13:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</loc>
-    <lastmod>2021-09-09T13:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/craft/</loc>
+    <loc>http://localhost:1313/tags/craft/</loc>
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/</loc>
+    <loc>http://localhost:1313/insights/intuition_cant_be_found_in_tools/</loc>
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</loc>
+    <loc>http://localhost:1313/tags/intution/</loc>
     <lastmod>2021-07-31T17:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/intution/</loc>
-    <lastmod>2021-07-31T17:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/automatedtesting/</loc>
+    <loc>http://localhost:1313/tags/automatedtesting/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/automation/</loc>
+    <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/</loc>
+    <loc>http://localhost:1313/quality/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/should_we_check_static_ui_elements_with_automation_tests/</loc>
+    <loc>http://localhost:1313/quality/should_we_check_static_ui_elements_with_automation_tests/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/statictext/</loc>
+    <loc>http://localhost:1313/tags/statictext/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/testautomation/</loc>
+    <loc>http://localhost:1313/tags/testautomation/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/ui/</loc>
+    <loc>http://localhost:1313/tags/ui/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/activities/</loc>
+    <loc>http://localhost:1313/activities/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/failqonf/</loc>
+    <loc>http://localhost:1313/tags/failqonf/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/activities/failqonf_ebook/</loc>
+    <loc>http://localhost:1313/activities/failqonf_ebook/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/exploratory/</loc>
+    <loc>http://localhost:1313/insights/practical_issues/</loc>
     <lastmod>2020-12-31T13:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/practical_issues/</loc>
-    <lastmod>2020-12-31T13:35:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/awareness/</loc>
+    <loc>http://localhost:1313/tags/awareness/</loc>
     <lastmod>2020-12-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/awareness/</loc>
+    <loc>http://localhost:1313/insights/awareness/</loc>
     <lastmod>2020-12-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/observations/</loc>
+    <loc>http://localhost:1313/tags/observations/</loc>
     <lastmod>2020-12-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/defect/</loc>
+    <loc>http://localhost:1313/tags/defect/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/devtester/</loc>
+    <loc>http://localhost:1313/tags/devtester/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/mobileapp/</loc>
+    <loc>http://localhost:1313/tags/mobileapp/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/mobileapptesting/</loc>
+    <loc>http://localhost:1313/tags/mobileapptesting/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/nonproduciblebug/</loc>
+    <loc>http://localhost:1313/tags/nonproduciblebug/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/softwaretesting/</loc>
+    <loc>http://localhost:1313/tags/softwaretesting/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/when_the_bug/</loc>
+    <loc>http://localhost:1313/quality/when_the_bug/</loc>
     <lastmod>2020-12-13T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/agile/</loc>
+    <loc>http://localhost:1313/tags/agile/</loc>
     <lastmod>2020-12-05T14:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/defects/</loc>
+    <loc>http://localhost:1313/tags/defects/</loc>
     <lastmod>2020-12-05T14:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/dignostics/</loc>
+    <loc>http://localhost:1313/tags/dignostics/</loc>
     <lastmod>2020-12-05T14:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</loc>
+    <loc>http://localhost:1313/quality/identify_issues_faster_with_logs/</loc>
     <lastmod>2020-12-05T14:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/logging/</loc>
+    <loc>http://localhost:1313/tags/logging/</loc>
     <lastmod>2020-12-05T14:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/testflix/</loc>
+    <loc>http://localhost:1313/tags/testflix/</loc>
     <lastmod>2020-11-28T16:55:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/activities/testflix_talk/</loc>
+    <loc>http://localhost:1313/activities/testflix_talk/</loc>
     <lastmod>2020-11-28T16:55:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/risks/</loc>
+    <loc>http://localhost:1313/tags/risks/</loc>
     <lastmod>2020-11-27T18:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/when_devs_tell_you/</loc>
+    <loc>http://localhost:1313/quality/when_devs_tell_you/</loc>
     <lastmod>2020-11-27T18:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/agiletesting/</loc>
+    <loc>http://localhost:1313/tags/agiletesting/</loc>
     <lastmod>2020-07-16T14:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/mobile-app/</loc>
+    <loc>http://localhost:1313/mobile-app/</loc>
     <lastmod>2020-07-16T14:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/offline/</loc>
+    <loc>http://localhost:1313/tags/offline/</loc>
     <lastmod>2020-07-16T14:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/mobile-app/offline_testing_of_online_app/</loc>
+    <loc>http://localhost:1313/mobile-app/offline_testing_of_online_app/</loc>
     <lastmod>2020-07-16T14:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/exploratorytesting/</loc>
+    <loc>http://localhost:1313/tags/exploratorytesting/</loc>
     <lastmod>2020-07-11T19:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/when-should-we-stop-testing/</loc>
+    <loc>http://localhost:1313/insights/when-should-we-stop-testing/</loc>
     <lastmod>2020-07-11T19:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/apidesign/</loc>
+    <loc>http://localhost:1313/tags/apidesign/</loc>
     <lastmod>2020-07-06T20:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/apitesting/</loc>
+    <loc>http://localhost:1313/tags/apitesting/</loc>
     <lastmod>2020-07-06T20:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/mobiletesting/</loc>
+    <loc>http://localhost:1313/tags/mobiletesting/</loc>
     <lastmod>2020-07-06T20:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</loc>
+    <loc>http://localhost:1313/quality/rethink_how_you_test_your_api/</loc>
     <lastmod>2020-07-06T20:35:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/negativetesting/</loc>
+    <loc>http://localhost:1313/tags/negativetesting/</loc>
     <lastmod>2020-03-05T10:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</loc>
+    <loc>http://localhost:1313/insights/should_you_build_for_the_unhappy_path/</loc>
     <lastmod>2020-03-05T10:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/unhappypath/</loc>
+    <loc>http://localhost:1313/tags/unhappypath/</loc>
     <lastmod>2020-03-05T10:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/dealing_with_changes/</loc>
+    <loc>http://localhost:1313/quality/dealing_with_changes/</loc>
     <lastmod>2020-01-12T16:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/dealingwithachange/</loc>
+    <loc>http://localhost:1313/tags/dealingwithachange/</loc>
     <lastmod>2020-01-12T16:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/qa/</loc>
+    <loc>http://localhost:1313/tags/qa/</loc>
     <lastmod>2020-01-12T16:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/requirement/</loc>
+    <loc>http://localhost:1313/tags/requirement/</loc>
     <lastmod>2020-01-12T16:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/requirementchange/</loc>
+    <loc>http://localhost:1313/tags/requirementchange/</loc>
     <lastmod>2020-01-12T16:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/apptesting/</loc>
+    <loc>http://localhost:1313/tags/apptesting/</loc>
     <lastmod>2020-01-05T13:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</loc>
+    <loc>http://localhost:1313/mobile-app/going_live_with_your_app_and_then/</loc>
     <lastmod>2020-01-05T13:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/golive/</loc>
+    <loc>http://localhost:1313/tags/golive/</loc>
     <lastmod>2020-01-05T13:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/postlaunch/</loc>
+    <loc>http://localhost:1313/tags/postlaunch/</loc>
     <lastmod>2020-01-05T13:40:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/mobile-app/emulator_simulator_real_devices/</loc>
+    <loc>http://localhost:1313/mobile-app/emulator_simulator_real_devices/</loc>
     <lastmod>2019-12-19T13:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/release/</loc>
+    <loc>http://localhost:1313/tags/release/</loc>
     <lastmod>2019-10-06T11:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</loc>
+    <loc>http://localhost:1313/insights/releasing_build_that_has_defects/</loc>
     <lastmod>2019-10-06T11:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/softwarewithbugs/</loc>
+    <loc>http://localhost:1313/tags/softwarewithbugs/</loc>
     <lastmod>2019-10-06T11:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/earlyfeedback/</loc>
+    <loc>http://localhost:1313/tags/earlyfeedback/</loc>
     <lastmod>2019-09-21T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</loc>
+    <loc>http://localhost:1313/insights/why_qa_should_know_the_business_domain_architecture/</loc>
     <lastmod>2019-09-21T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2019-07-31T16:43:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/agileqa/</loc>
+    <loc>http://localhost:1313/tags/agileqa/</loc>
     <lastmod>2019-07-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/agilesoftwaredevelopment/</loc>
+    <loc>http://localhost:1313/tags/agilesoftwaredevelopment/</loc>
     <lastmod>2019-07-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/conducting_exploratory/</loc>
+    <loc>http://localhost:1313/quality/conducting_exploratory/</loc>
     <lastmod>2019-07-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/continuousdelivery/</loc>
+    <loc>http://localhost:1313/tags/continuousdelivery/</loc>
     <lastmod>2019-07-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/discovertheunknown/</loc>
+    <loc>http://localhost:1313/tags/discovertheunknown/</loc>
     <lastmod>2019-07-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/unscripted/</loc>
+    <loc>http://localhost:1313/tags/unscripted/</loc>
     <lastmod>2019-07-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/calisa/</loc>
+    <loc>http://localhost:1313/tags/calisa/</loc>
     <lastmod>2019-04-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/mocks/</loc>
+    <loc>http://localhost:1313/tags/mocks/</loc>
     <lastmod>2019-04-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/mountebank/</loc>
+    <loc>http://localhost:1313/tags/mountebank/</loc>
     <lastmod>2019-04-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/servicevirtualization/</loc>
+    <loc>http://localhost:1313/tags/servicevirtualization/</loc>
     <lastmod>2019-04-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/stubs/</loc>
+    <loc>http://localhost:1313/tags/stubs/</loc>
     <lastmod>2019-04-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</loc>
+    <loc>http://localhost:1313/quality/stubs_mocks_virtualisation/</loc>
     <lastmod>2019-04-20T18:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</loc>
+    <loc>http://localhost:1313/insights/how_to_be_a_good_qa/</loc>
     <lastmod>2019-03-24T10:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/whyqa/</loc>
+    <loc>http://localhost:1313/tags/whyqa/</loc>
     <lastmod>2019-03-24T10:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</loc>
+    <loc>http://localhost:1313/tags/agiletesting-/</loc>
     <lastmod>2019-01-13T16:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</loc>
+    <loc>http://localhost:1313/insights/why_should_you_pay_qa_when_you_have_automation/</loc>
+    <lastmod>2019-01-13T16:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/insights/exploratory_should_we_or_shouldnt_we/</loc>
     <lastmod>2019-01-08T19:00:30+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</loc>
+    <loc>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</loc>
     <lastmod>2018-11-16T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/virtualization/</loc>
+    <loc>http://localhost:1313/tags/virtualization/</loc>
     <lastmod>2018-11-16T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/why_acceptance_criteria/</loc>
+    <loc>http://localhost:1313/quality/why_acceptance_criteria/</loc>
     <lastmod>2018-11-11T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/defectprevention/</loc>
+    <loc>http://localhost:1313/tags/defectprevention/</loc>
     <lastmod>2018-11-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</loc>
+    <loc>http://localhost:1313/quality/finding_defects_preventing_defects/</loc>
     <lastmod>2018-11-07T17:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/bg-blue-100/</loc>
+    <loc>http://localhost:1313/bg-blue-100/</loc>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/copyright-2022-vaishali-desarda-all-rights-reserved/</loc>
+    <loc>http://localhost:1313/copyright-2022-vaishali-desarda-all-rights-reserved/</loc>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/favicon.svg/</loc>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/insights/hearing/</loc>
+    <loc>http://localhost:1313/favicon.svg/</loc>
   </url>
 </urlset>

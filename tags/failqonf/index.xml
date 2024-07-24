@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>failqonf on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/failqonf/</link>
-    <description>Recent content in failqonf on Becoming a better Tester!</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 05 Jun 2021 16:05:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/failqonf/index.xml" rel="self" type="application/rss+xml" />
+    <title>Failqonf on Becoming a better Tester!</title>
+    <link>http://localhost:1313/tags/failqonf/</link>
+    <description>Recent content in Failqonf on Becoming a better Tester!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 05 Jun 2021 16:05:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/failqonf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FailQonf Ebook</title>
-      <link>https://www.vaishalidesarda.com/activities/failqonf_ebook/</link>
+      <link>http://localhost:1313/activities/failqonf_ebook/</link>
       <pubDate>Sat, 05 Jun 2021 16:05:00 +0000</pubDate>
-      
-      <guid>https://www.vaishalidesarda.com/activities/failqonf_ebook/</guid>
-      <description>It was our honor to learn from the speakers and to put together summary notes for those who would benefit from their wisdom :)
-All the more reasons to check this out! 🧡 Session notes by myself and mindmaps by Rahul!
-Grab your copy and relieve the #failqonf one more time!
-Ebook URL : FailQonf Ebook</description>
+      <guid>http://localhost:1313/activities/failqonf_ebook/</guid>
+      <description>It was our honor to learn from the speakers and to put together summary notes for those who would benefit from their wisdom :)&#xA;All the more reasons to check this out! 🧡 Session notes by myself and mindmaps by Rahul!&#xA;Grab your copy and relieve the #failqonf one more time!&#xA;Ebook URL : FailQonf Ebook</description>
     </item>
-    
   </channel>
 </rss>

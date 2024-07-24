@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>testflix on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/testflix/</link>
-    <description>Recent content in testflix on Becoming a better Tester!</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 28 Nov 2020 16:55:00 +0000</lastBuildDate><atom:link href="https://www.vaishalidesarda.com/tags/testflix/index.xml" rel="self" type="application/rss+xml" />
+    <title>Testflix on Becoming a better Tester!</title>
+    <link>http://localhost:1313/tags/testflix/</link>
+    <description>Recent content in Testflix on Becoming a better Tester!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 28 Nov 2020 16:55:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/testflix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TestFlix Talk</title>
-      <link>https://www.vaishalidesarda.com/activities/testflix_talk/</link>
+      <link>http://localhost:1313/activities/testflix_talk/</link>
       <pubDate>Sat, 28 Nov 2020 16:55:00 +0000</pubDate>
-      
-      <guid>https://www.vaishalidesarda.com/activities/testflix_talk/</guid>
-      <description>TestFlix was one of the kind!
-TestFlix 2020 Details: Abstract &amp;amp; Details
-Checkout my talk here : YouTube link</description>
+      <guid>http://localhost:1313/activities/testflix_talk/</guid>
+      <description>TestFlix was one of the kind!&#xA;TestFlix 2020 Details: Abstract &amp;amp; Details&#xA;Checkout my talk here : YouTube link</description>
     </item>
-    
   </channel>
 </rss>
