@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Exploratory on Becoming a better Tester!</title>
-    <link>http://localhost:1313/tags/exploratory/</link>
+    <link>https://www.vaishalidesarda.com/tags/exploratory/</link>
     <description>Recent content in Exploratory on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 Apr 2022 18:00:30 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/exploratory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaishalidesarda.com/tags/exploratory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hear to discover the Unseen</title>
-      <link>http://localhost:1313/insights/hearing/</link>
+      <link>https://www.vaishalidesarda.com/insights/hearing/</link>
       <pubDate>Sun, 10 Apr 2022 18:00:30 +0000</pubDate>
-      <guid>http://localhost:1313/insights/hearing/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/hearing/</guid>
       <description>Yes, you read it right. I’m talking about “Hearing, and not listening”. While the world is focusing on listening as a skill, I want to draw attention to hear. The basic ability of ours. While listening requires focused attention, anything you overhear can be beneficial too!&#xA;Being a tester, the information I have is never enough. I always end up seeking new details.&#xA;While I was attentive in meetings, my basic hearing ability has been of a lot of use post meetings.</description>
     </item>
     <item>
       <title>Practical issues of implementing Conference-time advice</title>
-      <link>http://localhost:1313/insights/practical_issues/</link>
+      <link>https://www.vaishalidesarda.com/insights/practical_issues/</link>
       <pubDate>Thu, 31 Dec 2020 13:35:00 +0000</pubDate>
-      <guid>http://localhost:1313/insights/practical_issues/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/practical_issues/</guid>
       <description>It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.&#xA;In all these forums,&#xA;We chat about testing as a craft. How to be agile, how to explore &amp;amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases.</description>
     </item>
     <item>
       <title>Conducting Effective Exploratory Testing!</title>
-      <link>http://localhost:1313/quality/conducting_exploratory/</link>
+      <link>https://www.vaishalidesarda.com/quality/conducting_exploratory/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/conducting_exploratory/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/conducting_exploratory/</guid>
       <description>With the interest to know more, for the curiosity to discover, we explore&amp;hellip; Roads, Code, Apps.. Exploratory testing is all about discovering the unknown. I have written before on why we should conduct exploratory testing.&#xA;Let’s discuss what to bear in mind when conducting effective Exploratory Testing!&#xA;There are quite a few misconceptions when it comes to how Exploratory testing is conducted. It’s not the same as exploring the roads. We are not wanderers when we explore the app.</description>
     </item>
   </channel>
