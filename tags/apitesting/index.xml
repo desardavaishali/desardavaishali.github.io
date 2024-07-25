@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apitesting on Becoming a better Tester!</title>
-    <link>http://localhost:1313/tags/apitesting/</link>
+    <link>https://www.vaishalidesarda.com/tags/apitesting/</link>
     <description>Recent content in Apitesting on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 06 Jul 2020 20:35:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/apitesting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaishalidesarda.com/tags/apitesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rethink how you test your API</title>
-      <link>http://localhost:1313/quality/rethink_how_you_test_your_api/</link>
+      <link>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</link>
       <pubDate>Mon, 06 Jul 2020 20:35:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/rethink_how_you_test_your_api/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</guid>
       <description>In the current digital world, with the increased demand for having everything on a click or at one’s fingertips, has forced companies to change the way they interact with or give an experience to users. The user expects real-time data at any given point of time and anywhere!&#xA;APIs bridge the gap between app/product and the backend legacy systems (including Mainframe) that most of the time maintain all the data.</description>
     </item>
   </channel>

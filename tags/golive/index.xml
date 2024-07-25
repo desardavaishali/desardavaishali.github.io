@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golive on Becoming a better Tester!</title>
-    <link>http://localhost:1313/tags/golive/</link>
+    <link>https://www.vaishalidesarda.com/tags/golive/</link>
     <description>Recent content in Golive on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 05 Jan 2020 13:40:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/golive/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaishalidesarda.com/tags/golive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Going live with your app ... and then?</title>
-      <link>http://localhost:1313/mobile-app/going_live_with_your_app_and_then/</link>
+      <link>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</link>
       <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
-      <guid>http://localhost:1313/mobile-app/going_live_with_your_app_and_then/</guid>
+      <guid>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</guid>
       <description>The mobile app market is drastically changing and everyone focuses on being noticed. After the app is launched, you have to be ready for continuous optimisation and improvement. Hence, highly frequent testing.&#xA;The QA role doesn’t stop once the app is live. Instead, the responsibilities continue in terms of regression and automation testing, signing off hotfixes and new releases - that too quicker, as customers don’t like to wait!&#xA;In the Pre-Launch phase, the business does the following :</description>
     </item>
   </channel>

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Craft on Becoming a better Tester!</title>
-    <link>http://localhost:1313/tags/craft/</link>
+    <link>https://www.vaishalidesarda.com/tags/craft/</link>
     <description>Recent content in Craft on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 31 Jul 2021 17:45:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/craft/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaishalidesarda.com/tags/craft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intuition can&#39;t be found in tools</title>
-      <link>http://localhost:1313/insights/intuition_cant_be_found_in_tools/</link>
+      <link>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</link>
       <pubDate>Sat, 31 Jul 2021 17:45:00 +0000</pubDate>
-      <guid>http://localhost:1313/insights/intuition_cant_be_found_in_tools/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</guid>
       <description>Intuition.&#xA;We name it Intuition when : We apply gut feeling We are certain that this path is important (even if it’s not spoken of in acceptance criteria/specifications), We apply judgement - things we cannot determine directly nor measure, or even wish to go against the measure/data. We sense something is not valid when we test.&#xA;While you test, there comes a scenario, you know something is not right. You do not have the confirmation, but again your gut instinct tells you to explore further.</description>
     </item>
     <item>
       <title>Practical issues of implementing Conference-time advice</title>
-      <link>http://localhost:1313/insights/practical_issues/</link>
+      <link>https://www.vaishalidesarda.com/insights/practical_issues/</link>
       <pubDate>Thu, 31 Dec 2020 13:35:00 +0000</pubDate>
-      <guid>http://localhost:1313/insights/practical_issues/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/practical_issues/</guid>
       <description>It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.&#xA;In all these forums,&#xA;We chat about testing as a craft. How to be agile, how to explore &amp;amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases.</description>
     </item>
   </channel>

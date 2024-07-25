@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agiletesting on Becoming a better Tester!</title>
-    <link>http://localhost:1313/tags/agiletesting/</link>
+    <link>https://www.vaishalidesarda.com/tags/agiletesting/</link>
     <description>Recent content in Agiletesting on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 16 Jul 2020 14:40:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/agiletesting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaishalidesarda.com/tags/agiletesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Offline Testing of an Online App - What, why and how!?</title>
-      <link>http://localhost:1313/mobile-app/offline_testing_of_online_app/</link>
+      <link>https://www.vaishalidesarda.com/mobile-app/offline_testing_of_online_app/</link>
       <pubDate>Thu, 16 Jul 2020 14:40:00 +0000</pubDate>
-      <guid>http://localhost:1313/mobile-app/offline_testing_of_online_app/</guid>
+      <guid>https://www.vaishalidesarda.com/mobile-app/offline_testing_of_online_app/</guid>
       <description>Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?&#xA;Like I’d written recently, Testing is much more than merely validating Business Acceptance Criteria. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.&#xA;Having a great experience online and offline is one of the key points of engaging users in-app.</description>
     </item>
     <item>
       <title>Rethink how you test your API</title>
-      <link>http://localhost:1313/quality/rethink_how_you_test_your_api/</link>
+      <link>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</link>
       <pubDate>Mon, 06 Jul 2020 20:35:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/rethink_how_you_test_your_api/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/rethink_how_you_test_your_api/</guid>
       <description>In the current digital world, with the increased demand for having everything on a click or at one’s fingertips, has forced companies to change the way they interact with or give an experience to users. The user expects real-time data at any given point of time and anywhere!&#xA;APIs bridge the gap between app/product and the backend legacy systems (including Mainframe) that most of the time maintain all the data.</description>
     </item>
     <item>
       <title>Should you build for the unhappy path?</title>
-      <link>http://localhost:1313/insights/should_you_build_for_the_unhappy_path/</link>
+      <link>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</link>
       <pubDate>Thu, 05 Mar 2020 10:15:00 +0000</pubDate>
-      <guid>http://localhost:1313/insights/should_you_build_for_the_unhappy_path/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</guid>
       <description>Why are Error scenarios more important than a happy path?&#xA;At the time of designing, developing, testing, releasing we all tend to check if a user can launch, login, navigate around, play, watch, submit and consume whatever features we have provided.&#xA;We end up giving extra focus on the happy path. Of course, it is important to set completion goals for the team and the stakeholders.&#xA;There are teams who design for a few unhappy paths too.</description>
     </item>
     <item>
       <title>Dealing with changes in requirements!</title>
-      <link>http://localhost:1313/quality/dealing_with_changes/</link>
+      <link>https://www.vaishalidesarda.com/quality/dealing_with_changes/</link>
       <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/dealing_with_changes/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/dealing_with_changes/</guid>
       <description>This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&amp;hellip;&#xA;General scenarios when one ends up in this situation :&#xA;You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.&#xA;OR You just signed off the story. It’s about to be released as an update.</description>
     </item>
     <item>
       <title>Going live with your app ... and then?</title>
-      <link>http://localhost:1313/mobile-app/going_live_with_your_app_and_then/</link>
+      <link>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</link>
       <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
-      <guid>http://localhost:1313/mobile-app/going_live_with_your_app_and_then/</guid>
+      <guid>https://www.vaishalidesarda.com/mobile-app/going_live_with_your_app_and_then/</guid>
       <description>The mobile app market is drastically changing and everyone focuses on being noticed. After the app is launched, you have to be ready for continuous optimisation and improvement. Hence, highly frequent testing.&#xA;The QA role doesn’t stop once the app is live. Instead, the responsibilities continue in terms of regression and automation testing, signing off hotfixes and new releases - that too quicker, as customers don’t like to wait!&#xA;In the Pre-Launch phase, the business does the following :</description>
     </item>
     <item>
       <title>Mobile App Testing - Emulator/Simulators or Real Device</title>
-      <link>http://localhost:1313/mobile-app/emulator_simulator_real_devices/</link>
+      <link>https://www.vaishalidesarda.com/mobile-app/emulator_simulator_real_devices/</link>
       <pubDate>Thu, 19 Dec 2019 13:45:00 +0000</pubDate>
-      <guid>http://localhost:1313/mobile-app/emulator_simulator_real_devices/</guid>
+      <guid>https://www.vaishalidesarda.com/mobile-app/emulator_simulator_real_devices/</guid>
       <description>Now that everyone has a smartphone and access to many free and paid apps, users and customers expect a certain level of professional and polished behaviour on their mobile devices. They know what to expect, what their devices are capable of, and expect to be delighted in terms of user experience, stability and interactions.&#xA;With new devices getting launched every month supporting different screen sizes, different resolutions, themes, Modified OS, combinations of OS and form factors, OS version updates, new features, it gets quite difficult to provide the Quality assurance and give the sign-off.</description>
     </item>
     <item>
       <title>Releasing a build that has defects!...</title>
-      <link>http://localhost:1313/insights/releasing_build_that_has_defects/</link>
+      <link>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</link>
       <pubDate>Sun, 06 Oct 2019 11:00:30 +0000</pubDate>
-      <guid>http://localhost:1313/insights/releasing_build_that_has_defects/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</guid>
       <description>Sounds weird right?! QA signing off on known defects for a release!&#xA;Should it happen?&#xA;If yes, when?&#xA;If no, what might happen?&#xA;This is quite a frequent scenario in these days of quick releases, early-to-market approaches.&#xA;Also, keeping the QA position aside, one needs to understand that it is impossible to create and release new software that works 100% of the time.&#xA;Finding a defect in Production by the customer is expected, and we - as in the project team / client - already have a process around on how to deal with it.</description>
     </item>
     <item>
       <title>Why a QA should know the business domain and the architecture.</title>
-      <link>http://localhost:1313/insights/why_qa_should_know_the_business_domain_architecture/</link>
+      <link>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</link>
       <pubDate>Sat, 21 Sep 2019 17:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/insights/why_qa_should_know_the_business_domain_architecture/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</guid>
       <description>Whenever I get started on a new project, I first learn the business domain and the architecture, and only then start to look into the stories.&#xA;Some of the managers I worked with find it unnecessary, thinking “ What would a QA do with an understanding of the architecture?? QA should just go to User story and sign it off after validating the Acceptance Criteria (AC)”.&#xA;In my experience, knowing the architecture and the business domain helps a QA identify much more hidden errors in the whole end to end flow, can give you more understanding and confidence on the product when you know it all.</description>
     </item>
     <item>
       <title>Conducting Effective Exploratory Testing!</title>
-      <link>http://localhost:1313/quality/conducting_exploratory/</link>
+      <link>https://www.vaishalidesarda.com/quality/conducting_exploratory/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/conducting_exploratory/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/conducting_exploratory/</guid>
       <description>With the interest to know more, for the curiosity to discover, we explore&amp;hellip; Roads, Code, Apps.. Exploratory testing is all about discovering the unknown. I have written before on why we should conduct exploratory testing.&#xA;Let’s discuss what to bear in mind when conducting effective Exploratory Testing!&#xA;There are quite a few misconceptions when it comes to how Exploratory testing is conducted. It’s not the same as exploring the roads. We are not wanderers when we explore the app.</description>
     </item>
     <item>
       <title>Stubs, Mocks, Virtualization – What’s in a name!</title>
-      <link>http://localhost:1313/quality/stubs_mocks_virtualisation/</link>
+      <link>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</link>
       <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
-      <guid>http://localhost:1313/quality/stubs_mocks_virtualisation/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</guid>
       <description>Tests are specifications detailing about how to test, what to test, how much to test, how frequently to test. You derive them from Acceptance Criteria (AC).&#xA;To achieve good quality code and test coverage, we opt for TDD- Test Driven Development. You write a test for AC, then you write the code to pass that test then you write another test and repeat till the AC conditions are fulfilled!&#xA;We usually tend to verify-</description>
     </item>
     <item>
       <title>How to be a good QA!</title>
-      <link>http://localhost:1313/insights/how_to_be_a_good_qa/</link>
+      <link>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</link>
       <pubDate>Sun, 24 Mar 2019 10:00:30 +0000</pubDate>
-      <guid>http://localhost:1313/insights/how_to_be_a_good_qa/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</guid>
       <description>I know.. You must be thinking that we are good; if we would have been bad, we would have been in some other profession by this time. We do all the assigned work, we follow agile, we automate everything, we create beautiful bug reports, we send the daily &amp;amp; weekly status, we finish the story points in time.. Well, there is more to know and keep in mind.&#xA;Believe me, everyone has got different circumstances.</description>
     </item>
     <item>
       <title>Exploratory Testing – should we or shouldn’t we?</title>
-      <link>http://localhost:1313/insights/exploratory_should_we_or_shouldnt_we/</link>
+      <link>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</link>
       <pubDate>Tue, 08 Jan 2019 19:00:30 +0000</pubDate>
-      <guid>http://localhost:1313/insights/exploratory_should_we_or_shouldnt_we/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</guid>
       <description>In time with need of frequent releases, test automation accelerates verification as the team needs to get quick feedback on the status of the System Under Test (SUT) for the changes done. The automation suite covers only the known. So, how we deal with the unknown?&#xA;We do so via Exploratory testing.&#xA;Why:&#xA;The challenge is to find NEW defects, not to look for the same thing over and over and over again.</description>
     </item>
     <item>
       <title>Service Virtualization - When integration points are a dependency for development</title>
-      <link>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</link>
+      <link>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</link>
       <pubDate>Fri, 16 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</guid>
       <description>Being dependent on is nothing but relying upon. One has to wait for that other thing to get the task at hand started/completed.&#xA;If Dependencies are not resolved or not made available, the task cannot be started/completed.&#xA;If dependencies are made available, much of the testing from QA &amp;amp; Dev at a component level, Unit level, can “shift left,” or be moved earlier in the SDLC. This is because each component can be tested individually instead of waiting for complete assembly.</description>
     </item>
     <item>
       <title>Why Acceptance Criteria!</title>
-      <link>http://localhost:1313/quality/why_acceptance_criteria/</link>
+      <link>https://www.vaishalidesarda.com/quality/why_acceptance_criteria/</link>
       <pubDate>Sun, 11 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/why_acceptance_criteria/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/why_acceptance_criteria/</guid>
       <description>The Final product should work as expected.&#xA;Everyone wants to create the product that customers (and their customers) love. The product should be:&#xA;As per customer’s expectation - Solution Fit &amp;amp; Market Fit Defect-free Early to market / without delays Within budget Changes post-go-live should be based on further feedback from customers Is it possible to achieve all above? Yes - With the help of acceptance criteria!!&#xA;Acceptance criteria =</description>
     </item>
     <item>
       <title>Finding Defects V s Preventing Defects</title>
-      <link>http://localhost:1313/quality/finding_defects_preventing_defects/</link>
+      <link>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</link>
       <pubDate>Wed, 07 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>http://localhost:1313/quality/finding_defects_preventing_defects/</guid>
+      <guid>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</guid>
       <description>Finding defects involves verifying after the software is created. Fixing defects involves re-doing the faulty code and then re-testing everything to ensure that the fix is in place and that nothing else got broken. This takes time and money. Preventing defects is easier, and needn&amp;rsquo;t take a lot of upfront analysis either if certain practices are followed.&#xA;Prevention is better than cure. Preventing the defects before the product is built (coding phase) helps deliver business value earlier.</description>
     </item>
   </channel>

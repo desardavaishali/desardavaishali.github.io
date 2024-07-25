@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Whyqa on Becoming a better Tester!</title>
-    <link>http://localhost:1313/tags/whyqa/</link>
+    <link>https://www.vaishalidesarda.com/tags/whyqa/</link>
     <description>Recent content in Whyqa on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 24 Mar 2019 10:00:30 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/whyqa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaishalidesarda.com/tags/whyqa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to be a good QA!</title>
-      <link>http://localhost:1313/insights/how_to_be_a_good_qa/</link>
+      <link>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</link>
       <pubDate>Sun, 24 Mar 2019 10:00:30 +0000</pubDate>
-      <guid>http://localhost:1313/insights/how_to_be_a_good_qa/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</guid>
       <description>I know.. You must be thinking that we are good; if we would have been bad, we would have been in some other profession by this time. We do all the assigned work, we follow agile, we automate everything, we create beautiful bug reports, we send the daily &amp;amp; weekly status, we finish the story points in time.. Well, there is more to know and keep in mind.&#xA;Believe me, everyone has got different circumstances.</description>
     </item>
     <item>
       <title>Why should you pay for a QA when you have automated tests?</title>
-      <link>http://localhost:1313/insights/why_should_you_pay_qa_when_you_have_automation/</link>
+      <link>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</link>
       <pubDate>Sun, 13 Jan 2019 16:00:30 +0000</pubDate>
-      <guid>http://localhost:1313/insights/why_should_you_pay_qa_when_you_have_automation/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</guid>
       <description>Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”&#xA;These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects.</description>
     </item>
   </channel>
