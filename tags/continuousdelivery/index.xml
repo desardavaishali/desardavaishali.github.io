@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Continuousdelivery on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/continuousdelivery/</link>
+    <link>http://localhost:1313/tags/continuousdelivery/</link>
     <description>Recent content in Continuousdelivery on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 07 Jul 2019 17:30:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/continuousdelivery/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/continuousdelivery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conducting Effective Exploratory Testing!</title>
-      <link>https://www.vaishalidesarda.com/quality/conducting_exploratory/</link>
+      <link>http://localhost:1313/quality/conducting_exploratory/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/conducting_exploratory/</guid>
+      <guid>http://localhost:1313/quality/conducting_exploratory/</guid>
       <description>With the interest to know more, for the curiosity to discover, we explore&amp;hellip; Roads, Code, Apps.. Exploratory testing is all about discovering the unknown. I have written before on why we should conduct exploratory testing.&#xA;Let’s discuss what to bear in mind when conducting effective Exploratory Testing!&#xA;There are quite a few misconceptions when it comes to how Exploratory testing is conducted. It’s not the same as exploring the roads. We are not wanderers when we explore the app.</description>
     </item>
     <item>
       <title>How to be a good QA!</title>
-      <link>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</link>
+      <link>http://localhost:1313/insights/how_to_be_a_good_qa/</link>
       <pubDate>Sun, 24 Mar 2019 10:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</guid>
+      <guid>http://localhost:1313/insights/how_to_be_a_good_qa/</guid>
       <description>I know.. You must be thinking that we are good; if we would have been bad, we would have been in some other profession by this time. We do all the assigned work, we follow agile, we automate everything, we create beautiful bug reports, we send the daily &amp;amp; weekly status, we finish the story points in time.. Well, there is more to know and keep in mind.&#xA;Believe me, everyone has got different circumstances.</description>
     </item>
     <item>
       <title>Why should you pay for a QA when you have automated tests?</title>
-      <link>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</link>
+      <link>http://localhost:1313/insights/why_should_you_pay_qa_when_you_have_automation/</link>
       <pubDate>Sun, 13 Jan 2019 16:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</guid>
+      <guid>http://localhost:1313/insights/why_should_you_pay_qa_when_you_have_automation/</guid>
       <description>Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”&#xA;These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects.</description>
     </item>
     <item>
       <title>Exploratory Testing – should we or shouldn’t we?</title>
-      <link>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</link>
+      <link>http://localhost:1313/insights/exploratory_should_we_or_shouldnt_we/</link>
       <pubDate>Tue, 08 Jan 2019 19:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</guid>
+      <guid>http://localhost:1313/insights/exploratory_should_we_or_shouldnt_we/</guid>
       <description>In time with need of frequent releases, test automation accelerates verification as the team needs to get quick feedback on the status of the System Under Test (SUT) for the changes done. The automation suite covers only the known. So, how we deal with the unknown?&#xA;We do so via Exploratory testing.&#xA;Why:&#xA;The challenge is to find NEW defects, not to look for the same thing over and over and over again.</description>
     </item>
     <item>
       <title>Service Virtualization - When integration points are a dependency for development</title>
-      <link>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</link>
+      <link>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</link>
       <pubDate>Fri, 16 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</guid>
+      <guid>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</guid>
       <description>Being dependent on is nothing but relying upon. One has to wait for that other thing to get the task at hand started/completed.&#xA;If Dependencies are not resolved or not made available, the task cannot be started/completed.&#xA;If dependencies are made available, much of the testing from QA &amp;amp; Dev at a component level, Unit level, can “shift left,” or be moved earlier in the SDLC. This is because each component can be tested individually instead of waiting for complete assembly.</description>
     </item>
     <item>
       <title>Why Acceptance Criteria!</title>
-      <link>https://www.vaishalidesarda.com/quality/why_acceptance_criteria/</link>
+      <link>http://localhost:1313/quality/why_acceptance_criteria/</link>
       <pubDate>Sun, 11 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/why_acceptance_criteria/</guid>
+      <guid>http://localhost:1313/quality/why_acceptance_criteria/</guid>
       <description>The Final product should work as expected.&#xA;Everyone wants to create the product that customers (and their customers) love. The product should be:&#xA;As per customer’s expectation - Solution Fit &amp;amp; Market Fit Defect-free Early to market / without delays Within budget Changes post-go-live should be based on further feedback from customers Is it possible to achieve all above? Yes - With the help of acceptance criteria!!&#xA;Acceptance criteria =</description>
     </item>
     <item>
       <title>Finding Defects V s Preventing Defects</title>
-      <link>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</link>
+      <link>http://localhost:1313/quality/finding_defects_preventing_defects/</link>
       <pubDate>Wed, 07 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/finding_defects_preventing_defects/</guid>
+      <guid>http://localhost:1313/quality/finding_defects_preventing_defects/</guid>
       <description>Finding defects involves verifying after the software is created. Fixing defects involves re-doing the faulty code and then re-testing everything to ensure that the fix is in place and that nothing else got broken. This takes time and money. Preventing defects is easier, and needn&amp;rsquo;t take a lot of upfront analysis either if certain practices are followed.&#xA;Prevention is better than cure. Preventing the defects before the product is built (coding phase) helps deliver business value earlier.</description>
     </item>
   </channel>

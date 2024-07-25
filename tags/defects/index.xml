@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Defects on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/defects/</link>
+    <link>http://localhost:1313/tags/defects/</link>
     <description>Recent content in Defects on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 05 Dec 2020 14:35:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/defects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/defects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Identify issues faster with logs!</title>
-      <link>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</link>
+      <link>http://localhost:1313/quality/identify_issues_faster_with_logs/</link>
       <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</guid>
+      <guid>http://localhost:1313/quality/identify_issues_faster_with_logs/</guid>
       <description>You are in the midst of exploring the mobile app when it suddenly crashes.&#xA;You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!&#xA;Things going on in your mind :&#xA;How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?</description>
     </item>
     <item>
       <title>Releasing a build that has defects!...</title>
-      <link>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</link>
+      <link>http://localhost:1313/insights/releasing_build_that_has_defects/</link>
       <pubDate>Sun, 06 Oct 2019 11:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</guid>
+      <guid>http://localhost:1313/insights/releasing_build_that_has_defects/</guid>
       <description>Sounds weird right?! QA signing off on known defects for a release!&#xA;Should it happen?&#xA;If yes, when?&#xA;If no, what might happen?&#xA;This is quite a frequent scenario in these days of quick releases, early-to-market approaches.&#xA;Also, keeping the QA position aside, one needs to understand that it is impossible to create and release new software that works 100% of the time.&#xA;Finding a defect in Production by the customer is expected, and we - as in the project team / client - already have a process around on how to deal with it.</description>
     </item>
   </channel>

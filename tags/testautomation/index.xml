@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testautomation on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/testautomation/</link>
+    <link>http://localhost:1313/tags/testautomation/</link>
     <description>Recent content in Testautomation on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 11 Jul 2021 16:53:14 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/testautomation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/testautomation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Should we check static UI elements with Automation Tests</title>
-      <link>https://www.vaishalidesarda.com/quality/should_we_check_static_ui_elements_with_automation_tests/</link>
+      <link>http://localhost:1313/quality/should_we_check_static_ui_elements_with_automation_tests/</link>
       <pubDate>Sun, 11 Jul 2021 16:53:14 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/should_we_check_static_ui_elements_with_automation_tests/</guid>
+      <guid>http://localhost:1313/quality/should_we_check_static_ui_elements_with_automation_tests/</guid>
       <description>Recently, I came across a scenario where all the Xamarin forms for the app had an update. This resulted in issues like static text being cut off, not being visible, changes in colors for a few buttons’ state, etc on different kinds of devices.&#xA;Will automation catch such changes?&#xA;Before we conclude, let’s pause and reflect - “Is this the purpose of automation?” “Do we write automation to detect such issues?</description>
     </item>
   </channel>

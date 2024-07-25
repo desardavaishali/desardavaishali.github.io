@@ -2,444 +2,444 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 09 Sep 2023 13:32:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Product</title>
-      <link>https://www.vaishalidesarda.com/tags/product/</link>
+      <link>http://localhost:1313/tags/product/</link>
       <pubDate>Sat, 09 Sep 2023 13:32:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/product/</guid>
+      <guid>http://localhost:1313/tags/product/</guid>
       <description></description>
     </item>
     <item>
       <title>Requirements</title>
-      <link>https://www.vaishalidesarda.com/tags/requirements/</link>
+      <link>http://localhost:1313/tags/requirements/</link>
       <pubDate>Sat, 09 Sep 2023 13:32:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/requirements/</guid>
+      <guid>http://localhost:1313/tags/requirements/</guid>
       <description></description>
     </item>
     <item>
       <title>Testing</title>
-      <link>https://www.vaishalidesarda.com/tags/testing/</link>
+      <link>http://localhost:1313/tags/testing/</link>
       <pubDate>Sat, 09 Sep 2023 13:32:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/testing/</guid>
+      <guid>http://localhost:1313/tags/testing/</guid>
       <description></description>
     </item>
     <item>
       <title>Exploratory</title>
-      <link>https://www.vaishalidesarda.com/tags/exploratory/</link>
+      <link>http://localhost:1313/tags/exploratory/</link>
       <pubDate>Sun, 10 Apr 2022 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/exploratory/</guid>
+      <guid>http://localhost:1313/tags/exploratory/</guid>
       <description></description>
     </item>
     <item>
       <title>Bug</title>
-      <link>https://www.vaishalidesarda.com/tags/bug/</link>
+      <link>http://localhost:1313/tags/bug/</link>
       <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/bug/</guid>
+      <guid>http://localhost:1313/tags/bug/</guid>
       <description></description>
     </item>
     <item>
       <title>Productionbug</title>
-      <link>https://www.vaishalidesarda.com/tags/productionbug/</link>
+      <link>http://localhost:1313/tags/productionbug/</link>
       <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/productionbug/</guid>
+      <guid>http://localhost:1313/tags/productionbug/</guid>
       <description></description>
     </item>
     <item>
       <title>Canary</title>
-      <link>https://www.vaishalidesarda.com/tags/canary/</link>
+      <link>http://localhost:1313/tags/canary/</link>
       <pubDate>Thu, 04 Nov 2021 07:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/canary/</guid>
+      <guid>http://localhost:1313/tags/canary/</guid>
       <description></description>
     </item>
     <item>
       <title>Devops</title>
-      <link>https://www.vaishalidesarda.com/tags/devops/</link>
+      <link>http://localhost:1313/tags/devops/</link>
       <pubDate>Thu, 04 Nov 2021 07:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/devops/</guid>
+      <guid>http://localhost:1313/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Craft</title>
-      <link>https://www.vaishalidesarda.com/tags/craft/</link>
+      <link>http://localhost:1313/tags/craft/</link>
       <pubDate>Sat, 31 Jul 2021 17:45:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/craft/</guid>
+      <guid>http://localhost:1313/tags/craft/</guid>
       <description></description>
     </item>
     <item>
       <title>Intution</title>
-      <link>https://www.vaishalidesarda.com/tags/intution/</link>
+      <link>http://localhost:1313/tags/intution/</link>
       <pubDate>Sat, 31 Jul 2021 17:45:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/intution/</guid>
+      <guid>http://localhost:1313/tags/intution/</guid>
       <description></description>
     </item>
     <item>
       <title>Automatedtesting</title>
-      <link>https://www.vaishalidesarda.com/tags/automatedtesting/</link>
+      <link>http://localhost:1313/tags/automatedtesting/</link>
       <pubDate>Sun, 11 Jul 2021 16:53:14 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/automatedtesting/</guid>
+      <guid>http://localhost:1313/tags/automatedtesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>https://www.vaishalidesarda.com/tags/automation/</link>
+      <link>http://localhost:1313/tags/automation/</link>
       <pubDate>Sun, 11 Jul 2021 16:53:14 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/automation/</guid>
+      <guid>http://localhost:1313/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Statictext</title>
-      <link>https://www.vaishalidesarda.com/tags/statictext/</link>
+      <link>http://localhost:1313/tags/statictext/</link>
       <pubDate>Sun, 11 Jul 2021 16:53:14 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/statictext/</guid>
+      <guid>http://localhost:1313/tags/statictext/</guid>
       <description></description>
     </item>
     <item>
       <title>Testautomation</title>
-      <link>https://www.vaishalidesarda.com/tags/testautomation/</link>
+      <link>http://localhost:1313/tags/testautomation/</link>
       <pubDate>Sun, 11 Jul 2021 16:53:14 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/testautomation/</guid>
+      <guid>http://localhost:1313/tags/testautomation/</guid>
       <description></description>
     </item>
     <item>
       <title>Ui</title>
-      <link>https://www.vaishalidesarda.com/tags/ui/</link>
+      <link>http://localhost:1313/tags/ui/</link>
       <pubDate>Sun, 11 Jul 2021 16:53:14 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/ui/</guid>
+      <guid>http://localhost:1313/tags/ui/</guid>
       <description></description>
     </item>
     <item>
       <title>Failqonf</title>
-      <link>https://www.vaishalidesarda.com/tags/failqonf/</link>
+      <link>http://localhost:1313/tags/failqonf/</link>
       <pubDate>Sat, 05 Jun 2021 16:05:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/failqonf/</guid>
+      <guid>http://localhost:1313/tags/failqonf/</guid>
       <description></description>
     </item>
     <item>
       <title>Awareness</title>
-      <link>https://www.vaishalidesarda.com/tags/awareness/</link>
+      <link>http://localhost:1313/tags/awareness/</link>
       <pubDate>Sun, 20 Dec 2020 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/awareness/</guid>
+      <guid>http://localhost:1313/tags/awareness/</guid>
       <description></description>
     </item>
     <item>
       <title>Observations</title>
-      <link>https://www.vaishalidesarda.com/tags/observations/</link>
+      <link>http://localhost:1313/tags/observations/</link>
       <pubDate>Sun, 20 Dec 2020 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/observations/</guid>
+      <guid>http://localhost:1313/tags/observations/</guid>
       <description></description>
     </item>
     <item>
       <title>Defect</title>
-      <link>https://www.vaishalidesarda.com/tags/defect/</link>
+      <link>http://localhost:1313/tags/defect/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/defect/</guid>
+      <guid>http://localhost:1313/tags/defect/</guid>
       <description></description>
     </item>
     <item>
       <title>Devtester</title>
-      <link>https://www.vaishalidesarda.com/tags/devtester/</link>
+      <link>http://localhost:1313/tags/devtester/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/devtester/</guid>
+      <guid>http://localhost:1313/tags/devtester/</guid>
       <description></description>
     </item>
     <item>
       <title>Mobileapp</title>
-      <link>https://www.vaishalidesarda.com/tags/mobileapp/</link>
+      <link>http://localhost:1313/tags/mobileapp/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/mobileapp/</guid>
+      <guid>http://localhost:1313/tags/mobileapp/</guid>
       <description></description>
     </item>
     <item>
       <title>Mobileapptesting</title>
-      <link>https://www.vaishalidesarda.com/tags/mobileapptesting/</link>
+      <link>http://localhost:1313/tags/mobileapptesting/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/mobileapptesting/</guid>
+      <guid>http://localhost:1313/tags/mobileapptesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Nonproduciblebug</title>
-      <link>https://www.vaishalidesarda.com/tags/nonproduciblebug/</link>
+      <link>http://localhost:1313/tags/nonproduciblebug/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/nonproduciblebug/</guid>
+      <guid>http://localhost:1313/tags/nonproduciblebug/</guid>
       <description></description>
     </item>
     <item>
       <title>Softwaretesting</title>
-      <link>https://www.vaishalidesarda.com/tags/softwaretesting/</link>
+      <link>http://localhost:1313/tags/softwaretesting/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/softwaretesting/</guid>
+      <guid>http://localhost:1313/tags/softwaretesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Agile</title>
-      <link>https://www.vaishalidesarda.com/tags/agile/</link>
+      <link>http://localhost:1313/tags/agile/</link>
       <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/agile/</guid>
+      <guid>http://localhost:1313/tags/agile/</guid>
       <description></description>
     </item>
     <item>
       <title>Defects</title>
-      <link>https://www.vaishalidesarda.com/tags/defects/</link>
+      <link>http://localhost:1313/tags/defects/</link>
       <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/defects/</guid>
+      <guid>http://localhost:1313/tags/defects/</guid>
       <description></description>
     </item>
     <item>
       <title>Dignostics</title>
-      <link>https://www.vaishalidesarda.com/tags/dignostics/</link>
+      <link>http://localhost:1313/tags/dignostics/</link>
       <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/dignostics/</guid>
+      <guid>http://localhost:1313/tags/dignostics/</guid>
       <description></description>
     </item>
     <item>
       <title>Logging</title>
-      <link>https://www.vaishalidesarda.com/tags/logging/</link>
+      <link>http://localhost:1313/tags/logging/</link>
       <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/logging/</guid>
+      <guid>http://localhost:1313/tags/logging/</guid>
       <description></description>
     </item>
     <item>
       <title>Testflix</title>
-      <link>https://www.vaishalidesarda.com/tags/testflix/</link>
+      <link>http://localhost:1313/tags/testflix/</link>
       <pubDate>Sat, 28 Nov 2020 16:55:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/testflix/</guid>
+      <guid>http://localhost:1313/tags/testflix/</guid>
       <description></description>
     </item>
     <item>
       <title>Risks</title>
-      <link>https://www.vaishalidesarda.com/tags/risks/</link>
+      <link>http://localhost:1313/tags/risks/</link>
       <pubDate>Fri, 27 Nov 2020 18:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/risks/</guid>
+      <guid>http://localhost:1313/tags/risks/</guid>
       <description></description>
     </item>
     <item>
       <title>Agiletesting</title>
-      <link>https://www.vaishalidesarda.com/tags/agiletesting/</link>
+      <link>http://localhost:1313/tags/agiletesting/</link>
       <pubDate>Thu, 16 Jul 2020 14:40:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/agiletesting/</guid>
+      <guid>http://localhost:1313/tags/agiletesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Offline</title>
-      <link>https://www.vaishalidesarda.com/tags/offline/</link>
+      <link>http://localhost:1313/tags/offline/</link>
       <pubDate>Thu, 16 Jul 2020 14:40:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/offline/</guid>
+      <guid>http://localhost:1313/tags/offline/</guid>
       <description></description>
     </item>
     <item>
       <title>Exploratorytesting</title>
-      <link>https://www.vaishalidesarda.com/tags/exploratorytesting/</link>
+      <link>http://localhost:1313/tags/exploratorytesting/</link>
       <pubDate>Sat, 11 Jul 2020 19:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/exploratorytesting/</guid>
+      <guid>http://localhost:1313/tags/exploratorytesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Apidesign</title>
-      <link>https://www.vaishalidesarda.com/tags/apidesign/</link>
+      <link>http://localhost:1313/tags/apidesign/</link>
       <pubDate>Mon, 06 Jul 2020 20:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/apidesign/</guid>
+      <guid>http://localhost:1313/tags/apidesign/</guid>
       <description></description>
     </item>
     <item>
       <title>Apitesting</title>
-      <link>https://www.vaishalidesarda.com/tags/apitesting/</link>
+      <link>http://localhost:1313/tags/apitesting/</link>
       <pubDate>Mon, 06 Jul 2020 20:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/apitesting/</guid>
+      <guid>http://localhost:1313/tags/apitesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Mobiletesting</title>
-      <link>https://www.vaishalidesarda.com/tags/mobiletesting/</link>
+      <link>http://localhost:1313/tags/mobiletesting/</link>
       <pubDate>Mon, 06 Jul 2020 20:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/mobiletesting/</guid>
+      <guid>http://localhost:1313/tags/mobiletesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Negativetesting</title>
-      <link>https://www.vaishalidesarda.com/tags/negativetesting/</link>
+      <link>http://localhost:1313/tags/negativetesting/</link>
       <pubDate>Thu, 05 Mar 2020 10:15:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/negativetesting/</guid>
+      <guid>http://localhost:1313/tags/negativetesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Unhappypath</title>
-      <link>https://www.vaishalidesarda.com/tags/unhappypath/</link>
+      <link>http://localhost:1313/tags/unhappypath/</link>
       <pubDate>Thu, 05 Mar 2020 10:15:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/unhappypath/</guid>
+      <guid>http://localhost:1313/tags/unhappypath/</guid>
       <description></description>
     </item>
     <item>
       <title>Dealingwithachange</title>
-      <link>https://www.vaishalidesarda.com/tags/dealingwithachange/</link>
+      <link>http://localhost:1313/tags/dealingwithachange/</link>
       <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/dealingwithachange/</guid>
+      <guid>http://localhost:1313/tags/dealingwithachange/</guid>
       <description></description>
     </item>
     <item>
       <title>Qa</title>
-      <link>https://www.vaishalidesarda.com/tags/qa/</link>
+      <link>http://localhost:1313/tags/qa/</link>
       <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/qa/</guid>
+      <guid>http://localhost:1313/tags/qa/</guid>
       <description></description>
     </item>
     <item>
       <title>Requirement</title>
-      <link>https://www.vaishalidesarda.com/tags/requirement/</link>
+      <link>http://localhost:1313/tags/requirement/</link>
       <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/requirement/</guid>
+      <guid>http://localhost:1313/tags/requirement/</guid>
       <description></description>
     </item>
     <item>
       <title>Requirementchange</title>
-      <link>https://www.vaishalidesarda.com/tags/requirementchange/</link>
+      <link>http://localhost:1313/tags/requirementchange/</link>
       <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/requirementchange/</guid>
+      <guid>http://localhost:1313/tags/requirementchange/</guid>
       <description></description>
     </item>
     <item>
       <title>Apptesting</title>
-      <link>https://www.vaishalidesarda.com/tags/apptesting/</link>
+      <link>http://localhost:1313/tags/apptesting/</link>
       <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/apptesting/</guid>
+      <guid>http://localhost:1313/tags/apptesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Golive</title>
-      <link>https://www.vaishalidesarda.com/tags/golive/</link>
+      <link>http://localhost:1313/tags/golive/</link>
       <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/golive/</guid>
+      <guid>http://localhost:1313/tags/golive/</guid>
       <description></description>
     </item>
     <item>
       <title>Postlaunch</title>
-      <link>https://www.vaishalidesarda.com/tags/postlaunch/</link>
+      <link>http://localhost:1313/tags/postlaunch/</link>
       <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/postlaunch/</guid>
+      <guid>http://localhost:1313/tags/postlaunch/</guid>
       <description></description>
     </item>
     <item>
       <title>Release</title>
-      <link>https://www.vaishalidesarda.com/tags/release/</link>
+      <link>http://localhost:1313/tags/release/</link>
       <pubDate>Sun, 06 Oct 2019 11:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/release/</guid>
+      <guid>http://localhost:1313/tags/release/</guid>
       <description></description>
     </item>
     <item>
       <title>Softwarewithbugs</title>
-      <link>https://www.vaishalidesarda.com/tags/softwarewithbugs/</link>
+      <link>http://localhost:1313/tags/softwarewithbugs/</link>
       <pubDate>Sun, 06 Oct 2019 11:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/softwarewithbugs/</guid>
+      <guid>http://localhost:1313/tags/softwarewithbugs/</guid>
       <description></description>
     </item>
     <item>
       <title>Earlyfeedback</title>
-      <link>https://www.vaishalidesarda.com/tags/earlyfeedback/</link>
+      <link>http://localhost:1313/tags/earlyfeedback/</link>
       <pubDate>Sat, 21 Sep 2019 17:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/earlyfeedback/</guid>
+      <guid>http://localhost:1313/tags/earlyfeedback/</guid>
       <description></description>
     </item>
     <item>
       <title>Agileqa</title>
-      <link>https://www.vaishalidesarda.com/tags/agileqa/</link>
+      <link>http://localhost:1313/tags/agileqa/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/agileqa/</guid>
+      <guid>http://localhost:1313/tags/agileqa/</guid>
       <description></description>
     </item>
     <item>
       <title>Agilesoftwaredevelopment</title>
-      <link>https://www.vaishalidesarda.com/tags/agilesoftwaredevelopment/</link>
+      <link>http://localhost:1313/tags/agilesoftwaredevelopment/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/agilesoftwaredevelopment/</guid>
+      <guid>http://localhost:1313/tags/agilesoftwaredevelopment/</guid>
       <description></description>
     </item>
     <item>
       <title>Continuousdelivery</title>
-      <link>https://www.vaishalidesarda.com/tags/continuousdelivery/</link>
+      <link>http://localhost:1313/tags/continuousdelivery/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/continuousdelivery/</guid>
+      <guid>http://localhost:1313/tags/continuousdelivery/</guid>
       <description></description>
     </item>
     <item>
       <title>Discovertheunknown</title>
-      <link>https://www.vaishalidesarda.com/tags/discovertheunknown/</link>
+      <link>http://localhost:1313/tags/discovertheunknown/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/discovertheunknown/</guid>
+      <guid>http://localhost:1313/tags/discovertheunknown/</guid>
       <description></description>
     </item>
     <item>
       <title>Unscripted</title>
-      <link>https://www.vaishalidesarda.com/tags/unscripted/</link>
+      <link>http://localhost:1313/tags/unscripted/</link>
       <pubDate>Sun, 07 Jul 2019 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/unscripted/</guid>
+      <guid>http://localhost:1313/tags/unscripted/</guid>
       <description></description>
     </item>
     <item>
       <title>Calisa</title>
-      <link>https://www.vaishalidesarda.com/tags/calisa/</link>
+      <link>http://localhost:1313/tags/calisa/</link>
       <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/calisa/</guid>
+      <guid>http://localhost:1313/tags/calisa/</guid>
       <description></description>
     </item>
     <item>
       <title>Mocks</title>
-      <link>https://www.vaishalidesarda.com/tags/mocks/</link>
+      <link>http://localhost:1313/tags/mocks/</link>
       <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/mocks/</guid>
+      <guid>http://localhost:1313/tags/mocks/</guid>
       <description></description>
     </item>
     <item>
       <title>Mountebank</title>
-      <link>https://www.vaishalidesarda.com/tags/mountebank/</link>
+      <link>http://localhost:1313/tags/mountebank/</link>
       <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/mountebank/</guid>
+      <guid>http://localhost:1313/tags/mountebank/</guid>
       <description></description>
     </item>
     <item>
       <title>Servicevirtualization</title>
-      <link>https://www.vaishalidesarda.com/tags/servicevirtualization/</link>
+      <link>http://localhost:1313/tags/servicevirtualization/</link>
       <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/servicevirtualization/</guid>
+      <guid>http://localhost:1313/tags/servicevirtualization/</guid>
       <description></description>
     </item>
     <item>
       <title>Stubs</title>
-      <link>https://www.vaishalidesarda.com/tags/stubs/</link>
+      <link>http://localhost:1313/tags/stubs/</link>
       <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/stubs/</guid>
+      <guid>http://localhost:1313/tags/stubs/</guid>
       <description></description>
     </item>
     <item>
       <title>Whyqa</title>
-      <link>https://www.vaishalidesarda.com/tags/whyqa/</link>
+      <link>http://localhost:1313/tags/whyqa/</link>
       <pubDate>Sun, 24 Mar 2019 10:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/whyqa/</guid>
+      <guid>http://localhost:1313/tags/whyqa/</guid>
       <description></description>
     </item>
     <item>
       <title>Agiletesting </title>
-      <link>https://www.vaishalidesarda.com/tags/agiletesting-/</link>
+      <link>http://localhost:1313/tags/agiletesting-/</link>
       <pubDate>Sun, 13 Jan 2019 16:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/agiletesting-/</guid>
+      <guid>http://localhost:1313/tags/agiletesting-/</guid>
       <description></description>
     </item>
     <item>
       <title>Virtualization</title>
-      <link>https://www.vaishalidesarda.com/tags/virtualization/</link>
+      <link>http://localhost:1313/tags/virtualization/</link>
       <pubDate>Fri, 16 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/virtualization/</guid>
+      <guid>http://localhost:1313/tags/virtualization/</guid>
       <description></description>
     </item>
     <item>
       <title>Defectprevention</title>
-      <link>https://www.vaishalidesarda.com/tags/defectprevention/</link>
+      <link>http://localhost:1313/tags/defectprevention/</link>
       <pubDate>Wed, 07 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/tags/defectprevention/</guid>
+      <guid>http://localhost:1313/tags/defectprevention/</guid>
       <description></description>
     </item>
   </channel>

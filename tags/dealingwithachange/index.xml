@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dealingwithachange on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/dealingwithachange/</link>
+    <link>http://localhost:1313/tags/dealingwithachange/</link>
     <description>Recent content in Dealingwithachange on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 Jan 2020 16:30:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/dealingwithachange/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/dealingwithachange/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dealing with changes in requirements!</title>
-      <link>https://www.vaishalidesarda.com/quality/dealing_with_changes/</link>
+      <link>http://localhost:1313/quality/dealing_with_changes/</link>
       <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/dealing_with_changes/</guid>
+      <guid>http://localhost:1313/quality/dealing_with_changes/</guid>
       <description>This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&amp;hellip;&#xA;General scenarios when one ends up in this situation :&#xA;You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.&#xA;OR You just signed off the story. It’s about to be released as an update.</description>
     </item>
   </channel>

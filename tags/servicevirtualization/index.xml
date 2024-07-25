@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Servicevirtualization on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/servicevirtualization/</link>
+    <link>http://localhost:1313/tags/servicevirtualization/</link>
     <description>Recent content in Servicevirtualization on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 20 Apr 2019 18:00:30 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/servicevirtualization/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/servicevirtualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stubs, Mocks, Virtualization – What’s in a name!</title>
-      <link>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</link>
+      <link>http://localhost:1313/quality/stubs_mocks_virtualisation/</link>
       <pubDate>Sat, 20 Apr 2019 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/stubs_mocks_virtualisation/</guid>
+      <guid>http://localhost:1313/quality/stubs_mocks_virtualisation/</guid>
       <description>Tests are specifications detailing about how to test, what to test, how much to test, how frequently to test. You derive them from Acceptance Criteria (AC).&#xA;To achieve good quality code and test coverage, we opt for TDD- Test Driven Development. You write a test for AC, then you write the code to pass that test then you write another test and repeat till the AC conditions are fulfilled!&#xA;We usually tend to verify-</description>
     </item>
     <item>
       <title>Service Virtualization - When integration points are a dependency for development</title>
-      <link>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</link>
+      <link>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</link>
       <pubDate>Fri, 16 Nov 2018 17:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/service_virtualisation_integration_dependancy/</guid>
+      <guid>http://localhost:1313/quality/service_virtualisation_integration_dependancy/</guid>
       <description>Being dependent on is nothing but relying upon. One has to wait for that other thing to get the task at hand started/completed.&#xA;If Dependencies are not resolved or not made available, the task cannot be started/completed.&#xA;If dependencies are made available, much of the testing from QA &amp;amp; Dev at a component level, Unit level, can “shift left,” or be moved earlier in the SDLC. This is because each component can be tested individually instead of waiting for complete assembly.</description>
     </item>
   </channel>

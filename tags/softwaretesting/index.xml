@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Softwaretesting on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/softwaretesting/</link>
+    <link>http://localhost:1313/tags/softwaretesting/</link>
     <description>Recent content in Softwaretesting on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 13 Dec 2020 11:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/softwaretesting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/softwaretesting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>When the bug is &#39;non-reproducible&#39;​...</title>
-      <link>https://www.vaishalidesarda.com/quality/when_the_bug/</link>
+      <link>http://localhost:1313/quality/when_the_bug/</link>
       <pubDate>Sun, 13 Dec 2020 11:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/when_the_bug/</guid>
+      <guid>http://localhost:1313/quality/when_the_bug/</guid>
       <description>Murphy’s Law states - “Anything that can go wrong, will go wrong!” - but do you know how it’s going wrong? What if it doesn’t go wrong again? What if you can’t make it go wrong again?&#xA;You find a bug, head over to the dev team and you say - “This is a bug. This is not the ideal user experience. Are we okay with this behaviour? This is not as per the Acceptance criteria.</description>
     </item>
     <item>
       <title>Identify issues faster with logs!</title>
-      <link>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</link>
+      <link>http://localhost:1313/quality/identify_issues_faster_with_logs/</link>
       <pubDate>Sat, 05 Dec 2020 14:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/identify_issues_faster_with_logs/</guid>
+      <guid>http://localhost:1313/quality/identify_issues_faster_with_logs/</guid>
       <description>You are in the midst of exploring the mobile app when it suddenly crashes.&#xA;You don’t recollect what sequence of actions exactly made it crash. You try to remember and execute the same steps again but in vain. The app doesn’t crash anymore!&#xA;Things going on in your mind :&#xA;How would you identify what had caused the crash? What if it doesn’t crash anymore? What if you missed keeping track of the steps you performed on the system/app?</description>
     </item>
   </channel>

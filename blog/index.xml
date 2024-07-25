@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent Posts on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Recent Posts on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 09 Sep 2023 13:32:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>So, who should review a feature</title>
-      <link>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</link>
+      <link>http://localhost:1313/blog/so-who-should-review-a-feature/</link>
       <pubDate>Sat, 09 Sep 2023 13:32:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</guid>
+      <guid>http://localhost:1313/blog/so-who-should-review-a-feature/</guid>
       <description>“Why is that even a question!?”, you wonder. Well, it very much is a question, and the answer is “All stakeholders”.&#xA;The one who signed the contract The one who turned it into a high-level idea The one who approved the idea The one who made business requirements out of it The one who did design One who wireframed it The one turning it into acceptance criteria The one who built it The one who tested and signed off The one who understood the risks before giving a Go One who funded it and the one who sold it on paper These and many more stakeholders.</description>
     </item>
     <item>
       <title>Aftermath of Production bug</title>
-      <link>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</link>
+      <link>http://localhost:1313/blog/aftermath_of_production_bug/</link>
       <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</guid>
+      <guid>http://localhost:1313/blog/aftermath_of_production_bug/</guid>
       <description>Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.&#xA;And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.&#xA;Well the production bug could be because we missed:&#xA;some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself.</description>
     </item>
     <item>
       <title>Are Canary Releases an Alternative to Testers?</title>
-      <link>https://www.vaishalidesarda.com/blog/article_in_infoq/</link>
+      <link>http://localhost:1313/blog/article_in_infoq/</link>
       <pubDate>Thu, 04 Nov 2021 07:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/blog/article_in_infoq/</guid>
+      <guid>http://localhost:1313/blog/article_in_infoq/</guid>
       <description>My first article at InfoQ is published. Thanks to Hrishikesh Barua for the review and the support.&#xA;Article URL : Are Canary Releases an Alternative to Testers?</description>
     </item>
   </channel>
