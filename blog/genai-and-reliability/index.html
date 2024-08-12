@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    GenAI and Reliability: On the road to building Trust - Becoming a better Tester!
+  </title>
+  <meta name="description" content="The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…
+Just like in Black Mirror, we&rsquo;re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!" />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.128.2"><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.fd38bf4eb79040344dfec5abb1b7eff6b2672b19fa7a6b9254c9ce2dec3cea9d.css"
+    integrity="sha256-/Ti/TreQQDRN/sWrsbfv9rJnKxn6emuSVMnOLew86p0="
+  />
+  
+  
+
+  <meta property="og:url" content="https://www.vaishalidesarda.com/blog/genai-and-reliability/">
+  <meta property="og:site_name" content="Becoming a better Tester!">
+  <meta property="og:title" content="GenAI and Reliability: On the road to building Trust">
+  <meta property="og:description" content="The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…
+Just like in Black Mirror, we’re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-08-12T22:04:00+00:00">
+    <meta property="article:modified_time" content="2024-08-12T22:04:00+00:00">
+    <meta property="article:tag" content="Testing">
+    <meta property="article:tag" content="QualityAssurance">
+    <meta property="article:tag" content="AITrust">
+    <meta property="article:tag" content="AITesting">
+    <meta property="article:tag" content="GenAI">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GenAI and Reliability: On the road to building Trust">
+  <meta name="twitter:description" content="The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…
+Just like in Black Mirror, we’re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!">
+
+  
+  <meta itemprop="name" content="GenAI and Reliability: On the road to building Trust">
+  <meta itemprop="description" content="The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…
+Just like in Black Mirror, we’re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!">
+  <meta itemprop="datePublished" content="2024-08-12T22:04:00+00:00">
+  <meta itemprop="dateModified" content="2024-08-12T22:04:00+00:00">
+  <meta itemprop="wordCount" content="2106">
+  <meta itemprop="keywords" content="Testing,QualityAssurance,AITrust,AITesting,GenAI">
+  
+  
+    
+      
+    
+  
+
+
+
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+      <li><a href="../../utilities">Utilities</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/activity/">Activities</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/un.jpg" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      August 12, 2024
+<br>
+
+⌚ : 10 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/qualityassurance/">qualityassurance</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/aitrust/">aitrust</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/aitesting/">aitesting</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/genai/">genai</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">GenAI and Reliability: On the road to building Trust</h1>
+	
+    <p>The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…</p>
+<p>Just like in <i>Black Mirror</i>, we&rsquo;re entering a new tech era with endless possibilities. Established products  are  incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to  2021.</br>
+Imagine this - One fine day at an all-hands, the management  announces - “The product is getting AI integration!”.  On a project, we were informed over just a Slack message.</p>
+<p>As exciting as AI and the evident benefits may be, it is important when rolling out a product to apply a Zero Trust approach to AI/GenAI. The reason being-  just as AI is now super handy for us ( some seem to have it on speed dial for every situation), it can help hackers in a similar way by giving them access to sensitive information, like entry points and personal data. This can upset the user base and threaten the organisation’s security.</p>
+<blockquote>
+<h2 id="remember---a-product-may-be-without-the-obvious-issuesbugs-but-may-hinder-users-when-it-comes-to-biasesfairnessaccuracycybersecuritybehaviour-patternhacks">Remember - a product may be without the obvious issues(bugs) but may hinder users when it comes to biases/fairness/accuracy/cybersecurity/behaviour pattern/hacks.</h2>
+</blockquote>
+<p>Let us see some examples of how skipping/missing out on quality checks can misfire. </br>
+I am not talking about tricking LLM into doing things it’s not meant for. You need to use AI/GenAI responsibly. Know the limitations. Give instructions it’s designed for. It can still fail even if you understand its working/design.</p>
+<p><strong><u>Here’s a glimpse of what apps with GenAI can do:</u></strong></p>
+<p><strong>App Context -</strong> A <i><u>language translation tool</i></u> embedded with GenAI. </br>
+At the start, GenAI responded with impressive accuracy and fluency for the translations. Hence, the PMs, Dev, and Testers, heavily reliant on the AI&rsquo;s capabilities, skipped the thorough testing of the &ldquo;bias&rdquo; and &ldquo;fairness&rdquo; aspects of the GenAI when it comes to translations.</p>
+<p>You might wonder - What  could go wrong for a language translation app with respect to bias or fairness? After all, it is just language translations?</p>
+<p><strong>Here’s   what went wrong after the release:</strong> </br>
+Users discovered the translated text had unexpected biases. For example, translations involving names of women defaulted to professions like &ldquo;nurse&rdquo; or &ldquo;secretary,&rdquo; while men&rsquo;s names translated to careers like &ldquo;doctor&rdquo; or &ldquo;executive&rdquo;.
+Such biased translations sparked outrage, raising ethical concerns and damaging the software&rsquo;s reputation in unanticipated ways.</p>
+<p><strong>Why GenAI behaved like this:</strong> GenAI and models are made up of huge sets of data that it gets trained with. The data fed in here had biases, which the model   incorporated into its translations. <i>Artificial Intelligence is statistics and is neither socially aware nor sensitive.</i></p>
+<p><strong>Lessons Learned for the Team:</strong></br>
+<strong>Don&rsquo;t blindly trust genAI:</strong> While powerful, genAI is limited by its training data. Critical evaluation of its output remains crucial. If possible, review and filter the data being fed.</br>
+<strong>Focus on diverse testing:</strong> Expand QA beyond functionality, and include checks for potential bias, fairness, and unintended consequences.</br>
+<strong>Transparency and explainability:</strong> Understand how GenAI works and be transparent with users about its limitations.</p>
+<p><strong><i><u>Let us take another example in Healthcare</i></u></strong> where GenAI is used to analyse the data <i><u>to detect heart-related disease and prescribe thereafter:</i></u></p>
+<p><strong>App Context:</strong> A GenAI-powered diagnostic tool for detecting heart disease. The tool analyze patient data and provides highly accurate diagnosis, reducing time and error in traditional methods.</p>
+<p><strong>What went wrong:</strong></br>
+As it was saving a lot of time and  was mostly error-free, the software  got adopted quickly.
+After some time, several patients experienced unexpected side effects after receiving medications recommended by the AI.</p>
+<p><strong>Why GenAI behaved like this:</strong> The investigation revealed the AI, trained on historical data, over-recommended a specific medication known to have rare but severe side effects in specific patient subgroups which were not adequately considered during quality checks.</p>
+<p><strong>A possible solution :</strong> Recognizing the limitations of the initial quality check, the AI can be trained to analyze not only diagnostic accuracy but also potential side effects based on individual patient profiles. This can flag the potential issues to be reviewed by clinicians before they hit that ‘SEND’ button.</p>
+<p><strong>Lessons Learned for the team:</strong></br>
+<strong>Go beyond core functionalities:</strong> Quality checks for AI-powered healthcare solutions must go beyond primary functions and consider potential downstream effects like side effects or misdiagnosis in specific patient populations. (Not all the red flags are a stroke)</br>
+<strong>Embrace the potential of AI for comprehensive checks:</strong> Utilise the capabilities of generative AI for broader and more nuanced testing, including analysis of potential unintended consequences.</br>
+<strong>Focus on patient safety:</strong> Maintain a critical yet patient-centric approach throughout the development and implementation phases of AI-powered healthcare solutions.</p>
+<p><i><u>Here’s another example of a <strong>Firewall breach:</strong></i></u></p>
+<p><strong>App context:</strong> A security company releases a revolutionary AI-powered firewall, promising impenetrable defense against cyber threats. The company, confident in the AI&rsquo;s capabilities, implements only basic quality checks focused on functionality.</p>
+<p><strong>What went wrong:</strong>  However, a sophisticated hacking group discovers a critical vulnerability in the AI&rsquo;s decision-making process, allowing it to bypass the firewall via certain specific conditions and access sensitive data.</br>
+The data breach leads to significant financial losses and reputational damage for the security company. </br>
+The incident reveals the inadequacy of the initial quality checks by the stakeholders and decision makers, which solely focused on the AI&rsquo;s ability to detect known threats but failed to consider its vulnerabilities to novel attack vectors.</p>
+<p><strong>Learning from the Breach:</strong> The company reevaluated its approach and implements a comprehensive quality check strategy for future genAI-embedded security solutions. They leveraged the power of generative AI to simulate diverse attack scenarios, pushing the AI&rsquo;s defenses beyond their initial training data. This &ldquo;adversarial training&rdquo; helped identify and address potential vulnerabilities before they could be exploited by real attackers.</p>
+<p><strong>Lessons Learned:</strong></br>
+<strong>Quality checks beyond functionality:</strong> Cybersecurity solutions with embedded genAI require rigorous quality checks that extend beyond core functionalities. Testing should also consider potential vulnerabilities and the AI&rsquo;s ability to adapt to novel threats.</br>
+<strong>Embrace adversarial training:</strong> Utilize generative AI to simulate diverse attack scenarios and continuously test the AI&rsquo;s defenses against evolving threats.</br>
+<strong>Proactive security posture:</strong> Maintain a proactive approach to security by continuously improving and refining AI-powered defenses through ongoing testing and adaptation.</p>
+<p><strong>As an aside, here is a  typical fear with Self Driving Cars</strong> - What if the car overlooks the stop sign or a child running across the road?</p>
+<p><strong><i>All these incidents give us a glimpse of how we can blindly be reliant on GenAI, impressed with its initial accuracy and fluency. It may detect known threats but we need to ensure it catches the novel attack vectors, the side effects, the biases, the fairness, the consistent accuracy etc.</i></strong></br></p>
+<p><strong>What GenAI is</strong> - GenAI can respond to you in a human-based way. It responds to you in the context you have prompted it with and creates a perfect and a new response that suits your needs - thanks to RAG. </br>
+We are making AI work as humans. GenAI is advancing impressively with each passing day. With all the digital products we are accompanied with 24x7, AI is going to influence or has already started influencing our health, finances and life altogether.</p>
+<p>There are mainly 3 ways of using GenAI.</p>
+<ul>
+<li>You develop your models and GenAI platforms</li>
+<li>You use open-source LLMs and platforms and embed them in your application or just use them without embedding.</li>
+<li>GenAI agents (multi-agents awaiting) and systems that function independently or in combination with LLMs.</li>
+</ul>
+<p><strong>While the GenAI is flexible enough to work for you, the stakes are high!</strong> </br>While the data scientists, LLM researchers, and developers are working towards making GenAI more flexible and safe to use, the stakeholders need to exploit the knowledge they have and  explore further to understand the preferences in responses/working of LLM.</p>
+<p><strong>High-level strategy checks to keep in mind when you test anything related to GenAI before launch:</strong></p>
+<ol>
+<li>Understand the model getting embedded in the application - limitations, design, api stuff. The kind of data it was trained with. Without this information, you will not be able to put the checks around. To start with - check all the field inputs the model is taking from the product feature.</li>
+<li>Understand the “Max Tokens” value to know the length of the response.</li>
+<li>A few checks which we apply to non-AI testing shall apply too.</li>
+<li>Did you give it a try - different testing data than what it’s trained on.</li>
+<li><i>The data is of main concern - Data accuracy is of utmost importance.</i> Ensure the integrity remains intact and the dataset includes adequate diversity. (The language tool example we discussed earlier)</li>
+<li>At how many places is this model used in the application? Check if those different points can influence the way AI generates the answer at any other checkpoint.</li>
+<li>Get familiar with the attack surface related to the product &amp; also the customers so as to determine/know the risks AI response would generate.</li>
+<li>Does it give false negatives/positives - which may lead to losing the clients.
+Eg. in the case of cyber security - too many false positives and your client may not like it.
+Missing on false negative - may lead to a system breach.</li>
+<li>Can you convince it to learn the wrong things e.g. 10+10 = 30</li>
+<li>Does it behave differently depending on the different accents?</li>
+<li>Does it behave fair when it deals with the health data of different races ? And how about different accents?</li>
+<li>Does updating the open-source tools change the behaviour in your application - either in terms of answers, notes, speed etc.</li>
+<li>Do you have automation ready to check with the auto training or version upgrading of LLMs?</li>
+<li>Are you able to train the model by just asking different questions or by inputting a number of different data? Like doing prompt engineering.</li>
+<li>How much time does it take to train with a team of 20 testing?</li>
+<li>Does it work with common logic? Try comparing answers/reports with another LLM and compare which one would make more sense to the user or is right for the user. And then do backpropagation (retrospect).</li>
+<li>Are you able to reverse-engineer the model?</li>
+<li>How do you differentiate the response between - expected, hallucination, confidant, prediction.</li>
+<li>How much fine-tuning is needed?
+20 If it’s a scanning software, is it missing on some data/files/email to scan?</li>
+<li>Does it give away extra information which is not asked for? - like IP, secrets, private data? Does your model compromise the information?</li>
+<li>Does it stop working after multiple similar questions? (I dealt with this)</li>
+<li>How does a “temperature” change in api make your product behave?</li>
+<li>Is your model  programmed to block certain things - Does it work as desired? (I am not talking about “gimme the steps to make a malware” prompt)</li>
+<li>If it’s a chatbox, does it understand the natural language, does it get influenced by the wrong information? Does it handle spelling mistakes by itself without human assistance?</li>
+<li>If it’s a summary-generating application - does it generate a different summary/right summary for the same data with different types of prompts (positive, negative) or when tried multiple times with the same data?</li>
+<li>If it’s a Social Media app, if (out of a team of 20), 10 users click on a close ad and 10 see the ad, what does your model behave like?</li>
+<li>If it’s a cyber security app - </br>
+a. Is it missing an understood vulnerability? See the false positive or false negative scenario  we discussed  earlier  .</br>
+b. Is it flagging the same requests multiple times ?</br>
+c. Is the data being manipulated? etc</li>
+<li>Does it work better than what is already in the market with your competitor? Do you have solid reasons why the clients will stick to your version of GenAI?</li>
+</ol>
+<p><strong>How to strategize:</strong></p>
+<ul>
+<li>The strategy, the classifications of the risks involved, and the adaptability of the models will differ on the combination of the domain and the above points to start with.</li>
+<li>Know the model, your Product and its usage in the real world - Understanding the underlying risk with the kind of industry you are currently working on is necessary. KNow the industry and your users and you are halfway through!</li>
+<li>Have a plan to deal with information overload. (this would be a never ending thing tho)</li>
+<li>Start small. Classify. Know where you are applying and to what you are applying.</li>
+</ul>
+<br>
+We always are super confident in what we have built. We treat it as our baby, but overlooking even the smallest vulnerability /risk would lead to disastrous consequences.</br>
+Advances of GenAI, upsets with GenAI and attacks using GenAI will surprise you each day. The least you can do is be proactive and prepared by having the necessary quality checks in place.
+<p>Cheers!</p>
+<p style="font-size: small;">Pic credits - unsplash.com</p>
+  </article>
+
+  
+<div class="share-container">
+  <button class="share-button" onclick="toggleSharePopup()" aria-label="Share">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="18" cy="18" r="3" />
+      <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+      <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+    </svg>
+  </button>
+  <div id="share-popup" class="share-popup hidden">
+    <a href="#" class="share-icon" onclick="shareOnLinkedIn(); return false;" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <line x1="8" y1="11" x2="8" y2="16"/>
+        <line x1="8" y1="8" x2="8" y2="8.01"/>
+        <line x1="12" y1="16" x2="12" y2="11"/>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnTwitter(); return false;" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnGmail(); return false;" aria-label="Gmail">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H8a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z"/>
+        <path d="M2 7l10 7l10-7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  function toggleSharePopup() {
+    var popup = document.getElementById('share-popup');
+    popup.classList.toggle('hidden');
+  }
+
+  function shareOnLinkedIn() {
+    var url = window.location.href;
+    var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnTwitter() {
+    var url = window.location.href;
+    var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnGmail() {
+    var url = window.location.href;
+    var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank');
+  }
+</script>
+
+<style>
+.share-container {
+    position: fixed;  
+    top: 50%;  
+    right: 100px;  
+    transform: translateY(-50%);  
+    z-index: 1000;  
+  }
+
+ .share-button {
+    background-color: transparent;  
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-popup {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .share-icon {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .share-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/"> &lt;&lt; Aftermath of Production bug</a> </div></ul>
+                <ul class="flex justify-right gap-8"> 
+      <a class="next" href="https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/"> So, who should review a feature >></a></div>     
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+
+
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+  <script>
+    function shareOnLinkedIn() {
+        var url = window.location.href;
+        var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnTwitter() {
+        var url = window.location.href;
+        var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnGmail() {
+        var url = window.location.href;
+        var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank');
+    }
+  </script>
+
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2024 © Becoming a better Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

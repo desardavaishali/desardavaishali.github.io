@@ -23,6 +23,21 @@
     <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
     <lastmod>2023-09-09T13:32:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/aitesting/</loc>
+    <lastmod>2024-08-12T22:04:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/aitrust/</loc>
+    <lastmod>2024-08-12T22:04:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/genai/</loc>
+    <lastmod>2024-08-12T22:04:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/genai-and-reliability/</loc>
+    <lastmod>2024-08-12T22:04:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/qualityassurance/</loc>
+    <lastmod>2024-08-12T22:04:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.vaishalidesarda.com/tags/exploratory/</loc>
     <lastmod>2022-04-10T18:00:30+00:00</lastmod>
   </url><url>
@@ -41,13 +56,16 @@
     <loc>https://www.vaishalidesarda.com/tags/productionbug/</loc>
     <lastmod>2021-12-22T21:34:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/article_in_infoq/</loc>
+    <loc>https://www.vaishalidesarda.com/quality/article_in_infoq/</loc>
     <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/canary/</loc>
     <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/devops/</loc>
+    <lastmod>2021-11-04T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/quality/</loc>
     <lastmod>2021-11-04T07:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/craft/</loc>
@@ -65,9 +83,6 @@
     <loc>https://www.vaishalidesarda.com/tags/automation/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/quality/</loc>
-    <lastmod>2021-07-11T16:53:14+00:00</lastmod>
-  </url><url>
     <loc>https://www.vaishalidesarda.com/quality/should_we_check_static_ui_elements_with_automation_tests/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
@@ -80,13 +95,13 @@
     <loc>https://www.vaishalidesarda.com/tags/ui/</loc>
     <lastmod>2021-07-11T16:53:14+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/activities/</loc>
+    <loc>https://www.vaishalidesarda.com/activity/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/failqonf/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/activities/failqonf_ebook/</loc>
+    <loc>https://www.vaishalidesarda.com/activity/failqonf_ebook/</loc>
     <lastmod>2021-06-05T16:05:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/insights/practical_issues/</loc>
@@ -140,7 +155,7 @@
     <loc>https://www.vaishalidesarda.com/tags/testflix/</loc>
     <lastmod>2020-11-28T16:55:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/activities/testflix_talk/</loc>
+    <loc>https://www.vaishalidesarda.com/activity/testflix_talk/</loc>
     <lastmod>2020-11-28T16:55:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/risks/</loc>
