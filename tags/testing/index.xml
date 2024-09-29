@@ -6,21 +6,28 @@
     <description>Recent content in Testing on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 Sep 2023 13:32:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2024 13:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Test Like a CEO: A Fresh Take on Quality Assurance</title>
+      <link>https://www.vaishalidesarda.com/blog/test-like-a-ceo/</link>
+      <pubDate>Thu, 19 Sep 2024 13:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/test-like-a-ceo/</guid>
+      <description>&amp;ldquo;The only way to do great work is to love what you do.&amp;rdquo; - Steve Jobs&#xA;Now, imagine applying that passion and perspective to Testing. You’re not just a tester following scripts or protocols - you’re someone who loves what they do. Think of it like building a house, where you’re not just making sure the bricks are in place but are ensuring it’s the kind of home someone will love living in.</description>
+    </item>
+    <item>
+      <title>GenAI and Reliability: On the road to building Trust</title>
+      <link>https://www.vaishalidesarda.com/blog/genai-and-reliability/</link>
+      <pubDate>Mon, 12 Aug 2024 22:04:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/genai-and-reliability/</guid>
+      <description>The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…&#xA;Just like in Black Mirror, we&amp;rsquo;re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!</description>
+    </item>
     <item>
       <title>So, who should review a feature</title>
       <link>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</link>
       <pubDate>Sat, 09 Sep 2023 13:32:00 +0000</pubDate>
       <guid>https://www.vaishalidesarda.com/blog/so-who-should-review-a-feature/</guid>
       <description>“Why is that even a question!?”, you wonder. Well, it very much is a question, and the answer is “All stakeholders”.&#xA;The one who signed the contract The one who turned it into a high-level idea The one who approved the idea The one who made business requirements out of it The one who did design One who wireframed it The one turning it into acceptance criteria The one who built it The one who tested and signed off The one who understood the risks before giving a Go One who funded it and the one who sold it on paper These and many more stakeholders.</description>
-    </item>
-    <item>
-      <title>GenAI and Reliability: On the road to building Trust</title>
-      <link>https://www.vaishalidesarda.com/blog/genai-and-reliability/</link>
-      <pubDate>Sat, 12 Aug 2023 22:04:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/blog/genai-and-reliability/</guid>
-      <description>The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…&#xA;Just like in Black Mirror, we&amp;rsquo;re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!</description>
     </item>
     <item>
       <title>Hear to discover the Unseen</title>
@@ -31,9 +38,9 @@
     </item>
     <item>
       <title>Aftermath of Production bug</title>
-      <link>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</link>
+      <link>https://www.vaishalidesarda.com/insights/aftermath_of_production_bug/</link>
       <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/blog/aftermath_of_production_bug/</guid>
+      <guid>https://www.vaishalidesarda.com/insights/aftermath_of_production_bug/</guid>
       <description>Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.&#xA;And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.&#xA;Well the production bug could be because we missed:&#xA;some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself.</description>
     </item>
     <item>

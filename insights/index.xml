@@ -16,6 +16,13 @@
       <description>Yes, you read it right. I’m talking about “Hearing, and not listening”. While the world is focusing on listening as a skill, I want to draw attention to hear. The basic ability of ours. While listening requires focused attention, anything you overhear can be beneficial too!&#xA;Being a tester, the information I have is never enough. I always end up seeking new details.&#xA;While I was attentive in meetings, my basic hearing ability has been of a lot of use post meetings.</description>
     </item>
     <item>
+      <title>Aftermath of Production bug</title>
+      <link>https://www.vaishalidesarda.com/insights/aftermath_of_production_bug/</link>
+      <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/insights/aftermath_of_production_bug/</guid>
+      <description>Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.&#xA;And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.&#xA;Well the production bug could be because we missed:&#xA;some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself.</description>
+    </item>
+    <item>
       <title>Intuition can&#39;t be found in tools</title>
       <link>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</link>
       <pubDate>Sat, 31 Jul 2021 17:45:00 +0000</pubDate>

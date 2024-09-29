@@ -6,12 +6,19 @@
     <description>Recent content in QualityAssurance on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Aug 2023 22:04:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Sep 2024 13:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/tags/qualityassurance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Test Like a CEO: A Fresh Take on Quality Assurance</title>
+      <link>https://www.vaishalidesarda.com/blog/test-like-a-ceo/</link>
+      <pubDate>Thu, 19 Sep 2024 13:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/test-like-a-ceo/</guid>
+      <description>&amp;ldquo;The only way to do great work is to love what you do.&amp;rdquo; - Steve Jobs&#xA;Now, imagine applying that passion and perspective to Testing. You’re not just a tester following scripts or protocols - you’re someone who loves what they do. Think of it like building a house, where you’re not just making sure the bricks are in place but are ensuring it’s the kind of home someone will love living in.</description>
+    </item>
     <item>
       <title>GenAI and Reliability: On the road to building Trust</title>
       <link>https://www.vaishalidesarda.com/blog/genai-and-reliability/</link>
-      <pubDate>Sat, 12 Aug 2023 22:04:00 +0000</pubDate>
+      <pubDate>Mon, 12 Aug 2024 22:04:00 +0000</pubDate>
       <guid>https://www.vaishalidesarda.com/blog/genai-and-reliability/</guid>
       <description>The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…&#xA;Just like in Black Mirror, we&amp;rsquo;re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!</description>
     </item>
