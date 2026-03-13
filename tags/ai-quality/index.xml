@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Quality on Becoming a better Tester!</title>
+    <link>http://localhost:1313/tags/ai-quality/</link>
+    <description>Recent content in AI Quality on Becoming a better Tester!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai-quality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When &#39;Done&#39; Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems</title>
+      <link>http://localhost:1313/blog/when-done-is-not-done/</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/when-done-is-not-done/</guid>
+      <description>When “Done” Doesn&amp;rsquo;t Mean Done: A Quiet Reliability Gap in AI Systems “योगः कर्मसु कौशलम्”&#xA;Excellence lies in the precision of action.&#xA;We often celebrate intelligence in terms of articulation — the ability to explain, reason and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.&#xA;As AI systems become increasingly fluent, this distinction becomes more important than it first appears.&#xA;In several recent testing cycles, I began noticing a subtle but recurring pattern.</description>
+    </item>
+  </channel>
+</rss>

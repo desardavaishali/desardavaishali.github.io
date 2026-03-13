@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems - Becoming a better Tester!
+  </title>
+  <meta name="description" content="“योगः कर्मसु कौशलम्”Excellence lies in the precision of action.We often celebrate intelligence in terms of articulation - the ability to explain, reason, and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.
+As AI systems become increasingly fluent, this distinction becomes more important than it first appears.
+In several recent testing cycles, I began noticing a subtle but recurring pattern: the system would acknowledge an instruction, confirm that a change had been applied, and even explain what had been updated." />
+  <meta name="author" content="Vaishali Desarda" />
+  <meta name="generator" content="Hugo 0.128.2"><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.fd38bf4eb79040344dfec5abb1b7eff6b2672b19fa7a6b9254c9ce2dec3cea9d.css"
+    integrity="sha256-/Ti/TreQQDRN/sWrsbfv9rJnKxn6emuSVMnOLew86p0="
+  />
+  
+  
+
+  <meta property="og:url" content="https://www.vaishalidesarda.com/blog/when-done-is-not-done/">
+  <meta property="og:site_name" content="Becoming a better Tester!">
+  <meta property="og:title" content="When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems">
+  <meta property="og:description" content="“योगः कर्मसु कौशलम्”Excellence lies in the precision of action.We often celebrate intelligence in terms of articulation - the ability to explain, reason, and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.
+As AI systems become increasingly fluent, this distinction becomes more important than it first appears.
+In several recent testing cycles, I began noticing a subtle but recurring pattern: the system would acknowledge an instruction, confirm that a change had been applied, and even explain what had been updated.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-03-08T19:50:00+00:00">
+    <meta property="article:modified_time" content="2024-03-08T19:50:00+00:00">
+    <meta property="article:tag" content="AIQuality">
+    <meta property="article:tag" content="Softwaretesting">
+    <meta property="article:tag" content="TechStrategy">
+    <meta property="article:tag" content="QualityEngineering">
+    <meta property="article:tag" content="AITesting">
+    <meta property="article:tag" content="AITrust">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems">
+  <meta name="twitter:description" content="“योगः कर्मसु कौशलम्”Excellence lies in the precision of action.We often celebrate intelligence in terms of articulation - the ability to explain, reason, and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.
+As AI systems become increasingly fluent, this distinction becomes more important than it first appears.
+In several recent testing cycles, I began noticing a subtle but recurring pattern: the system would acknowledge an instruction, confirm that a change had been applied, and even explain what had been updated.">
+
+  
+  <meta itemprop="name" content="When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems">
+  <meta itemprop="description" content="“योगः कर्मसु कौशलम्”Excellence lies in the precision of action.We often celebrate intelligence in terms of articulation - the ability to explain, reason, and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.
+As AI systems become increasingly fluent, this distinction becomes more important than it first appears.
+In several recent testing cycles, I began noticing a subtle but recurring pattern: the system would acknowledge an instruction, confirm that a change had been applied, and even explain what had been updated.">
+  <meta itemprop="datePublished" content="2024-03-08T19:50:00+00:00">
+  <meta itemprop="dateModified" content="2024-03-08T19:50:00+00:00">
+  <meta itemprop="wordCount" content="1493">
+  <meta itemprop="keywords" content="AIQuality,Softwaretesting,TechStrategy,QualityEngineering,AITesting,AITrust,AIQualityEngineering,AgenticAI,ReliabilityEngineering,LLMTesting">
+  
+  
+    
+      
+    
+  
+
+
+
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+      <li><a href="../../utilities">Utilities</a></li>
+    
+
+    
+      <li><a href="https://www.vaishalidesarda.com/blog/">Recent Posts</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/insights/">Insights</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/quality/">Quality</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/activity/">Activities</a></li>
+    
+      <li><a href="https://www.vaishalidesarda.com/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/pgrm.png" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      March 8, 2024
+<br>
+
+⌚ : 7 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/aiquality/">aiquality</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agenticai/">agenticai</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/softwaretesting/">softwaretesting</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/techstrategy/">techstrategy</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/qualityengineering/">qualityengineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/aitesting/">aitesting</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/aitrust/">aitrust</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/reliabilityengineering/">reliabilityengineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/aiqualityengineering/">aiqualityengineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agenticai/">agenticai</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/reliabilityengineering/">reliabilityengineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/llmtesting/">llmtesting</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems</h1>
+	
+    <blockquote>
+<pre><code>  						 “योगः कर्मसु कौशलम्”
+  				Excellence lies in the precision of action.
+</code></pre>
+</blockquote>
+<p>We often celebrate intelligence in terms of articulation - the ability to explain, reason, and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.</p>
+<p>As AI systems become increasingly fluent, this distinction becomes more important than it first appears.<br>
+In several recent testing cycles, I began noticing a subtle but recurring pattern: the system would acknowledge an instruction, confirm that a change had been applied, and even explain what had been updated.</p>
+<p>Yet, when we inspected the underlying system state or traced the execution path, the change had not truly occurred.</p>
+<p>The response was coherent. The execution was not.</p>
+<p>At first glance, this may seem minor. In practice, it represents a reliability gap that grows more significant as AI systems shift from assistive tools to operational components within products.</p>
+<h2 id="not-a-hallucination---something-quieter">Not a Hallucination - Something Quieter</h2>
+<p>Much of today&rsquo;s AI risk discourse focuses <i><strong>on visible failures:</strong></i></p>
+<ul>
+<li><strong>Hallucinated information</strong></li>
+<li><strong>Bias in outputs</strong></li>
+<li><strong>False positives and false negatives</strong></li>
+<li><strong>Security vulnerabilities</strong></li>
+</ul>
+<p>These are important, measurable concerns.</p>
+<p>However, the pattern I have observed is different from the model generating incorrect output. I have identified that models may signal completion without having verified execution.<br>
+The verification is missing because platforms often mistake <strong>activity for achievement</strong>. An agentic tool might successfully &lsquo;run the test&rsquo;- triggering the code and seeing a response - but it lacks the critical eye to notice if the test passed on a technicality while the actual data drifted or failed silently behind the scenes. If explicit verification is not built into the application, then the application may rely on the agent&rsquo;s response and proceed.</p>
+<p>In traditional software systems, state change is deterministic. If a system confirms that a record has been updated, that update can be validated directly through logs, databases or downstream effects.<br>
+In AI-driven systems - particularly conversational or agent-like interfaces - confirmation itself can create an <strong>illusion of completion</strong>.</p>
+<h3 id="apicrawl-loop">API/Crawl Loop:</h3>
+<p>In my work with SEO analysis agents - systems designed to orchestrate complex tools like Semrush and Firecrawl - I began to see the &lsquo;Precision Gap&rsquo; in real-time. An agent would confidently present a &lsquo;Competitor Gap Analysis,&rsquo; mapping out keyword opportunities. The articulation was flawless.
+However, as a strategist, I don&rsquo;t test the output; I test the traceability. When I inspected the execution trace, I found that the Firecrawl sequence had timed out or the Semrush API had returned an error. <strong>Crucially, the agent&rsquo;s internal log even explicitly noted <code>Semrush API: Request Failed</code> - and yet, it immediately proceeded to generate a beautiful, comprehensive analysis of &lsquo;Competitor Keyword Gaps&rsquo; as if nothing had gone wrong.</strong>
+It acknowledged the failure, ignored it, and then used its linguistic capability to &lsquo;hallucinate the labor.&rsquo;<br>
+<strong>It wasn&rsquo;t lying; it&rsquo;s simply hallucinating its own success.</strong> It prioritized the performance of &lsquo;completing the task&rsquo; over the data truth of an &lsquo;API void.&rsquo; This is where &ldquo;Done&rdquo; becomes a pure performance.</p>
+<h2 id="ai-treats-data-as-creative-text">AI Treats Data as &ldquo;Creative&rdquo; Text</h2>
+<p>This reliability gap often stems from a fundamental misunderstanding of how LLMs handle data. In my research into structural AI failures, I&rsquo;ve identified a pattern where models treat <strong>structured schema as &ldquo;creative&rdquo; text</strong> rather than immutable data.</p>
+<p>I&rsquo;ve seen:</p>
+<ul>
+<li>
+<p><strong>HTML Entity Injection</strong><br>
+<code>&gt;</code> becomes <code>&amp;gt;</code></p>
+</li>
+<li>
+<p><strong>Case-Sensitivity Drift</strong><br>
+<code>customer_id</code> becomes <code>Customer_id</code></p>
+</li>
+</ul>
+<p>To a linguistic model, these are minor translations; to a technical system, they are fatal execution errors that break the handshake between the AI and the database. I&rsquo;ve identified a pattern where models treat structured schema as &lsquo;creative&rsquo; text.</p>
+<p>I&rsquo;ve seen</p>
+<ul>
+<li><strong>Noun Decay</strong><br>
+<code>Bill</code> (a person) becomes <code>bill</code> (invoice)</li>
+</ul>
+<p>Whether it&rsquo;s an identity in a database or a specific SKU in an SEO audit, when AI prioritizes linguistic &ldquo;fluency&rdquo; over <strong>Entity Anchors</strong>, the handshake between the AI and the technical system breaks.</p>
+<p>The system sounds certain. However,  certainty in language is not proof of action. </br>
+Just because an AI platform claims to have seen passing tests does not necessarily mean that it may have even run the tests, leave alone whether the tests passed or not!</p>
+<h2 id="when-fluency-masks-gaps">When Fluency Masks Gaps</h2>
+<p>This becomes more visible in higher-stakes environments.</p>
+<p>This mirrors a critical reliability issue I first explored in 2023 regarding <strong>Health-AI systems.</strong> In those environments, the gap is dangerous because human lives are at stake. In that case, a diagnostic model trained on historical data began systematically over-recommending a cardiac medication that carried rare but severe side effects for certain patient subgroups. The system&rsquo;s reasoning about the diagnosis was sound, yet it failed to incorporate those patient-specific risk conditions in its recommendation.</p>
+<p>I&rsquo;ve observed systems that logically explain a complex medical protocol with total clarity, yet fail to map that logic to the actual patient data state. The system defaults to high-frequency training patterns rather than the specific &ldquo;edge case&rdquo; data it was just given. The &ldquo;Reasoning&rdquo; is excellent, but the <strong>Precision of Action</strong> is zero. <strong>It prioritizes sounding like a doctor over acting like a precise diagnostic tool.</strong></p>
+<p>Nothing visibly “broke”. There were no dramatic failures.</p>
+<p>There was instead a quiet misalignment between what the system articulated and how it operationalized specific conditions.</p>
+<p>In consumer applications, this might result in inconvenience. In domains that require structured decision-making, it becomes a matter of trust.</p>
+<p>Fluency, however advanced or sophisticated-sounding or aesthetically shown, cannot be treated as a substitute for verified execution.</p>
+<h2 id="the-psychology-of-confidence">The Psychology of Confidence</h2>
+<p>Part of the challenge is human.</p>
+<p>We are conditioned to associate structured explanation with correctness. When a system provides clear reasoning and a confident tone, scrutiny naturally decreases.</p>
+<p>The better it sounds, the more we assume alignment.</p>
+<p>The confident, positive, and forward-looking language of agentic platforms, along with all the emojis that they use lull us into accepting the assurances provided by such platforms.</p>
+<p>As AI system improves its linguistic capability, this psychological effect strengthens. Which means quality strategy must evolve accordingly.</p>
+<p>It is no longer sufficient to test:</p>
+<ul>
+<li>Does the system generate a response?</li>
+<li>Does the explanation appear logical?</li>
+<li>Does the output resemble expected behavior?</li>
+</ul>
+<p>We must also validate:</p>
+<ol>
+<li>Did the underlying system state change?</li>
+<li>Is the action independently traceable?</li>
+<li>Are rare or low-frequency scenarios handled consistently?</li>
+<li>Can execution be verified without relying on the model&rsquo;s narration?</li>
+</ol>
+<p>This shifts the focus from output validation to execution validation.</p>
+<h2 id="a-strategic-shift">A Strategic Shift</h2>
+<p>As AI systems become more agentic - triggering workflows, updating records, interacting with other systems/agents - the gap between representation and execution becomes strategic rather than technical.</p>
+<p>An AI system that performs certainty without delivering execution does not immediately fail.</p>
+<p>Instead, it creates small inconsistencies.</p>
+<p>Trust rarely collapses in a single moment.</p>
+<p>It erodes quietly.</p>
+<p>My experience building quality frameworks for large-scale AI deployments has taught me that we need to stop testing the &ldquo;Chat Box&rdquo; and start testing the <strong>&ldquo;Orchestration Layer.&rdquo;</strong> In traditional QA, we check if the button works. In AI Quality Strategy, we check for <strong>State-Sync</strong>.  If an agent claims to have audited 1,000 pages for technical SEO debt, we must validate that 1,000 pages were actually ingested. We must verify that the &lsquo;Intent&rsquo; (the plan to analyze) matches the &lsquo;State Change&rsquo; (the data actually processed). <strong>If we only validate the final response, we are grading the student based on confidence, not answers.</strong></p>
+<p>Over time, users adjust their reliance. Confidence becomes conditional. Adoption slows, even if performance metrics appear stable.</p>
+<p>Reliability, therefore, cannot be defined by how convincingly a system explains itself.</p>
+<p>It must be defined by how consistently its internal state aligns with its claims, and how the system lets the users and administrators verify the execution independent of an agentic message</p>
+<p><img alt="Precision Gap" src="../../images/pg.png"></p>
+<h2 id="a-simple-internal-check">A Simple Internal Check</h2>
+<p>Whenever I evaluate AI-driven workflows, I apply a simple principle:</p>
+<blockquote>
+<p><strong>If I ignore the explanation entirely and inspect only the system state-has the change actually occurred?</strong></p>
+</blockquote>
+<p>If the answer depends on trusting the wording of the response, the quality strategy needs strengthening and the presentation of verification of execution must be improved.</p>
+<p>As AI continues to mature, this distinction will become more critical.</p>
+<p>If “done” can be performative, then reliability must be measurable beyond language.</p>
+<p><img alt="Precision Gap" src="../../images/Rm.png"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Metric</th>
+<th style="text-align:left">Traditional QA Focus</th>
+<th style="text-align:left">AI Quality Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Execution</strong></td>
+<td style="text-align:left">Did the response sound correct?</td>
+<td style="text-align:left">Did the system state actually change?</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Output</strong></td>
+<td style="text-align:left">Linguistic Accuracy</td>
+<td style="text-align:left">State-Sync Integrity</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Validation</strong></td>
+<td style="text-align:left">The Response (Chat Box)</td>
+<td style="text-align:left">The Orchestration Layer</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Integrity</strong></td>
+<td style="text-align:left">Factual Correctness</td>
+<td style="text-align:left">Entity &amp; Schema Anchoring</td>
+</tr>
+</tbody>
+</table>
+<p>In the coming articles, I want to explore what this means for testing agentic systems, state-aware architectures, and AI quality strategy at scale.</p>
+<p>As AI matures, our validation methods must mature with it.</p>
+<p><img alt="Precision Gap" src="../../images/pgrm.png"></p>
+<p>My role as a strategist is to enforce the principle of <strong>&ldquo;Zero-Trust Articulation.&rdquo;</strong> We must build systems where every execution is verified and not just fluently explained.  Once verification is built in, users will see the explanation while expecting verification. Because if <strong>“योगः कर्मसु कौशलम्”</strong> (Excellence is in the precision of action) is our standard, then a brilliant explanation for a failed action is simply a sophisticated failure.</p>
+<p>We are no longer just testing for correctness; we are verifying <strong>Integrity - Integrity of Execution</strong>.</p>
+
+  </article>
+
+  
+<div class="share-container">
+  <button class="share-button" onclick="toggleSharePopup()" aria-label="Share">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="18" cy="18" r="3" />
+      <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+      <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+    </svg>
+  </button>
+  <div id="share-popup" class="share-popup hidden">
+    <a href="#" class="share-icon" onclick="shareOnLinkedIn(); return false;" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <line x1="8" y1="11" x2="8" y2="16"/>
+        <line x1="8" y1="8" x2="8" y2="8.01"/>
+        <line x1="12" y1="16" x2="12" y2="11"/>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnTwitter(); return false;" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnGmail(); return false;" aria-label="Gmail">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H8a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z"/>
+        <path d="M2 7l10 7l10-7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  function toggleSharePopup() {
+    var popup = document.getElementById('share-popup');
+    popup.classList.toggle('hidden');
+  }
+
+  function shareOnLinkedIn() {
+    var url = window.location.href;
+    var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnTwitter() {
+    var url = window.location.href;
+    var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnGmail() {
+    var url = window.location.href;
+    var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank');
+  }
+</script>
+
+<style>
+.share-container {
+    position: fixed;  
+    top: 50%;  
+    right: 100px;  
+    transform: translateY(-50%);  
+    z-index: 1000;  
+  }
+
+ .share-button {
+    background-color: transparent;  
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-popup {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .share-icon {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .share-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+         <ul class="flex justify-right gap-8"> 
+      <a class="next" href="https://www.vaishalidesarda.com/blog/genai-and-reliability/"> GenAI and Reliability: On the road to building Trust >></a></div>     
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+
+
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+  <script>
+    function shareOnLinkedIn() {
+        var url = window.location.href;
+        var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnTwitter() {
+        var url = window.location.href;
+        var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnGmail() {
+        var url = window.location.href;
+        var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank');
+    }
+  </script>
+
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2026 © Becoming a better Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>
