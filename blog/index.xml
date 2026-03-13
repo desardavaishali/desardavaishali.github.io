@@ -6,8 +6,15 @@
     <description>Recent content in Recent Posts on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Sep 2024 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2026 19:50:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/blog/index.xml" rel="self" type="application/rss+xml" />
+ <item>
+      <title>When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems</title>
+      <link>https://www.vaishalidesarda.com/blog/when-done-is-not-done/</link>
+      <pubDate>Sun, 08 Mar 2026 19:50:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/when-done-is-not-done/</guid>
+      <description>“योगः कर्मसु कौशलम्”&#xD;Excellence lies in the precision of action.&#xD;We often celebrate intelligence in terms of articulation - the ability to explain, reason, and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.&#xA;As AI systems become increasingly fluent, this distinction becomes more important than it first appears.&#xA;In several recent testing cycles, I began noticing a subtle but recurring pattern: the system would acknowledge an instruction, confirm that a change had been applied, and even explain what had been updated.</description>
+    </item>
     <item>
       <title>How to Test Like a CEO: A Fresh Take on Quality Assurance</title>
       <link>https://www.vaishalidesarda.com/blog/test-like-a-ceo/</link>
@@ -22,12 +29,6 @@
       <guid>https://www.vaishalidesarda.com/blog/genai-and-reliability/</guid>
       <description>The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…&#xA;Just like in Black Mirror, we&amp;rsquo;re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!</description>
     </item>
-    <item>
-      <title>When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems</title>
-      <link>https://www.vaishalidesarda.com/blog/when-done-is-not-done/</link>
-      <pubDate>Fri, 08 Mar 2026 19:50:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/blog/when-done-is-not-done/</guid>
-      <description>“योगः कर्मसु कौशलम्”&#xD;Excellence lies in the precision of action.&#xD;We often celebrate intelligence in terms of articulation - the ability to explain, reason, and respond with clarity. But excellence, whether in systems or in life, ultimately lies in execution.&#xA;As AI systems become increasingly fluent, this distinction becomes more important than it first appears.&#xA;In several recent testing cycles, I began noticing a subtle but recurring pattern: the system would acknowledge an instruction, confirm that a change had been applied, and even explain what had been updated.</description>
-    </item>
+   
   </channel>
 </rss>
