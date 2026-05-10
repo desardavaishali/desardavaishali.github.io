@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Built on Scar Tissue — Part 1: The QA Job Nobody Built AI For - Becoming a better Tester!
+  </title>
+  <meta name="description" content="AI test generation introduces a risk nobody is talking about yet — not missing test cases, but something quieter and more expensive." /><meta name="generator" content="Hugo 0.128.2">
+  <link rel="stylesheet" href="../../css/styles.css" />
+  
+  
+
+  <meta property="og:url" content="http://localhost:1313/blog/built-on-scar-tissue-part-1-1/">
+  <meta property="og:site_name" content="Becoming a better Tester!">
+  <meta property="og:title" content="Built on Scar Tissue — Part 1: The QA Job Nobody Built AI For">
+  <meta property="og:description" content="AI test generation introduces a risk nobody is talking about yet — not missing test cases, but something quieter and more expensive.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-05-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-10T00:00:00+00:00">
+    <meta property="article:tag" content="Qa">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Testing">
+    <meta property="article:tag" content="Quality Engineering">
+    <meta property="article:tag" content="Built on Scar Tissue">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Built on Scar Tissue — Part 1: The QA Job Nobody Built AI For">
+  <meta name="twitter:description" content="AI test generation introduces a risk nobody is talking about yet — not missing test cases, but something quieter and more expensive.">
+
+  
+  <meta itemprop="name" content="Built on Scar Tissue — Part 1: The QA Job Nobody Built AI For">
+  <meta itemprop="description" content="AI test generation introduces a risk nobody is talking about yet — not missing test cases, but something quieter and more expensive.">
+  <meta itemprop="datePublished" content="2025-05-10T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-05-10T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1487">
+  <meta itemprop="keywords" content="Qa,AI,Testing,Quality Engineering,Built on Scar Tissue">
+  
+  
+    
+      
+    
+  
+
+
+
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
+  <a href="http://localhost:1313/" class="capitalize font-extrabold text-2xl">
+    Becoming a better Tester!
+  </a>
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+      <li><a href="../../utilities">Utilities</a></li>
+    
+
+    
+      <li><a href="http://localhost:1313/blog/">Recent Posts</a></li>
+    
+      <li><a href="http://localhost:1313/insights/">Insights</a></li>
+    
+      <li><a href="http://localhost:1313/quality/">Quality</a></li>
+    
+      <li><a href="http://localhost:1313/activity/">Activities</a></li>
+    
+      <li><a href="http://localhost:1313/mobile-app/">Mobile Apps</a></li>
+    
+
+    <a href="../../tags">Tags! </a>
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header>
+<main>
+
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/qa/">qa</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/ai/">ai</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/quality-engineering/">quality-engineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/built-on-scar-tissue/">built-on-scar-tissue</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Built on Scar Tissue — Part 1: The QA Job Nobody Built AI For</h1>
+	
+    <div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin-bottom: 24px;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0 0 8px 0;">"It takes considerable knowledge just to realize the extent of your own ignorance."</p>
+  <p style="color:#534AB7; margin:0;">— Thomas Sowell</p>
+</div>
+<hr>
+<h2 id="the-most-dangerous-test-suite-isnt-an-empty-one">The most dangerous test suite isn&rsquo;t an empty one</h2>
+<p>Fifteen years across fintech, regulated digital health, and enterprise platforms teaches you things that no tool documents and which no training covers.</p>
+<p>One of them is this: an empty test suite is never the real problem.</p>
+<p>Everyone can see an empty suite. It signals incompleteness loudly. Someone asks questions. Someone pushes back. The release slows down. The absence of coverage is visible — and visibility, even uncomfortable visibility, triggers the right conversation.</p>
+<p><strong>The dangerous suite is the one that looks complete.</strong></p>
+<p>For a product that we worked on, there were 30 well-written cases with happy path covered, error states handled, role visibility checked. The test cases were structured, readable, and confidently produced. That suite got signed off. It built confidence in a room full of people who should still be asking questions. And then a customer in production found what the suite didn&rsquo;t — quietly, expensively, sometimes irreversibly.</p>
+<p>I&rsquo;ve watched this happen across domains. In fintech, where a silent backend failure didn&rsquo;t throw an error — it just quietly processed the wrong amount. In digital health, where a reading got confirmed as saved but never actually reached the server. In both cases, the test suite was thorough, but the thinking behind it wasn&rsquo;t. <strong>We don&rsquo;t have a writing problem. We have a thinking problem.</strong></p>
+<p>When AI-driven test generation arrived, I wasn&rsquo;t excited. I was concerned.</p>
+<hr>
+<h2 id="the-problem-with-convincing-output">The problem with convincing output</h2>
+<p>I have been concerned not because AI produces bad test cases, but because it produces <strong>convincing ones</strong>. LLM-based generation is extraordinarily good at one thing — pattern completion. Feed it a feature description, it returns structured cases: valid inputs, error states, happy path, sad path, all correctly labelled. These test cases look exactly like what a complete suite is supposed to look like.</p>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">That appearance of completeness is precisely the risk.</p>
+  <p style="color:#412402; margin:0;">Because what's missing isn't visible. It never is.</p>
+</div>
+<p>One example of what doesn&rsquo;t get generated: the question of whether the API enforces what the UI restricts. The scenario where a user double-taps submit and the backend processes the request twice. The case where a confirmation message fires and nothing persists to the database. The role that the UI blocks but the API doesn&rsquo;t.</p>
+<p>These gaps don&rsquo;t come from pattern-matching against training data. They come from having seen these failures before — in real systems, under real delivery pressure, with real consequences. That knowledge lives in people who&rsquo;ve spent years watching where software actually breaks. <strong>It doesn&rsquo;t live in a generation model and it <em>can&rsquo;t be retrieved by prompting more carefully</em>.</strong></p>
+<p><strong>Melissa Reeve, author of <em>Hyperadaptive</em>,</strong> named the broader shift on <strong>TechLead Journal (Ep. 254)</strong>: jobs are moving from doing tasks to evaluating the output of AI. Human as evaluator. In QA specifically, that evaluation is not a soft skill. It is the entire discipline — and it was the part nobody was building for.</p>
+<p>A blank suite tells you something is missing. A complete-looking suite with gaps tells you nothing — until production does.</p>
+<hr>
+<h2 id="what-years-of-qa-actually-teaches-you">What years of QA actually teaches you</h2>
+<p>The gaps that cause production incidents are not random. They repeat. Across teams, across domains, across levels of QA maturity — the same categories of missing thinking appear with uncomfortable consistency.</p>
+<p>This repeatability matters. These gaps are not a function of individual carelessness. They are a function of <em>how systems get built under delivery pressure</em> — and of what never makes it into a specification because nobody thought to question it.</p>
+<p>Some examples of such gaps are:</p>
+<ul>
+<li>
+<p><strong>Authorization mismatches.</strong> The UI correctly restricts an action for a given role. The API does not enforce the same restriction. The test suite validates UI behaviour and concludes the access control is working. The backend exposure goes completely untested — invisible behind an interface that looks correct.</p>
+</li>
+<li>
+<p><strong>Idempotency gaps.</strong> Double submission, network retries, page refresh after a form submit — these are normal user and network behaviours. They are almost never in generated test suites. The implicit assumption is that a user performs one action and waits. Real users and real networks do not behave that way.</p>
+</li>
+<li>
+<p><strong>Silent backend failures.</strong> The UI shows a success confirmation. Behind it, a validation error, a timeout, or a write failure occurred and did not surface. The user proceeds believing the action completed. The record does not exist. This pattern is particularly dangerous in healthcare and fintech domains where the absence of a record is not neutral.</p>
+</li>
+<li>
+<p><strong>State consistency issues.</strong> Partial saves, stale sessions, cached data, race conditions under concurrent access. These failures are invisible at unit level and only surface under integrated, stateful testing.</p>
+</li>
+<li>
+<p><strong>Audit trail gaps.</strong> In regulated systems, certain actions must be logged, attributed, and traceable. Generated suites cover whether an action succeeds. They rarely ask whether the audit record was created, attributed correctly, or would survive a rollback.</p>
+</li>
+<li>
+<p><strong>Dependency failure paths.</strong> Third-party services time out. APIs return partial responses. External systems degrade. How a system behaves when its dependencies fail partially — not completely — is a category of scenario that almost never appears in generated output.</p>
+</li>
+</ul>
+<p>None of these are exotic. They sit at the boundary between what gets specified and what gets questioned. A generation model produces the former. The latter requires someone who has watched what happens when these questions go unasked.</p>
+<hr>
+<h2 id="one-example-that-stays-with-me">One example that stays with me</h2>
+<p>This was a heart rate and SpO2 capture workflow — the kind you&rsquo;d expect from a health wearable syncing into a medical app. There were around 30 test cases, carefully written: valid readings, sensor failure states, sync success, history screen, permissions, error handling. It looked complete.</p>
+<div style="background-color:#F5F4ED; padding: 20px 24px; border-radius: 6px; margin: 20px 0;">
+  <p style="font-weight:700; margin:0 0 16px 0;">What was missing</p>
+  <p style="margin:0 0 12px 0;"><strong>No test for double submission.</strong> A user taps "Save" twice, or the network retries during sync. The UI confirms success both times. The same reading gets stored twice. Now the health trend graph shows a spike that was never real.</p>
+  <p style="margin:0 0 12px 0;"><strong>No test for API-level access control.</strong> The UI correctly hid detailed health records from a restricted account. But the backend API still returned full history when called directly. This was a privacy and compliance risk — invisible behind a UI that looked correct.</p>
+  <p style="margin:0;"><strong>No test for silent backend failure.</strong> The app showed "Saved successfully." The user moved on. But the record never reached the server, and the health history stayed incomplete.</p>
+</div>
+<div style="background-color:#FAECE7; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="margin:0;">A doctor may never see a real spike that should trigger attention. Or worse — may get alerted about spikes that were never real, because duplicate records made the trend look abnormal. The suite looked done. The thinking behind it wasn't.</p>
+</div>
+<hr>
+<h2 id="generation-is-a-pattern-review-is-a-philosophy">Generation is a pattern. Review is a philosophy.</h2>
+<p>These are two structurally different jobs. Most teams collapse them into one — and that collapse is where the blind spot lives.</p>
+<p>Generation writes the cases. It fills the structure, covers the visible paths, produces output that matches the shape of a complete suite. AI is genuinely good at this. Use it.</p>
+<p>Review questions the cases. It steps back and asks: what is this suite assuming? What breaks if the real user doesn&rsquo;t behave like the test imagined? What failure mode is normal for this kind of system that nobody represented here?</p>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; margin:0 0 6px 0;">That is adversarial thinking. It does not emerge from training data.</p>
+  <p style="color:#633806; font-weight:700; margin:0;">It emerges from scar tissue.</p>
+</div>
+<p>The real risk in AI-assisted QA is not that generation produces wrong output. It is that good-looking output reduces the scrutiny that would have caught what it missed. A suite that appears exhaustive makes people feel safe. And that feeling — the false confidence of a full-looking suite — is the most expensive thing AI has introduced into the quality process.</p>
+<p>Speed was never the problem in QA. Scrutiny was.</p>
+<hr>
+<h2 id="what-i-started-building-in-my-career-break">What I started building in my career break</h2>
+<p>We started shipping AI from 2023. In mid 2024, during a career break, I started building something for this gap — not a generator, but a reviewer. A tool that does what a senior QA lead does in a review: reasons about intent, surfaces gaps, flags what is redundant, and gives a structured verdict. Not a score. A reasoned call with specifics.</p>
+<p>A few fellow professionals have been generous enough to run it on real suites and come back with honest feedback on where it falls short. That loop has shaped it more than anything else.</p>
+<div style="background-color:#F5F4ED; padding: 20px 24px; border-radius: 6px; margin: 20px 0;">
+<!-- IMAGE: Replace this comment with your screenshot -->
+<!-- ![Agent output showing Conditional Approval with specific gap findings](your-screenshot-filename.png) -->
+<p style="margin-top: 16px;">That Conditional Approval is not the agent being conservative. It is the agent saying — here are the exact gaps, here is why they carry risk, address these before you ship.</p>
+</div>
+<p>The agent doesn&rsquo;t sign off releases. It prevents humans from signing off blindly. It doesn&rsquo;t make QA faster. It makes the thinking harder to skip.</p>
+<p><strong>Part 2</strong> covers what the agent does, what it catches consistently across suites, and what building it has taught me about encoding fifteen years of QA instinct into something that scales.</p>
+<p><em>Coming soon. Stay tuned.</em></p>
+
+  </article>
+
+  
+<div class="share-container">
+  <button class="share-button" onclick="toggleSharePopup()" aria-label="Share">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="18" cy="18" r="3" />
+      <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+      <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+    </svg>
+  </button>
+  <div id="share-popup" class="share-popup hidden">
+    <a href="#" class="share-icon" onclick="shareOnLinkedIn(); return false;" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <line x1="8" y1="11" x2="8" y2="16"/>
+        <line x1="8" y1="8" x2="8" y2="8.01"/>
+        <line x1="12" y1="16" x2="12" y2="11"/>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnTwitter(); return false;" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnGmail(); return false;" aria-label="Gmail">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H8a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z"/>
+        <path d="M2 7l10 7l10-7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  function toggleSharePopup() {
+    var popup = document.getElementById('share-popup');
+    popup.classList.toggle('hidden');
+  }
+
+  function shareOnLinkedIn() {
+    var url = window.location.href;
+    var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnTwitter() {
+    var url = window.location.href;
+    var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnGmail() {
+    var url = window.location.href;
+    var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank');
+  }
+</script>
+
+<style>
+.share-container {
+    position: fixed;  
+    top: 50%;  
+    right: 100px;  
+    transform: translateY(-50%);  
+    z-index: 1000;  
+  }
+
+ .share-button {
+    background-color: transparent;  
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-popup {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .share-icon {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .share-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="http://localhost:1313/blog/test-like-a-ceo/"> &lt;&lt; How to Test Like a CEO: A Fresh Take on Quality Assurance</a> </div></ul>
+                <ul class="flex justify-right gap-8"> 
+      <a class="next" href="http://localhost:1313/blog/when-done-is-not-done/"> When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems >></a></div>     
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">I work on everything Quality!</p>
+    </div>
+
+
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://twitter.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+  <script>
+    function shareOnLinkedIn() {
+        var url = window.location.href;
+        var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnTwitter() {
+        var url = window.location.href;
+        var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnGmail() {
+        var url = window.location.href;
+        var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank');
+    }
+  </script>
+
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2026 © Becoming a better Tester!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="http://localhost:1313/js/scripts.min.js"></script>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

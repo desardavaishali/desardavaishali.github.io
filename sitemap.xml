@@ -2,8 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.vaishalidesarda.com/tags/ai/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.vaishalidesarda.com/</loc>
-    <lastmod>2024-09-19T13:00:00+00:00</lastmod>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/built-on-scar-tissue/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/qa/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/quality-engineering/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
+    <lastmod>2026-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/agenticai/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/aiquality/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/aiqualityengineering/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/aitesting/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/aitrust/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/llmtesting/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/qualityengineering/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/reliabilityengineering/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/softwaretesting/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/techstrategy/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/when-done-is-not-done/</loc>
+    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/blog/test-like-a-ceo/</loc>
     <lastmod>2024-09-19T13:00:00+00:00</lastmod>
@@ -14,56 +71,14 @@
     <loc>https://www.vaishalidesarda.com/tags/qualityassurance/</loc>
     <lastmod>2024-09-19T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/</loc>
-    <lastmod>2024-09-19T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/</loc>
-    <lastmod>2024-09-19T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
-    <lastmod>2024-09-19T13:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.vaishalidesarda.com/tags/thinking/</loc>
     <lastmod>2024-09-19T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/aitesting/</loc>
-    <lastmod>2024-08-12T22:04:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/aitrust/</loc>
-    <lastmod>2024-08-12T22:04:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/genai/</loc>
     <lastmod>2024-08-12T22:04:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/blog/genai-and-reliability/</loc>
     <lastmod>2024-08-12T22:04:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/agenticai/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/aiquality/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/aiqualityengineering/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/llmtesting/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/qualityengineering/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/reliabilityengineering/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/softwaretesting/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/techstrategy/</loc>
-    <lastmod>2024-03-08T19:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/when-done-is-not-done/</loc>
-    <lastmod>2026-03-08T19:50:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/insights/</loc>
     <lastmod>2023-09-09T13:32:00+00:00</lastmod>
@@ -240,9 +255,6 @@
     <lastmod>2020-01-12T16:30:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/dealingwithachange/</loc>
-    <lastmod>2020-01-12T16:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/qa/</loc>
     <lastmod>2020-01-12T16:30:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/requirement/</loc>

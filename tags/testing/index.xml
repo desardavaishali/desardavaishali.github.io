@@ -6,8 +6,15 @@
     <description>Recent content in Testing on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Sep 2024 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Built on Scar Tissue - Part 1: The QA Job Nobody Built AI For</title>
+      <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</link>
+      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</guid>
+      <description>Why experience can&amp;rsquo;t be generated - and why that matters more than ever &#34;It takes considerable knowledge just to realize the extent of your own ignorance.&#34;&#xA;- Thomas Sowell&#xA;The most dangerous test suite isn&amp;rsquo;t an empty one Fifteen years across fintech, regulated digital health, and enterprise platforms teaches you things that no tool documents and which no training covers.&#xA;One of them is this: an empty test suite is never the real problem.</description>
+    </item>
     <item>
       <title>How to Test Like a CEO: A Fresh Take on Quality Assurance</title>
       <link>https://www.vaishalidesarda.com/blog/test-like-a-ceo/</link>

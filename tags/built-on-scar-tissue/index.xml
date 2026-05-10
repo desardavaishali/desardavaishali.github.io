@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Qa on Becoming a better Tester!</title>
-    <link>https://www.vaishalidesarda.com/tags/qa/</link>
-    <description>Recent content in Qa on Becoming a better Tester!</description>
+    <title>Built on Scar Tissue on Becoming a better Tester!</title>
+    <link>https://www.vaishalidesarda.com/tags/built-on-scar-tissue/</link>
+    <description>Recent content in Built on Scar Tissue on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/tags/qa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.vaishalidesarda.com/tags/built-on-scar-tissue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Built on Scar Tissue - Part 1: The QA Job Nobody Built AI For</title>
       <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</link>
       <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
       <guid>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</guid>
       <description>Why experience can&amp;rsquo;t be generated - and why that matters more than ever &#34;It takes considerable knowledge just to realize the extent of your own ignorance.&#34;&#xA;- Thomas Sowell&#xA;The most dangerous test suite isn&amp;rsquo;t an empty one Fifteen years across fintech, regulated digital health, and enterprise platforms teaches you things that no tool documents and which no training covers.&#xA;One of them is this: an empty test suite is never the real problem.</description>
-    </item>
-    <item>
-      <title>Dealing with changes in requirements!</title>
-      <link>https://www.vaishalidesarda.com/quality/dealing_with_changes/</link>
-      <pubDate>Sun, 12 Jan 2020 16:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/quality/dealing_with_changes/</guid>
-      <description>This happens to everyone irrespective of the SDLC phase - mostly in the late development phase for business/customer’s benefit&amp;hellip;&#xA;General scenarios when one ends up in this situation :&#xA;You are in the middle of validating a User Story, you find some gaps considering User’s behaviour for the functionality which are leading to bugs, you check with BA/PO and they change the requirement.&#xA;OR You just signed off the story. It’s about to be released as an update.</description>
     </item>
   </channel>
 </rss>

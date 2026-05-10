@@ -6,9 +6,16 @@
     <description>Recent content in Recent Posts on Becoming a better Tester!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Mar 2026 19:50:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/blog/index.xml" rel="self" type="application/rss+xml" />
- <item>
+    <item>
+      <title>Built on Scar Tissue - Part 1: The QA Job Nobody Built AI For</title>
+      <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</link>
+      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</guid>
+      <description>Why experience can&amp;rsquo;t be generated - and why that matters more than ever &#34;It takes considerable knowledge just to realize the extent of your own ignorance.&#34;&#xA;- Thomas Sowell&#xA;The most dangerous test suite isn&amp;rsquo;t an empty one Fifteen years across fintech, regulated digital health, and enterprise platforms teaches you things that no tool documents and which no training covers.&#xA;One of them is this: an empty test suite is never the real problem.</description>
+    </item>
+    <item>
       <title>When “Done” Doesn&#39;t Mean Done: A Quiet Reliability Gap in AI Systems</title>
       <link>https://www.vaishalidesarda.com/blog/when-done-is-not-done/</link>
       <pubDate>Sun, 08 Mar 2026 19:50:00 +0000</pubDate>
@@ -29,6 +36,5 @@
       <guid>https://www.vaishalidesarda.com/blog/genai-and-reliability/</guid>
       <description>The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…&#xA;Just like in Black Mirror, we&amp;rsquo;re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!</description>
     </item>
-   
   </channel>
 </rss>
