@@ -2,101 +2,122 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Insights on Vaishali Desarda - Quality, AI, and the thinking in between!</title>
-    <link>https://www.vaishalidesarda.com/insights/</link>
+    <link>http://localhost:1313/insights/</link>
     <description>Recent content in Insights on Vaishali Desarda - Quality, AI, and the thinking in between!</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 09 Sep 2023 13:32:00 +0000</lastBuildDate>
-    <atom:link href="https://www.vaishalidesarda.com/insights/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/insights/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>So, who should review a feature</title>
-      <link>https://www.vaishalidesarda.com/insights/so-who-should-review-a-feature/</link>
+      <link>http://localhost:1313/insights/so-who-should-review-a-feature/</link>
       <pubDate>Sat, 09 Sep 2023 13:32:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/so-who-should-review-a-feature/</guid>
+      <guid>http://localhost:1313/insights/so-who-should-review-a-feature/</guid>
       <description>“Why is that even a question!?”, you wonder. Well, it very much is a question, and the answer is “All stakeholders”.&#xA;The one who signed the contract The one who turned it into a high-level idea The one who approved the idea The one who made business requirements out of it The one who did design One who wireframed it The one turning it into acceptance criteria The one who built it The one who tested and signed off The one who understood the risks before giving a Go One who funded it and the one who sold it on paper These and many more stakeholders.</description>
     </item>
     <item>
       <title>Hear to discover the Unseen</title>
-      <link>https://www.vaishalidesarda.com/insights/hearing/</link>
+      <link>http://localhost:1313/insights/hearing/</link>
       <pubDate>Sun, 10 Apr 2022 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/hearing/</guid>
+      <guid>http://localhost:1313/insights/hearing/</guid>
       <description>Yes, you read it right. I’m talking about “Hearing, and not listening”. While the world is focusing on listening as a skill, I want to draw attention to hear. The basic ability of ours. While listening requires focused attention, anything you overhear can be beneficial too!&#xA;Being a tester, the information I have is never enough. I always end up seeking new details.&#xA;While I was attentive in meetings, my basic hearing ability has been of a lot of use post meetings.</description>
     </item>
     <item>
       <title>Aftermath of Production bug</title>
-      <link>https://www.vaishalidesarda.com/insights/aftermath_of_production_bug/</link>
+      <link>http://localhost:1313/insights/aftermath_of_production_bug/</link>
       <pubDate>Wed, 22 Dec 2021 21:34:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/aftermath_of_production_bug/</guid>
+      <guid>http://localhost:1313/insights/aftermath_of_production_bug/</guid>
       <description>Yes, the aftermath. That’s where the game resumes. The update is released.. A Few days pass by fine and we suddenly start getting reports of a few things not working as we promised. “Production issue” they call it.&#xA;And even before we know the root cause, the famous ritual of ‘Why did the Tester not find it’ starts.&#xA;Well the production bug could be because we missed:&#xA;some configs the redirect URLs Cache clearing after logout Time-zone consideration Performance handling Some change of a code to fix a regression issue And many more unrelated to business functionality itself.</description>
     </item>
     <item>
       <title>Intuition can&#39;t be found in tools</title>
-      <link>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</link>
+      <link>http://localhost:1313/insights/intuition_cant_be_found_in_tools/</link>
       <pubDate>Sat, 31 Jul 2021 17:45:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/intuition_cant_be_found_in_tools/</guid>
+      <guid>http://localhost:1313/insights/intuition_cant_be_found_in_tools/</guid>
       <description>Intuition.&#xA;We name it Intuition when : We apply gut feeling We are certain that this path is important (even if it’s not spoken of in acceptance criteria/specifications), We apply judgement - things we cannot determine directly nor measure, or even wish to go against the measure/data. We sense something is not valid when we test.&#xA;While you test, there comes a scenario, you know something is not right. You do not have the confirmation, but again your gut instinct tells you to explore further.</description>
     </item>
     <item>
       <title>Practical issues of implementing Conference-time advice</title>
-      <link>https://www.vaishalidesarda.com/insights/practical_issues/</link>
+      <link>http://localhost:1313/insights/practical_issues/</link>
       <pubDate>Thu, 31 Dec 2020 13:35:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/practical_issues/</guid>
+      <guid>http://localhost:1313/insights/practical_issues/</guid>
       <description>It’s 2020, and the pandemic is going on. Everyone (at least from the IT industry) is working from home. Conferences and meetups are virtual and free to some extent or at an economical cost.&#xA;In all these forums,&#xA;We chat about testing as a craft. How to be agile, how to explore &amp;amp; Experiment, session-based testing, state-based testing, automation just checks, it’s not testing. We prefer test ideas over test cases, or we write minimal test cases.</description>
     </item>
     <item>
       <title>Awareness and Observation in Life and Testing</title>
-      <link>https://www.vaishalidesarda.com/insights/awareness/</link>
+      <link>http://localhost:1313/insights/awareness/</link>
       <pubDate>Sun, 20 Dec 2020 18:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/awareness/</guid>
+      <guid>http://localhost:1313/insights/awareness/</guid>
       <description>Some actions/events are so natural that we do not realise if we are in the moment or not!&#xA;While repeatedly working on the same thing, that walk to the grocery store or brushing the teeth maybe or making the bed for that matter.&#xA;Does this kill awareness or observation power?&#xA;What happens once we automate the test cases/scenarios/ideas?&#xA;Do we look back? Do we regularly go through with our eyes at least once just to make sure there is nothing extra we should add even if asserts are passing?</description>
     </item>
     <item>
+      <title>Offline Testing of an Online App - What, why and how!?</title>
+      <link>http://localhost:1313/insights/offline_testing_of_online_app/</link>
+      <pubDate>Thu, 16 Jul 2020 14:40:00 +0000</pubDate>
+      <guid>http://localhost:1313/insights/offline_testing_of_online_app/</guid>
+      <description>Offline testing of an online app!? If an app expects to be online, then, of course, it’ll not work offline! Whatever is there to test offline!?&#xA;Like I’d written recently, Testing is much more than merely validating Business Acceptance Criteria. A Tester helps see the app from the end user’s point of view and provides feedback to improve the quality and helps polish the user experience.&#xA;Having a great experience online and offline is one of the key points of engaging users in-app.</description>
+    </item>
+    <item>
       <title>When Should We Stop Testing</title>
-      <link>https://www.vaishalidesarda.com/insights/when-should-we-stop-testing/</link>
+      <link>http://localhost:1313/insights/when-should-we-stop-testing/</link>
       <pubDate>Sat, 11 Jul 2020 19:30:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/when-should-we-stop-testing/</guid>
+      <guid>http://localhost:1313/insights/when-should-we-stop-testing/</guid>
       <description>After reading this headline, you must be thinking “why does one need to write an article on this! It’s straightforward - Your test cases are passed, there are no open high priority or high severity bugs, the story is signed off by PO and you are done!”&#xA;No, my friend.&#xA;There is more to this.&#xA;To ensure that the application “meets the requirements” and also to ensure that “earlier requirements that were met, have not been undone”, one takes the approach of validating that the requirements of the software are known and are being met.</description>
     </item>
     <item>
       <title>Should you build for the unhappy path?</title>
-      <link>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</link>
+      <link>http://localhost:1313/insights/should_you_build_for_the_unhappy_path/</link>
       <pubDate>Thu, 05 Mar 2020 10:15:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/should_you_build_for_the_unhappy_path/</guid>
+      <guid>http://localhost:1313/insights/should_you_build_for_the_unhappy_path/</guid>
       <description>Why are Error scenarios more important than a happy path?&#xA;At the time of designing, developing, testing, releasing we all tend to check if a user can launch, login, navigate around, play, watch, submit and consume whatever features we have provided.&#xA;We end up giving extra focus on the happy path. Of course, it is important to set completion goals for the team and the stakeholders.&#xA;There are teams who design for a few unhappy paths too.</description>
     </item>
     <item>
+      <title>Going live with your app ... and then?</title>
+      <link>http://localhost:1313/insights/going_live_with_your_app_and_then/</link>
+      <pubDate>Sun, 05 Jan 2020 13:40:00 +0000</pubDate>
+      <guid>http://localhost:1313/insights/going_live_with_your_app_and_then/</guid>
+      <description>The mobile app market is drastically changing and everyone focuses on being noticed. After the app is launched, you have to be ready for continuous optimisation and improvement. Hence, highly frequent testing.&#xA;The QA role doesn’t stop once the app is live. Instead, the responsibilities continue in terms of regression and automation testing, signing off hotfixes and new releases - that too quicker, as customers don’t like to wait!&#xA;In the Pre-Launch phase, the business does the following :</description>
+    </item>
+    <item>
+      <title>Mobile App Testing - Emulator/Simulators or Real Device</title>
+      <link>http://localhost:1313/insights/emulator_simulator_real_devices/</link>
+      <pubDate>Thu, 19 Dec 2019 13:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/insights/emulator_simulator_real_devices/</guid>
+      <description>Now that everyone has a smartphone and access to many free and paid apps, users and customers expect a certain level of professional and polished behaviour on their mobile devices. They know what to expect, what their devices are capable of, and expect to be delighted in terms of user experience, stability and interactions.&#xA;With new devices getting launched every month supporting different screen sizes, different resolutions, themes, Modified OS, combinations of OS and form factors, OS version updates, new features, it gets quite difficult to provide the Quality assurance and give the sign-off.</description>
+    </item>
+    <item>
       <title>Releasing a build that has defects!...</title>
-      <link>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</link>
+      <link>http://localhost:1313/insights/releasing_build_that_has_defects/</link>
       <pubDate>Sun, 06 Oct 2019 11:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/releasing_build_that_has_defects/</guid>
+      <guid>http://localhost:1313/insights/releasing_build_that_has_defects/</guid>
       <description>Sounds weird right?! QA signing off on known defects for a release!&#xA;Should it happen?&#xA;If yes, when?&#xA;If no, what might happen?&#xA;This is quite a frequent scenario in these days of quick releases, early-to-market approaches.&#xA;Also, keeping the QA position aside, one needs to understand that it is impossible to create and release new software that works 100% of the time.&#xA;Finding a defect in Production by the customer is expected, and we - as in the project team / client - already have a process around on how to deal with it.</description>
     </item>
     <item>
       <title>Why a QA should know the business domain and the architecture.</title>
-      <link>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</link>
+      <link>http://localhost:1313/insights/why_qa_should_know_the_business_domain_architecture/</link>
       <pubDate>Sat, 21 Sep 2019 17:00:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</guid>
+      <guid>http://localhost:1313/insights/why_qa_should_know_the_business_domain_architecture/</guid>
       <description>Whenever I get started on a new project, I first learn the business domain and the architecture, and only then start to look into the stories.&#xA;Some of the managers I worked with find it unnecessary, thinking “ What would a QA do with an understanding of the architecture?? QA should just go to User story and sign it off after validating the Acceptance Criteria (AC)”.&#xA;In my experience, knowing the architecture and the business domain helps a QA identify much more hidden errors in the whole end to end flow, can give you more understanding and confidence on the product when you know it all.</description>
     </item>
     <item>
       <title>How to be a good QA!</title>
-      <link>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</link>
+      <link>http://localhost:1313/insights/how_to_be_a_good_qa/</link>
       <pubDate>Sun, 24 Mar 2019 10:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/how_to_be_a_good_qa/</guid>
+      <guid>http://localhost:1313/insights/how_to_be_a_good_qa/</guid>
       <description>I know.. You must be thinking that we are good; if we would have been bad, we would have been in some other profession by this time. We do all the assigned work, we follow agile, we automate everything, we create beautiful bug reports, we send the daily &amp;amp; weekly status, we finish the story points in time.. Well, there is more to know and keep in mind.&#xA;Believe me, everyone has got different circumstances.</description>
     </item>
     <item>
       <title>Why should you pay for a QA when you have automated tests?</title>
-      <link>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</link>
+      <link>http://localhost:1313/insights/why_should_you_pay_qa_when_you_have_automation/</link>
       <pubDate>Sun, 13 Jan 2019 16:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/why_should_you_pay_qa_when_you_have_automation/</guid>
+      <guid>http://localhost:1313/insights/why_should_you_pay_qa_when_you_have_automation/</guid>
       <description>Customer/Client: “We are now agile. There is no QA in an agile team. Developers can do their own testing. Why should I pay for a QA? I don’t need one!”&#xA;These days Developers build automated tests and integrate code-based tests as well by using various frameworks (e.g. mocks). Some developers follow the Test Driven Development approach and code all the tests, find where their fix breaks the code, as they don’t like QA finding the defects.</description>
     </item>
     <item>
       <title>Exploratory Testing – should we or shouldn’t we?</title>
-      <link>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</link>
+      <link>http://localhost:1313/insights/exploratory_should_we_or_shouldnt_we/</link>
       <pubDate>Tue, 08 Jan 2019 19:00:30 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/insights/exploratory_should_we_or_shouldnt_we/</guid>
+      <guid>http://localhost:1313/insights/exploratory_should_we_or_shouldnt_we/</guid>
       <description>In time with need of frequent releases, test automation accelerates verification as the team needs to get quick feedback on the status of the System Under Test (SUT) for the changes done. The automation suite covers only the known. So, how we deal with the unknown?&#xA;We do so via Exploratory testing.&#xA;Why:&#xA;The challenge is to find NEW defects, not to look for the same thing over and over and over again.</description>
     </item>
   </channel>
