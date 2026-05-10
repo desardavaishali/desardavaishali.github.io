@@ -37,6 +37,13 @@
       <description>The advances in AI/GenAI (awaiting AGI) over the past year never fail to surprise! Pleasantly, most of the time…&#xA;Just like in Black Mirror, we&amp;rsquo;re entering a new tech era with endless possibilities. Established products are incorporating open-source AI or developing and deriving their own LLMs to help their customer base advance and have estimated benefits at a 100X speed compared to 2021. Imagine this - One fine day at an all-hands, the management announces - “The product is getting AI integration!</description>
     </item>
     <item>
+      <title>About</title>
+      <link>https://www.vaishalidesarda.com/about/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/about/</guid>
+      <description>I&amp;rsquo;m Vaishali.&#xA;I&amp;rsquo;ve spent 15+ years making sure software actually works. Not theoretically works. Not demo-works. Works for the real person, in the real moment, doing the thing nobody thought to write a test for.&#xA;That&amp;rsquo;s taken me across a lot of rooms - startups and enterprises, London and India, fintech and regulated digital health, teams that cared deeply about quality and teams that thought QA was something you did at the end.</description>
+    </item>
+    <item>
       <title>So, who should review a feature</title>
       <link>https://www.vaishalidesarda.com/insights/so-who-should-review-a-feature/</link>
       <pubDate>Sat, 09 Sep 2023 13:32:00 +0000</pubDate>
@@ -189,13 +196,6 @@
       <pubDate>Sat, 21 Sep 2019 17:00:00 +0000</pubDate>
       <guid>https://www.vaishalidesarda.com/insights/why_qa_should_know_the_business_domain_architecture/</guid>
       <description>Whenever I get started on a new project, I first learn the business domain and the architecture, and only then start to look into the stories.&#xA;Some of the managers I worked with find it unnecessary, thinking “ What would a QA do with an understanding of the architecture?? QA should just go to User story and sign it off after validating the Acceptance Criteria (AC)”.&#xA;In my experience, knowing the architecture and the business domain helps a QA identify much more hidden errors in the whole end to end flow, can give you more understanding and confidence on the product when you know it all.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://www.vaishalidesarda.com/about/</link>
-      <pubDate>Wed, 31 Jul 2019 16:43:00 +0000</pubDate>
-      <guid>https://www.vaishalidesarda.com/about/</guid>
-      <description>Vaishali Desarda&#xD;Quality Assurance Expert | Lead Quality Engineer in Fintech and SaMD | Freelancer&#xA;I&amp;rsquo;m Vaishali.&#xA;I make sure software actually works. That&amp;rsquo;s the dinner-table answer and it&amp;rsquo;s also the accurate one.&#xA;The longer version: 15 years across fintech, regulated digital health, and enterprise platforms. Six years in London. Before and after that, India. Multiple clients, multiple teams, multiple kinds of delivery pressure - and through all of it, the same stubborn curiosity about where things actually break versus where everyone assumes they won&amp;rsquo;t.</description>
     </item>
     <item>
       <title></title>
