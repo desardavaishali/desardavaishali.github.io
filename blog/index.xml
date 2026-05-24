@@ -6,8 +6,15 @@
     <description>Recent content on Vaishali Desarda - Quality, AI, and the thinking in between!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Built on Scar Tissue - Part 2: So I Built Release Risk Intelligence</title>
+      <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-2/</link>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-2/</guid>
+      <description>So I Built Release Risk Intelligence in late 2024 - What the reviewer does, what it catches, and what building it keeps teaching me.&#xA;This is Part 2 of Built on Scar Tissue - an ongoing series on encoding experienced QA thinking into AI. If you haven&amp;rsquo;t read Part 1 yet, start there - Built on Scar Tissue – Part 1. This piece assumes you have.&#xA;&#34;Knowledge is of no value unless you put it into practice.</description>
+    </item>
     <item>
       <title>Built on Scar Tissue - Part 1: The QA Job Nobody Built AI For</title>
       <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-1/</link>
