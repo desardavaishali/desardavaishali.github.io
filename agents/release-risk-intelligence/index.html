@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<!-- Release Risk Intelligence · QA Review Agent by Vaishali Desarda -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Release Risk Intelligence · QA Review Agent by Vaishali Desarda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070e;--s1:#0f0f1a;--s2:#161625;--s3:#1e1e30;
+  --b1:rgba(255,255,255,0.06);--b2:rgba(255,255,255,0.11);--b3:rgba(255,255,255,0.18);
+  --tx:#eeeef5;--mu:#8888a0;--mu2:#b0b0c8;
+  --acc:#7c6af7;--acc2:#4ecdc4;--acc3:#f7c56a;--acc4:#f76a8a;--grn:#4ef788;
+  --mono:'DM Mono',monospace;--sans:'Syne',sans-serif;
+}
+body{background:var(--bg);color:var(--tx);font-family:var(--sans);min-height:100vh}
+.app{max-width:1000px;margin:0 auto;padding:36px 18px 100px}
+.hero{margin-bottom:36px}
+.hero-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,106,247,0.1);border:1px solid rgba(124,106,247,0.25);color:var(--acc);font-family:var(--mono);font-size:10px;padding:3px 9px;border-radius:3px;letter-spacing:.1em}
+.badge-grn{background:rgba(78,247,136,0.07);border-color:rgba(78,247,136,0.2);color:var(--grn)}
+.badge-teal{background:rgba(78,205,196,0.08);border-color:rgba(78,205,196,0.2);color:var(--acc2)}
+h1{font-size:clamp(32px,5vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1.0;background:linear-gradient(130deg,#eeeef5 0%,#a090ff 45%,#4ecdc4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+.hero-sub{color:var(--mu2);font-family:var(--mono);font-size:12px;line-height:1.8;max-width:580px;margin-bottom:8px}
+.hero-sub span{color:var(--acc2)}
+.byline{color:var(--mu);font-family:var(--mono);font-size:10px}
+.byline a{color:var(--acc2);text-decoration:none}.byline a:hover{text-decoration:underline}
+.domain-strip{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 0;padding:12px 14px;background:var(--s1);border:1px solid var(--b1);border-radius:8px;align-items:center}
+.ds-label{font-family:var(--mono);font-size:9px;color:var(--mu);text-transform:uppercase;letter-spacing:.1em;margin-right:4px;white-space:nowrap}
+.dp{font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:3px;border:1px solid var(--b2);color:var(--mu2)}
+.provcard{background:var(--s1);border:1px solid var(--b2);border-radius:12px;padding:20px 22px;margin-bottom:16px;transition:border-color .3s}
+.fl{font-size:10px;font-family:var(--mono);color:var(--mu);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.prov-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.ptab{padding:8px 18px;border-radius:6px;font-family:var(--mono);font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--b2);color:var(--mu2);background:transparent;transition:all .2s;letter-spacing:.04em;display:inline-flex;align-items:center;gap:6px}
+.ptab:hover{border-color:var(--b3);color:var(--tx)}
+.ptab.sel{color:#fff;border-color:transparent}
+.free-chip{font-size:9px;background:rgba(78,247,136,0.15);border:1px solid rgba(78,247,136,0.3);color:#4ef788;border-radius:3px;padding:1px 5px;letter-spacing:.05em}
+.key-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin-bottom:12px}
+@media(max-width:560px){.key-row{grid-template-columns:1fr}}
+.get-btn{display:inline-flex;align-items:center;gap:5px;padding:11px 14px;border-radius:7px;font-family:var(--mono);font-size:11px;font-weight:500;text-decoration:none;white-space:nowrap;border:1px solid;transition:opacity .2s;line-height:1}
+.get-btn:hover{opacity:.75}
+.privacy{display:flex;align-items:flex-start;gap:9px;padding:10px 13px;background:rgba(78,247,136,0.04);border:1px solid rgba(78,247,136,0.13);border-radius:8px}
+.pico{font-size:13px;flex-shrink:0;margin-top:2px}
+.ptxt{font-family:var(--mono);font-size:11px;color:var(--mu2);line-height:1.65}
+.ptxt strong{color:var(--grn);font-weight:500}
+.billing-warn{display:none;margin-top:10px;align-items:flex-start;gap:9px;padding:10px 13px;border-radius:8px}
+.billing-warn.show{display:flex}
+.bwt{font-family:var(--mono);font-size:11px;line-height:1.65}
+.card{background:var(--s1);border:1px solid var(--b2);border-radius:12px;padding:22px;margin-bottom:16px}
+textarea,input[type=text],input[type=password]{width:100%;background:var(--s2);border:1px solid var(--b2);border-radius:7px;color:var(--tx);font-family:var(--mono);font-size:12.5px;line-height:1.65;padding:11px 13px;outline:none;transition:border-color .2s;resize:vertical}
+textarea:focus,input:focus{border-color:var(--acc)}
+textarea::placeholder,input::placeholder{color:var(--mu)}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:600px){.fr{grid-template-columns:1fr}}
+.fb{display:flex;flex-direction:column}
+.ts{min-height:80px}.tm{min-height:160px}
+.hint{font-family:var(--mono);font-size:10px;color:var(--mu);margin-top:5px;line-height:1.6}
+.hint strong{color:var(--mu2)}
+.samples{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px;align-items:center}
+.slabel{font-family:var(--mono);font-size:10px;color:var(--mu)}
+.pill{background:rgba(255,255,255,0.04);border:1px solid var(--b2);border-radius:4px;padding:3px 9px;font-size:11px;font-family:var(--mono);cursor:pointer;color:var(--mu2);transition:border-color .2s,color .2s}
+.pill:hover{border-color:var(--acc);color:var(--acc)}
+.run-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--acc),#5040c8);border:none;border-radius:8px;color:#fff;font-family:var(--sans);font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.02em;transition:opacity .2s,transform .1s}
+.run-btn:hover:not(:disabled){opacity:.88;transform:translateY(-1px)}
+.run-btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.err{background:rgba(247,106,138,0.08);border:1px solid rgba(247,106,138,0.25);border-radius:7px;padding:10px 13px;font-family:var(--mono);font-size:11.5px;color:var(--acc4);margin-top:10px;display:none;line-height:1.65}
+.err.show{display:block}
+.db{display:none;align-items:center;gap:10px;margin-bottom:18px;padding:10px 14px;background:var(--s1);border:1px solid var(--b2);border-radius:8px;font-family:var(--mono);font-size:12px}
+.db.show{display:flex}
+.dc{padding:4px 11px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.06em;flex-shrink:0}
+.di{color:var(--mu);font-size:11px;flex:1}
+.stg{display:none;margin-bottom:20px}.stg.show{display:flex}
+.st{flex:1;text-align:center;padding:8px 4px;font-family:var(--mono);font-size:10px;color:var(--mu);border-bottom:2px solid var(--b1);transition:color .3s,border-color .3s;letter-spacing:.05em}
+.st.active{color:var(--acc);border-color:var(--acc)}.st.done{color:var(--grn);border-color:var(--grn)}
+@media(max-width:600px){.st{font-size:8px;padding:6px 2px}}
+.ph{font-size:10px;font-family:var(--mono);color:var(--mu);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:none}.ph.show{display:block}
+.pg{display:none;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-bottom:18px}.pg.show{display:grid}
+.pc{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:14px;transition:border-color .3s}
+.pc.active{border-color:var(--acc)}.pc.done{border-color:var(--grn)}
+.pt{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+.pn{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;line-height:1.3}
+.pbg{font-family:var(--mono);font-size:9px;padding:2px 6px;border-radius:3px;white-space:nowrap}
+.bw{background:rgba(255,255,255,0.04);color:var(--mu)}
+.bk{background:rgba(124,106,247,0.14);color:var(--acc)}
+.bd{background:rgba(78,247,136,0.1);color:var(--grn)}
+.be2{background:rgba(247,106,138,0.1);color:var(--acc4)}
+.pscore{font-family:var(--mono);font-size:24px;margin:4px 0}
+.pfocus{font-family:var(--mono);font-size:11px;color:var(--mu);line-height:1.5;margin-bottom:8px}
+.pfindings{font-family:var(--mono);font-size:11px;color:var(--mu2);line-height:1.6;margin-bottom:8px}
+.tc-list{margin-top:8px;border-top:1px solid var(--b1);padding-top:8px}
+.tc-list.collapsed{display:none}
+.tc-toggle{font-family:var(--mono);font-size:10px;color:var(--mu);cursor:pointer;display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:3px 0;border:none;background:transparent;transition:color .2s}
+.tc-toggle:hover{color:var(--tx)}
+.impact-box{background:rgba(247,197,106,0.05);border:1px solid rgba(247,197,106,0.15);border-left:2px solid var(--acc3);border-radius:0 6px 6px 0;padding:8px 12px;margin-top:6px;font-family:var(--mono);font-size:10.5px;color:var(--acc3);line-height:1.55;display:none}
+.impact-box.show{display:block}
+.tc-row{display:flex;align-items:flex-start;gap:6px;margin-bottom:6px;font-family:var(--mono);font-size:10px;line-height:1.5}
+.tc-detail{color:var(--mu2)}
+.dots span{display:inline-block;animation:blink 1s infinite;color:var(--acc);font-size:16px}
+.dots span:nth-child(2){animation-delay:.2s}.dots span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,100%{opacity:.15}50%{opacity:1}}
+.rp{display:none;background:var(--s1);border:1px solid var(--b2);border-radius:12px;overflow:hidden;margin-top:4px}.rp.show{display:block}
+.rt{padding:22px 24px 18px;border-bottom:1px solid var(--b1);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.rtt{font-size:16px;font-weight:700}.rm{font-family:var(--mono);font-size:10px;color:var(--mu);margin-top:4px}
+.bs{font-family:var(--mono);font-size:42px;font-weight:500;line-height:1}
+.bss{font-family:var(--mono);font-size:10px;color:var(--mu);text-align:right;margin-top:3px}
+.sb{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;padding:16px 24px;border-bottom:1px solid var(--b1)}
+@media(max-width:650px){.sb{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.sb{grid-template-columns:1fr}}
+.sbb{background:var(--s2);border-radius:7px;padding:10px 12px}
+.sbl{font-family:var(--mono);font-size:10px;color:var(--mu);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.sbv{font-family:var(--mono);font-size:20px;font-weight:500}
+.sbt{height:3px;background:var(--b2);border-radius:2px;margin-top:6px;overflow:hidden}
+.sbf2{height:100%;border-radius:2px;transition:width .8s ease}
+.rb{padding:20px 24px}
+.rs{margin-bottom:24px}
+.rst{font-size:10px;font-family:var(--mono);color:var(--mu);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.rst::after{content:'';flex:1;height:1px;background:var(--b1)}
+.rtx{font-family:var(--mono);font-size:12.5px;line-height:1.75;color:var(--tx);white-space:pre-wrap}
+.fl2{display:flex;align-items:flex-start;gap:8px;margin-bottom:7px;font-family:var(--mono);font-size:12.5px;line-height:1.55}
+.dot{width:5px;height:5px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.dr{background:var(--acc4)}.dg{background:var(--grn)}.dy{background:var(--acc3)}
+.ci{background:var(--s2);border-left:2px solid var(--acc3);border-radius:0 6px 6px 0;padding:8px 12px;margin-bottom:6px;font-family:var(--mono);font-size:12px;color:var(--tx);line-height:1.5}
+.ps-box{background:var(--s2);border:1px solid var(--b2);border-left:3px solid var(--acc);border-radius:0 8px 8px 0;padding:14px 16px}
+.jb{background:var(--s3);border:1px solid var(--b2);border-radius:7px;padding:14px;font-family:var(--mono);font-size:11.5px;line-height:1.7;color:var(--mu2);white-space:pre-wrap;max-height:300px;overflow-y:auto;margin-bottom:8px}
+.jira-actions{display:flex;gap:8px;flex-wrap:wrap}
+.cb{background:rgba(124,106,247,0.12);border:1px solid rgba(124,106,247,0.3);color:var(--acc);font-family:var(--sans);font-size:12px;font-weight:600;padding:7px 16px;border-radius:6px;cursor:pointer;transition:background .2s}
+.cb:hover{background:rgba(124,106,247,0.22)}.cb.copied{background:rgba(78,247,136,0.1);border-color:rgba(78,247,136,0.3);color:var(--grn)}
+.tc-table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11.5px}
+.tc-table th{text-align:left;padding:7px 10px;color:var(--mu);font-weight:500;border-bottom:1px solid var(--b2);font-size:10px;text-transform:uppercase;letter-spacing:.07em}
+.tc-table td{padding:8px 10px;border-bottom:1px solid var(--b1);vertical-align:top;line-height:1.5}
+.tc-table tr:last-child td{border-bottom:none}
+.tc-table tr:hover td{background:rgba(255,255,255,0.02)}
+.badge-ok{display:inline-block;padding:2px 8px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(78,247,136,0.1);color:var(--grn)}
+.badge-gap{display:inline-block;padding:2px 8px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(247,197,106,0.12);color:var(--acc3)}
+.badge-bad{display:inline-block;padding:2px 8px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(247,144,106,0.12);color:#f7906a}
+.badge-partial{display:inline-block;padding:2px 8px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(160,144,255,0.12);color:#a090ff}
+.badge-weak{display:inline-block;padding:2px 8px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(247,106,138,0.1);color:var(--acc4)}
+.badge-miss{display:inline-block;padding:2px 8px;border-radius:3px;font-size:9px;font-weight:600;background:rgba(124,106,247,0.12);color:var(--acc)}
+.sh{color:#4ef788}.sm{color:#f7c56a}.sl{color:#f76a8a}
+/* Score drivers */
+.score-drivers{margin-top:6px;font-family:var(--mono);font-size:9.5px;color:var(--mu);line-height:1.6}
+.score-drivers span{display:block;padding-left:8px;position:relative}
+.score-drivers span::before{content:'·';position:absolute;left:0;color:var(--mu)}
+/* Production risks */
+.prod-risk-item{display:flex;align-items:flex-start;gap:8px;padding:9px 12px;background:var(--s2);border-radius:6px;margin-bottom:6px;font-family:var(--mono);font-size:12px;line-height:1.55;border-left:2px solid var(--acc4)}
+.prod-risk-num{color:var(--acc4);font-weight:600;flex-shrink:0}
+/* Severity badges */
+.sev-blocker{display:inline-block;padding:1px 7px;border-radius:3px;font-size:9px;font-weight:700;background:rgba(247,106,138,0.14);color:var(--acc4);margin-right:6px;letter-spacing:.05em}
+.sev-high{display:inline-block;padding:1px 7px;border-radius:3px;font-size:9px;font-weight:700;background:rgba(247,197,106,0.14);color:var(--acc3);margin-right:6px;letter-spacing:.05em}
+.sev-medium{display:inline-block;padding:1px 7px;border-radius:3px;font-size:9px;font-weight:700;background:rgba(124,106,247,0.12);color:var(--acc);margin-right:6px;letter-spacing:.05em}
+/* Verdict band */
+.verdict-band{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;margin-bottom:10px;font-family:var(--mono);font-size:12px;font-weight:600;border:1px solid}
+.vb-block{background:rgba(247,106,138,0.08);border-color:rgba(247,106,138,0.3);color:var(--acc4)}
+.vb-cond{background:rgba(247,197,106,0.07);border-color:rgba(247,197,106,0.25);color:var(--acc3)}
+.vb-approve{background:rgba(78,247,136,0.06);border-color:rgba(78,247,136,0.2);color:var(--grn)}
+.vb-minor{background:rgba(78,205,196,0.07);border-color:rgba(78,205,196,0.2);color:var(--acc2)}
+.mt-item{display:flex;gap:10px;padding:8px 12px;background:var(--s2);border-radius:6px;margin-bottom:6px;font-family:var(--mono);font-size:12px;line-height:1.6;border-left:2px solid var(--acc)}
+.mt-num{color:var(--acc);font-weight:600;flex-shrink:0;min-width:20px}
+.mt-txt{color:var(--tx)}
+.ceo-bullet{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;background:linear-gradient(135deg,rgba(247,197,106,0.04),rgba(247,106,138,0.04));border:1px solid rgba(247,197,106,0.18);border-radius:8px;margin-bottom:8px;font-family:var(--mono);font-size:12px;line-height:1.6}
+.ceo-num{color:var(--acc3);font-weight:700;flex-shrink:0;min-width:18px;font-size:11px;padding-top:1px}
+.ceo-txt{color:var(--tx);flex:1}
+.ship-blocker{color:var(--acc4);font-weight:700;background:rgba(247,106,138,0.12);padding:1px 6px;border-radius:3px;font-size:10px;letter-spacing:.05em;margin-right:4px}
+.footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--b1);font-family:var(--mono);font-size:10px;color:var(--mu);text-align:center;line-height:2}
+.footer a{color:var(--mu2);text-decoration:none}.footer a:hover{color:var(--acc2)}
+</style>
+</head>
+<body>
+<div class="app">
+
+<div class="hero">
+  <div class="hero-badges">
+    <div class="badge">&#9658; AI QA REVIEW AGENT &middot; V15.1</div>
+    <div class="badge badge-teal">&#9658; ANY DOMAIN &middot; AUTO-DETECTED</div>
+  </div>
+  <h1>Release Risk<br>Intelligence</h1>
+  <div class="hero-sub">
+    <span>Know your release risk before release day.</span><br>
+    Paste your story, AC &amp; test cases &rarr; get a domain-aware senior QA review in seconds.<br>
+    Real stakeholder personas &middot; TC-by-TC verdict &middot; Jira-ready sign-off comment.
+  </div>
+  <div class="byline">by <a href="https://www.vaishalidesarda.com" target="_blank">Vaishali Desarda</a> &middot; QA Leader · Fintech &amp; SaMD</div>
+  <div class="domain-strip">
+    <span class="ds-label">Works for &rarr;</span>
+    <span class="dp">Fintech</span>
+    <span class="dp">Healthcare / SaMD</span>
+    <span class="dp">SaaS</span>
+    <span class="dp">ERP / SAP</span>
+    <span class="dp">Salesforce</span>
+    <span class="dp">Gov &amp; Public Sector</span>
+    <span class="dp" style="border-color:rgba(124,106,247,0.4);color:var(--acc)">+ any domain</span>
+  </div>
+</div>
+
+<div class="provcard" id="provCard">
+  <div class="fl">// choose your AI provider</div>
+  <div class="prov-tabs" id="provTabs">
+    <button class="ptab" data-p="groq"   onclick="selProv('groq')">Groq <span class="free-chip">free tier</span></button>
+    <button class="ptab" data-p="gemini" onclick="selProv('gemini')">Google Gemini <span class="free-chip">free tier</span></button>
+    <button class="ptab" data-p="claude" onclick="selProv('claude')">Claude</button>
+    <button class="ptab" data-p="openai" onclick="selProv('openai')">OpenAI</button>
+  </div>
+  <div class="key-row">
+    <div>
+      <div class="fl" id="keyLbl">// your api key</div>
+      <input type="password" id="apiKey" placeholder="">
+    </div>
+    <a class="get-btn" id="getBtn" href="#" target="_blank">&#9658; Get key</a>
+  </div>
+  <div class="privacy">
+    <div class="pico">&#128274;</div>
+    <div class="ptxt"><strong>Your API key and story are never stored or logged.</strong> Requests are proxied securely to your chosen AI provider - we see nothing, store nothing. Your key, your data, your control.</div>   </div>
+  <div style="margin-top:10px;padding:10px 13px;background:rgba(124,106,247,0.06);border:1px solid rgba(124,106,247,0.2);border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div style="font-family:var(--mono);font-size:11px;color:var(--mu2);line-height:1.7"><strong style="color:var(--acc)">Want a domain-customized version for your product?</strong><br>Tailored for your workflows and release sign-off standards.<br><span style="color:var(--mu)">Custom domains &middot; team workspaces &middot; private deployment for regulated industries.</span></div>
+    <a href="mailto:desardavaishali@gmail.com" style="font-family:var(--mono);font-size:11px;font-weight:600;color:var(--acc);background:rgba(124,106,247,0.12);border:1px solid rgba(124,106,247,0.3);padding:8px 16px;border-radius:5px;text-decoration:none;white-space:nowrap;flex-shrink:0">&#9658; Contact me</a>
+  </div>
+  <div class="billing-warn" id="billingWarn">
+    <div style="font-size:13px;flex-shrink:0;margin-top:2px">&#9888;</div>
+    <div class="bwt" id="billingWarnText"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="fr">
+    <div class="fb">
+      <div class="fl">// story title</div>
+      <input type="text" id="storyTitle" placeholder="e.g. PMC Out-of-Scope Handling Flow">
+    </div>
+    <div class="fb">
+      <div class="fl">// feature type (optional)</div>
+      <input type="text" id="featureType" placeholder="e.g. Workflow, Validation, Integration">
+    </div>
+  </div>
+  <div class="fb" style="margin-bottom:12px">
+    <div class="fl">// story / acceptance criteria</div>
+    <textarea id="acInput" class="ts" placeholder="Paste your user story, acceptance criteria, or feature description here.&#10;&#10;e.g. PMC user can submit inspection with mandatory Form No.3 upload.&#10;Step status must update to Complete on submission.&#10;Visit Type must change to Rectification.&#10;&#10;Full Jira stories work too — paste everything."></textarea>
+    <div class="hint">Tip: paste your full Jira description or AC bullet points. <strong>Implementation details are fine</strong> — the agent extracts what it needs.</div>
+  </div>
+  <div class="fb" style="margin-bottom:12px">
+    <div class="fl">// test cases</div>
+    <textarea id="tcInput" class="tm" placeholder="Paste your test cases here. Any format works:&#10;&#10;1. Login with valid credentials → success&#10;2. Login with invalid password → error shown&#10;TC-03: Submit without mandatory field → validation fires&#10;&#10;Structured tables (SR No / Title / Steps / Expected) also work."></textarea>
+  </div>
+  <div class="samples">
+    <span class="slabel">try a sample &rarr;</span>
+    <span class="pill" onclick="ls('fintech')">Fintech</span>
+    <span class="pill" onclick="ls('samd')">SaMD</span>
+    <span class="pill" onclick="ls('realestate')">Real Estate</span>
+    <span class="pill" onclick="ls('salesforce')">Salesforce</span>
+    <span class="pill" onclick="ls('ecommerce')">E-commerce</span>
+    <span class="pill" onclick="ls('aiproduct')">AI Product</span>
+    <span class="pill" onclick="ls('saas')">SaaS</span>
+    <span class="pill" onclick="ls('erp')">ERP</span>
+    <span class="pill" onclick="ls('logistics')">Logistics</span>
+    <span class="pill" onclick="ls('government')">Gov</span>
+  </div>
+  <button class="run-btn" id="runBtn" onclick="run()">Run QA Review &#x2192;</button>
+  <div class="err" id="errMsg"></div>
+</div>
+
+<div class="db" id="domainBanner">
+  <span class="dc" id="domainChip"></span>
+  <span class="di" id="domainInfo"></span>
+  <span style="font-family:var(--mono);font-size:10px;" id="provTag"></span>
+</div>
+<div class="stg" id="stages">
+  <div class="st" id="st0">UNDERSTAND</div>
+  <div class="st" id="st1">PERSONAS</div>
+  <div class="st" id="st2">REVIEWING</div>
+  <div class="st" id="st3">TC MATRIX</div>
+  <div class="st" id="st4">REPORT</div>
+  <div class="st" id="st5">DONE</div>
+</div>
+<div class="ph" id="ph">// domain personas &mdash; auto-generated for this story</div>
+<div class="pg" id="pg"></div>
+
+<div class="rp" id="report">
+  <div class="rt">
+    <div><div class="rtt">QA Review Report</div><div class="rm" id="reportMeta"></div></div>
+    <div style="text-align:right"><div class="bs" id="bigScore"></div><div class="bss">overall quality score</div></div>
+  </div>
+  <div class="sb">
+    <div class="sbb"><div class="sbl">Req. Coverage</div><div class="sbv" id="sCov">&mdash;</div><div class="sbt"><div class="sbf2" id="bCov" style="width:0%"></div></div><div class="score-drivers" id="dCov"></div></div>
+    <div class="sbb"><div class="sbl">Regression Safety</div><div class="sbv" id="sReg">&mdash;</div><div class="sbt"><div class="sbf2" id="bReg" style="width:0%"></div></div><div class="score-drivers" id="dReg"></div></div>
+    <div class="sbb"><div class="sbl">Design Quality</div><div class="sbv" id="sDes">&mdash;</div><div class="sbt"><div class="sbf2" id="bDes" style="width:0%"></div></div><div class="score-drivers" id="dDes"></div></div>
+    <div class="sbb">
+      <div class="sbl">Release Risk</div>
+      <div class="sbv" id="sRisk" style="font-size:14px;margin-top:6px">&mdash;</div>
+      <div id="riskReason" style="font-family:var(--mono);font-size:10px;color:var(--mu);margin-top:5px;line-height:1.5;display:none"></div>
+    </div>
+  </div>
+  <div class="rb">
+    <div class="rs"><div class="rst">test case analysis &mdash; verdict per TC</div><div id="tcMatrix"></div></div>
+    <div class="rs"><div class="rst">🔥 top production failure modes</div><div id="productionRisks"></div></div>
+    <div class="rs"><div class="rst">ac coverage mapping &mdash; requirements traced to tests</div><div id="acCoverage"></div></div>
+    <div class="rs"><div class="rst">product sense &mdash; what the business is actually risking</div><div class="ps-box"><div class="rtx" id="productSense"></div></div></div>
+    <div class="rs"><div class="rst">precision gap check &mdash; zero-trust articulation</div><div class="rtx" id="precGap"></div></div>
+    <div class="rs"><div class="rst">incorrect test cases &mdash; expected results that contradict AC</div><div id="incorrectTCs"></div></div>
+    <div class="rs"><div class="rst">critical gaps</div><div id="critGaps"></div></div>
+    <div class="rs"><div class="rst">missing test cases &mdash; gaps traced to AC</div><div id="missing"></div></div>
+    <div class="rs"><div class="rst">💥 real user failure experience</div><div class="ps-box" id="realUserFailure" style="border-left-color:var(--acc4)"></div></div>
+    <div class="rs"><div class="rst">✏ weak test rewrites</div><div id="weakRewrites"></div></div>
+    <div class="rs"><div class="rst">recommended additional risks &mdash; not required by AC</div><div id="recommendedRisks"></div></div>
+    <div class="rs"><div class="rst">implied risks &mdash; assumptions worth raising</div><div id="impliedRisks"></div></div>
+    <div class="rs"><div class="rst">duplicate scenarios</div><div class="rtx" id="duplicates"></div></div>
+    <div class="rs"><div class="rst">clarification questions for BA / PO</div><div id="clarifyQ"></div></div>
+    <div class="rs"><div class="rst">overall verdict</div><div id="verdictWrap"></div></div>
+    <div class="rs" id="ceoRiskSection" style="display:none">
+      <div class="rst">🎯 ceo risk summary &mdash; executive sign-off language</div>
+      <div id="ceoRisk"></div>
+    </div>
+    <div class="rs">
+      <div class="rst">jira-ready comment</div>
+      <div class="jb" id="jiraBox"></div>
+      <div class="jira-actions"><button class="cb" id="copyBtn" onclick="cj()">Copy to clipboard</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  Built by <a href="https://www.vaishalidesarda.com" target="_blank">Vaishali Desarda</a> &middot; QA Leader · Fintech &amp; SaMD &middot;
+  <a href="https://www.linkedin.com/in/desardavaishali/" target="_blank">LinkedIn</a><br>
+  Domain-aware personas &middot; Precision Gap methodology &middot; Release risk sign-off &middot; Your key and data are never stored
+</div>
+</div>
+
+<script>
+// ─── PROVIDER CONFIG ──────────────────────────────────────────────────────────
+const P = {
+  groq:   { name:'Groq',         model:'llama-3.3-70b-versatile',  col:'#a090ff', free:true,  ph:'gsk_...',          lbl:'// your groq api key (free — console.groq.com/keys)', url:'https://console.groq.com/keys',               btn:'&#9658; Get free key' },
+  gemini: { name:'Google Gemini', model:'gemini-2.0-flash',         col:'#4ecdc4', free:true,  ph:'AIza...',          lbl:'// your google gemini api key (free)',                url:'https://aistudio.google.com/app/apikey',      btn:'&#9658; Get free key' },
+  claude: { name:'Claude',        model:'claude-sonnet-4-20250514', col:'#f7c56a', free:false, ph:'sk-ant-api03-...', lbl:'// your anthropic api key',                          url:'https://console.anthropic.com/settings/keys', btn:'&#9658; Get API key'  },
+  openai: { name:'OpenAI',        model:'gpt-4o-mini',              col:'#4ef788', free:false, ph:'sk-proj-...',      lbl:'// your openai api key',                             url:'https://platform.openai.com/api-keys',        btn:'&#9658; Get API key'  }
+};
+let cur = 'groq';
+
+function selProv(k) {
+  cur = k; const p = P[k];
+  document.querySelectorAll('.ptab').forEach(function(t) {
+    const on = t.dataset.p === k;
+    t.classList.toggle('sel', on);
+    t.style.background  = on ? p.col+'22' : '';
+    t.style.borderColor = on ? p.col+'55' : '';
+    t.style.color       = on ? p.col : '';
+  });
+  document.getElementById('provCard').style.borderColor = p.col+'33';
+  document.getElementById('keyLbl').textContent = p.lbl;
+  document.getElementById('apiKey').placeholder = p.ph;
+  document.getElementById('apiKey').value = '';
+  const gb = document.getElementById('getBtn');
+  gb.innerHTML = p.btn;
+  gb.href = p.url; gb.style.background = p.col+'18'; gb.style.borderColor = p.col+'44'; gb.style.color = p.col;
+  const bw = document.getElementById('billingWarn');
+  const bt = document.getElementById('billingWarnText');
+  const W = {
+    openai: { m:'OpenAI requires a paid account with credits. A $0 balance returns a quota error even on first use. Add credits at platform.openai.com/settings/billing &mdash; or use <strong style="color:#a090ff">Groq</strong> (free, no card).', bg:'rgba(247,106,138,0.06)', bc:'rgba(247,106,138,0.25)', tc:'#d97090' },
+    claude: { m:'Anthropic requires a paid API account. Free Claude.ai logins do not include API access. Add credits at console.anthropic.com &mdash; or use <strong style="color:#a090ff">Groq</strong> (free, no card).', bg:'rgba(247,106,138,0.06)', bc:'rgba(247,106,138,0.25)', tc:'#d97090' },
+    gemini: { m:'Free Gemini keys work well for most stories. If you hit a rate limit mid-run, the agent will surface the error. Switch to <strong style="color:#a090ff">Groq</strong> if it happens repeatedly.', bg:'rgba(247,197,106,0.04)', bc:'rgba(247,197,106,0.2)', tc:'#c8a84a' },
+    groq:   { m:'Groq free tier: ~12k tokens/min. The agent auto-retries if you hit the rate limit &mdash; the button will show a countdown. For very large stories (&gt;25 TCs), wait 60s between runs.', bg:'rgba(78,247,136,0.04)', bc:'rgba(78,247,136,0.18)', tc:'#40b870' }
+  };
+  const w = W[k];
+  if (w) { bt.innerHTML = w.m; bw.style.background = w.bg; bw.style.border = '1px solid '+w.bc; bt.style.color = w.tc; bw.classList.add('show'); }
+  else { bw.classList.remove('show'); }
+}
+selProv('groq');
+
+// ─── SAMPLES ──────────────────────────────────────────────────────────────────
+const S = {
+  fintech:    {title:'UPI Refund Processing',feature:'Payment Automation',
+    ac:'If UPI payment status = FAILED, auto-initiate refund within 15 minutes\nRefund must be processed only once (idempotency)\nRefund must not happen if payment status becomes SUCCESS later\nCustomer must receive SMS + email confirmation\nRefund status visible in transaction history\nAudit log must capture refund reference ID',
+    tc:'1. Refund triggered for FAILED transaction within 15 mins\n2. Refund not triggered for SUCCESS payment\n3. Refund not triggered twice for same transaction (retry event)\n4. Payment changes FAILED→SUCCESS after 10 mins: refund should not occur\n5. Refund reference ID appears in audit log\n6. Customer receives SMS/email and content is correct\n7. Transaction history shows "Refund Initiated" then "Refund Completed"\n8. Refund fails due to bank downtime → retry logic verification'},
+  samd:       {title:'Glucose Reading Display',feature:'Data Visualisation',
+    ac:'Display 90-day glucose history\nFlag readings outside clinical range\nExport as PDF for clinician\nAudit log entry on every view',
+    tc:'1. Patient with 90 days data → graph shown\n2. No data → empty state shown\n3. Filter by date range → filtered results\n4. Export PDF → file downloaded\n5. Out-of-range reading → flagged in red'},
+  realestate: {title:'Lead Assignment to Broker',feature:'Workflow',
+    ac:'Leads assigned automatically based on region\nIf broker inactive, assign to fallback pool\nAssignment must be logged with timestamp\nBroker cannot see leads from other regions\nAssignment should not change if lead already assigned',
+    tc:'1. New lead in broker region → assigned correctly\n2. Lead assigned to inactive broker → routed to pool\n3. Assignment audit log entry created with timestamp\n4. Broker opens lead list → only own-region leads visible\n5. Re-run assignment on existing lead → assignment unchanged'},
+  salesforce: {title:'Log Call Activity on Opportunity',feature:'CRM Workflow',
+    ac:'Sales rep logs call on open opportunity\nActivity appears in timeline\nDuration and outcome are mandatory\nClosed-won opportunities allow activity logging',
+    tc:'1. Log call on open opp → appears in timeline\n2. Log without subject → validation error\n3. Log on closed-won opp → saved correctly\n4. Set duration → shown on activity\n5. View all activities → list displays'},
+  ecommerce:  {title:'Last Slot Booking',feature:'Concurrency',
+    ac:'Only 1 booking allowed per slot capacity\nPayment confirmation must lock slot\nIf payment fails, slot is released immediately\nCancellation releases slot for others',
+    tc:'1. Book available slot → confirmed\n2. Two users book last slot simultaneously → only one succeeds\n3. Payment timeout → slot released\n4. Cancel booking → slot available again\n5. Attempt to book already-booked slot → blocked'},
+  aiproduct:  {title:'AI Chat Export to PDF',feature:'Export',
+    ac:'User can export own chat history as PDF\nExport includes timestamp and conversation ID\nPrivate conversations cannot be exported by other users\nExport must redact masked PII (phone, email)\nExport fails gracefully if PDF service is down',
+    tc:'1. Export own conversation → PDF generated with timestamps\n2. Export includes conversation ID in header\n3. User B attempts to export User A conversation → blocked\n4. Chat with phone number → phone redacted in export\n5. PDF service unavailable → user-friendly error shown'},
+  saas:       {title:'Auto-renew Subscription',feature:'Billing',
+    ac:'Renewal happens 3 days before expiry\nIf payment fails, retry 3 times in 24 hours\nIf all retries fail, subscription becomes Past Due\nInvoice generated only once per renewal cycle\nCustomer receives email for renewal success or failure',
+    tc:'1. Renewal success 3 days before expiry → invoice generated once\n2. Payment fails → retry scheduled within 24 hours\n3. Payment succeeds on retry #2 → subscription renewed, no further retries\n4. All 3 retries fail → subscription status becomes Past Due\n5. Duplicate renewal prevention → second invoice not created'},
+  logistics:  {title:'Last Delivery Slot Booking',feature:'Concurrency',
+    ac:'Only 1 booking allowed per slot capacity\nPayment must lock slot for 5 minutes\nIf payment fails, slot released automatically after timeout\nTwo users booking same slot simultaneously → only first confirmed\nCancellation releases slot instantly\nAudit log must store slot allocation history with timestamp',
+    tc:'1. Book available slot → confirmed and slot locked\n2. Payment timeout after 5 mins → slot released\n3. Two users submit booking for last slot simultaneously → only first succeeds\n4. Cancel confirmed booking → slot immediately available\n5. Audit log entry created with user ID and timestamp on booking and cancel'},
+  government: {title:'Citizen Document Download',feature:'RBAC + Audit',
+    ac:'Citizen can download only their own documents\nAdmin can download any citizen document\nEvery download must be logged: user ID, timestamp, IP address\nIf document is expired → download blocked with reason message\nIf file is missing from storage → show error and log incident',
+    tc:'1. Citizen downloads their own document → file downloaded\n2. Citizen attempts to access another citizen document URL → blocked\n3. Admin downloads any citizen document → succeeds\n4. Citizen requests expired document → blocked with expiry reason\n5. Document file missing in storage → error shown and incident logged'},
+  erp:        {title:'Purchase Order Approval',feature:'Approval Workflow',
+    ac:'PO above ₹1,00,000 requires Director approval\nPO below threshold auto-approved\nRejected PO cannot be resubmitted unless edited\nAudit trail required for all approvals with approver name and timestamp\nApprover must see PO attachment before approving',
+    tc:'1. PO ₹1,50,000 submitted → Director approval requested\n2. PO ₹80,000 submitted → auto-approved immediately\n3. Rejected PO resubmitted without changes → blocked\n4. Director approves PO → audit log shows approver name and timestamp\n5. PO without attachment submitted for approval → attachment visible to approver in approval screen'}
+};
+function ls(k){const s=S[k];document.getElementById('storyTitle').value=s.title;document.getElementById('featureType').value=s.feature;document.getElementById('acInput').value=s.ac;document.getElementById('tcInput').value=s.tc;}
+
+// ─── AI CALL — proxied through Vercel (prompts stay server-side) ────────────────
+const PROXY = 'https://release-risk-intelligence.vercel.app/api/review';
+
+async function ai(stage, payload, maxTok, label) {
+  const key = document.getElementById('apiKey').value.trim();
+  const p = P[cur];
+  if (!key) throw new Error('Please paste your ' + p.name + ' API key above. Get it free at: ' + p.url);
+  const btn = document.getElementById('runBtn');
+
+  async function once() {
+    const r = await fetch(PROXY, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({provider: cur, key: key, stage: stage, payload: payload, maxTok: maxTok || 2000})
+    });
+    const d = await r.json();
+    if (r.status === 429) {
+      const e = new Error(d.error || 'Rate limit');
+      e.isRL = true; e.retryAfter = d.retryAfter || 15000; throw e;
+    }
+    if (!r.ok) throw new Error(d.error || 'HTTP ' + r.status);
+    return d.result || '';
+  }
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try { return await once(); }
+    catch(e) {
+      if (e.isRL && attempt < 2) {
+        const waitMs = e.retryAfter || 15000;
+        const waitSec = Math.round(waitMs / 1000);
+        for (let s = waitSec; s > 0; s--) {
+          btn.textContent = (label||'Retrying') + ' — rate limit, retrying in ' + s + 's...';
+          await delay(1000);
+        }
+        btn.textContent = 'Retrying ' + (label||'') + '...';
+        continue;
+      }
+      throw e;
+    }
+  }
+}
+
+
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
+function prs(raw) {
+  if (!raw) return null;
+  let c = raw.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim();
+  try { return JSON.parse(c); } catch(e) {}
+  const m = c.match(/\{[\s\S]*\}/);
+  if (m) {
+    try { return JSON.parse(m[0]); } catch(e2) {
+      let s=m[0],ob=0,ob2=0,inStr=false,esc=false;
+      for(let i=0;i<s.length;i++){const ch=s[i];if(esc){esc=false;continue;}if(ch==='\\'){esc=true;continue;}if(ch==='"'){inStr=!inStr;continue;}if(inStr)continue;if(ch==='{')ob++;else if(ch==='}')ob--;else if(ch==='[')ob2++;else if(ch===']')ob2--;}
+      let fix=s;if(ob2>0)fix+=']'.repeat(ob2);if(ob>0)fix+='}'. repeat(ob);
+      try { return JSON.parse(fix); } catch(e3) {}
+    }
+  }
+  console.warn('[prs] Parse failed. Raw:', raw.slice(0,500)); return null;
+}
+function sc(n){return n>=75?'sh':n>=50?'sm':'sl'}
+function bc(n){return n>=75?'#4ef788':n>=50?'#f7c56a':'#f76a8a'}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function stg(n,s){const e=document.getElementById('st'+n);if(e)e.className='st '+(s==='active'?'active':s==='done'?'done':'');}
+function rst(){for(let i=0;i<6;i++)stg(i,'');}
+function delay(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function verdictBadge(v){
+  const vl=(v||'').toLowerCase();
+  if(vl.includes('precision gap'))return '<span class="badge-gap">PRECISION GAP</span>';
+  if(vl.includes('weak'))return '<span class="badge-weak">WEAK</span>';
+  if(vl.includes('missing'))return '<span class="badge-miss">MISSING</span>';
+  return '<span class="badge-ok">COVERED</span>';
+}
+function rpc(p){
+  return '<div class="pc" id="pc-'+p.id+'">'+
+    '<div class="pt"><div class="pn" style="color:'+p.color+'">'+esc(p.name)+'</div><span class="pbg bw" id="pb-'+p.id+'">WAITING</span></div>'+
+    '<div class="pscore" id="ps-'+p.id+'">&mdash;</div>'+
+    '<div class="pfocus" id="pf-'+p.id+'">'+esc(p.focus)+'</div>'+
+    '<div class="pfindings" id="pfi-'+p.id+'"></div>'+
+    '<div class="impact-box" id="imp-'+p.id+'"></div>'+
+    '<div id="tc-toggle-'+p.id+'" style="display:none">'+
+      '<button class="tc-toggle" onclick="toggleTC(\''+p.id+'\')"><span id="tc-arr-'+p.id+'">&#9660;</span> <span id="tc-lbl-'+p.id+'">show TC analysis</span></button>'+
+    '</div>'+
+    '<div class="tc-list collapsed" id="ptc-'+p.id+'"></div>'+
+  '</div>';
+}
+function toggleTC(id){
+  const list=document.getElementById('ptc-'+id);
+  const arr=document.getElementById('tc-arr-'+id);
+  const lbl=document.getElementById('tc-lbl-'+id);
+  const collapsed=list.classList.toggle('collapsed');
+  arr.innerHTML=collapsed?'&#9660;':'&#9650;';
+  lbl.textContent=collapsed?'show TC analysis':'hide TC analysis';
+}
+function scd(id, state, res) {
+  const card=document.getElementById('pc-'+id);
+  const badge=document.getElementById('pb-'+id);
+  const scoreEl=document.getElementById('ps-'+id);
+  const fi=document.getElementById('pfi-'+id);
+  const tcDiv=document.getElementById('ptc-'+id);
+  const impDiv=document.getElementById('imp-'+id);
+  const tcToggleWrap=document.getElementById('tc-toggle-'+id);
+  if(!card) return;
+  card.className='pc'+(state==='active'?' active':state==='done'?' done':'');
+  if(state==='active'){
+    badge.className='pbg bk'; badge.textContent='REVIEWING';
+    scoreEl.innerHTML='<span class="dots"><span>.</span><span>.</span><span>.</span></span>';
+  } else if(state==='skipped'){
+    // Hide card entirely — never show parse errors to end user
+    card.style.display='none';
+  } else if(state==='done'){
+    const failed=res.failed;
+    badge.className='pbg '+(failed?'be2':'bd'); badge.textContent=failed?'FAILED':'DONE';
+    const n=parseInt(res.score)||0;
+    scoreEl.className='pscore '+(failed?'sl':sc(n));
+    scoreEl.textContent=failed?'—':n+'/100';
+    fi.innerHTML=esc(res.findings||'');
+    // business impact box
+    if(impDiv&&res.business_impact){impDiv.textContent='⚡ '+res.business_impact;impDiv.classList.add('show');}
+    // TC analysis — collapsed by default, shown via toggle
+    if(tcDiv){
+      const tca=res.tc_analysis||[];
+      if(tca.length){
+        tcDiv.innerHTML=tca.map(function(t){
+          return '<div class="tc-row">'+verdictBadge(t.verdict||'')+
+            '<span class="tc-detail"><strong style="color:var(--mu2)">'+esc(t.tc||'')+'</strong> &mdash; '+esc(t.comment||'')+'</span></div>';
+        }).join('');
+        if(tcToggleWrap){tcToggleWrap.style.display='block';}
+        // update toggle label with counts
+        const gaps=tca.filter(function(t){return (t.verdict||'').toLowerCase().includes('precision gap');}).length;
+        const bad=tca.filter(function(t){return (t.verdict||'').toLowerCase().includes('badly written');}).length;
+        const weak=tca.filter(function(t){return (t.verdict||'').toLowerCase().includes('weak');}).length;
+        const miss=tca.filter(function(t){return (t.verdict||'').toLowerCase().includes('missing') && !(t.verdict||'').toLowerCase().includes('badly');}).length;
+        const lbl=document.getElementById('tc-lbl-'+id);
+        if(lbl){
+          const parts=[];
+          if(gaps)parts.push(gaps+' gap'+(gaps>1?'s':''));
+          if(bad)parts.push(bad+' badly written');
+          if(weak)parts.push(weak+' weak');
+          if(miss)parts.push(miss+' missing');
+          lbl.textContent='show TC analysis'+(parts.length?' ('+parts.join(', ')+')':'');
+        }
+      }
+    }
+  }
+}
+
+// ─── RENDER HELPERS ───────────────────────────────────────────────────────────
+function verdictBadge(v){
+  const vl=(v||'').toLowerCase();
+  if(vl.includes('precision gap'))return '<span class="badge-gap">PRECISION GAP</span>';
+  if(vl.includes('badly written'))return '<span class="badge-bad">BADLY WRITTEN</span>';
+  if(vl.includes('partial'))return '<span class="badge-partial">PARTIAL</span>';
+  if(vl.includes('weak'))return '<span class="badge-weak">WEAK</span>';
+  if(vl.includes('missing'))return '<span class="badge-miss">MISSING</span>';
+  return '<span class="badge-ok">COVERED</span>';
+}
+function renderTCMatrix(tcSummary) {
+  if (!tcSummary || !tcSummary.length) return '<div style="font-family:var(--mono);font-size:11px;color:var(--mu);padding:8px 0">TC matrix unavailable — synthesis may have been cut short. Persona cards above contain per-TC analysis.</div>';
+  var totalGaps = tcSummary.filter(function(t){return (t.consensus_verdict||'').toLowerCase().includes('precision gap');}).length;
+  var totalBad = tcSummary.filter(function(t){return (t.consensus_verdict||'').toLowerCase().includes('badly written');}).length;
+  var totalWeak = tcSummary.filter(function(t){return (t.consensus_verdict||'').toLowerCase().includes('weak');}).length;
+  var totalPartial = tcSummary.filter(function(t){return (t.consensus_verdict||'').toLowerCase().includes('partial');}).length;
+  var totalMiss = tcSummary.filter(function(t){return (t.consensus_verdict||'').toLowerCase().includes('missing') && !t.consensus_verdict.toLowerCase().includes('badly');}).length;
+  var totalOk = tcSummary.length - totalGaps - totalBad - totalWeak - totalPartial - totalMiss;
+  var summary = '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;font-family:var(--mono);font-size:10px">';
+  summary += '<span>'+tcSummary.length+' TCs reviewed</span>';
+  if(totalOk) summary += '<span style="color:var(--grn)">&#10003; '+totalOk+' covered</span>';
+  if(totalGaps) summary += '<span style="color:var(--acc3)">&#9650; '+totalGaps+' precision gap'+(totalGaps>1?'s':'')+'</span>';
+  if(totalBad) summary += '<span style="color:#f7906a">&#9888; '+totalBad+' badly written</span>';
+  if(totalPartial) summary += '<span style="color:#a090ff">&#11044; '+totalPartial+' partial</span>';
+  if(totalWeak) summary += '<span style="color:var(--acc4)">&#9632; '+totalWeak+' weak</span>';
+  if(totalMiss) summary += '<span style="color:var(--acc)">&#9632; '+totalMiss+' missing</span>';
+  summary += '</div>';
+  var html = summary+'<table class="tc-table"><thead><tr><th>Test Case</th><th>Verdict</th><th>Recommendation</th></tr></thead><tbody>';
+  tcSummary.forEach(function(t){html+='<tr><td style="color:var(--tx);font-weight:500">'+esc(t.tc||'')+'</td><td>'+verdictBadge(t.consensus_verdict||'')+'</td><td style="color:var(--mu2)">'+esc(t.recommendation||'')+'</td></tr>';});
+  return html+'</tbody></table>';
+}
+function renderACCoverage(acCov) {
+  if (!acCov || !acCov.length) return '';
+  return acCov.map(function(item){
+    var s = String(item);
+    var isNotCovered = s.toUpperCase().includes('NOT COVERED');
+    // Split on first colon only
+    var colonIdx = s.indexOf(':');
+    var label = colonIdx > -1 ? s.slice(0, colonIdx) : s;
+    var tcs = colonIdx > -1 ? s.slice(colonIdx + 1).trim() : '';
+    if (isNotCovered) {
+      return '<div class="fl2"><div class="dot dr"></div><div style="font-family:var(--mono);font-size:12px;line-height:1.55"><strong style="color:var(--mu2)">'+esc(label)+':</strong> <span style="color:var(--acc4);font-weight:600">NOT COVERED</span> <span style="color:var(--mu);font-size:10px">— missing test</span></div></div>';
+    }
+    return '<div class="fl2"><div class="dot dg"></div><div style="font-family:var(--mono);font-size:12px;line-height:1.55"><strong style="color:var(--mu2)">'+esc(label)+':</strong> '+esc(tcs)+'</div></div>';
+  }).join('');
+}
+function renderMissingTests(mt) {
+  if (!mt) return '';
+  var items;
+  if (Array.isArray(mt)) {
+    items = mt.filter(function(x){return String(x||'').trim();}).map(function(item, i) {
+      var s = String(item).replace(/^\d+\.\s*/, '').trim();
+      return { num: i+1, txt: s };
+    });
+  } else {
+    items = String(mt).split('\n').filter(function(l){return l.trim();}).map(function(line, i) {
+      var m = line.match(/^(\d+)\.\s*(.*)/);
+      return m ? { num: m[1], txt: m[2] } : { num: i+1, txt: line };
+    });
+  }
+  return items.filter(function(x){return x.txt && x.txt.toLowerCase()!=='none';}).map(function(x){
+    // Detect TC-style format (has →) vs sentence format
+    var isTCStyle = x.txt.includes('→') || x.txt.includes('->');
+    var parts = isTCStyle ? x.txt.split(/→|->/) : null;
+    var html = '<div class="mt-item"><span class="mt-num">'+x.num+'.</span>';
+    if (isTCStyle && parts && parts.length >= 2) {
+      html += '<span class="mt-txt"><strong style="color:var(--mu2)">'+esc(parts[0].trim())+'</strong>';
+      html += ' <span style="color:var(--acc3)">→</span> ';
+      html += '<span style="color:var(--mu2)">'+esc(parts.slice(1).join('→').trim())+'</span></span>';
+    } else {
+      html += '<span class="mt-txt">'+esc(x.txt)+'</span>';
+    }
+    return html + '</div>';
+  }).join('');
+}
+
+// ─── MAIN RUN ─────────────────────────────────────────────────────────────────
+async function run() {
+  const title   = document.getElementById('storyTitle').value.trim();
+  const feature = document.getElementById('featureType').value.trim();
+  const ac      = document.getElementById('acInput').value.trim();
+  const tc      = document.getElementById('tcInput').value.trim();
+  if (!tc) { se('Please paste your test cases in the box above.'); return; }
+
+  const btn = document.getElementById('runBtn');
+  btn.disabled = true; btn.textContent = 'Analysing...';
+  he();
+  ['report','domainBanner','stages','ph','pg'].forEach(function(id){document.getElementById(id).classList.remove('show');});
+  document.getElementById('pg').innerHTML = ''; rst();
+  // Reset all report fields to prevent stale data from previous run
+  ['tcMatrix','productionRisks','acCoverage','productSense','precGap','incorrectTCs','critGaps','missing','realUserFailure','weakRewrites','recommendedRisks','impliedRisks','duplicates','clarifyQ','verdictWrap','ceoRisk','jiraBox'].forEach(function(id){var el=document.getElementById(id);if(el)el.innerHTML='';});
+  var ceoSec=document.getElementById('ceoRiskSection'); if(ceoSec) ceoSec.style.display='none';
+  var riskReason=document.getElementById('riskReason');if(riskReason)riskReason.style.display='none';
+
+  // ── JS-level duplicate detection (before any API call) ──────────────────────
+  // Normalise each TC line: lowercase, strip numbers/punctuation from start, trim
+  function normTC(s) { return String(s).toLowerCase().replace(/^[\d\s\.\-\)]+/,'').replace(/\s+/g,' ').trim(); }
+  var tcLines = tc.split('\n').map(function(l){return l.trim();}).filter(function(l){return l;});
+  var tcNorm = tcLines.map(normTC);
+  var jsDuplicates = [];
+  for (var di = 0; di < tcNorm.length; di++) {
+    for (var dj = di+1; dj < tcNorm.length; dj++) {
+      // exact match after normalisation
+      if (tcNorm[di] && tcNorm[dj] && tcNorm[di] === tcNorm[dj]) {
+        jsDuplicates.push('TC'+(di+1)+' and TC'+(dj+1)+': "'+tcLines[di].slice(0,60)+'"');
+      }
+      // near-match: one string starts with the other (handles trailing words)
+      else if (tcNorm[di].length > 20 && tcNorm[dj].length > 20) {
+        var shorter = tcNorm[di].length < tcNorm[dj].length ? tcNorm[di] : tcNorm[dj];
+        var longer  = tcNorm[di].length < tcNorm[dj].length ? tcNorm[dj] : tcNorm[di];
+        if (longer.startsWith(shorter) && shorter.length / longer.length > 0.8) {
+          jsDuplicates.push('TC'+(di+1)+' and TC'+(dj+1)+' (near-duplicate): "'+tcLines[di].slice(0,50)+'"');
+        }
+      }
+    }
+  }
+
+  // Domain detection: story truncated to 2000 chars to prevent token overflow
+  const storySnippet = (ac||'').length > 2000 ? (ac||'').slice(0,2000)+'...[truncated]' : (ac||'Not provided');
+  const inpFull = 'STORY: '+(title||'Untitled')+'\nFEATURE: '+(feature||'')+'\nSTORY/AC:\n'+storySnippet+'\nTEST CASES:\n'+tc;
+
+  // Persona reviews: AC truncated to 2000 chars — saves tokens per persona call
+  const acSnippet = (ac||'').length > 2000 ? (ac||'').slice(0,2000)+'...[see story for full AC]' : (ac||'');
+  const inpPersona = (acSnippet ? 'ACCEPTANCE CRITERIA:\n'+acSnippet+'\n\n' : '')+'TEST CASES:\n'+tc;
+
+  // AC extraction: use FULL AC text (up to 5000 chars) — never truncate for extraction
+  // This is the critical budget that determines AC count accuracy
+  const acFull = (ac||'').length > 5000 ? (ac||'').slice(0,5000)+'...[truncated after AC extraction]' : (ac||'');
+
+  // ── JS AC pre-processor: extract ALL numbered top-level ACs ──────────────────
+  // Uses acFull (up to 5000 chars) — never the truncated acSnippet
+  // Handles: AC1:/AC2: labels, numbered lists, markdown headings, bullet points
+  function extractACs(text) {
+    if (!text) return [];
+    var lines = text.split('\n').map(function(l){return l.trim();}).filter(Boolean);
+    var acs = [];
+    var current = null;
+    var inACBlock = false; // true once any AC1:/AC2: style header is seen
+
+    lines.forEach(function(line) {
+      var isACHeader = /^AC\s*\d+\s*[:\-\.]/i.test(line);
+      var isNumberedSection = /^\d+\.\s+[A-Z][a-z]/.test(line) && line.length < 100;
+      var isMarkdownHeading = /^#{1,3}\s+/.test(line) || (/^\*\*[A-Z]/.test(line) && line.length < 100);
+      var isTopLevel = isACHeader || isNumberedSection || isMarkdownHeading;
+
+      if (isACHeader) inACBlock = true;
+
+      if (isTopLevel) {
+        // New top-level AC — save previous, start new
+        if (current) acs.push(current.trim());
+        current = line.replace(/^#{1,3}\s+/, '').replace(/\*\*/g, '');
+      } else if (inACBlock) {
+        // Inside an AC1:/AC2: block — ALL content belongs to current AC until next header
+        // This prevents sub-bullets like "system must update only once" from becoming new ACs
+        if (current) current += ' | ' + line.replace(/^[-•*]\s+/, '');
+      } else if (/^[-•*]\s+/.test(line)) {
+        // Bullet list before any AC header — each bullet = one AC
+        var clean = line.replace(/^[-•*]\s+/, '').trim();
+        if (clean.length > 20) { if (current) acs.push(current.trim()); current = clean; }
+      } else if (line.length > 25) {
+        // Plain prose requirement sentence — each line = one AC (handles flat requirement lists)
+        if (current) acs.push(current.trim());
+        current = line;
+      }
+    });
+    if (current && current.trim()) acs.push(current.trim());
+    return acs.filter(function(a){ return a.length > 15; });
+  }
+  var acList = extractACs(acFull);
+  // Fallback: if extraction found nothing, split on blank lines
+  if (acList.length < 2 && acFull) {
+    acList = acFull.split(/\n\n+/).filter(function(s){return s.trim().length > 15;});
+  }
+  var acNumbered = acList.map(function(a,i){return 'AC'+(i+1)+': '+a;}).join('\n');
+  var jsAcCount = acList.length || 1;
+
+  // TC format detection — deterministic, passed to model as ground truth
+  var structuredMarkers = /→|->|given|when|then|precondition|step[s]?:|expected|result:/i;
+  var titleOnlyTCs = tcLines.filter(function(l){ return l.trim() && !structuredMarkers.test(l); }).length;
+  var tcFormatNote = titleOnlyTCs === tcLines.length
+    ? 'ALL '+tcLines.length+' TCs are single-line titles with no steps or expected results — design_score MUST be 50-60 maximum, not higher'
+    : titleOnlyTCs > 0
+    ? titleOnlyTCs+' of '+tcLines.length+' TCs are title-only; '+(tcLines.length-titleOnlyTCs)+' have steps — design_score should be 60-72'
+    : 'All '+tcLines.length+' TCs have steps/expected results — design_score can start from 80';
+
+  // ── JS keyword mapping hints — pre-compute likely TC→AC relationships ────────
+  // This prevents the model from using positional matching (TC6→AC6)
+  // We extract key signal words from each TC and each AC, then find overlaps
+  function keywordsOf(s) {
+    return String(s).toLowerCase()
+      .replace(/[^a-z0-9\s]/g,' ')
+      .split(/\s+/)
+      .filter(function(w){ return w.length > 3 && !/^(test|case|that|with|when|should|must|have|from|this|then|also|after|before|into|only|more|some|over|under|each|both|been|being|their|will|not|and|for|the|are|but|its|all|any)$/.test(w); });
+  }
+  var jsMappingHints = [];
+  acList.forEach(function(acText, ai) {
+    var acKw = keywordsOf(acText);
+    var matches = [];
+    tcLines.forEach(function(tcText, ti) {
+      var tcKw = keywordsOf(tcText);
+      var overlap = acKw.filter(function(w){ return tcKw.includes(w); });
+      if (overlap.length >= 1) {
+        matches.push({tc: 'TC'+(ti+1), tcTitle: tcText.trim().slice(0,50), overlap: overlap.slice(0,4)});
+      }
+    });
+    jsMappingHints.push({
+      ac: 'AC'+(ai+1),
+      acSummary: acText.slice(0,60),
+      likelyTCs: matches.length ? matches : 'none found by keyword'
+    });
+  });
+
+  const provName = P[cur].name, provCol = P[cur].col;
+
+  try {
+    document.getElementById('stages').classList.add('show');
+    stg(0,'active');
+
+    // Stage 0: Domain detection
+    const dr = await ai('domain', {input: inpFull}, 1500, 'Domain detect');
+    const domParsed = prs(dr);
+    if (!domParsed) console.warn('[domain] Parse failed. Raw:', dr ? dr.slice(0,400) : 'empty');
+    const dom = domParsed || {
+      domain:'Generic Software', confidence:'Low',
+      feature_context:'Domain detection failed — generic fallback in use.',
+      domain_rules:'Apply functional correctness, access control, boundary, and regression checks.',
+      personas:[
+        {id:'p1',name:'QA Lead',focus:'coverage gaps and precision',color:'#7c6af7',prompt_role:'Senior QA Lead. Find missing negative paths, precision gaps where tests check messages not state, and boundary conditions.'},
+        {id:'p2',name:'Business Analyst',focus:'AC completeness and traceability',color:'#4ecdc4',prompt_role:'BA who owns the AC. Verify every AC has a test, flag vague expected results, identify untested business rules.'},
+        {id:'p3',name:'Security Engineer',focus:'access control and data exposure',color:'#f76a8a',prompt_role:'Security engineer. Find missing auth tests, privilege escalation, direct object reference vulnerabilities.'},
+        {id:'p4',name:'Chaos Engineer',focus:'failure modes and resilience',color:'#f7c56a',prompt_role:'Reliability engineer. Find race conditions, concurrent session conflicts, boundary violations, timeout/retry gaps.'}
+      ]
+    };
+    stg(0,'done'); stg(1,'active');
+
+    const dco = {'Salesforce CRM':'#00a1e0','Fintech':'#4ef788','Healthcare / SaMD':'#f7c56a','Real Estate':'#4ecdc4','E-commerce':'#f76a8a','AI Product':'#a090ff','SaaS':'#7c6af7','ERP / SAP':'#f7a56a','Government / Public Sector':'#6af7c5','Logistics / Supply Chain':'#c5f76a','EdTech':'#f76ac5','Generic Software':'#8888a0'};
+    const dc = dco[dom.domain] || '#7c6af7';
+    const chip = document.getElementById('domainChip');
+    chip.textContent = dom.domain.toUpperCase(); chip.style.background = dc+'18'; chip.style.border = '1px solid '+dc+'44'; chip.style.color = dc;
+    var confLabel = (dom.confidence||'').toLowerCase() === 'high' ? 'Domain detected' : (dom.confidence||'').toLowerCase() === 'medium' ? 'Domain inferred' : 'Domain best-guess';
+    document.getElementById('domainInfo').textContent = confLabel+' · '+(dom.feature_context||'');
+    const pt = document.getElementById('provTag'); pt.textContent = '◆ '+provName; pt.style.color = provCol;
+    document.getElementById('domainBanner').classList.add('show');
+
+    const personas = dom.personas || [];
+    document.getElementById('pg').innerHTML = personas.map(rpc).join('');
+    document.getElementById('pg').classList.add('show');
+    document.getElementById('ph').classList.add('show');
+    stg(1,'done'); stg(2,'active');
+
+    // Stage 2: Persona reviews — smart gap + auto-retry on parse failure
+    const pRes = [];
+    let lastRateLimitWait = 0;
+    for (let i = 0; i < personas.length; i++) {
+      const p = personas[i];
+      scd(p.id, 'active', {});
+      const gapMs = i > 0 ? Math.max(2500, lastRateLimitWait + 1000) : 0;
+      if (gapMs > 0) await delay(gapMs);
+      lastRateLimitWait = 0;
+      try {
+        let raw = await ai('persona', {persona: p, domain: dom.domain, domainRules: dom.domain_rules, input: inpPersona}, 2000, p.name);
+        let res = prs(raw);
+        // Auto-retry once if parse failed — model sometimes returns markdown or partial JSON
+        if (!res) {
+          console.warn('[persona:'+p.id+'] First parse failed, retrying once...');
+          await delay(1500);
+          raw = await ai('persona', {persona: p, domain: dom.domain, domainRules: dom.domain_rules, input: inpPersona}, 2000, p.name+' retry');
+          res = prs(raw);
+        }
+        if (!res) {
+          // Hide persona card completely — never show 0/100 to user
+          console.error('[persona:'+p.id+'] Retry also failed. Hiding card. Raw:', raw ? raw.slice(0,300) : 'empty');
+          scd(p.id, 'skipped', {});
+          pRes.push({id:p.id, name:p.name, score:0, findings:'', business_impact:'', tc_analysis:[], missing:[], skipped:true});
+          continue;
+        }
+        res.score = res.score||0; res.business_impact = res.business_impact||''; res.tc_analysis = res.tc_analysis||[]; res.missing = res.missing||[];
+        scd(p.id, 'done', res);
+        pRes.push({id:p.id, name:p.name, score:res.score, findings:res.findings, business_impact:res.business_impact, tc_analysis:res.tc_analysis, missing:res.missing});
+      } catch(pe) {
+        if (pe.isRL && pe.retryAfter) lastRateLimitWait = pe.retryAfter;
+        const msg = pe.isRL ? '⏳ Rate limit — retries exhausted. Wait 60s and re-run, or switch to Google Gemini (free) · Claude · OpenAI.' : 'Could not complete: '+pe.message;
+        scd(p.id, 'done', {score:0, findings:msg, tc_analysis:[], missing:[], failed:true});
+        pRes.push({id:p.id, name:p.name, score:0, findings:msg, tc_analysis:[], missing:[]});
+      }
+    }
+    stg(2,'done'); stg(3,'active');
+    btn.textContent = 'Building TC matrix...';
+
+    // Stage 3: TC matrix — passes FULL TC list + AC text for proper extraction and escalation
+    const sr1 = await ai('tc_matrix', {domain: dom.domain, personaResults: pRes, tcList: tc, featureType: dom.feature_type||feature||'', acText: acFull}, 3000, 'TC Matrix');
+    const syn1 = prs(sr1);
+    const tcSummary = (syn1 && syn1.tc_summary) ? syn1.tc_summary : [];
+
+    stg(3,'done'); stg(4,'active');
+    btn.textContent = 'Writing report...';
+
+    // Stage 4: Report narrative — tcSummary passed as ground truth to prevent contradictions
+    // Build numbered TC title list for accurate AC mapping
+    var tcLines2 = tc.split('\n').map(function(l){return l.trim();}).filter(Boolean);
+    var tcTitled = tcLines2.map(function(l,i){return 'TC'+(i+1)+': '+l;}).join('\n');
+
+    // ── JS pre-computed AC→TC keyword mapping (prevents positional guessing) ──
+    function buildMappingHint(acList, tcLines) {
+      var stop = new Set(['the','and','or','in','on','at','to','of','for','by','with','from','that','this',
+        'is','are','was','were','be','been','it','its','as','if','not','should','must','will','can','do',
+        'does','when','then','have','has','had','after','before','only','also','all','any','no','yes',
+        'user','test','check','verify','ensure','case','cases','via','per','would','could','may','might']);
+      function kws(text) {
+        return text.toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
+          .filter(function(w){return w.length>3 && !stop.has(w);});
+      }
+      var tcKws = tcLines.map(function(l,i){return {n:i+1,title:l,kws:kws(l)};});
+      return acList.map(function(acText,i) {
+        var ak = kws(acText);
+        var hits = [];
+        tcKws.forEach(function(tc) {
+          var matched = ak.filter(function(k){return tc.kws.indexOf(k)>-1||tc.title.toLowerCase().indexOf(k)>-1;});
+          if (matched.length>0) hits.push({n:tc.n,score:matched.length,kws:matched.slice(0,3)});
+        });
+        hits.sort(function(a,b){return b.score-a.score;});
+        if (hits.length>0) {
+          return 'AC'+(i+1)+'→'+hits.slice(0,3).map(function(h){return 'TC'+h.n+'('+h.kws.join(',')+')';}).join(',');
+        }
+        return 'AC'+(i+1)+'→NO_MATCH';
+      }).join('\n');
+    }
+    var jsMappingHints = buildMappingHint(acList, tcLines2);
+
+    const sr2 = await ai('report', {domain: dom.domain, domainRules: dom.domain_rules, personaResults: pRes, tcList: tcTitled, tcSummary: tcSummary, acNumbered: acNumbered, jsAcCount: jsAcCount, tcFormatNote: tcFormatNote, jsMappingHints: jsMappingHints}, 4000, 'Report');
+    const syn = prs(sr2);
+    if (!syn) {
+      console.error('[report] Parse failed. Raw:', sr2 ? sr2.slice(0,800) : 'empty');
+      if (tcSummary.length) {
+        document.getElementById('tcMatrix').innerHTML = renderTCMatrix(tcSummary);
+        document.getElementById('report').classList.add('show');
+        document.getElementById('bigScore').textContent = '—';
+      }
+      se('Report narrative could not be parsed — TC matrix above is complete. To get the full report: switch to Claude or OpenAI, or wait 60s and retry on Groq.');
+      btn.disabled = false; btn.textContent = 'Run QA Review →';
+      return;
+    }
+    stg(4,'done'); stg(5,'active');
+
+    // Stage 5: Render
+    const os = syn.overall_score||0;
+    document.getElementById('bigScore').textContent = os+'/100';
+    document.getElementById('bigScore').className = 'bs '+sc(os);
+    document.getElementById('reportMeta').textContent = dom.domain+' · '+(title||'Untitled')+' · '+new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})+' · '+provName;
+
+    // ── Safe type helpers — defined ONCE here ──────────────────────────────────
+    function toStr(v) {
+      if (v === null || v === undefined) return '';
+      if (Array.isArray(v)) return v.filter(Boolean).join(' ');
+      if (typeof v === 'object') return '';
+      return String(v);
+    }
+    function toArr(v) {
+      if (Array.isArray(v)) return v.filter(function(x){var s=String(x||'').trim();return s&&s.toLowerCase()!=='none'&&s.toLowerCase()!=='n/a'&&s!=='-';});
+      if (v && typeof v === 'object') return [];
+      if (typeof v === 'string') {var s=v.trim();return (s&&s.toLowerCase()!=='none'&&s.toLowerCase()!=='n/a')?[s]:[];}
+      return [];
+    }
+
+    // ── JS-computed design_score override: more reliable than LLM calculation ──
+    // Counts WEAK + BADLY WRITTEN from the TC matrix and computes a deterministic score
+    (function() {
+      var badCount = tcSummary.filter(function(t){
+        var v=(t.consensus_verdict||'').toLowerCase();
+        return v.includes('weak')||v.includes('badly written');
+      }).length;
+      var partialCount = tcSummary.filter(function(t){return (t.consensus_verdict||'').toLowerCase().includes('partial');}).length;
+      if (badCount > 0 || partialCount > 0) {
+        var jsDesign = Math.max(40, 100 - (badCount*15) - (partialCount*7));
+        // Only override if LLM was more generous than our formula
+        if (!syn.design_score || syn.design_score > jsDesign + 10) {
+          syn.design_score = jsDesign;
+          // Recompute overall with JS-corrected design
+          if (syn.coverage_score && syn.regression_score) {
+            syn.overall_score = Math.round(((syn.coverage_score*0.35)+(syn.regression_score*0.40)+(jsDesign*0.25))/5)*5;
+          }
+        }
+      }
+    })();
+
+    // ── COVERED TC set for contradiction guard ─────────────────────────────────
+    var coveredTCSet = {};
+    tcSummary.forEach(function(t){
+      if((t.consensus_verdict||'').toLowerCase()==='covered'){
+        var m=(t.tc||'').match(/^TC\s*(\d+)/i); if(m) coveredTCSet[m[1]]=true;
+      }
+    });
+    function stripCoveredRefs(v) {
+      var text = toStr(v);
+      if (!text || !Object.keys(coveredTCSet).length) return text;
+      return text.replace(/\bTC\s*(\d+)\b/gi, function(match, num) {
+        return coveredTCSet[num] ? '' : match;
+      }).replace(/\s{2,}/g, ' ').trim();
+    }
+
+    // ── Scores + drivers ───────────────────────────────────────────────────────
+    function setSb(v,b,val){var el=document.getElementById(v);el.textContent=(val||0)+'/100';el.className='sbv '+sc(val||0);var br=document.getElementById(b);br.style.width=(val||0)+'%';br.style.background=bc(val||0);}
+    setSb('sCov','bCov',syn.coverage_score); setSb('sReg','bReg',syn.regression_score); setSb('sDes','bDes',syn.design_score);
+    document.getElementById('bigScore').textContent = (syn.overall_score||0)+'/100';
+    document.getElementById('bigScore').className = 'bs '+sc(syn.overall_score||0);
+
+    function renderDrivers(id, arr) {
+      var el = document.getElementById(id); if(!el) return;
+      el.innerHTML = '';
+      toArr(arr).forEach(function(d){var s=document.createElement('span');s.textContent=String(d);el.appendChild(s);});
+    }
+    renderDrivers('dCov', syn.coverage_drivers);
+    renderDrivers('dReg', syn.regression_drivers);
+    renderDrivers('dDes', syn.design_drivers);
+
+    var riskL = toStr(syn.release_risk).toLowerCase();
+    document.getElementById('sRisk').textContent = toStr(syn.release_risk)||'—';
+    document.getElementById('sRisk').className = 'sbv '+(riskL==='high'?'sl':riskL==='low'?'sh':'sm');
+    var rre = document.getElementById('riskReason');
+    if(rre && syn.release_risk_reason){rre.textContent=toStr(syn.release_risk_reason);rre.style.display='block';}
+
+    // ── TC matrix ──────────────────────────────────────────────────────────────
+    document.getElementById('tcMatrix').innerHTML = renderTCMatrix(tcSummary);
+
+    // ── Production risks ───────────────────────────────────────────────────────
+    var prEl = document.getElementById('productionRisks');
+    if (prEl) {
+      var prArr = toArr(syn.production_risks);
+      prEl.innerHTML = prArr.length
+        ? prArr.map(function(r,i){return '<div class="prod-risk-item"><span class="prod-risk-num">'+(i+1)+'.</span><span>'+esc(String(r))+'</span></div>';}).join('')
+        : '<div style="font-family:var(--mono);font-size:11px;color:var(--mu)">No production failure modes identified.</div>';
+    }
+
+    // ── AC coverage (renders NOT COVERED with red indicator) ───────────────────
+    var acCovEl = document.getElementById('acCoverage');
+    if (acCovEl) {
+      acCovEl.innerHTML = toArr(syn.ac_coverage).length ? renderACCoverage(toArr(syn.ac_coverage)) : '<div style="font-family:var(--mono);font-size:11px;color:var(--mu)">AC coverage mapping not available.</div>';
+    }
+
+    // ── Text sections (toStr prevents crashes) ─────────────────────────────────
+    document.getElementById('productSense').textContent = toStr(syn.product_sense);
+    document.getElementById('precGap').textContent = stripCoveredRefs(syn.precision_gap);
+
+    // ── Incorrect TCs ──────────────────────────────────────────────────────────
+    var incEl = document.getElementById('incorrectTCs');
+    if (incEl) {
+      var incRaw = syn.incorrect_tcs;
+      var incArr = Array.isArray(incRaw) ? incRaw : toStr(incRaw).split('\n');
+      var realInc = incArr.filter(function(l){var t=String(l||'').trim();return t&&!t.toLowerCase().includes('all expected')&&!t.toLowerCase().includes('none');});
+      incEl.innerHTML = realInc.length
+        ? realInc.map(function(l){return '<div class="fl2"><div class="dot dy"></div><div style="font-family:var(--mono);font-size:12.5px;line-height:1.55">'+esc(String(l))+'</div></div>';}).join('')
+        : '<div style="font-family:var(--mono);font-size:12px;color:var(--grn);padding:4px 0">&#10003; All expected results align with AC — no contradictions found.</div>';
+    }
+
+    // ── Critical gaps ──────────────────────────────────────────────────────────
+    document.getElementById('critGaps').innerHTML = toArr(syn.critical_gaps).length
+      ? toArr(syn.critical_gaps).map(function(g){
+          var gStr=(g&&typeof g==='object')?toStr(g.gap):toStr(g);
+          var sev=(g&&typeof g==='object')?toStr(g.severity).toLowerCase():'';
+          var sevHtml=sev==='blocker'?'<span class="sev-blocker">BLOCKER</span>':sev==='high'?'<span class="sev-high">HIGH</span>':sev==='medium'?'<span class="sev-medium">MEDIUM</span>':'';
+          return '<div class="fl2"><div class="dot dr"></div><div>'+sevHtml+esc(gStr)+'</div></div>';
+        }).join('')
+      : '<div style="font-family:var(--mono);font-size:12px;color:var(--grn);padding:4px 0">&#10003; No critical gaps identified.</div>';
+
+    document.getElementById('missing').innerHTML = renderMissingTests(toArr(syn.missing_tests));
+
+    // ── Real user failure — with template-leak guard ──────────────────────────
+    var rufEl = document.getElementById('realUserFailure');
+    if (rufEl) {
+      var rufTxt = toStr(syn.real_user_failure);
+      // Guard: if text contains template examples not from this story's AC/TC input, flag it
+      var storyText = (ac + ' ' + tc).toLowerCase();
+      var suspectPhrases = ['spo2', 'spo₂', '88%', 'oxygen saturation', 'renew twice', 'billing portal'];
+      var hasLeak = suspectPhrases.some(function(p){ return rufTxt.toLowerCase().includes(p) && !storyText.includes(p); });
+      if (hasLeak) {
+        rufTxt = 'Unable to generate a story-specific failure scenario — the top gap in this review is the untested AC identified in the critical gaps section above.';
+      }
+      rufEl.innerHTML = rufTxt ? '<div class="rtx" style="color:var(--tx)">'+esc(rufTxt)+'</div>'
+        : '<div style="font-family:var(--mono);font-size:12px;color:var(--mu);padding:4px 0">No specific user failure scenario identified.</div>';
+    }
+
+    // ── Weak test rewrites ─────────────────────────────────────────────────────
+    var wrEl = document.getElementById('weakRewrites');
+    if (wrEl) {
+      var wrArr = toArr(syn.weak_rewrites);
+      wrEl.innerHTML = wrArr.length
+        ? wrArr.map(function(r){
+            var s=toStr(r), arrow=s.indexOf('→ Improved:');
+            if (arrow>-1) return '<div class="fl2"><div class="dot dy"></div><div style="font-family:var(--mono);font-size:12px;line-height:1.6"><span style="color:var(--mu2)">'+esc(s.slice(0,arrow).trim())+'</span><br><span style="color:var(--acc3)">→ Improved: </span><span style="color:var(--tx)">'+esc(s.slice(arrow+11).trim())+'</span></div></div>';
+            return '<div class="fl2"><div class="dot dy"></div><div style="font-family:var(--mono);font-size:12px">'+esc(s)+'</div></div>';
+          }).join('')
+        : '<div style="font-family:var(--mono);font-size:12px;color:var(--grn);padding:4px 0">&#10003; No weak or badly written test cases detected.</div>';
+    }
+
+    // ── Recommended additional risks ───────────────────────────────────────────
+    var recEl = document.getElementById('recommendedRisks');
+    if (recEl) {
+      var recArr = toArr(syn.recommended_risks);
+      recEl.innerHTML = recArr.length
+        ? recArr.map(function(r){return '<div class="ci" style="border-left-color:var(--acc2);background:rgba(78,205,196,0.05)">&#9651; '+esc(toStr(r))+'</div>';}).join('')
+        : '<div style="font-family:var(--mono);font-size:12px;color:var(--mu);padding:4px 0">No additional recommendations — all gaps traced to AC.</div>';
+    }
+
+    // ── Implied risks ──────────────────────────────────────────────────────────
+    var impliedEl = document.getElementById('impliedRisks');
+    if (impliedEl) {
+      impliedEl.innerHTML = toArr(syn.implied_risks).length
+        ? toArr(syn.implied_risks).map(function(r){return '<div class="ci" style="border-left-color:var(--acc);background:rgba(124,106,247,0.05)">&#9432; '+esc(toStr(r))+'</div>';}).join('')
+        : '<div style="font-family:var(--mono);font-size:12px;color:var(--mu);padding:4px 0">No implied risks raised — all issues trace to AC.</div>';
+    }
+
+        // Duplicates — JS detection overrides LLM
+    // Duplicate section: only show meaningful content — hide generic "no duplicates" noise
+    var dupEl = document.getElementById('duplicates');
+    if (dupEl) {
+      if (jsDuplicates.length > 0) {
+        dupEl.textContent = jsDuplicates.join('\n');
+        dupEl.closest('.rs').style.display = '';
+      } else {
+        var dupRaw = toStr(syn.duplicates);
+        var hasDup = dupRaw && !dupRaw.toLowerCase().includes('no duplicate') && !dupRaw.toLowerCase().includes('none') && dupRaw.length > 10;
+        if (hasDup) {
+          dupEl.textContent = dupRaw;
+          dupEl.closest('.rs').style.display = '';
+        } else {
+          // Hide the whole section — "no duplicates" adds no value
+          dupEl.closest('.rs').style.display = 'none';
+        }
+      }
+    }
+
+    var clarifyArr = toArr(syn.clarification_questions);
+    document.getElementById('clarifyQ').innerHTML = clarifyArr.length
+      ? clarifyArr.map(function(q){return '<div class="ci">? '+esc(String(q))+'</div>';}).join('')
+      : '<div style="font-family:var(--mono);font-size:12px;color:var(--mu);padding:4px 0">No clarification questions raised — all scenarios addressed in AC and test cases.</div>';
+
+    // Verdict with band badge — apply contradiction guard to verdict text
+    var verdictWrap = document.getElementById('verdictWrap');
+    if (verdictWrap) {
+      var vb = (syn.verdict_band||'').toLowerCase();
+      var bandClass = vb.includes('block') ? 'vb-block' : vb.includes('minor') ? 'vb-minor' : vb.includes('approved') && !vb.includes('conditional') && !vb.includes('minor') ? 'vb-approve' : 'vb-cond';
+      var bandLabel = vb.includes('block') ? '🛑 Block Release' : vb.includes('minor') ? '✓ Approve with Minor Actions' : vb.includes('approved') && !vb.includes('conditional') ? '✅ Approved' : '⚠ Conditional Approval';
+      var cleanVerdict = stripCoveredRefs(syn.verdict||'');
+      verdictWrap.innerHTML = '<div class="verdict-band '+bandClass+'">'+bandLabel+'</div><div class="rtx">'+esc(cleanVerdict)+'</div>';
+    }
+
+    // ── CEO Risk Summary ──────────────────────────────────────────────────────
+    var ceoEl = document.getElementById('ceoRisk');
+    var ceoSec = document.getElementById('ceoRiskSection');
+    if (ceoEl && ceoSec) {
+      var ceoArr = toArr(syn.ceo_risk_summary);
+      // Filter out placeholder bullets that were not filled in
+      ceoArr = ceoArr.filter(function(b){ var s=toStr(b); return s && !s.startsWith('bullet') && s.length > 20; });
+      if (ceoArr.length >= 2) {
+        ceoEl.innerHTML = ceoArr.map(function(r,i){
+          var s = toStr(r);
+          // Highlight SHIP BLOCKER
+          var html = esc(s).replace(/SHIP BLOCKER:?/gi, '<span class="ship-blocker">🛑 SHIP BLOCKER</span>');
+          return '<div class="ceo-bullet"><span class="ceo-num">'+(i+1)+'.</span><span class="ceo-txt">'+html+'</span></div>';
+        }).join('');
+        ceoSec.style.display = '';
+      }
+    }
+
+    // ── Jira comment: patch design score + append TC quality note ──────────────
+    var jiraRaw = toStr(syn.jira_comment);
+    // Patch design score in Jira comment to match JS-computed value (prevents 40 vs 55 inconsistency)
+    if (jiraRaw && syn.design_score) {
+      jiraRaw = jiraRaw.replace(/Design:\s*\d+/i, 'Design: '+syn.design_score);
+    }
+    if (jiraRaw && tcFormatNote && tcFormatNote.indexOf('title-only') > -1) {
+      jiraRaw += '\n\n== NOTE ==\nMany TCs are title-only with no steps or expected results. Precision Gap verdict = expected result is not verifiable without adding test steps.';
+    }
+    document.getElementById('jiraBox').textContent = jiraRaw;
+
+    document.getElementById('report').classList.add('show');
+    stg(5,'done');
+    document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
+
+  } catch(e) {
+    se('Error: '+e.message); rst();
+  }
+  btn.disabled = false; btn.textContent = 'Run QA Review →';
+}
+
+function cj(){navigator.clipboard.writeText(document.getElementById('jiraBox').textContent).then(function(){var b=document.getElementById('copyBtn');b.textContent='Copied!';b.classList.add('copied');setTimeout(function(){b.textContent='Copy to clipboard';b.classList.remove('copied');},2000);});}
+function se(msg){var e=document.getElementById("errMsg");e.textContent=msg;e.classList.add("show");}
+function he(){document.getElementById("errMsg").classList.remove("show");}
+</script>
+</body>
+</html>

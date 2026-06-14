@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../favicon.ico">
+
+  <title>
+    AI Agents - Vaishali Desarda - Quality, AI, and the thinking in between!
+  </title>
+  <meta name="description" content="AI agents built from 15&#43; years of QA instinct. Each one encodes a specific thinking pattern that experienced practitioners apply - and that teams without that experience skip." /><meta name="generator" content="Hugo 0.128.2"><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.c784d2cbc9dee6c45d668c4ba820c03a088ed38b8eef3d62bb97dad174807b1f.css"
+    integrity="sha256-x4TSy8ne5sRdZoxLqCDAOgiO04uO7z1iu5fa0XSAex8="
+  />
+  
+  
+
+  <meta property="og:url" content="https://www.vaishalidesarda.com/agents/">
+  <meta property="og:site_name" content="Vaishali Desarda - Quality, AI, and the thinking in between!">
+  <meta property="og:title" content="AI Agents">
+  <meta property="og:description" content="AI agents built from 15&#43; years of QA instinct. Each one encodes a specific thinking pattern that experienced practitioners apply - and that teams without that experience skip.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Agents">
+  <meta name="twitter:description" content="AI agents built from 15&#43; years of QA instinct. Each one encodes a specific thinking pattern that experienced practitioners apply - and that teams without that experience skip.">
+
+  
+  <meta itemprop="name" content="AI Agents">
+  <meta itemprop="description" content="AI agents built from 15&#43; years of QA instinct. Each one encodes a specific thinking pattern that experienced practitioners apply - and that teams without that experience skip.">
+  <meta itemprop="datePublished" content="2024-05-24T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-05-24T00:00:00+00:00">
+  
+  
+    
+      
+    
+  
+
+
+
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-between items-center p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Vaishali Desarda - Quality, AI, and the thinking in between!
+  </a>
+  <ul class="flex items-center" style="gap: 2rem;">
+
+    
+      <li><a href="../about">About</a></li>
+    
+      <li><a href="../writing/">Writing</a></li>
+    
+      <li><a href="../on-ai/">On AI</a></li>
+    
+      <li><a href="../agents/">Agents</a></li>
+    
+
+    <li><a href="../tags">Tags!</a></li>
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header><main>
+<style>
+.agents-wrap {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 52px 32px 80px;
+}
+.agents-hero {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+}
+.agents-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+.agents-hero p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0 0 10px;
+}
+.agents-hero-hint {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+.agents-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
+}
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 64px;
+}
+.agent-card {
+  border: 1.5px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 28px 24px 22px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  background: #fff;
+}
+.agent-card:hover {
+  border-color: #bbb;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: inherit;
+}
+.agent-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.agent-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 4px 9px;
+  border-radius: 4px;
+}
+.agent-live-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: inline-block;
+}
+.agent-type {
+  font-size: 10px;
+  color: #aaa;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.agent-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.35;
+  color: #111;
+}
+.agent-card p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+.agent-cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: #111;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+}
+.agent-card:hover .agent-cta {
+  background: #333;
+}
+.agents-coming {
+  padding-top: 40px;
+}
+.agents-coming h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px;
+}
+.agents-coming p {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+}
+.agents-coming a { color: #333; }
+@media (max-width: 600px) {
+  .agents-wrap { padding: 32px 20px 60px; }
+  .agents-hero h1 { font-size: 1.7rem; }
+  .agents-grid { grid-template-columns: 1fr; }
+}
+</style>
+<div class="agents-wrap">
+  <div class="agents-hero">
+    <h1>AI Agents</h1>
+    <p>AI agents built from 15&#43; years of QA instinct. Each one encodes a specific thinking pattern that experienced practitioners apply - and that teams without that experience skip.</p>
+    <p class="agents-hero-hint">Free to use &middot; Bring your own API key &middot; Groq is free &rarr; <a href="https://console.groq.com/keys" target="_blank" rel="noopener" style="color:#555;text-decoration:underline;">console.groq.com/keys</a></p>
+  </div>
+  <div class="agents-section-label">Live now</div>
+  <div class="agents-grid">
+    
+    
+    <a class="agent-card" href="../agents/release-risk-intelligence/" target="_blank" rel="noopener">
+      <div class="agent-card-top">
+        <span class="agent-live-badge">Live</span>
+        <span class="agent-type">QA Review Agent</span>
+      </div>
+      <h2>Release Risk Intelligence</h2>
+      <p>Know your release risk before release day. Paste your story, AC and test cases - get a domain-aware senior QA review in seconds.</p>
+      <span class="agent-cta">Try it &rarr;</span>
+    </a>
+    
+    
+  </div>
+  <div class="agents-coming">
+    <h3>More agents shipping soon.</h3>
+    <p>Each one encodes a specific gap in AI-assisted QA - the thinking that comes from experience, made available at scale. Follow along on <a href="https://www.linkedin.com/in/desardavaishali/">LinkedIn</a> or <a href="https://x.com/VaishaliDesarda">X</a>.</p>
+  </div>
+</div><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">Quality, AI, and the thinking in between.</p>
+    </div>
+
+
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://x.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2026 © Vaishali Desarda - Quality, AI, and the thinking in between!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>
