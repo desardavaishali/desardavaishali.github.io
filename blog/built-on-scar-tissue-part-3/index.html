@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Built on Scar Tissue - Part 3: The Story Was Already Wrong - Vaishali Desarda - Quality, AI, and the thinking in between!
+  </title>
+  <meta name="description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written." /><meta name="generator" content="Hugo 0.128.2"><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.c784d2cbc9dee6c45d668c4ba820c03a088ed38b8eef3d62bb97dad174807b1f.css"
+    integrity="sha256-x4TSy8ne5sRdZoxLqCDAOgiO04uO7z1iu5fa0XSAex8="
+  />
+  
+  
+
+  <meta property="og:url" content="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/">
+  <meta property="og:site_name" content="Vaishali Desarda - Quality, AI, and the thinking in between!">
+  <meta property="og:title" content="Built on Scar Tissue - Part 3: The Story Was Already Wrong">
+  <meta property="og:description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-07-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-20T00:00:00+00:00">
+    <meta property="article:tag" content="Qa">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Testing">
+    <meta property="article:tag" content="Quality Engineering">
+    <meta property="article:tag" content="Built on Scar Tissue">
+    <meta property="article:tag" content="Agentic AI">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Built on Scar Tissue - Part 3: The Story Was Already Wrong">
+  <meta name="twitter:description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written.">
+
+  
+  <meta itemprop="name" content="Built on Scar Tissue - Part 3: The Story Was Already Wrong">
+  <meta itemprop="description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written.">
+  <meta itemprop="datePublished" content="2026-07-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-07-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1216">
+  <meta itemprop="keywords" content="Qa,AI,Testing,Quality Engineering,Built on Scar Tissue,Agentic AI">
+  
+  
+    
+      
+    
+  
+
+
+
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-between items-center p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Vaishali Desarda - Quality, AI, and the thinking in between!
+  </a>
+  <ul class="flex items-center" style="gap: 2rem;">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+      <li><a href="../../writing/">Writing</a></li>
+    
+      <li><a href="../../on-ai/">On AI</a></li>
+    
+      <li><a href="../../agents/">Agents</a></li>
+    
+
+    <li><a href="../../tags">Tags!</a></li>
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header><main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/part3.png" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      July 20, 2026
+<br>
+
+⌚ : 6 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/qa/">qa</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/ai/">ai</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/quality-engineering/">quality-engineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/built-on-scar-tissue/">built-on-scar-tissue</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agentic-ai/">agentic-ai</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Built on Scar Tissue - Part 3: The Story Was Already Wrong</h1>
+	
+    <h2 id="the-defect-that-nobody-wrote-but-everyone-shipped">The defect that nobody wrote, but everyone shipped</h2>
+<div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin-bottom: 24px;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0 0 8px 0;">"The single biggest problem in communication is the illusion that it has taken place."</p>
+  <p style="color:#534AB7; margin:0;">- George Bernard Shaw</p>
+</div>
+<p>Here's a Jira story that would sail through grooming:</p>
+<div style="background-color:#F5F4ED; padding: 16px 20px; border-radius: 6px; margin: 16px 0;">
+  <p style="margin:0;"><b>Story: Send USDT to another wallet.</b> As a crypto user, I want to transfer USDT from my wallet to another wallet.</p>
+<p style="margin:0 0 20px 0;">User enters recipient address. Enters amount. Clicks Send. System validates balance. Creates transaction. Shows success.</p></div>
+Everyone nods. Three story points. Development starts.
+<p>Here&rsquo;s what actually happens. A user sends 10,000 USDT. The network&rsquo;s slow. The button shows a spinner. She clicks Send again. Then again.</p>
+<p>Three valid requests. All pass balance validation - because the second and third checks run before the first balance updates. Three real blockchain transactions. 30,000 USDT sent instead of 10,000. Blockchain doesn&rsquo;t have undo. Somebody is holding that loss.</p>
+<p>During refinement, somebody should have asked the question: what happens if the user clicks Send more than once?</p>
+<p>Well, nobody asked. Not because the team was careless. Six acceptance criteria, all looked complete. <strong>The question just wasn&rsquo;t in the room.</strong></p>
+<p><img alt="Six AC" src="../../images/part3.png"></p>
+<h2 id="same-gap-no-human-in-the-loop">Same gap, no human in the loop</h2>
+<p>Now take the same gap and remove the human entirely.</p>
+<p>This specific failure hasn&rsquo;t made it to a retro room yet - agentic financial tools are still too new for that. But anyone who&rsquo;s watched this gap repeat before can see where it&rsquo;s heading.</p>
+<p>OpenClaw, the self-hosted agent that went viral late last year, lets users move money, interact with DeFi protocols, and manage wallets through natural language -make this less of a thought experiment and more of a question worth asking before it happens. OpenClaw can move money, interact with DeFi protocols, and manage wallets. Exactly the kind of tool where this failure mode becomes someone&rsquo;s real retro story. Imagine a user says: &ldquo;Send 1000 USDT to Mum.&rdquo; The agent finds Mum&rsquo;s wallet, validates the balance, and calls a transfer tool.</p>
+<p><code>User → LLM → Transfer Tool → Blockchain</code></p>
+<p>The transfer goes through on-chain. Then something ordinary happens: a timeout, a dropped connection, the agent process restarting. The user never sees a success message. They see: something went wrong.</p>
+<p>So they do the obvious thing. They try again.</p>
+<p>The agent reasons through the request fresh. It has no memory of the fact that it already succeeded thirty seconds ago. It calls the transfer tool again. The blockchain executes a second, completely valid transfer. The user now believes they sent 1000 USDT. They actually sent 2000.</p>
+<p>Notice what didn&rsquo;t go wrong here. The LLM reasoned correctly. The tool executed correctly. The blockchain recorded everything accurately. Every individual component did its job. The failure lives entirely in a question nobody had written down anywhere in the system: can the agent tell the difference between retrying something that failed and repeating something that already succeeded?</p>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The agent is doing its job perfectly.</p>
+  <p style="color:#412402; margin:0;">The job was never specified correctly.</p>
+</div>
+<p>A year ago, this would have sounded like an edge case. Now it&rsquo;s just what happens when a system takes real-world action - books something, sends something, charges something - and gets interrupted between calling a tool and hearing back from it.</p>
+<h2 id="one-stage-earlier-than-part-1-and-part-2">One stage earlier than Part 1 and Part 2</h2>
+<p>This is the gap <a href="https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-1/">Part 1</a> and <a href="https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-2/">Part 2</a> both pointed at, but one stage earlier.</p>
+<p>Part 1 showed how AI-generated test suites look complete while missing the thinking. Part 2 showed how Release Risk Intelligence catches what generation misses by asking who else the system touches. Both operate after the code exists.</p>
+<p><strong>This operates before it.</strong></p>
+<p>The question isn&rsquo;t &ldquo;does the test suite cover the risk?&rdquo; It&rsquo;s &ldquo;does the story even know the risk exists?&rdquo;</p>
+<p>That&rsquo;s a different category of intervention. Not a test generator. Not a code reviewer. Not a Jira summarizer. Something that reads a story before a sprint starts and asks one question nobody wrote down.</p>
+<p><a href="https://www.vaishalidesarda.com/agents/release-risk-intelligence/">RRI</a> reviews test suites - catches what the tests missed. This one reviews stories - prevents the gap from reaching the tests at all. Same philosophy, different stage. Both built from the same scar tissue.</p>
+<p>That&rsquo;s been the arc: generation makes you feel covered. Review catches what generation missed. One stage before both - the story itself was already wrong.</p>
+<h2 id="the-question-the-reviewer-surfaces">The question the reviewer surfaces</h2>
+<p>Give the original story to the reviewer. Here&rsquo;s the question it identifies as missing - not a test case, not a code review, but the gap that would have caught this before build:</p>
+<div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0;">If a user submits the same transfer request more than once - whether through impatience, network retry, or an AI agent re-invoking a tool after a connection timeout - does the system guarantee that only one transaction is created? If not, what prevents the duplicate from succeeding?</p>
+</div>
+<p>The story happens to be about crypto. The question doesn&rsquo;t. I&rsquo;ve watched the same question surface in health monitoring, food delivery, payment systems, and now agentic AI. Different technology. Different teams. Different decade. Same missing assumption. That&rsquo;s what scar tissue looks like.</p>
+<p>Same scar tissue. Different actor. The OpenClaw scenario above is that question one level deeper - a human clicking twice versus an agent retrying twice, with no instinct to hesitate. I haven&rsquo;t run that one through the reviewer yet. That&rsquo;s Part 4.</p>
+<p>That question, asked during grooming, would have changed the story before a line of code was written.</p>
+<p>An engineer who&rsquo;s been burned by double submissions once might add idempotency to that specific endpoint. An engineer who&rsquo;s been burned four times doesn&rsquo;t wait for the endpoint. <strong>They check every story that touches an irreversible operation.</strong></p>
+<p>Ask a coding assistant to build the transfer flow from that original story, and it builds exactly what&rsquo;s written - validate, transfer, confirm. Nothing in the story called for an idempotency check. The model didn&rsquo;t miss it. The story never asked for it.</p>
+<h2 id="what-experience-actually-teaches">What experience actually teaches</h2>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The acceptance criteria aren't the insight. The question is.</p>
+  <p style="color:#412402; margin:0;">The criteria are what you write after you know what to ask. Experience doesn't give you better answers. It teaches you where to become suspicious.</p>
+</div>
+<p>In the teams I&rsquo;ve watched get this right, somebody asks one question before grooming closes, and asks it of every story that touches money, state, or anything irreversible: what happens if this exact request arrives twice - from a slow human, a flaky network, or now, a retrying agent?</p>
+<p>Most teams ask what should happen. Good teams ask what could happen twice. Recently I&rsquo;ve noticed another question starting to appear. Not because the systems changed. Because the actor did. The thing retrying isn&rsquo;t a person anymore. It&rsquo;s another system. And systems don&rsquo;t hesitate.</p>
+<p>Thirty seconds. In a meeting most people are half-listening to. That single question is the difference between a clean three-point story and a retro nobody enjoys.</p>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The agent is doing its job perfectly.</p>
+  <p style="color:#412402; margin:0;">The job was never specified correctly.</p>
+</div>
+<p>Part 4 is where that sentence stops being philosophy and becomes a product: <strong>The Question Before the Code</strong> - a tool that reads a story before the sprint starts and hands back the question nobody realised they needed to answer. Not tests. Not coverage. Just the question.</p>
+<p><em>Coming soon.</em></p>
+<p><em>If you&rsquo;ve shipped something that did exactly what the story said, and exactly what nobody meant - I&rsquo;d like to hear where the gap was.</em></p>
+
+  </article>
+
+  
+<div class="share-container">
+  <button class="share-button" onclick="toggleSharePopup()" aria-label="Share">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="18" cy="18" r="3" />
+      <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+      <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+    </svg>
+  </button>
+  <div id="share-popup" class="share-popup hidden">
+    <a href="#" class="share-icon" onclick="shareOnLinkedIn(); return false;" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <line x1="8" y1="11" x2="8" y2="16"/>
+        <line x1="8" y1="8" x2="8" y2="8.01"/>
+        <line x1="12" y1="16" x2="12" y2="11"/>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnTwitter(); return false;" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnGmail(); return false;" aria-label="Gmail">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H8a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z"/>
+        <path d="M2 7l10 7l10-7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  function toggleSharePopup() {
+    var popup = document.getElementById('share-popup');
+    popup.classList.toggle('hidden');
+  }
+
+  function shareOnLinkedIn() {
+    var url = window.location.href;
+    var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnTwitter() {
+    var url = window.location.href;
+    var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnGmail() {
+    var url = window.location.href;
+    var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank');
+  }
+</script>
+
+<style>
+.share-container {
+    position: fixed;  
+    top: 50%;  
+    right: 100px;  
+    transform: translateY(-50%);  
+    z-index: 1000;  
+  }
+
+ .share-button {
+    background-color: transparent;  
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-popup {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .share-icon {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .share-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-2/"> &lt;&lt; Built on Scar Tissue - Part 2: So I Built Release Risk Intelligence</a> </div></ul>
+                <ul class="flex justify-right gap-8">  
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">Quality, AI, and the thinking in between.</p>
+    </div>
+
+
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://x.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+  <script>
+    function shareOnLinkedIn() {
+        var url = window.location.href;
+        var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnTwitter() {
+        var url = window.location.href;
+        var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnGmail() {
+        var url = window.location.href;
+        var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank');
+    }
+  </script>
+
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2026 © Vaishali Desarda - Quality, AI, and the thinking in between!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

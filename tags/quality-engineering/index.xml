@@ -6,8 +6,22 @@
     <description>Recent content in Quality Engineering on Vaishali Desarda - Quality, AI, and the thinking in between!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/tags/quality-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Built on Scar Tissue - Part 3: The Story Was Already Wrong</title>
+      <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/</guid>
+      <description>The defect that nobody wrote, but everyone shipped &#34;The single biggest problem in communication is the illusion that it has taken place.&#34;&#xA;- George Bernard Shaw&#xA;Here&#39;s a Jira story that would sail through grooming:&#xA;Story: Send USDT to another wallet. As a crypto user, I want to transfer USDT from my wallet to another wallet.&#xA;User enters recipient address. Enters amount. Clicks Send. System validates balance. Creates transaction. Shows success.</description>
+    </item>
+    <item>
+      <title>Built on Scar Tissue - Part 3: The Story Was Already Wrong</title>
+      <link>https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-3/</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-3/</guid>
+      <description>The defect that nobody wrote, but everyone shipped &#34;The single biggest problem in communication is the illusion that it has taken place.&#34;&#xA;- George Bernard Shaw&#xA;Here&#39;s a Jira story that would sail through grooming:&#xA;Story: Send USDT to another wallet. As a crypto user, I want to transfer USDT from my wallet to another wallet.&#xA;User enters recipient address. Enters amount. Clicks Send. System validates balance. Creates transaction. Shows success.</description>
+    </item>
     <item>
       <title>Built on Scar Tissue - Part 2: So I Built Release Risk Intelligence</title>
       <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-2/</link>
