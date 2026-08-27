@@ -6,9 +6,9 @@
   <link rel="icon" href="../../favicon.ico">
 
   <title>
-    Built on Scar Tissue - Part 3: The Story Was Already Wrong - Vaishali Desarda - Quality, AI, and the thinking in between!
+    Built on Scar Tissue - Part 4: The Question Before the Code - Vaishali Desarda - Quality, AI, and the thinking in between!
   </title>
-  <meta name="description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written." /><meta name="generator" content="Hugo 0.128.2"><link
+  <meta name="description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t." /><meta name="generator" content="Hugo 0.128.2"><link
     rel="stylesheet"
     href="https://www.vaishalidesarda.com/css/styles.min.c784d2cbc9dee6c45d668c4ba820c03a088ed38b8eef3d62bb97dad174807b1f.css"
     integrity="sha256-x4TSy8ne5sRdZoxLqCDAOgiO04uO7z1iu5fa0XSAex8="
@@ -16,15 +16,15 @@
   
   
 
-  <meta property="og:url" content="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/">
+  <meta property="og:url" content="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-4/">
   <meta property="og:site_name" content="Vaishali Desarda - Quality, AI, and the thinking in between!">
-  <meta property="og:title" content="Built on Scar Tissue - Part 3: The Story Was Already Wrong">
-  <meta property="og:description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written.">
+  <meta property="og:title" content="Built on Scar Tissue - Part 4: The Question Before the Code">
+  <meta property="og:description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2026-07-20T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-07-20T00:00:00+00:00">
+    <meta property="article:published_time" content="2026-07-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-29T00:00:00+00:00">
     <meta property="article:tag" content="Qa">
     <meta property="article:tag" content="AI">
     <meta property="article:tag" content="Testing">
@@ -34,15 +34,15 @@
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Built on Scar Tissue - Part 3: The Story Was Already Wrong">
-  <meta name="twitter:description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written.">
+  <meta name="twitter:title" content="Built on Scar Tissue - Part 4: The Question Before the Code">
+  <meta name="twitter:description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t.">
 
   
-  <meta itemprop="name" content="Built on Scar Tissue - Part 3: The Story Was Already Wrong">
-  <meta itemprop="description" content="AI test generation and AI review both operate after the code exists. This is about the gap that opens one stage earlier - inside the story itself, before a line of code is written.">
-  <meta itemprop="datePublished" content="2026-07-20T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2026-07-20T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1216">
+  <meta itemprop="name" content="Built on Scar Tissue - Part 4: The Question Before the Code">
+  <meta itemprop="description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t.">
+  <meta itemprop="datePublished" content="2026-07-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-07-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1439">
   <meta itemprop="keywords" content="Qa,AI,Testing,Quality Engineering,Built on Scar Tissue,Agentic AI">
   
   
@@ -119,12 +119,12 @@
 
   
   <div class="relative max-w-5xl mx-auto px-4">
-    <img src="../../images/part3.png" class="rounded-lg shadow-sm w-full object-contain" />
+    <img src="../../images/part4_main.png" class="rounded-lg shadow-sm w-full object-contain" />
     <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
-      July 20, 2026
+      July 29, 2026
 <br>
 
-⌚ : 6 min
+⌚ : 7 min
     </div>
   </div>
   
@@ -152,71 +152,67 @@
   <a href="https://www.vaishalidesarda.com/tags/agentic-ai/">agentic-ai</a> </U></ul>
 <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
 	
-    <h1 class="text-2xl font-bold mb-2">Built on Scar Tissue - Part 3: The Story Was Already Wrong</h1>
+    <h1 class="text-2xl font-bold mb-2">Built on Scar Tissue - Part 4: The Question Before the Code</h1>
 	
-    <h2 id="the-defect-that-nobody-wrote-but-everyone-shipped">The defect that nobody wrote, but everyone shipped</h2>
-<div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin-bottom: 24px;">
-  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0 0 8px 0;">"The single biggest problem in communication is the illusion that it has taken place."</p>
-  <p style="color:#534AB7; margin:0;">- George Bernard Shaw</p>
+    <div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin-bottom: 24px;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0 0 8px 0;">"There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult."</p>
+  <p style="color:#534AB7; margin:0;">- C.A.R. Hoare, 1980 Turing Award lecture</p>
 </div>
-<p>Here's a Jira story that would sail through grooming:</p>
+<p>Part 3 ended on a sentence that was still philosophy at the time.</p>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The agent is doing its job perfectly.</p>
+  <p style="color:#412402; margin:0;">The job was never specified correctly.</p>
+</div>
+<p>I said Part 4 was where that stopped being philosophy and became a product. I called it <strong>The Question Before the Code</strong>. So I gave it a story - one story, the kind that would actually get written, not the kind built to make a tool look clever.</p>
+<h2 id="the-story-that-would-sail-through-grooming">The story that would sail through grooming</h2>
 <div style="background-color:#F5F4ED; padding: 16px 20px; border-radius: 6px; margin: 16px 0;">
-  <p style="margin:0;"><b>Story: Send USDT to another wallet.</b> As a crypto user, I want to transfer USDT from my wallet to another wallet.</p>
-<p style="margin:0 0 20px 0;">User enters recipient address. Enters amount. Clicks Send. System validates balance. Creates transaction. Shows success.</p></div>
-Everyone nods. Three story points. Development starts.
-<p>Here&rsquo;s what actually happens. A user sends 10,000 USDT. The network&rsquo;s slow. The button shows a spinner. She clicks Send again. Then again.</p>
-<p>Three valid requests. All pass balance validation - because the second and third checks run before the first balance updates. Three real blockchain transactions. 30,000 USDT sent instead of 10,000. Blockchain doesn&rsquo;t have undo. Somebody is holding that loss.</p>
-<p>During refinement, somebody should have asked the question: what happens if the user clicks Send more than once?</p>
-<p>Well, nobody asked. Not because the team was careless. Six acceptance criteria, all looked complete. <strong>The question just wasn&rsquo;t in the room.</strong></p>
-<p><img alt="Six AC" src="../../images/part3.png"></p>
-<h2 id="same-gap-no-human-in-the-loop">Same gap, no human in the loop</h2>
-<p>Now take the same gap and remove the human entirely.</p>
-<p>This specific failure hasn&rsquo;t made it to a retro room yet - agentic financial tools are still too new for that. But anyone who&rsquo;s watched this gap repeat before can see where it&rsquo;s heading.</p>
-<p>OpenClaw, the self-hosted agent that went viral late last year, lets users move money, interact with DeFi protocols, and manage wallets through natural language -make this less of a thought experiment and more of a question worth asking before it happens. OpenClaw can move money, interact with DeFi protocols, and manage wallets. Exactly the kind of tool where this failure mode becomes someone&rsquo;s real retro story. Imagine a user says: &ldquo;Send 1000 USDT to Mum.&rdquo; The agent finds Mum&rsquo;s wallet, validates the balance, and calls a transfer tool.</p>
-<p><code>User → LLM → Transfer Tool → Blockchain</code></p>
-<p>The transfer goes through on-chain. Then something ordinary happens: a timeout, a dropped connection, the agent process restarting. The user never sees a success message. They see: something went wrong.</p>
-<p>So they do the obvious thing. They try again.</p>
-<p>The agent reasons through the request fresh. It has no memory of the fact that it already succeeded thirty seconds ago. It calls the transfer tool again. The blockchain executes a second, completely valid transfer. The user now believes they sent 1000 USDT. They actually sent 2000.</p>
-<p>Notice what didn&rsquo;t go wrong here. The LLM reasoned correctly. The tool executed correctly. The blockchain recorded everything accurately. Every individual component did its job. The failure lives entirely in a question nobody had written down anywhere in the system: can the agent tell the difference between retrying something that failed and repeating something that already succeeded?</p>
-<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
-  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The agent is doing its job perfectly.</p>
-  <p style="color:#412402; margin:0;">The job was never specified correctly.</p>
+  <p style="margin:0;"><b>As an admin, I want to remove a user's access to a shared document.</b></p>
+  <p style="margin:8px 0 0 0;">Acceptance criteria:</p>
+  <ul style="margin:4px 0 0 0;">
+    <li>Access is removed immediately.</li>
+    <li>User can no longer view the document.</li>
+    <li>Removal is logged.</li>
+  </ul>
 </div>
-<p>A year ago, this would have sounded like an edge case. Now it&rsquo;s just what happens when a system takes real-world action - books something, sends something, charges something - and gets interrupted between calling a tool and hearing back from it.</p>
-<h2 id="one-stage-earlier-than-part-1-and-part-2">One stage earlier than Part 1 and Part 2</h2>
-<p>This is the gap <a href="https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-1/">Part 1</a> and <a href="https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-2/">Part 2</a> both pointed at, but one stage earlier.</p>
-<p>Part 1 showed how AI-generated test suites look complete while missing the thinking. Part 2 showed how Release Risk Intelligence catches what generation misses by asking who else the system touches. Both operate after the code exists.</p>
-<p><strong>This operates before it.</strong></p>
-<p>The question isn&rsquo;t &ldquo;does the test suite cover the risk?&rdquo; It&rsquo;s &ldquo;does the story even know the risk exists?&rdquo;</p>
-<p>That&rsquo;s a different category of intervention. Not a test generator. Not a code reviewer. Not a Jira summarizer. Something that reads a story before a sprint starts and asks one question nobody wrote down.</p>
-<p><a href="https://www.vaishalidesarda.com/agents/release-risk-intelligence/">RRI</a> reviews test suites - catches what the tests missed. This one reviews stories - prevents the gap from reaching the tests at all. Same philosophy, different stage. Both built from the same scar tissue.</p>
-<p>That&rsquo;s been the arc: generation makes you feel covered. Review catches what generation missed. One stage before both - the story itself was already wrong.</p>
-<h2 id="the-question-the-reviewer-surfaces">The question the reviewer surfaces</h2>
-<p>Give the original story to the reviewer. Here&rsquo;s the question it identifies as missing - not a test case, not a code review, but the gap that would have caught this before build:</p>
+<p>Read that again. It&rsquo;s not thin. It has a role, an action, and three acceptance criteria that all sound reasonable on their own. This would clear grooming in under a minute - most stories like it have.</p>
+<p>Here&rsquo;s what came back.</p>
 <div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin: 20px 0;">
-  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0;">If a user submits the same transfer request more than once - whether through impatience, network retry, or an AI agent re-invoking a tool after a connection timeout - does the system guarantee that only one transaction is created? If not, what prevents the duplicate from succeeding?</p>
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0;">The database says access is revoked. The active session says it is allowed. Which one stops the user?</p>
 </div>
-<p>The story happens to be about crypto. The question doesn&rsquo;t. I&rsquo;ve watched the same question surface in health monitoring, food delivery, payment systems, and now agentic AI. Different technology. Different teams. Different decade. Same missing assumption. That&rsquo;s what scar tissue looks like.</p>
-<p>Same scar tissue. Different actor. The OpenClaw scenario above is that question one level deeper - a human clicking twice versus an agent retrying twice, with no instinct to hesitate. I haven&rsquo;t run that one through the reviewer yet. That&rsquo;s Part 4.</p>
-<p>That question, asked during grooming, would have changed the story before a line of code was written.</p>
-<p>An engineer who&rsquo;s been burned by double submissions once might add idempotency to that specific endpoint. An engineer who&rsquo;s been burned four times doesn&rsquo;t wait for the endpoint. <strong>They check every story that touches an irreversible operation.</strong></p>
-<p>Ask a coding assistant to build the transfer flow from that original story, and it builds exactly what&rsquo;s written - validate, transfer, confirm. Nothing in the story called for an idempotency check. The model didn&rsquo;t miss it. The story never asked for it.</p>
-<h2 id="what-experience-actually-teaches">What experience actually teaches</h2>
+<p>I didn&rsquo;t write that question. I wrote the story and the three checkboxes above it. The agent read all four lines, and asked the thing none of them had.</p>
+<h2 id="what-the-story-assumed-without-saying-it">What the story assumed without saying it</h2>
+<p>The failure this assumption creates is easy to imagine once someone points at it. An admin revokes a user&rsquo;s access to a shared document. The user keeps editing it. They export data from it. Not because anything broke - because their active session and cached tokens stay valid until they log out, and nothing in the story said what should happen to a session that was already open when the permission changed.</p>
+<p><img alt="Glimpse of the access-revocation output" src="../../images/part4.png"></p>
+<p>The admin didn&rsquo;t do anything wrong. Every acceptance criterion passed. Access was removed immediately, in the sense the story meant it - the permission flag flipped the instant the admin clicked revoke. The user couldn&rsquo;t open the document from a fresh link. The removal was logged. Three for three. Same instinct as a test suite that passes every case that was written down. Same instinct as &ldquo;AI said it&rsquo;s done, so it&rsquo;s done.&rdquo; A confident, fully-checked story is not the same thing as a finished one, and nobody in that room had a reason to suspect otherwise - everyone pictured the same clean ending: access gone, document safe, done. Nobody pictured the session that was already open when the flag changed, because the story never mentioned there were two things to revoke.</p>
+<p><strong>What the story didn&rsquo;t say:</strong> there is no rule for how long a session survives after permissions are revoked. Not because someone forgot. Because the sentence never asked the question that would have made them think about it. In production, that gap is a two-hour window where a disgruntled employee - already removed, already logged, already off the document by every measure the story checked - is still inside it, exporting whatever they can reach before the session finally dies.</p>
+<h2 id="five-words-found-something-too">Five words found something too</h2>
+<p>Before I trusted the full story&rsquo;s result, I ran the same idea through with almost nothing behind it - five words, no role, no acceptance criteria: <em>&ldquo;Remove a user&rsquo;s access.&rdquo;</em></p>
+<p>It came back with something real, just not the same thing.</p>
+<div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0;">Disabling login stops the person. What stops the token?</p>
+</div>
+<p>Not the session gap the full story found. A terminated employee&rsquo;s login gets disabled, and their long-lived API token - the credential that scripts and integrations use instead of a password - keeps deploying code to production, because nobody wrote a rule connecting &ldquo;disable this person&rdquo; to &ldquo;and everything else this person could authenticate with.&rdquo;</p>
+<p>That&rsquo;s a different layer of the same problem. The full story never mentioned sessions. This one never mentioned tokens. Both stories said &ldquo;remove access&rdquo; and both meant one thing when the system actually has several places access lives.</p>
+<p>Five words were enough to find one of them. They just wern&rsquo;t enough to find the specific one that mattered for <em>this</em> story - the session gap, the two-hour window, the acceptance criteria that all passed anyway. That&rsquo;s the actual case for writing a real story instead of a fragment. Not that the tool fails on five words. It doesn&rsquo;t. It&rsquo;s that five words gets you a real problem in general. A real story gets you the real problem in <em>your</em> system, specific enough to write into a ticket.</p>
+<h2 id="why-this-is-the-one">Why this is the one</h2>
+<p>I could have run five more stories after this. More runs wouldn&rsquo;t have proven the thing I actually cared about - these two already exposed the mechanism. This story has an admin who did everything right, three acceptance criteria that all passed, and a window measured in hours where none of that mattered, because the thing that failed was never written down as something that could fail.</p>
+<p>That&rsquo;s the actual claim I want to make with <strong>The Question Before the Code</strong>, and I don&rsquo;t want to bury it under examples to prove it travels. It&rsquo;s not that this agent is clever across industries. It&rsquo;s that it reconstructs what has to be true for your story&rsquo;s outcome to actually happen, then questions the assumption holding that up. It isn&rsquo;t really about comprehension. It&rsquo;s about interrogation. That&rsquo;s a different kind of useful than breadth. It&rsquo;s the difference between a tool that&rsquo;s impressive and a tool that&rsquo;s yours.</p>
+<h2 id="what-experience-actually-caught-here">What experience actually caught here</h2>
+<p>Someone who&rsquo;s been burned by exactly this - a user who kept working in a document for hours after being removed from it, or a session that just wouldn&rsquo;t die when it was supposed to - would have asked this question on instinct, without needing to explain why. That instinct usually took a bad incident to build. That&rsquo;s what scar tissue is: not a rule you were taught, but a question you now ask because you already know what happens if you don&rsquo;t.</p>
+<p>I&rsquo;m not the person who reads a story and checks the boxes. I&rsquo;m the person who reads a story and asks what it&rsquo;s quietly assuming. That&rsquo;s been my job for fifteen years. This agent asked it on the first try, from one story and three acceptance criteria, before a line of code existed - no bad incident required to earn the instinct.</p>
+<h2 id="one-stage-earlier">One stage earlier</h2>
+<p>Part 1 was about the danger of generated test suites that look complete. Part 2 was about putting experienced review back into that process - asking what the suite was assuming, who else the system touched, and where those assumptions could break. Part 3 moved the question one stage earlier: what if the gap exists before there&rsquo;s even a test suite to review?</p>
+<p>That&rsquo;s what this agent is built for. A test reviewer asks whether the risk is represented in the tests. This one asks whether the story represented the risk at all. The first catches what generation missed. The second tries to catch the gap before it becomes something we have to test in the first place.</p>
 <div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
-  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The acceptance criteria aren't the insight. The question is.</p>
-  <p style="color:#412402; margin:0;">The criteria are what you write after you know what to ask. Experience doesn't give you better answers. It teaches you where to become suspicious.</p>
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">Same scar tissue.</p>
+  <p style="color:#412402; margin:0;">Earlier intervention.</p>
 </div>
-<p>In the teams I&rsquo;ve watched get this right, somebody asks one question before grooming closes, and asks it of every story that touches money, state, or anything irreversible: what happens if this exact request arrives twice - from a slow human, a flaky network, or now, a retrying agent?</p>
-<p>Most teams ask what should happen. Good teams ask what could happen twice. Recently I&rsquo;ve noticed another question starting to appear. Not because the systems changed. Because the actor did. The thing retrying isn&rsquo;t a person anymore. It&rsquo;s another system. And systems don&rsquo;t hesitate.</p>
-<p>Thirty seconds. In a meeting most people are half-listening to. That single question is the difference between a clean three-point story and a retro nobody enjoys.</p>
-<h2 id="whats-next">What&rsquo;s next</h2>
-<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
-  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The agent is doing its job perfectly.</p>
-  <p style="color:#412402; margin:0;">The job was never specified correctly.</p>
-</div>
-<p>Part 4 is where that sentence stops being philosophy and becomes a product: <strong>The Question Before the Code</strong> - a tool that reads a story before the sprint starts and hands back the question nobody realised they needed to answer. Not tests. Not coverage. Just the question.</p>
-<p><em>Coming soon.</em></p>
-<p><em>If you&rsquo;ve shipped something that did exactly what the story said, and exactly what nobody meant - I&rsquo;d like to hear where the gap was.</em></p>
+<h2 id="one-problem-not-the-whole-problem">One problem, not the whole problem</h2>
+<p>This agent doesn&rsquo;t replace grooming, and it doesn&rsquo;t catch everything a room full of experienced people would catch talking it through together. It catches one specific thing: the assumption sitting underneath a story that reads as finished. That&rsquo;s a narrow claim on purpose. It&rsquo;s also the one that&rsquo;s hardest to catch any other way, because there&rsquo;s nothing wrong on the page - the gap lives in what didn&rsquo;t get written, on either side of the room.</p>
+<p>This series has never been a product roadmap. It&rsquo;s a record of where the same missing question kept showing up, and what it took to build something that asks it without me in the room.</p>
+<p>That&rsquo;s the part I&rsquo;m most interested in now - not whether the agent can produce a clever question, but whether it can take something that usually lives inside an experienced reviewer&rsquo;s head and put it in front of the team while there&rsquo;s still time to do something about it: before the code exists, before the test cases exist, before the incident that teaches everyone the question the hard way.</p>
+<p><em>If you&rsquo;ve got a story sitting in your backlog that reads clean and complete - the kind nobody would flag - I&rsquo;d like to hear what it turns out you didn&rsquo;t say.</em></p>
+<p><strong><a href="https://www.vaishalidesarda.com/agents">The Question Before the Code</a></strong></p>
 
   </article>
 
@@ -341,9 +337,8 @@ Everyone nods. Three story points. Development starts.
     <div>
 <ul class="flex justify-center gap-8">
  
-     <a class="previous" href="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-2/"> &lt;&lt; Built on Scar Tissue - Part 2: So I Built Release Risk Intelligence</a> </div></ul>
-                <ul class="flex justify-right gap-8"> 
-      <a class="next" href="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-4/"> Built on Scar Tissue - Part 4: The Question Before the Code >></a></div>     
+     <a class="previous" href="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/"> &lt;&lt; Built on Scar Tissue - Part 3: The Story Was Already Wrong</a> </div></ul>
+                <ul class="flex justify-right gap-8">  
      </ul></ul></div></div>
 <br><div class="bg-pink-50 dark:bg-gray-900">
   <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

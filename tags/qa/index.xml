@@ -6,8 +6,15 @@
     <description>Recent content in Qa on Vaishali Desarda - Quality, AI, and the thinking in between!</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.vaishalidesarda.com/tags/qa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Built on Scar Tissue - Part 4: The Question Before the Code</title>
+      <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-4/</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-4/</guid>
+      <description>&#34;There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.&#34;&#xA;- C.A.R. Hoare, 1980 Turing Award lecture&#xA;Part 3 ended on a sentence that was still philosophy at the time.&#xA;The agent is doing its job perfectly.</description>
+    </item>
     <item>
       <title>Built on Scar Tissue - Part 3: The Story Was Already Wrong</title>
       <link>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/</link>
