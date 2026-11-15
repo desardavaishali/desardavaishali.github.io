@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Playwright on Vaishali Desarda - Quality, AI, and the thinking in between!</title>
+    <link>https://www.vaishalidesarda.com/tags/playwright/</link>
+    <description>Recent content in Playwright on Vaishali Desarda - Quality, AI, and the thinking in between!</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.vaishalidesarda.com/tags/playwright/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>So I Made Our Postmortems Run in CI</title>
+      <link>https://www.vaishalidesarda.com/blog/so-i-made-our-postmortems-run-in-ci/</link>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/blog/so-i-made-our-postmortems-run-in-ci/</guid>
+      <description>The morning the test failed while passing &#34;Experience is the name everyone gives to their mistakes.&#34;&#xA;- Oscar Wilde, Lady Windermere&#39;s Fan&#xA;A few weeks ago, an automation suite I maintain had one of those weeks. Salesforce journeys, driven end to end with Playwright - create a customer, convert it, book the order, verify what a downstream system received. The unglamorous kind of testing.&#xA;It started with a run that failed at 96%.</description>
+    </item>
+    <item>
+      <title>So I Made Our Postmortems Run in CI</title>
+      <link>https://www.vaishalidesarda.com/on-ai/so-i-made-our-postmortems-run-in-ci/</link>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.vaishalidesarda.com/on-ai/so-i-made-our-postmortems-run-in-ci/</guid>
+      <description>The morning the test failed while passing &#34;Experience is the name everyone gives to their mistakes.&#34;&#xA;- Oscar Wilde, Lady Windermere&#39;s Fan&#xA;A few weeks ago, an automation suite I maintain had one of those weeks. Salesforce journeys, driven end to end with Playwright - create a customer, convert it, book the order, verify what a downstream system received. The unglamorous kind of testing.&#xA;It started with a run that failed at 96%.</description>
+    </item>
+  </channel>
+</rss>

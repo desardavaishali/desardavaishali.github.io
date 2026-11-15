@@ -2,8 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.vaishalidesarda.com/agents/</loc>
+    <lastmod>2026-11-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.vaishalidesarda.com/blog/</loc>
-    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/built-on-scar-tissue/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/on-ai/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/open-source/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/playwright/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/quality-engineering/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/blog/so-i-made-our-postmortems-run-in-ci/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/on-ai/so-i-made-our-postmortems-run-in-ci/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/test-automation/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
+    <lastmod>2026-11-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/agentic-ai/</loc>
     <lastmod>2026-07-29T00:00:00+00:00</lastmod>
@@ -11,34 +44,19 @@
     <loc>https://www.vaishalidesarda.com/tags/ai/</loc>
     <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/built-on-scar-tissue/</loc>
+    <loc>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-4/</loc>
     <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-4/</loc>
+    <loc>https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-4/</loc>
     <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/tags/qa/</loc>
     <lastmod>2026-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/quality-engineering/</loc>
-    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/</loc>
-    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/tags/testing/</loc>
-    <lastmod>2026-07-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/agents/</loc>
-    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/</loc>
     <lastmod>2026-07-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-3/</loc>
-    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.vaishalidesarda.com/on-ai/</loc>
     <lastmod>2026-07-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-2/</loc>

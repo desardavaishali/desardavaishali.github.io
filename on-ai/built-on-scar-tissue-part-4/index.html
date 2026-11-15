@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    Built on Scar Tissue - Part 4: The Question Before the Code - Vaishali Desarda - Quality, AI, and the thinking in between!
+  </title>
+  <meta name="description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t." /><meta name="generator" content="Hugo 0.128.2"><link
+    rel="stylesheet"
+    href="https://www.vaishalidesarda.com/css/styles.min.c784d2cbc9dee6c45d668c4ba820c03a088ed38b8eef3d62bb97dad174807b1f.css"
+    integrity="sha256-x4TSy8ne5sRdZoxLqCDAOgiO04uO7z1iu5fa0XSAex8="
+  />
+  
+  
+
+  <meta property="og:url" content="https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-4/">
+  <meta property="og:site_name" content="Vaishali Desarda - Quality, AI, and the thinking in between!">
+  <meta property="og:title" content="Built on Scar Tissue - Part 4: The Question Before the Code">
+  <meta property="og:description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="on-ai">
+    <meta property="article:published_time" content="2026-07-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-29T00:00:00+00:00">
+    <meta property="article:tag" content="Qa">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Testing">
+    <meta property="article:tag" content="Quality Engineering">
+    <meta property="article:tag" content="Built on Scar Tissue">
+    <meta property="article:tag" content="Agentic AI">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Built on Scar Tissue - Part 4: The Question Before the Code">
+  <meta name="twitter:description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t.">
+
+  
+  <meta itemprop="name" content="Built on Scar Tissue - Part 4: The Question Before the Code">
+  <meta itemprop="description" content="What it feels like when an agent reads your story back to you and catches the thing you meant to say but didn&#39;t.">
+  <meta itemprop="datePublished" content="2026-07-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-07-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1439">
+  <meta itemprop="keywords" content="Qa,AI,Testing,Quality Engineering,Built on Scar Tissue,Agentic AI">
+  
+  
+    
+      
+    
+  
+
+
+
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-between items-center p-6 mx-auto">
+  <a href="https://www.vaishalidesarda.com/" class="capitalize font-extrabold text-2xl">
+    Vaishali Desarda - Quality, AI, and the thinking in between!
+  </a>
+  <ul class="flex items-center" style="gap: 2rem;">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+      <li><a href="../../writing/">Writing</a></li>
+    
+      <li><a href="../../on-ai/">On AI</a></li>
+    
+      <li><a href="../../agents/">Agents</a></li>
+    
+
+    <li><a href="../../tags">Tags!</a></li>
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header><main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/part4_main.png" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      July 29, 2026
+<br>
+
+⌚ : 7 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/qa/">qa</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/ai/">ai</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/quality-engineering/">quality-engineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/built-on-scar-tissue/">built-on-scar-tissue</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="https://www.vaishalidesarda.com/tags/agentic-ai/">agentic-ai</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">Built on Scar Tissue - Part 4: The Question Before the Code</h1>
+	
+    <div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin-bottom: 24px;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0 0 8px 0;">"There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult."</p>
+  <p style="color:#534AB7; margin:0;">- C.A.R. Hoare, 1980 Turing Award lecture</p>
+</div>
+<p>Part 3 ended on a sentence that was still philosophy at the time.</p>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">The agent is doing its job perfectly.</p>
+  <p style="color:#412402; margin:0;">The job was never specified correctly.</p>
+</div>
+<p>I said Part 4 was where that stopped being philosophy and became a product. I called it <strong>The Question Before the Code</strong>. So I gave it a story - one story, the kind that would actually get written, not the kind built to make a tool look clever.</p>
+<h2 id="the-story-that-would-sail-through-grooming">The story that would sail through grooming</h2>
+<div style="background-color:#F5F4ED; padding: 16px 20px; border-radius: 6px; margin: 16px 0;">
+  <p style="margin:0;"><b>As an admin, I want to remove a user's access to a shared document.</b></p>
+  <p style="margin:8px 0 0 0;">Acceptance criteria:</p>
+  <ul style="margin:4px 0 0 0;">
+    <li>Access is removed immediately.</li>
+    <li>User can no longer view the document.</li>
+    <li>Removal is logged.</li>
+  </ul>
+</div>
+<p>Read that again. It&rsquo;s not thin. It has a role, an action, and three acceptance criteria that all sound reasonable on their own. This would clear grooming in under a minute - most stories like it have.</p>
+<p>Here&rsquo;s what came back.</p>
+<div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0;">The database says access is revoked. The active session says it is allowed. Which one stops the user?</p>
+</div>
+<p>I didn&rsquo;t write that question. I wrote the story and the three checkboxes above it. The agent read all four lines, and asked the thing none of them had.</p>
+<h2 id="what-the-story-assumed-without-saying-it">What the story assumed without saying it</h2>
+<p>The failure this assumption creates is easy to imagine once someone points at it. An admin revokes a user&rsquo;s access to a shared document. The user keeps editing it. They export data from it. Not because anything broke - because their active session and cached tokens stay valid until they log out, and nothing in the story said what should happen to a session that was already open when the permission changed.</p>
+<p><img alt="Glimpse of the access-revocation output" src="../../images/part4.png"></p>
+<p>The admin didn&rsquo;t do anything wrong. Every acceptance criterion passed. Access was removed immediately, in the sense the story meant it - the permission flag flipped the instant the admin clicked revoke. The user couldn&rsquo;t open the document from a fresh link. The removal was logged. Three for three. Same instinct as a test suite that passes every case that was written down. Same instinct as &ldquo;AI said it&rsquo;s done, so it&rsquo;s done.&rdquo; A confident, fully-checked story is not the same thing as a finished one, and nobody in that room had a reason to suspect otherwise - everyone pictured the same clean ending: access gone, document safe, done. Nobody pictured the session that was already open when the flag changed, because the story never mentioned there were two things to revoke.</p>
+<p><strong>What the story didn&rsquo;t say:</strong> there is no rule for how long a session survives after permissions are revoked. Not because someone forgot. Because the sentence never asked the question that would have made them think about it. In production, that gap is a two-hour window where a disgruntled employee - already removed, already logged, already off the document by every measure the story checked - is still inside it, exporting whatever they can reach before the session finally dies.</p>
+<h2 id="five-words-found-something-too">Five words found something too</h2>
+<p>Before I trusted the full story&rsquo;s result, I ran the same idea through with almost nothing behind it - five words, no role, no acceptance criteria: <em>&ldquo;Remove a user&rsquo;s access.&rdquo;</em></p>
+<p>It came back with something real, just not the same thing.</p>
+<div style="background-color:#EEEDFE; padding: 20px 24px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#3C3489; font-style:italic; font-size:1.05em; margin:0;">Disabling login stops the person. What stops the token?</p>
+</div>
+<p>Not the session gap the full story found. A terminated employee&rsquo;s login gets disabled, and their long-lived API token - the credential that scripts and integrations use instead of a password - keeps deploying code to production, because nobody wrote a rule connecting &ldquo;disable this person&rdquo; to &ldquo;and everything else this person could authenticate with.&rdquo;</p>
+<p>That&rsquo;s a different layer of the same problem. The full story never mentioned sessions. This one never mentioned tokens. Both stories said &ldquo;remove access&rdquo; and both meant one thing when the system actually has several places access lives.</p>
+<p>Five words were enough to find one of them. They just wern&rsquo;t enough to find the specific one that mattered for <em>this</em> story - the session gap, the two-hour window, the acceptance criteria that all passed anyway. That&rsquo;s the actual case for writing a real story instead of a fragment. Not that the tool fails on five words. It doesn&rsquo;t. It&rsquo;s that five words gets you a real problem in general. A real story gets you the real problem in <em>your</em> system, specific enough to write into a ticket.</p>
+<h2 id="why-this-is-the-one">Why this is the one</h2>
+<p>I could have run five more stories after this. More runs wouldn&rsquo;t have proven the thing I actually cared about - these two already exposed the mechanism. This story has an admin who did everything right, three acceptance criteria that all passed, and a window measured in hours where none of that mattered, because the thing that failed was never written down as something that could fail.</p>
+<p>That&rsquo;s the actual claim I want to make with <strong>The Question Before the Code</strong>, and I don&rsquo;t want to bury it under examples to prove it travels. It&rsquo;s not that this agent is clever across industries. It&rsquo;s that it reconstructs what has to be true for your story&rsquo;s outcome to actually happen, then questions the assumption holding that up. It isn&rsquo;t really about comprehension. It&rsquo;s about interrogation. That&rsquo;s a different kind of useful than breadth. It&rsquo;s the difference between a tool that&rsquo;s impressive and a tool that&rsquo;s yours.</p>
+<h2 id="what-experience-actually-caught-here">What experience actually caught here</h2>
+<p>Someone who&rsquo;s been burned by exactly this - a user who kept working in a document for hours after being removed from it, or a session that just wouldn&rsquo;t die when it was supposed to - would have asked this question on instinct, without needing to explain why. That instinct usually took a bad incident to build. That&rsquo;s what scar tissue is: not a rule you were taught, but a question you now ask because you already know what happens if you don&rsquo;t.</p>
+<p>I&rsquo;m not the person who reads a story and checks the boxes. I&rsquo;m the person who reads a story and asks what it&rsquo;s quietly assuming. That&rsquo;s been my job for fifteen years. This agent asked it on the first try, from one story and three acceptance criteria, before a line of code existed - no bad incident required to earn the instinct.</p>
+<h2 id="one-stage-earlier">One stage earlier</h2>
+<p>Part 1 was about the danger of generated test suites that look complete. Part 2 was about putting experienced review back into that process - asking what the suite was assuming, who else the system touched, and where those assumptions could break. Part 3 moved the question one stage earlier: what if the gap exists before there&rsquo;s even a test suite to review?</p>
+<p>That&rsquo;s what this agent is built for. A test reviewer asks whether the risk is represented in the tests. This one asks whether the story represented the risk at all. The first catches what generation missed. The second tries to catch the gap before it becomes something we have to test in the first place.</p>
+<div style="background-color:#FAEEDA; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+  <p style="color:#633806; font-weight:600; margin:0 0 4px 0;">Same scar tissue.</p>
+  <p style="color:#412402; margin:0;">Earlier intervention.</p>
+</div>
+<h2 id="one-problem-not-the-whole-problem">One problem, not the whole problem</h2>
+<p>This agent doesn&rsquo;t replace grooming, and it doesn&rsquo;t catch everything a room full of experienced people would catch talking it through together. It catches one specific thing: the assumption sitting underneath a story that reads as finished. That&rsquo;s a narrow claim on purpose. It&rsquo;s also the one that&rsquo;s hardest to catch any other way, because there&rsquo;s nothing wrong on the page - the gap lives in what didn&rsquo;t get written, on either side of the room.</p>
+<p>This series has never been a product roadmap. It&rsquo;s a record of where the same missing question kept showing up, and what it took to build something that asks it without me in the room.</p>
+<p>That&rsquo;s the part I&rsquo;m most interested in now - not whether the agent can produce a clever question, but whether it can take something that usually lives inside an experienced reviewer&rsquo;s head and put it in front of the team while there&rsquo;s still time to do something about it: before the code exists, before the test cases exist, before the incident that teaches everyone the question the hard way.</p>
+<p><em>If you&rsquo;ve got a story sitting in your backlog that reads clean and complete - the kind nobody would flag - I&rsquo;d like to hear what it turns out you didn&rsquo;t say.</em></p>
+<p><strong><a href="https://www.vaishalidesarda.com/agents">The Question Before the Code</a></strong></p>
+
+  </article>
+
+  
+<div class="share-container">
+  <button class="share-button" onclick="toggleSharePopup()" aria-label="Share">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="18" cy="18" r="3" />
+      <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+      <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+    </svg>
+  </button>
+  <div id="share-popup" class="share-popup hidden">
+    <a href="#" class="share-icon" onclick="shareOnLinkedIn(); return false;" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <line x1="8" y1="11" x2="8" y2="16"/>
+        <line x1="8" y1="8" x2="8" y2="8.01"/>
+        <line x1="12" y1="16" x2="12" y2="11"/>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnTwitter(); return false;" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnGmail(); return false;" aria-label="Gmail">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H8a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z"/>
+        <path d="M2 7l10 7l10-7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  function toggleSharePopup() {
+    var popup = document.getElementById('share-popup');
+    popup.classList.toggle('hidden');
+  }
+
+  function shareOnLinkedIn() {
+    var url = window.location.href;
+    var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnTwitter() {
+    var url = window.location.href;
+    var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnGmail() {
+    var url = window.location.href;
+    var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank');
+  }
+</script>
+
+<style>
+.share-container {
+    position: fixed;  
+    top: 50%;  
+    right: 100px;  
+    transform: translateY(-50%);  
+    z-index: 1000;  
+  }
+
+ .share-button {
+    background-color: transparent;  
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-popup {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .share-icon {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .share-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="https://www.vaishalidesarda.com/on-ai/built-on-scar-tissue-part-3/"> &lt;&lt; Built on Scar Tissue - Part 3: The Story Was Already Wrong</a> </div></ul>
+                <ul class="flex justify-right gap-8"> 
+      <a class="next" href="https://www.vaishalidesarda.com/on-ai/so-i-made-our-postmortems-run-in-ci/"> So I Made Our Postmortems Run in CI >></a></div>     
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">Quality, AI, and the thinking in between.</p>
+    </div>
+
+
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://x.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+  <script>
+    function shareOnLinkedIn() {
+        var url = window.location.href;
+        var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnTwitter() {
+        var url = window.location.href;
+        var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnGmail() {
+        var url = window.location.href;
+        var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank');
+    }
+  </script>
+
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2026 © Vaishali Desarda - Quality, AI, and the thinking in between!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://www.vaishalidesarda.com/js/scripts.min.js"></script>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>

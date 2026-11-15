@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>
+    So I Made Our Postmortems Run in CI - Vaishali Desarda - Quality, AI, and the thinking in between!
+  </title>
+  <meta name="description" content="Fixes land where the pain was. Lessons stay where the people are. This is about making a repo&#39;s postmortems executable - and what the tool found when it reviewed its own author." /><meta name="generator" content="Hugo 0.128.2">
+  <link rel="stylesheet" href="../../css/styles.css" />
+  
+  
+
+  <meta property="og:url" content="http://localhost:1313/on-ai/so-i-made-our-postmortems-run-in-ci-3/">
+  <meta property="og:site_name" content="Vaishali Desarda - Quality, AI, and the thinking in between!">
+  <meta property="og:title" content="So I Made Our Postmortems Run in CI">
+  <meta property="og:description" content="Fixes land where the pain was. Lessons stay where the people are. This is about making a repo&#39;s postmortems executable - and what the tool found when it reviewed its own author.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="on-ai">
+    <meta property="article:published_time" content="2026-11-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-11-14T00:00:00+00:00">
+    <meta property="article:tag" content="Qa">
+    <meta property="article:tag" content="Testing">
+    <meta property="article:tag" content="Test Automation">
+    <meta property="article:tag" content="Quality Engineering">
+    <meta property="article:tag" content="Built on Scar Tissue">
+    <meta property="article:tag" content="Playwright">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="So I Made Our Postmortems Run in CI">
+  <meta name="twitter:description" content="Fixes land where the pain was. Lessons stay where the people are. This is about making a repo&#39;s postmortems executable - and what the tool found when it reviewed its own author.">
+
+  
+  <meta itemprop="name" content="So I Made Our Postmortems Run in CI">
+  <meta itemprop="description" content="Fixes land where the pain was. Lessons stay where the people are. This is about making a repo&#39;s postmortems executable - and what the tool found when it reviewed its own author.">
+  <meta itemprop="datePublished" content="2026-11-14T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2026-11-14T00:00:00+00:00">
+  <meta itemprop="wordCount" content="3037">
+  <meta itemprop="keywords" content="Qa,Testing,Test Automation,Quality Engineering,Built on Scar Tissue,Playwright,Open Source">
+  
+  
+    
+      
+    
+  
+
+
+
+
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+</head>
+<body class="dark:bg-gray-800 dark:text-white relative"><header class="container flex justify-between items-center p-6 mx-auto">
+  <a href="http://localhost:1313/" class="capitalize font-extrabold text-2xl">
+    Vaishali Desarda - Quality, AI, and the thinking in between!
+  </a>
+  <ul class="flex items-center" style="gap: 2rem;">
+
+    
+      <li><a href="../../about">About</a></li>
+    
+      <li><a href="../../writing/">Writing</a></li>
+    
+      <li><a href="../../on-ai/">On AI</a></li>
+    
+      <li><a href="../../agents/">Agents</a></li>
+    
+
+    <li><a href="../../tags">Tags!</a></li>
+
+    
+    <li class="grid place-items-center">
+      <span class="open-search inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
+      </span>
+    </li>
+    
+
+    
+    <li class="grid place-items-center">
+      <span class="toggle-dark-mode inline-block cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="5" x2="12" y2="5.01" />
+          <line x1="17" y1="7" x2="17" y2="7.01" />
+          <line x1="19" y1="12" x2="19" y2="12.01" />
+          <line x1="17" y1="17" x2="17" y2="17.01" />
+          <line x1="12" y1="19" x2="12" y2="19.01" />
+          <line x1="7" y1="17" x2="7" y2="17.01" />
+          <line x1="5" y1="12" x2="5" y2="12.01" />
+          <line x1="7" y1="7" x2="7" y2="7.01" />
+        </svg>
+      </span>
+    </li>
+    
+  </ul>
+</header><main>
+
+  
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="../../images/scar-finding.png" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      November 14, 2026
+<br>
+
+⌚ : 14 min
+    </div>
+  </div>
+  
+
+ &nbsp;  &nbsp;
+
+ 
+
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  Click to find relevant articles:  
+
+<ul>
+&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;&nbsp;  &nbsp
+   &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/qa/">qa</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/testing/">testing</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/test-automation/">test-automation</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/quality-engineering/">quality-engineering</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/built-on-scar-tissue/">built-on-scar-tissue</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/playwright/">playwright</a> </U> &nbsp;  &nbsp; 
+   <U>
+  <a href="http://localhost:1313/tags/open-source/">open-source</a> </U></ul>
+<article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+	
+    <h1 class="text-2xl font-bold mb-2">So I Made Our Postmortems Run in CI</h1>
+	
+    <style>
+:root{
+  --sc-q-bg:#E6F1FB; --sc-q-fg:#0C447C; --sc-q-ac:#378ADD;
+  --sc-l-bg:#FAECE7; --sc-l-fg:#712B13; --sc-l-ac:#D85A30;
+  --sc-p-bg:#E1F5EE; --sc-p-fg:#085041; --sc-p-ac:#1D9E75;
+  --sc-c-bg:#FAEEDA; --sc-c-fg:#633806; --sc-c-ac:#EF9F27;
+  --sc-t-bg:#F1EFE8; --sc-t-fg:#2C2C2A; --sc-t-ac:#888780;
+}
+@media (prefers-color-scheme: dark){
+  :root:not(.light):not([data-theme="light"]){
+    --sc-q-bg:#0F2742; --sc-q-fg:#B5D4F4; --sc-q-ac:#378ADD;
+    --sc-l-bg:#3B1D13; --sc-l-fg:#F5C4B3; --sc-l-ac:#D85A30;
+    --sc-p-bg:#0A3328; --sc-p-fg:#9FE1CB; --sc-p-ac:#1D9E75;
+    --sc-c-bg:#3A2A0F; --sc-c-fg:#FAC775; --sc-c-ac:#EF9F27;
+    --sc-t-bg:#262624; --sc-t-fg:#D3D1C7; --sc-t-ac:#888780;
+  }
+}
+.dark, [data-theme="dark"]{
+  --sc-q-bg:#0F2742; --sc-q-fg:#B5D4F4; --sc-q-ac:#378ADD;
+  --sc-l-bg:#3B1D13; --sc-l-fg:#F5C4B3; --sc-l-ac:#D85A30;
+  --sc-p-bg:#0A3328; --sc-p-fg:#9FE1CB; --sc-p-ac:#1D9E75;
+  --sc-c-bg:#3A2A0F; --sc-c-fg:#FAC775; --sc-c-ac:#EF9F27;
+  --sc-t-bg:#262624; --sc-t-fg:#D3D1C7; --sc-t-ac:#888780;
+}
+.sc-box{padding:16px 20px;margin:20px 0;border-radius:6px;border-left:4px solid var(--sc-ac);background:var(--sc-bg);color:var(--sc-fg)}
+.sc-box p,.sc-box a,.sc-box code{color:var(--sc-fg)!important}
+.sc-box p{margin:0}
+.sc-box p+p{margin-top:6px}
+.sc-box a{text-decoration:underline}
+.sc-box code{background:rgba(127,127,127,.18);padding:1px 6px;border-radius:4px}
+.sc-title{font-weight:600}
+.sc-quote{--sc-bg:var(--sc-q-bg);--sc-fg:var(--sc-q-fg);--sc-ac:var(--sc-q-ac)}
+.sc-lesson{--sc-bg:var(--sc-l-bg);--sc-fg:var(--sc-l-fg);--sc-ac:var(--sc-l-ac)}
+.sc-proof{--sc-bg:var(--sc-p-bg);--sc-fg:var(--sc-p-fg);--sc-ac:var(--sc-p-ac)}
+.sc-caveat{--sc-bg:var(--sc-c-bg);--sc-fg:var(--sc-c-fg);--sc-ac:var(--sc-c-ac)}
+.sc-try{--sc-bg:var(--sc-t-bg);--sc-fg:var(--sc-t-fg);--sc-ac:var(--sc-t-ac)}
+</style>
+<h2 id="the-morning-the-test-failed-while-passing">The morning the test failed while passing</h2>
+<div class="sc-box sc-quote">
+  <p style="font-style:italic; font-size:1.05em;">"Experience is the name everyone gives to their mistakes."</p>
+  <p>- Oscar Wilde</p>
+</div>
+<p>A few weeks ago, an automation suite I maintain had one of those weeks. Salesforce journeys, driven end to end with Playwright - create a customer, convert it, book the order, verify what a downstream system received. The unglamorous kind of testing.</p>
+<p>It started with a run that failed at 96%. Not flaky infrastructure, not a broken selector. The test hit its five minute timeout <strong>while it was still working</strong>. The journey it automates takes about five and a half minutes when everything goes right. The cap expired during the final steps of a completely green run.</p>
+<p>And here is the part that cost me an hour of cleanup: the runner retried.</p>
+<p>The journey creates records in a shared staging org. Create, convert, book. Irreversible operations against a shared inventory. The retry started the whole journey again, against a system that had already accepted the first attempt. By the time anyone looked, there were duplicate orders sitting in the org, created by nobody, authored by a config file.</p>
+<p>I raised the timeout and moved on. That is what you do. Fix, push, next fire.</p>
+<p>What I did not do was ask the question that would have saved me the next three days:</p>
+<p><strong>Where else is this lesson currently not written down?</strong></p>
+<h2 id="the-week-the-suite-confessed">The week the suite confessed</h2>
+<p>Once I started looking, the lessons were everywhere. Each one paid for in a specific evening.</p>
+<p>A success toast that appears for two seconds on fast machines and never on slow ones. The fix races the toast against something durable instead of trusting it alone.</p>
+<p>A field reader that used <code>isVisible({ timeout: 5000 })</code> to wait for a label. Except <code>isVisible()</code> accepts no options and returns instantly, so labels still rendering came back as empty strings, silently, on every verification. The fix swaps in a real wait.</p>
+<p>Picklist values typed as <code>web</code> where the platform demands exactly <code>Web</code>. Rejected on save, traced by hand, fixed with one character.</p>
+<p>Smoke scenarios pinned to specific inventory items. Every green run consumed its own fixture, so each success quietly poisoned the next run.</p>
+<p>Plaintext credentials sitting as fallback defaults in config, removed in a purge commit.</p>
+<p>Eight fixes landed across five days in our repo. Each commit message is a tiny postmortem. Each one closed a wound in exactly one file.</p>
+<p>Then I did something slightly uncomfortable. I checked whether the lessons had actually spread, or whether they were still standing where they fell.</p>
+<h2 id="fixes-are-local-memory-is-not">Fixes are local. Memory is not.</h2>
+<p>That <code>isVisible</code> fix? Correct, well-commented, committed with an explanation of the trap.</p>
+<p>The same misuse was still sitting in <strong>twelve other places across five page objects in our repo</strong>. Some written <em>after</em> the fix existed.</p>
+<p>The picklist purge? Thorough. It missed tokens in a different constants file entirely.</p>
+<p>The credential cleanup? It cleaned three environments and left two others holding plaintext defaults.</p>
+<p>And the <code>.env</code> file with credentials in it that someone added to <code>.gitignore</code>? Still tracked by git. Ignore rules never untrack anything. Every clone carried it.</p>
+<p>Nothing here is unusual. This is just what organisations look like on the inside: fixes land where the pain was, lessons stay where the people are, and both drift apart the moment attention moves elsewhere.</p>
+<p>We write postmortems as if reading them changes something. They don&rsquo;t. Reading is not enforcement.</p>
+<div class="sc-box sc-lesson">
+  <p class="sc-title">The problem was never fixing.</p>
+  <p>It was remembering.</p>
+</div>
+<h2 id="what-if-the-retro-could-run">What if the retro could run?</h2>
+<p>So I tried a different move. Instead of writing down what we learned, I made the lessons executable.</p>
+<p>The idea takes one diagram:</p>
+<pre tabindex="0"><code>git history  →  extract once  →  rules file  →  review forever
+</code></pre><p>Every incident becomes one JSON object: a one-line rule, the commit hash that proves it, how bad recurrence would be, and a pattern a machine can look for. Then a small offline engine reads that file and checks code against all of it, on every pull request if you want.</p>
+<p>Here is a finding from our rule set, paths shortened, so you can see the shape:</p>
+<pre tabindex="0"><code>[ HIGH] WAIT - Never pass options to isVisible(). It takes none
+       and returns instantly.
+
+  where : pages/orders-page.ts:186
+  matched: if (await result.isVisible({ timeout: 5000 })...)
+
+  origin : 9f2c41d
+           isVisible() ignores options and returns immediately,
+           so a label still rendering read as absent and the field
+           value was silently reported as &#39;&#39;.
+
+  do this: locator.waitFor({ state:&#39;visible&#39;, timeout:N })
+</code></pre><p>The shipped template calls this one <code>ST-004</code>; our rule set had its own names first.</p>
+<p>Notice what the finding is not. It is not a lint opinion. It is not a model&rsquo;s vibe. It is a specific line, tied to a specific afternoon, with the fix that already worked once. A reviewer can argue with a style opinion. A commit is harder to argue with.</p>
+<p>The extraction is the only part that touches AI. First comes the deterministic pass: <code>sfqa-scar harvest</code> reads your git history, proposes a draft for every incident no existing rule claims yet, and hands the list back to a human - so the retro has something to run before it ever has to write. Then you point an assistant at the remaining history with a prompt that refuses to accept any rule without a citing commit. Everything after that is plain regex over local files. No network. No keys. Same input, same findings, every time, which is the only way a merge gate earns the right to fail your build.</p>
+<div class="sc-box sc-try">
+  <p class="sc-title">Try it</p>
+  <p><code>npm install -D @sfqa/scar</code> then <code>npx sfqa-scar harvest</code></p>
+  <p><a href="https://www.npmjs.com/package/@sfqa/scar">@sfqa/scar on npm</a> &middot; <a href="https://github.com/desardavaishali/sfqa-scar">GitHub</a> &middot; MIT</p>
+</div>
+<h2 id="proving-it-on-our-own-scars">Proving it on our own scars</h2>
+<p>An agent like this is easy to demo and easy to fake, so I built a proof harness before publishing anything.</p>
+<p>For each incident in the history, the script extracts the file as it existed <strong>before</strong> the fix commit, runs the reviewer against it, then extracts the file <strong>at</strong> the fix commit and runs it again.</p>
+<p>Two criteria, because not every fix was complete. Most rules must fire on the past and go quiet on the present. For the credential rule, the honest criterion is weaker: the count must go down.</p>
+<pre tabindex="0"><code>COMMIT    FILE                    RULE    PRE  POST  VERDICT
+9f2c41d   pages/field-reader.ts   WAIT     1     0  PASS
+cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
+79ac113   pages/orders-page.ts    POLL     3     0  PASS
+58de613   playwright.config.ts    TIMEOUT  1     0  PASS
+...8 incidents, 8 passes...
+</code></pre><div class="sc-box sc-proof">
+  <p class="sc-title">Eight incidents replayed. Eight passes.</p>
+  <p>One of them still had four findings left.</p>
+</div>
+<p><code>PASS*</code> is a decrease-mode pass, not a clean one.</p>
+<p>Look at the second row. Sixteen findings before the credential purge. Four after.</p>
+<p>Not zero.</p>
+<p>Four plaintext fallbacks survived the original cleanup, in environments everyone had stopped looking at. My agent found them on its first replay pass. It reviewed the work of the person who wrote it and handed back homework.</p>
+<p>I have decided to find that encouraging rather than humiliating. Both, honestly.</p>
+<h2 id="the-catch-that-justified-the-whole-build">The catch that justified the whole build</h2>
+<p>The same first run also flagged this:</p>
+<pre tabindex="0"><code>[HIGH] SECRETS - Never hardcode credentials or commit .env files.
+
+  where : .env
+  matched: (file name &#34;.env&#34;)
+  origin : cc1f7b2
+           ...a .env with credentials in it was committed and later added to
+           .gitignore - which never untracks existing files...
+</code></pre><p>The file was sitting right there, ignored on paper and fully tracked in reality, in a repository maintained by someone who absolutely knew better. Git&rsquo;s most common footgun, caught not because anyone re-checked but because a rule written from an old mistake simply kept looking.</p>
+<p>That is the entire pitch in one moment: <strong>the check does not get tired of checking.</strong></p>
+<h2 id="the-second-catch-a-rule-that-could-never-fire">The second catch: a rule that could never fire</h2>
+<p>The replay was not the last gate I built.</p>
+<p>Before publishing anything, I rebuilt the proof as a fixture harness: for every rule with a machine detector, a positive fixture must make it fire, and a clean fixture set must produce zero findings. Same idea as the replay, but it does not depend on this repository&rsquo;s history, so anyone can run it.</p>
+<p>The fixture harness failed on its first run.</p>
+<p>Not because a fixture was wrong.</p>
+<p><strong>One rule had a detector that could never fire.</strong></p>
+<p>It checked that each environment block reads its own environment&rsquo;s variables - the exact bug from the staging environment that quietly authenticated against the wrong org. The pattern was written to span lines. The engine was testing every line pattern against one line at a time. A cross-line regex cannot match a single line, so the rule sat in the report looking thorough and could never flag anything.</p>
+<div class="sc-box sc-lesson">
+  <p class="sc-title">A rule that cannot fire is worse than a missing rule.</p>
+  <p>It buys trust it has not earned.</p>
+</div>
+<p>The fix scans multi-line patterns against the whole file and maps each match back to its line. A regression fixture now proves it fires. The proof caught the tool lying about itself before anyone else could.</p>
+<p>That is the part I trust most: the gate does not care that I wrote it.</p>
+<h2 id="the-third-catch-the-detectors-were-the-problem">The third catch: the detectors were the problem</h2>
+<p>Fixtures prove a rule fires. They do not prove it fires on the right thing, so I ran the whole set against the repository it came from.</p>
+<p>Thirty-seven findings came back at <code>high</code>. About eight were real.</p>
+<p>That is the number nobody puts in a launch post, and it is the one that decides whether a tool survives contact with a team. A reviewer that opens with twenty-nine false alarms gets switched off in a week, and rightly.</p>
+<p>Here is what most of them were:</p>
+<pre tabindex="0"><code>[HIGH] POLL - never pass options to isVisible()
+
+  test-pages/web/HomePage.ts:865
+  const launcherVisible = await this.page
+    .locator(&#39;.appLauncherMenu, one-app-launcher-modal&#39;)
+    .first()
+    .isVisible({ timeout: 3000 })
+    .catch(() =&gt; false);
+</code></pre><p>A deliberate probe. The rule counts <code>.isVisible({ timeout })</code> as a silent assertion because of an incident where exactly that line quietly asserted the wrong thing - but this one is guarded on the next line, so it cannot be silent. The scanner was reading one line at a time.</p>
+<p>Two more shapes: <code>'Email': 'email'</code> in a field map, read as a misspelt picklist label, and <code>map.get('password')</code>, read as a hardcoded credential. Both are values in code, not labels or secrets.</p>
+<p>Every one became a detector fix with a regression test - never a severity demotion in the shipped template. A rule that fires on clean code is a rule your team turns off, and then it protects nothing at all.</p>
+<p>Re-run on the same tree: 113 findings, 11 <code>high</code>, and most of those eleven are things I genuinely owe an afternoon to. Two categories I am deliberately living with - inventory rows in feature tables because there is no test-data API yet, and an account-name assertion that is safe today because it reads a name the test itself created - are demoted in <em>our</em> rule set, with the reason written into the rule, not in the template everyone else gets.</p>
+<p>That is the promise the tool makes, and the reason it is worth a pull request slot: when it is wrong, it is wrong in a way you can read, fix, and prove.</p>
+<h2 id="what-this-is-not">What this is not</h2>
+<p>It is not another AI code reviewer. The interesting part of the design is that the AI touches it only during extraction, under supervision, with receipts required. Enforcement afterwards is boring on purpose. Boring is what lets you put it in a pipeline and trust a red build.</p>
+<p>Your rules file encodes your organisation&rsquo;s biography, warts included. It lives in your repo, reviewed like code, versioned like code. The scanner never leaves your machine; extraction is the one step where you decide what the model sees. If that sounds like your <code>.eslintrc</code>, except written by your worst weeks, that is exactly what it is.</p>
+<h2 id="where-this-fits">Where this fits</h2>
+<p>This is packaged now: a zero-dependency CLI, a rule-set format, an extraction prompt, and a proof harness that proves the shipped rules fire and stay quiet before you trust a word I say. MIT.</p>
+<p>The replay above is mine, on our history. The fixture harness is the part you can run.</p>
+<p>It is one piece of a small family I am building around the same idea. There is a portable core with no org vocabulary in it at all - a boundary test fails the build if that changes. There is a probe that reads a Salesforce org&rsquo;s describe metadata and writes the org adapter the main journey is built on: exact labels, active picklist values, required flags, and a review sheet of what it could not map. The probe writes the adapter; it does not write the journey. The journey is authored against it, which is the point: grounded in what the org actually says, not what I remembered about the last one.</p>
+<p>Pointing the whole chain at an unfamiliar sandbox is the next milestone.</p>
+<div class="sc-box sc-caveat">
+  <p class="sc-title">The scar reviewer is still being tested. Deliberately.</p>
+  <p>It is v0.1.0, and the shipped set is a template: 18 of the 19 rules have a detector and are proven both ways; the nineteenth is listed as a gap, not counted as coverage. The public proof runs on synthetic fixtures, not a field trial. The next round is running it against repositories that have nothing to do with this one, measuring false positives honestly, and publishing those numbers whether or not they flatter me.</p>
+</div>
+<h2 id="what-it-looks-like-when-i-run-it">What it looks like when I run it</h2>
+<p>These are the commands, the inputs, and the outputs - the same loop I run in a repo.</p>
+<p>Install once with <code>npm install -D @sfqa/scar</code>; every command below runs through <code>npx</code>.</p>
+<h3 id="1-scan-a-known-scar-firing-again">1. Scan: a known scar firing again</h3>
+<p><code>scar-tissue.json</code> in the repo root is <em>my</em> rule set (auto-picked up). If a repo has none, the scan falls back to the packaged template <code>rules/generic.json</code>; the first <code>sfqa-scar new …</code> or a copy of that template gives you a file of your own to tune.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ npx sfqa-scar --markdown --fail-on high .
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>## sfqa-scar
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>**113 finding(s)** across 1385 file(s) - 4 high, 46 med, 63 low.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| Rule | Severity | Where | Matched |
+</span></span><span style="display:flex;"><span>| --- | --- | --- | --- |
+</span></span><span style="display:flex;"><span>| ST-001 | high | `test-lib/setup/env.ts:472` | `Password: process.env.STAGING_ADMIN_PASSWORD \|\| &#39;&lt;redacted&gt;&#39;` |
+</span></span><span style="display:flex;"><span>| ST-001 | high | `test-lib/setup/env.ts:474` | `Password: process.env.STAGING_MANAGER_PASSWORD \|\| &#39;&lt;redacted&gt;&#39;` |
+</span></span><span style="display:flex;"><span>| ST-001 | high | `test-lib/setup/env.ts:498` | `password: process.env.STAGING_MANAGER_PASSWORD \|\| &#39;&lt;redacted&gt;&#39;` |
+</span></span><span style="display:flex;"><span>| ST-004 | high | `test-pages/web/LeadPage.ts:591` | `const spinnerExists = await … .isVisible({ timeout: 1000 });` |
+</span></span><span style="display:flex;"><span>| … | … | … | … |
+</span></span></code></pre></div><p>That is where the third catch ends up on the repo that mined the rules: 37 highs down to 11 once the detectors stopped misreading code, and down to 4 once I demoted, in <em>my</em> <code>scar-tissue.json</code> (never the template), the two categories I am deliberately living with and wrote the reason into. To review only what changed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx sfqa-scar --base origin/main --fail-on high
+</span></span><span style="display:flex;"><span>npx sfqa-scar --staged --fail-on high
+</span></span></code></pre></div><h3 id="2-harvest-the-incidents-nobody-wrote-a-rule-for">2. Harvest: the incidents nobody wrote a rule for</h3>
+<p><code>harvest</code> reads fix-shaped commits and local report artifacts, proposes a draft for each unclaimed incident, and hands the list back - it writes nothing unless you ask it to.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ npx sfqa-scar harvest --since 2026-01-01
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>CANDIDATE 1/1
+</span></span><span style="display:flex;"><span>  commit : 402ef2d  2026-11-09
+</span></span><span style="display:flex;"><span>  subject: fix: replace fixed sleep with an element wait
+</span></span><span style="display:flex;"><span>  files  : tests/orders.ts
+</span></span><span style="display:flex;"><span>  removed: await page.waitForTimeout(2000);
+</span></span><span style="display:flex;"><span>  added  : await locator.waitFor({ state: &#39;visible&#39;, timeout: 5000 });
+</span></span><span style="display:flex;"><span>  detect : page\.waitForTimeout\(  [confidence high]
+</span></span><span style="display:flex;"><span>  scope  : tests/**
+</span></span><span style="display:flex;"><span>  id     : commit:402ef2d9c1...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>No rule claims this incident yet. Review the draft, prove it, then add it.
+</span></span></code></pre></div><p><code>--json</code> or <code>--write scar-candidates.json</code> gives you the machine-readable form; <code>--strict</code> in CI turns &ldquo;we forgot to record last month&rsquo;s hotfix&rdquo; into a red build.</p>
+<h3 id="3-turn-an-incident-into-a-rule-new--fill--prove">3. Turn an incident into a rule (<code>new</code> → fill → <code>prove</code>)</h3>
+<p>One command scaffolds the rule and puts both fixtures where the rule will actually look:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ npx sfqa-scar new --rule <span style="color:#f1fa8c">&#34;Never wait on a fixed sleep for a UI element&#34;</span> --scope tests/
+</span></span><span style="display:flex;"><span>created ST-020 <span style="color:#ff79c6">(</span>new rule file<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  rule      scar-tissue.json
+</span></span><span style="display:flex;"><span>  positive  scar-fixtures/positive/tests/st-020.ts
+</span></span><span style="display:flex;"><span>  clean     scar-fixtures/negative/tests/st-020.ts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>what to <span style="color:#ff79c6">do</span> next
+</span></span><span style="display:flex;"><span>  1. open scar-tissue.json, replace the TODOs, and put the pattern in match.linePatterns
+</span></span><span style="display:flex;"><span>  2. not sure of the pattern? prompts/turn-incident-into-rule.md drafts it from the incident
+</span></span><span style="display:flex;"><span>  3. paste the bad line into scar-fixtures/positive/tests/st-020.ts
+</span></span><span style="display:flex;"><span>  4. paste the same code with the fix into scar-fixtures/negative/tests/st-020.ts
+</span></span><span style="display:flex;"><span>  5. prove just this rule: sfqa-scar prove --id ST-020
+</span></span></code></pre></div><p>The rule it wrote is the input - data, with an empty detector (a gap) until you fill it. Positive fixture gets the bad line, clean fixture gets the fixed line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;ST-020&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;rule&#34;</span>: <span style="color:#f1fa8c">&#34;Never wait on a fixed sleep for a UI element&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;severity&#34;</span>: <span style="color:#f1fa8c">&#34;med&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;match&#34;</span>: { <span style="color:#ff79c6">&#34;pathInclude&#34;</span>: [<span style="color:#f1fa8c">&#34;tests/**&#34;</span>], <span style="color:#ff79c6">&#34;linePatterns&#34;</span>: [] },
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;origin&#34;</span>: { <span style="color:#ff79c6">&#34;commit&#34;</span>: <span style="color:#ff79c6">null</span>, <span style="color:#ff79c6">&#34;summary&#34;</span>: <span style="color:#f1fa8c">&#34;TODO: what broke, and what it cost.&#34;</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;recommendation&#34;</span>: <span style="color:#f1fa8c">&#34;TODO: the fix that worked.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Not sure of the pattern? Hand the incident to <code>prompts/turn-incident-into-rule.md</code> (in the package) and an assistant drafts the detector and both fixtures. Then prove it - <code>prove</code> is the part I trust, not the draft:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ npx sfqa-scar prove --id ST-020
+</span></span><span style="display:flex;"><span>rule    severity  detector   positive   clean
+</span></span><span style="display:flex;"><span>ST-020  med       yes        fires      clean
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PROOF: 1/1 executable rules fire on a positive fixture and stay silent on the clean set.
+</span></span></code></pre></div><p><code>fires</code> = the bad line was caught. <code>clean</code> = the fixed line was not. A rule with no detector, or a fixture that never fires, is reported as a gap/miss and the command exits 1. The shipped set sits at <strong>18/18 executable rules proven, 1 documented gap</strong>.</p>
+<p>If you want to start today: run <code>harvest</code>, turn one candidate into a rule with <code>new</code> + the prompt + <code>prove</code>, and let the resulting file start reviewing your pull requests. Then watch what your history confesses when it finally gets asked.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li>The package: <a href="https://www.npmjs.com/package/@sfqa/scar"><code>@sfqa/scar</code> on npm</a></li>
+<li>The repository: <a href="https://github.com/desardavaishali/sfqa-scar">github.com/desardavaishali/sfqa-scar</a></li>
+<li>The proof: <a href="https://github.com/desardavaishali/sfqa-scar/blob/main/scar-validation/REPORT.md"><code>scar-validation/REPORT.md</code></a></li>
+<li>The extraction prompt: <a href="https://github.com/desardavaishali/sfqa-scar/blob/main/packages/scar/prompts/extract-rules.md"><code>prompts/extract-rules.md</code></a></li>
+<li>The rule-set template: <a href="https://github.com/desardavaishali/sfqa-scar/blob/main/packages/scar/rules/generic.json"><code>rules/generic.json</code></a></li>
+</ul>
+<hr>
+<p><em>If you run the extraction on your own repository and it finds something that made you wince, I would genuinely like to hear what it was. Those stories are how the starter rules get better.</em></p>
+<p><em>This sits alongside <a href="https://www.vaishalidesarda.com/blog/built-on-scar-tissue-part-3/">Built on Scar Tissue</a>: Part 3 asked what happens when a request arrives twice. Recently I watched my own test suite answer that question against a shared staging org, and decided the retro should be the thing that runs first next time.</em></p>
+
+  </article>
+
+  
+<div class="share-container">
+  <button class="share-button" onclick="toggleSharePopup()" aria-label="Share">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <circle cx="18" cy="18" r="3" />
+      <line x1="8.7" y1="10.7" x2="15.3" y2="7.3" />
+      <line x1="8.7" y1="13.3" x2="15.3" y2="16.7" />
+    </svg>
+  </button>
+  <div id="share-popup" class="share-popup hidden">
+    <a href="#" class="share-icon" onclick="shareOnLinkedIn(); return false;" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <line x1="8" y1="11" x2="8" y2="16"/>
+        <line x1="8" y1="8" x2="8" y2="8.01"/>
+        <line x1="12" y1="16" x2="12" y2="11"/>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnTwitter(); return false;" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"/>
+      </svg>
+    </a>
+    <a href="#" class="share-icon" onclick="shareOnGmail(); return false;" aria-label="Gmail">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H8a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z"/>
+        <path d="M2 7l10 7l10-7"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  function toggleSharePopup() {
+    var popup = document.getElementById('share-popup');
+    popup.classList.toggle('hidden');
+  }
+
+  function shareOnLinkedIn() {
+    var url = window.location.href;
+    var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnTwitter() {
+    var url = window.location.href;
+    var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank', 'width=600,height=400');
+  }
+
+  function shareOnGmail() {
+    var url = window.location.href;
+    var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+    window.open(shareUrl, '_blank');
+  }
+</script>
+
+<style>
+.share-container {
+    position: fixed;  
+    top: 50%;  
+    right: 100px;  
+    transform: translateY(-50%);  
+    z-index: 1000;  
+  }
+
+ .share-button {
+    background-color: transparent;  
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-popup {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .share-icon {
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .share-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+
+<div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+<ul class="flex justify-center gap-8">
+ 
+     <a class="previous" href="http://localhost:1313/on-ai/built-on-scar-tissue-part-3/"> &lt;&lt; Built on Scar Tissue - Part 3: The Story Was Already Wrong</a> </div></ul>
+                <ul class="flex justify-right gap-8">  
+     </ul></ul></div></div>
+<br><div class="bg-pink-50 dark:bg-gray-900">
+  <div class="container px-6 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <div class="text-2xl font-bold mb-2">Connect / Follow me</div>
+      <p class="opacity-60">Quality, AI, and the thinking in between.</p>
+    </div>
+
+
+    <ul class="flex justify-center gap-4">
+      
+      <li>
+        <a
+          href="https://x.com/VaishaliDesarda"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a
+          href="https://www.linkedin.com/in/desardavaishali/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+  <script>
+    function shareOnLinkedIn() {
+        var url = window.location.href;
+        var shareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnTwitter() {
+        var url = window.location.href;
+        var shareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank', 'width=600,height=400');
+    }
+
+    function shareOnGmail() {
+        var url = window.location.href;
+        var shareUrl = 'mailto:?subject=Check%20this%20out&body=' + encodeURIComponent(url);
+        window.open(shareUrl, '_blank');
+    }
+  </script>
+
+
+    </main><footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    
+    2026 © Vaishali Desarda - Quality, AI, and the thinking in between!
+    
+  </span>
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+<div class="search-ui absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 hidden">
+  <div class="container max-w-3xl mx-auto p-12">
+    <div class="relative">
+      <div class="my-4 text-center text-2xl font-bold">Search</div>
+
+      <span class="p-2 absolute right-0 top-0 cursor-pointer close-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </span>
+    </div>
+
+    <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
+      placeholder="Enter search query" />
+
+    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <ul class="search-list my-2">
+
+    </ul>
+
+    <div class="no-results text-center my-8 hidden">
+      <div class="text-xl font-semibold mb-2">No results found</div>
+      <p class="font-light text-sm">Try adjusting your search query</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="http://localhost:1313/js/scripts.min.js"></script>
+
+ <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+
+
+
+<script>
+  
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const isDark = localStorage.getItem('darkmode');
+  if(isDark && isDark === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+</body>
+</html>
