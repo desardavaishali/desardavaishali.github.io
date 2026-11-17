@@ -42,7 +42,7 @@
   <meta itemprop="description" content="Fixes land where the pain was. Lessons stay where the people are. This is about making a repo&#39;s postmortems executable - and what the tool found when it reviewed its own author.">
   <meta itemprop="datePublished" content="2026-11-14T00:00:00+00:00">
   <meta itemprop="dateModified" content="2026-11-14T00:00:00+00:00">
-  <meta itemprop="wordCount" content="4135">
+  <meta itemprop="wordCount" content="4339">
   <meta itemprop="keywords" content="Testing,Test Automation,Quality Engineering,Built on Scar Tissue,Playwright,Open Source">
   
   
@@ -124,7 +124,7 @@
       November 14, 2026
 <br>
 
-⌚ : 19 min
+⌚ : 20 min
     </div>
   </div>
   
@@ -244,6 +244,9 @@
 <li><strong>Lesson:</strong> Keep picklist values in one place, checked against the live org, and make tests reference the constant instead of retyping the string.</li>
 <li><strong>Rule:</strong> <code>ST-003</code> flags a literal that matches a known label when you ignore case, spaces and hyphens but is not exactly equal to it. It only knows the labels you give it, and the list in the template is an example you replace. <code>ST-015</code> asks that picklist constants carry a marker showing they were verified against the live org.</li>
 </ul>
+<pre tabindex="0"><code>source: &#39;web&#39;   // rejected on save
+source: &#39;Web&#39;   // the value the org accepts
+</code></pre><p>(The field name is illustrative.)</p>
 <p><strong>5. Test data that a passing run consumes</strong></p>
 <ul>
 <li><strong>What happened:</strong> Smoke scenarios were pinned to specific inventory items. Every green run used up its own item, so each success made the next run fail with &ldquo;not available&rdquo;.</li>
@@ -282,6 +285,7 @@
 <tr>
 <th>#</th>
 <th>Scar</th>
+<th>Lesson in one line</th>
 <th>Rule</th>
 <th>Replay row</th>
 </tr>
@@ -290,62 +294,73 @@
 <tr>
 <td>1</td>
 <td>Timeout treated as failure</td>
+<td>No confirmation in time is not the same as the operation failing.</td>
 <td><code>ST-009</code> (no rule yet for the retry)</td>
 <td>TIMEOUT</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Toast as the only proof</td>
+<td>Assert on state the system keeps, not on a notification.</td>
 <td><code>ST-005</code></td>
 <td>-</td>
 </tr>
 <tr>
 <td>3</td>
 <td><code>isVisible</code> with a timeout</td>
+<td>A visibility check is not a wait.</td>
 <td><code>ST-004</code></td>
 <td>WAIT</td>
 </tr>
 <tr>
 <td>4</td>
 <td><code>web</code> vs <code>Web</code></td>
+<td>Platform values are exact tokens, not text.</td>
 <td><code>ST-003</code>, <code>ST-015</code></td>
 <td>-</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Fixtures a run consumes</td>
+<td>A dependency a passing test uses up is not a fixture.</td>
 <td><code>ST-008</code></td>
 <td>-</td>
 </tr>
 <tr>
 <td>6</td>
 <td>Credential fallbacks</td>
+<td>No secrets as defaults. Fail when missing. Rotate what was exposed.</td>
 <td><code>ST-001</code></td>
 <td>SECRETS (16 to 4)</td>
 </tr>
 <tr>
 <td>7</td>
 <td>Tracked <code>.env</code></td>
+<td>Ignored on paper is not gone.</td>
 <td><code>ST-001</code></td>
 <td>SECRETS</td>
 </tr>
 <tr>
 <td>8</td>
 <td>Polling a static page</td>
+<td>If a value does not update live, refresh the source.</td>
 <td><code>ST-007</code></td>
 <td>POLL</td>
 </tr>
 </tbody>
 </table>
+<p>Eight different mistakes, one shape. Each lesson was written down in a commit, and each commit only knew about one file.</p>
 <p>Then I did something slightly uncomfortable. I checked whether these lessons had actually spread, or whether each fix was still standing only where it fell.</p>
 <h2 id="fixes-are-local-memory-is-not">Fixes are local. Memory is not.</h2>
 <p>The timeout fix (scar #1)? It stopped that run failing. It left the retry alone, so the next journey that crosses its limit repeats itself the same way.</p>
 <p>That isVisible fix (scar #3)? Correct, well-commented, committed with an explanation of the trap.</p>
 <p>The same misuse was still sitting in <strong>twelve other places across five page objects in our repo</strong>. Some written <em>after</em> the fix existed. The commit had closed that wound in that file - and only that file.</p>
+<p>That is the detail from earlier. One commit, one wound, one file.</p>
 <p>The picklist cleanup (scar #4)? It fixed the values I knew to look for and missed tokens in a different constants file entirely. Same class of mistake, different file, still open.</p>
 <p>The fixture fix (scar #5)? The sentinel went into the scenarios I touched. Concrete inventory codes are still in other feature tables.</p>
-<p>The credential purge (scar #6)? It cleaned three environments and left plaintext fallback defaults in others. A decrease, not a clean finish.</p>
+<p>The credential purge (scar #6)? It cleaned three environments and left plaintext fallback defaults in others. A decrease, not a clean finish. The replay below counts it: 16 findings before, 4 after.</p>
 <p>And the tracked .env (scar #7)? Still in the index, still carried by clones, despite being &ldquo;ignored&rdquo;. The rule everyone knows, caught only because no one re-checked.</p>
+<p>The toast fix (scar #2) and the polling fix (scar #8) I never re-checked by hand. Nobody does. That is what the rules are for.</p>
 <p>Nothing here is unusual. The fix lands where it hurt. The lesson stays with whoever was there. Then everyone moves on to the next fire.</p>
 <p>We write postmortems as if reading them changes something. They don&rsquo;t. Reading is not enforcement.</p>
 <div class="sc-box sc-lesson">
@@ -376,7 +391,7 @@
 <div class="sc-box sc-try">
   <p class="sc-title">Try it</p>
   <p><code>npm install -D @sfqa/scar</code> then <code>npx sfqa-scar .</code> (or <code>npx sfqa-scar harvest</code> to surface incidents to turn into rules)</p>
-  <p><a href="https://www.npmjs.com/package/@sfqa/scar">@sfqa/scar on npm</a> &middot; <a href="https://github.com/desardavaishali/sfqa-scar">GitHub</a> &middot; MIT</p>
+  <p><a href="https://www.npmjs.com/package/@sfqa/scar">@sfqa/scar on npm</a> &middot; <a href="https://github.com/desardavaishali/sfqa-scar">GitHub</a> &middot; Apache-2.0</p>
 </div>
 <h2 id="proving-it-on-our-own-scars">Proving it on our own scars</h2>
 <p>A tool like this is easy to demo and easy to fake, so I built a proof harness before publishing anything.</p>
@@ -391,7 +406,8 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
 79ac113   pages/orders-page.ts    POLL     3     0  PASS
 58de613   playwright.config.ts    TIMEOUT  1     0  PASS
 ...8 incidents, 8 passes...
-</code></pre><div class="sc-box sc-proof">
+</code></pre><p>The rows map back to the scars above: WAIT is scar 3, SECRETS is scars 6 and 7, POLL is scar 8, TIMEOUT is scar 1.</p>
+<div class="sc-box sc-proof">
   <p class="sc-title">Eight incidents replayed. Eight passes.</p>
   <p>One of them - the credential cleanup - was decrease-mode: 16 findings down to 4, not down to zero.</p>
 </div>
@@ -437,7 +453,7 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
     .isVisible({ timeout: 3000 })
     .catch(() =&gt; false);
 </code></pre><p>A deliberate probe, guarded by <code>.catch(() =&gt; false)</code> - so it cannot silently assert the wrong thing. The rule exists because of an incident where that same call was a silent assertion (scar #3), but the detector, reading naively, could not tell a guarded probe from an unguarded one.</p>
-<p>Two more shapes showed up: <code>'Email': 'email'</code> in a field map misread as a picklist label issue, and <code>map.get('password')</code> misread as a hardcoded credential. Values in code, not contract labels or secrets.</p>
+<p>Two more shapes showed up: <code>'Email': 'email'</code> in a field map misread as a picklist label issue (<code>ST-003</code>), and <code>map.get('password')</code> misread as a hardcoded credential (<code>ST-001</code>). Values in code, not contract labels or secrets.</p>
 <p>Each misread became a detector fix with a regression test - not a severity demotion in the shipped template. A rule that fires on clean code is a rule your team turns off, and then it protects nothing.</p>
 <p>When it is wrong, it is wrong in a way you can read, fix, and prove. That is why it is worth a pull-request slot.</p>
 <h2 id="what-this-is-not">What this is not</h2>
@@ -445,7 +461,7 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
 <p>It also only sees patterns in text. It cannot tell you whether a retry is safe. It can only remind you of the last time one was not.</p>
 <p>Your rules file lives in your repo, reviewed and versioned like code. If that sounds like your <code>.eslintrc</code>, except written by your worst weeks, that is exactly what it is.</p>
 <h2 id="where-this-fits">Where this fits</h2>
-<p>This is packaged now: a zero-dependency CLI, a rule-set format, an extraction/drafting prompt, and a proof harness that proves shipped rules fire and stay quiet before you trust a word I say. MIT.</p>
+<p>This is packaged now: a zero-dependency CLI, a rule-set format, an extraction/drafting prompt, and a proof harness that proves shipped rules fire and stay quiet before you trust a word I say. Apache-2.0.</p>
 <p>The replay above is mine, on our history. The fixture harness is the part you can run.</p>
 <p>There is more coming around this idea. This release is the reviewer on its own.</p>
 <div class="sc-box sc-caveat">
@@ -469,8 +485,7 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
 </span></span><span style="display:flex;"><span>| ST-001 | high | `test-lib/setup/env.ts:498` | `password: process.env.STAGING_MANAGER_PASSWORD \|\| &#39;&lt;redacted&gt;&#39;` |
 </span></span><span style="display:flex;"><span>| ST-004 | high | `test-pages/web/DealPage.ts:591` | `const spinnerExists = await … .isVisible({ timeout: 1000 });` |
 </span></span><span style="display:flex;"><span>| … | … | … | … |
-</span></span></code></pre></div><p>(I replaced the secret values with <code>&lt;redacted&gt;</code> for this post.)</p>
-<p>On the repo that mined the rules, that is 37 highs down to 11 once the detectors stopped misreading code, and down to 4 once I demoted two categories I am deliberately living with - in <em>my</em> <code>scar-tissue.json</code>, never the template, with the reason written into each rule. To review only what changed:</p>
+</span></span></code></pre></div><p>On the repo that mined the rules, that is 37 highs down to 11 once the detectors stopped misreading code, and down to 4 once I demoted two categories I am deliberately living with - concrete inventory rows in feature tables (scar #5), and an account-name assertion that reads a name the test itself created - in <em>my</em> <code>scar-tissue.json</code>, never the template, with the reason written into each rule. To review only what changed:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx sfqa-scar --base origin/main --fail-on high
 </span></span><span style="display:flex;"><span>npx sfqa-scar --staged --fail-on high
 </span></span></code></pre></div><details>
