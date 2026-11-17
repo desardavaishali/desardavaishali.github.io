@@ -42,7 +42,7 @@
   <meta itemprop="description" content="Fixes land where the pain was. Lessons stay where the people are. This is about making a repo&#39;s postmortems executable - and what the tool found when it reviewed its own author.">
   <meta itemprop="datePublished" content="2026-11-14T00:00:00+00:00">
   <meta itemprop="dateModified" content="2026-11-14T00:00:00+00:00">
-  <meta itemprop="wordCount" content="2793">
+  <meta itemprop="wordCount" content="4135">
   <meta itemprop="keywords" content="Testing,Test Automation,Quality Engineering,Built on Scar Tissue,Playwright,Open Source">
   
   
@@ -124,7 +124,7 @@
       November 14, 2026
 <br>
 
-⌚ : 13 min
+⌚ : 19 min
     </div>
   </div>
   
@@ -179,9 +179,11 @@
   --sc-t-bg:#262624; --sc-t-fg:#D3D1C7; --sc-t-ac:#888780;
 }
 .sc-box{padding:16px 20px;margin:20px 0;border-radius:6px;border-left:4px solid var(--sc-ac);background:var(--sc-bg);color:var(--sc-fg)}
-.sc-box p,.sc-box a,.sc-box code{color:var(--sc-fg)!important}
+.sc-box p,.sc-box a,.sc-box code,.sc-box li{color:var(--sc-fg)!important}
 .sc-box p{margin:0}
-.sc-box p+p{margin-top:6px}
+.sc-box p+p,.sc-box p+ul,.sc-box ul+p{margin-top:8px}
+.sc-box ul{margin:8px 0 0 18px}
+.sc-box li+li{margin-top:4px}
 .sc-box a{text-decoration:underline}
 .sc-box code{background:rgba(127,127,127,.18);padding:1px 6px;border-radius:4px}
 .sc-title{font-weight:600}
@@ -197,40 +199,165 @@
   <p>- Oscar Wilde, <em>Lady Windermere's Fan</em></p>
 </div>
 <p>A few weeks ago, an automation suite I maintain had one of those weeks. Salesforce journeys, driven end to end with Playwright - create a customer, convert it, book the order, verify what a downstream system received. The unglamorous kind of testing.</p>
-<p>It started with a run that failed at 96%. Not flaky infrastructure, not a broken selector. The test hit its five minute timeout <strong>while it was still working</strong>. The journey it automates takes about five and a half minutes when everything goes right. The cap expired during the final steps of a completely green run.</p>
+<p>It started with a run that failed at 96%. Not flaky infrastructure, not a broken selector. The test hit its five-minute timeout <strong>while it was still working</strong>. The journey takes about five and a half minutes when everything goes right. The timeout expired during the final steps of a run whose business operations had already completed.</p>
 <p>Take Salesforce out of it and the shape is everywhere. A payment is confirmed on the ledger just as the client gives up waiting for the response. A patient&rsquo;s heart-rate-variability reading is stored just as the upload times out on the phone. Both look like failures. Both had already succeeded.</p>
-<p>And here is the part that cost me an hour of cleanup: the runner retried.</p>
-<p>The journey creates records in a shared staging org. Create, convert, book. Irreversible operations against a shared inventory. The retry started the whole journey again, against a system that had already accepted the first attempt. By the time anyone looked, there were duplicate orders sitting in the org, created by nobody, authored by a config file.</p>
+<p>And here is the part that cost me an hour of cleanup: the test runner retried.</p>
+<p>The journey performs irreversible operations against a shared staging org - create, convert, book. The retry did not check whether those operations had already completed; it started the whole journey again against a system that had already accepted the first attempt. By the time anyone looked, there were duplicate orders in the org, produced by an automated retry - not by a person - because the run was configured to treat a timeout as a failure worth retrying.</p>
 <p>I raised the timeout and moved on. That is what you do. Fix, push, next fire.</p>
 <p>What I did not do was ask the question that would have saved me the next three days:</p>
 <p><strong>Where else have I messed this up?</strong></p>
 <h2 id="the-week-the-suite-confessed">The week the suite confessed</h2>
-<p>Once I started looking, the lessons were everywhere. Each one paid for in a specific evening.</p>
-<p>A success toast that appears for two seconds on fast machines and never on slow ones. The fix races the toast against something durable instead of trusting it alone.</p>
-<p>A field reader that used <code>isVisible({ timeout: 5000 })</code> to wait for a label. Except <code>isVisible()</code> ignores its <code>timeout</code> option and returns instantly, so labels still rendering came back as empty strings, silently, on every verification. The fix swaps in a real wait.</p>
-<p>Picklist values typed as <code>web</code> where the platform demands exactly <code>Web</code>. Rejected on save, traced by hand, fixed with one character.</p>
-<p>Smoke scenarios pinned to specific inventory items. Every green run consumed its own fixture, so each success quietly poisoned the next run.</p>
-<p>Plaintext credentials sitting as fallback defaults in config, removed in a purge commit.</p>
-<p>Eight fixes landed across five days in our repo. Each commit message is a tiny postmortem. Each one closed a wound in exactly one file.</p>
-<p>Then I did something slightly uncomfortable. I checked whether the lessons had actually spread, or whether they were still standing where they fell.</p>
+<p>Once I started looking, the lessons were everywhere. Each one paid for in a specific evening. Eight fixes landed across five days, and each commit message is a tiny postmortem. And each commit closed a wound in exactly one file - the file where the pain showed up.</p>
+<p>That last detail matters. I didn&rsquo;t see why until later.</p>
+<p><strong>1. A timeout is not a failed operation</strong></p>
+<ul>
+<li><strong>What happened:</strong> The journey takes about five and a half minutes. The test timeout was five. The run failed at 96%, after create, convert and book had already succeeded. The runner then retried the whole journey and created duplicate orders in a shared staging org.</li>
+<li><strong>Why it was wrong:</strong> &ldquo;No confirmation within the time limit&rdquo; was treated as &ldquo;the operation failed, try again&rdquo;. For an irreversible journey those are different things.</li>
+<li><strong>The fix:</strong> The timeout went up, from 3 to 5 to 10 minutes over time.</li>
+<li><strong>Still open:</strong> The retry. Raising the timeout stops this run failing. It does not stop the next journey that crosses its limit from repeating itself.</li>
+<li><strong>Lesson:</strong> For operations you cannot undo, retries must be bounded by what the operation did, with a precondition check or a deduplication key, not by a default retry policy.</li>
+<li><strong>Rule:</strong> <code>ST-009</code> checks the timeout against the measured length of the longest legitimate journey. There is no rule yet for retrying an irreversible journey.</li>
+</ul>
+<p><strong>2. A toast is a notification, not proof</strong></p>
+<ul>
+<li><strong>What happened:</strong> A flow waited for a success toast. On fast machines it shows for about two seconds. On a slower environment it was gone before the test looked, so green conversions failed.</li>
+<li><strong>Why it was wrong:</strong> A transient UI element was the only evidence that the operation worked.</li>
+<li><strong>The fix:</strong> Race the toast against something durable - the record URL, the next step in the flow, or the primary field rendering.</li>
+<li><strong>Lesson:</strong> Assert on a state the system keeps. Treat a toast as a hint, never as proof.</li>
+<li><strong>Rule:</strong> <code>ST-005</code> flags a wait on a toast selector with no race against a durable signal.</li>
+</ul>
+<p><strong>3. <code>isVisible({ timeout })</code> was a wait that never waited</strong></p>
+<ul>
+<li><strong>What happened:</strong> A field reader used <code>isVisible({ timeout: 5000 })</code> to wait for a label. The call returned instantly, so labels still rendering were read as empty, and the field came back as an empty string on every verification.</li>
+<li><strong>Why it was silent:</strong> Playwright ignores the <code>timeout</code> option on <code>isVisible()</code>. The reader then treated &ldquo;not visible right now&rdquo; as &ldquo;empty&rdquo;, so a timing race turned into quietly bad data.</li>
+<li><strong>The fix:</strong> A real wait: <code>locator.waitFor({ state: 'visible', timeout })</code>.</li>
+<li><strong>Still open:</strong> The same call in twelve other places across five page objects, some written after the fix existed.</li>
+<li><strong>Lesson:</strong> A visibility check is not a wait. Be careful with any API that accepts an option it ignores.</li>
+<li><strong>Rule:</strong> <code>ST-004</code>. Replay row WAIT.</li>
+</ul>
+<p><strong>4. <code>web</code> and <code>Web</code> are different values, not a typo</strong></p>
+<ul>
+<li><strong>What happened:</strong> Constants held <code>web</code> where the org&rsquo;s picklist value is <code>Web</code>. Salesforce rejected the save, and it took a hand trace to find out why. The fix was one character.</li>
+<li><strong>Why a one-character diff is misleading:</strong> The mistake was not the missing capital. A value the platform defines was typed as free text, and the platform compares it exactly - case, spaces and hyphens included. In review <code>web</code> and <code>Web</code> look the same, and nothing in the repo said which spelling the org really accepts.</li>
+<li><strong>The fix:</strong> The character was corrected in that one file.</li>
+<li><strong>Still open:</strong> The same near-miss spellings in a different constants file. This drift comes back whenever the org&rsquo;s picklists change.</li>
+<li><strong>Lesson:</strong> Keep picklist values in one place, checked against the live org, and make tests reference the constant instead of retyping the string.</li>
+<li><strong>Rule:</strong> <code>ST-003</code> flags a literal that matches a known label when you ignore case, spaces and hyphens but is not exactly equal to it. It only knows the labels you give it, and the list in the template is an example you replace. <code>ST-015</code> asks that picklist constants carry a marker showing they were verified against the live org.</li>
+</ul>
+<p><strong>5. Test data that a passing run consumes</strong></p>
+<ul>
+<li><strong>What happened:</strong> Smoke scenarios were pinned to specific inventory items. Every green run used up its own item, so each success made the next run fail with &ldquo;not available&rdquo;.</li>
+<li><strong>Why it was wrong:</strong> The fixture was shared, finite state that the test itself depleted.</li>
+<li><strong>The fix:</strong> An availability sentinel, so the product&rsquo;s own search picks a free item.</li>
+<li><strong>Still open:</strong> Some inventory rows remain in feature tables, knowingly, because there is no test-data API yet.</li>
+<li><strong>Lesson:</strong> A dependency that a passing test uses up is not a fixture. Make test data replenishable or isolated per run.</li>
+<li><strong>Rule:</strong> <code>ST-008</code> flags concrete inventory codes in scenarios. The shipped identifier shape is an example you replace.</li>
+</ul>
+<p><strong>6. A purge that only cleans the file it touched</strong></p>
+<ul>
+<li><strong>What happened:</strong> Config read credentials as <code>process.env.X || 'literal'</code>. If the variable was missing, the suite ran with the literal credential instead of stopping. One commit removed those fallbacks, in three environments.</li>
+<li><strong>Why a fallback is worse than a missing value:</strong> The secret sits in source and in history. A missing variable no longer stops the run, so it can quietly sign in to the wrong environment. And it fails open instead of failing closed.</li>
+<li><strong>The fix:</strong> The literal fallbacks were removed from the environments the commit touched.</li>
+<li><strong>Still open:</strong> Four more in environments nobody had touched. The replay counted 16 findings before the purge commit and 4 after.</li>
+<li><strong>Lesson:</strong> No secrets as defaults. Read credentials from the environment or a secret store, and fail the run when they are empty. Removing a secret from the current file does not unexpose it, so rotate anything that was ever committed.</li>
+<li><strong>Rule:</strong> <code>ST-001</code> flags a quoted literal of six or more characters assigned to a password, secret or token key. An environment read with an empty fallback is allowed. Replay row SECRETS, 16 down to 4.</li>
+</ul>
+<p><strong>7. A <code>.env</code> that was ignored but still tracked</strong></p>
+<ul>
+<li><strong>What happened:</strong> A <code>.env</code> file with credentials was added to <code>.gitignore</code> after it had been committed. <code>.gitignore</code> only affects files git is not already tracking, so every clone still carried it.</li>
+<li><strong>The fix that did not work:</strong> Adding it to <code>.gitignore</code>.</li>
+<li><strong>The fix that does:</strong> <code>git rm --cached .env</code>, a commit, and rotating every value in it, because history and existing clones keep the old copy.</li>
+<li><strong>Lesson:</strong> &ldquo;Ignored&rdquo; on paper is not the same as gone.</li>
+<li><strong>Rule:</strong> <code>ST-001</code> also flags any tracked <code>.env</code> by file name. The replay caught it from the same commit as the purge.</li>
+</ul>
+<p><strong>8. Polling a page that never updates</strong></p>
+<ul>
+<li><strong>What happened:</strong> A field filled in by a backend integration showed up on the server after the record was created. The test polled the open page, and the page never updated, so the poll stalled until it timed out.</li>
+<li><strong>The fix:</strong> Reload the record every few stalled polls, inside the same deadline.</li>
+<li><strong>Lesson:</strong> If a value does not update live, polling is not enough. Refresh the source.</li>
+<li><strong>Rule:</strong> <code>ST-007</code> flags deadline-based polling loops in page objects that have no reload in the same file. Replay row POLL.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Scar</th>
+<th>Rule</th>
+<th>Replay row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Timeout treated as failure</td>
+<td><code>ST-009</code> (no rule yet for the retry)</td>
+<td>TIMEOUT</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Toast as the only proof</td>
+<td><code>ST-005</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>isVisible</code> with a timeout</td>
+<td><code>ST-004</code></td>
+<td>WAIT</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>web</code> vs <code>Web</code></td>
+<td><code>ST-003</code>, <code>ST-015</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Fixtures a run consumes</td>
+<td><code>ST-008</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Credential fallbacks</td>
+<td><code>ST-001</code></td>
+<td>SECRETS (16 to 4)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Tracked <code>.env</code></td>
+<td><code>ST-001</code></td>
+<td>SECRETS</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Polling a static page</td>
+<td><code>ST-007</code></td>
+<td>POLL</td>
+</tr>
+</tbody>
+</table>
+<p>Then I did something slightly uncomfortable. I checked whether these lessons had actually spread, or whether each fix was still standing only where it fell.</p>
 <h2 id="fixes-are-local-memory-is-not">Fixes are local. Memory is not.</h2>
-<p>That <code>isVisible</code> fix? Correct, well-commented, committed with an explanation of the trap.</p>
-<p>The same misuse was still sitting in <strong>twelve other places across five page objects in our repo</strong>. Some written <em>after</em> the fix existed.</p>
-<p>The picklist purge? Thorough. It missed tokens in a different constants file entirely.</p>
-<p>The credential cleanup? It cleaned three environments and left two others holding plaintext defaults.</p>
-<p>And the <code>.env</code> file with credentials in it that someone added to <code>.gitignore</code>? Still tracked by git. Ignore rules never untrack anything. Every clone carried it.</p>
+<p>The timeout fix (scar #1)? It stopped that run failing. It left the retry alone, so the next journey that crosses its limit repeats itself the same way.</p>
+<p>That isVisible fix (scar #3)? Correct, well-commented, committed with an explanation of the trap.</p>
+<p>The same misuse was still sitting in <strong>twelve other places across five page objects in our repo</strong>. Some written <em>after</em> the fix existed. The commit had closed that wound in that file - and only that file.</p>
+<p>The picklist cleanup (scar #4)? It fixed the values I knew to look for and missed tokens in a different constants file entirely. Same class of mistake, different file, still open.</p>
+<p>The fixture fix (scar #5)? The sentinel went into the scenarios I touched. Concrete inventory codes are still in other feature tables.</p>
+<p>The credential purge (scar #6)? It cleaned three environments and left plaintext fallback defaults in others. A decrease, not a clean finish.</p>
+<p>And the tracked .env (scar #7)? Still in the index, still carried by clones, despite being &ldquo;ignored&rdquo;. The rule everyone knows, caught only because no one re-checked.</p>
 <p>Nothing here is unusual. The fix lands where it hurt. The lesson stays with whoever was there. Then everyone moves on to the next fire.</p>
 <p>We write postmortems as if reading them changes something. They don&rsquo;t. Reading is not enforcement.</p>
 <div class="sc-box sc-lesson">
   <p class="sc-title">The problem was never fixing.</p>
-  <p>It was remembering.</p>
+  <p>It was propagation. A commit can close one wound in one file; it cannot, by itself, teach every other file the lesson.</p>
 </div>
 <h2 id="what-if-the-retro-could-run">What if the retro could run?</h2>
 <p>So I tried a different move. Instead of writing down what we learned, I made the lessons executable.</p>
 <p>The idea takes one diagram:</p>
 <pre tabindex="0"><code>git history  →  extract once  →  rules file  →  review forever
-</code></pre><p>Every incident becomes one JSON object: a one-line rule, the commit hash that proves it, how bad recurrence would be, and a pattern a machine can look for. Then a small offline engine reads that file and checks code against all of it, on every pull request if you want.</p>
-<p>Here is a finding from our rule set, paths shortened, so you can see the shape:</p>
+</code></pre><p>Every incident becomes one structured rule: a one-line statement of what not to repeat, the commit that proved it, how bad recurrence would be, and a pattern a machine can look for. A small offline engine reads that file and checks code against all of it - on every pull request if you want.</p>
+<p>Here is a finding from our rule set (paths shortened) so you can see the shape:</p>
 <pre tabindex="0"><code>[HIGH] WAIT - Never pass a timeout to isVisible(). The option is
        ignored and the call returns instantly.
 
@@ -245,16 +372,19 @@
   do this: locator.waitFor({ state:&#39;visible&#39;, timeout:N })
 </code></pre><p>(In the shipped template this rule is <code>ST-004</code>.)</p>
 <p>Notice what the finding is not. It is not a lint opinion. It is not a model&rsquo;s vibe. It is a specific line, tied to a specific afternoon, with the fix that already worked once. A reviewer can argue with a style opinion. A commit is harder to argue with.</p>
-<p>The extraction is the only part that touches AI. First comes the deterministic pass: <code>sfqa-scar harvest</code> reads your git history, proposes a draft for every incident no existing rule claims yet, and hands the list back to a human - so the retro has something to run before it ever has to write. Then you point an assistant at the remaining history with a prompt that refuses to accept any rule without a citing commit. Everything after that is plain regex over local files. No network. No keys. Same input, same findings, every time, which is the only way a merge gate earns the right to fail your build.</p>
+<p>A note on AI, because it causes confusion: <code>sfqa-scar</code> itself does not call a model. No API keys, no tokens, no network - same input, same findings, every time. AI only appears if you choose it, outside the tool and under your review. <code>sfqa-scar harvest</code> finds incident-shaped commits and drafts candidates from your history, with no AI. The prompts shipped in the package can help an assistant of your choice turn an incident into a rule and fixtures. No rule is accepted without a citing commit. The review, the proof and the gate never call a model.</p>
 <div class="sc-box sc-try">
   <p class="sc-title">Try it</p>
-  <p><code>npm install -D @sfqa/scar</code> then <code>npx sfqa-scar harvest</code></p>
+  <p><code>npm install -D @sfqa/scar</code> then <code>npx sfqa-scar .</code> (or <code>npx sfqa-scar harvest</code> to surface incidents to turn into rules)</p>
   <p><a href="https://www.npmjs.com/package/@sfqa/scar">@sfqa/scar on npm</a> &middot; <a href="https://github.com/desardavaishali/sfqa-scar">GitHub</a> &middot; MIT</p>
 </div>
 <h2 id="proving-it-on-our-own-scars">Proving it on our own scars</h2>
-<p>An agent like this is easy to demo and easy to fake, so I built a proof harness before publishing anything.</p>
-<p>For each incident in the history, the script extracts the file as it existed <strong>before</strong> the fix commit, runs the reviewer against it, then extracts the file <strong>at</strong> the fix commit and runs it again.</p>
-<p>Two criteria, because not every fix was complete. Most rules must fire on the past and go quiet on the present. For the credential rule, the honest criterion is weaker: the count must go down.</p>
+<p>A tool like this is easy to demo and easy to fake, so I built a proof harness before publishing anything.</p>
+<p>For each incident in the history, the script extracts the file as it existed <strong>before</strong> the fix commit, runs the reviewer against it, then extracts the file <strong>at</strong> the fix commit and runs it again. I used two explicit criteria, because not every cleanup was complete:</p>
+<ul>
+<li><strong>Regression cleared:</strong> the finding fires before the fix and is gone after it.</li>
+<li><strong>Decrease-mode (<code>PASS*</code>):</strong> the count goes down but does not reach zero, used when the original cleanup was incomplete. This is an honest, weaker pass, not the same as &ldquo;fixed&rdquo;.</li>
+</ul>
 <pre tabindex="0"><code>COMMIT    FILE                    RULE    PRE  POST  VERDICT
 9f2c41d   pages/field-reader.ts   WAIT     1     0  PASS
 cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
@@ -263,12 +393,11 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
 ...8 incidents, 8 passes...
 </code></pre><div class="sc-box sc-proof">
   <p class="sc-title">Eight incidents replayed. Eight passes.</p>
-  <p>One of them still had four findings left.</p>
+  <p>One of them - the credential cleanup - was decrease-mode: 16 findings down to 4, not down to zero.</p>
 </div>
-<p><code>PASS*</code> is a decrease-mode pass, not a clean one.</p>
-<p>Look at the second row. Sixteen findings before the credential purge. Four after.</p>
+<p>Look at the second row. Sixteen findings before the purge commit. Four after.</p>
 <p>Not zero.</p>
-<p>Four plaintext fallbacks survived the original cleanup, in environments everyone had stopped looking at. My agent found them on its first replay pass. It reviewed the work of the person who wrote it and handed back homework.</p>
+<p>Four plaintext fallback defaults survived the original cleanup, in environments everyone had stopped looking at. The commit had closed the wounds it touched; it had not closed the ones in other files. The reviewer found the remainder on its first replay pass. It reviewed the work of the person who wrote it and handed back homework.</p>
 <p>I have decided to find that encouraging rather than humiliating. Both, honestly.</p>
 <h2 id="the-catch-that-justified-the-whole-build">The catch that justified the whole build</h2>
 <p>The same first run also flagged this:</p>
@@ -279,23 +408,23 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
   origin : cc1f7b2
            ...a .env with credentials in it was committed and later added to
            .gitignore - which never untracks existing files...
-</code></pre><p>The file was sitting right there, ignored on paper and fully tracked in reality, in a repository maintained by someone who absolutely knew better. Git&rsquo;s most common footgun, caught not because anyone re-checked but because a rule written from an old mistake simply kept looking.</p>
+</code></pre><p>The file was sitting right there - ignored on paper, fully tracked in reality - in a repository maintained by someone who absolutely knew better. Git&rsquo;s most common footgun: <code>.gitignore</code> does not untrack what is already in the index. The rule caught it not because anyone re-checked, but because a lesson written from an old mistake simply kept looking.</p>
 <p>The entire pitch, in one moment: <strong>the check does not get tired of checking.</strong></p>
 <h2 id="the-second-catch-a-rule-that-could-never-fire">The second catch: a rule that could never fire</h2>
 <p>The replay was not the last gate I built.</p>
-<p>Before publishing anything, I rebuilt the proof as a fixture harness: for every rule with a machine detector, a positive fixture must make it fire, and a clean fixture set must produce zero findings. Same idea as the replay, but it does not depend on this repository&rsquo;s history, so anyone can run it.</p>
+<p>Before publishing anything, I rebuilt the proof as a fixture harness: for every rule with a machine detector, a positive fixture must make it fire, and a clean fixture must produce zero findings. Same idea as the replay, but independent of this repository&rsquo;s history, so anyone can run it.</p>
 <p>The fixture harness failed on its first run.</p>
 <p>Not because a fixture was wrong.</p>
 <p><strong>One rule had a detector that could never fire.</strong></p>
-<p>It checked that each environment reads its own environment&rsquo;s variables - the bug where staging quietly authenticated against the wrong org. The pattern spanned lines. The engine tested one line at a time. So the rule sat in the report looking thorough and could never flag anything.</p>
+<p>It was meant to catch a case where each environment must read its own environment&rsquo;s variables (the bug where one environment quietly authenticated against the wrong org; <code>ST-002</code> in the template). The relevant pattern spanned multiple lines. The engine evaluated patterns line by line. So the rule sat in the report looking thorough and could never flag the thing it described.</p>
 <div class="sc-box sc-lesson">
   <p class="sc-title">A rule that cannot fire is worse than a missing rule.</p>
   <p>It buys trust it has not earned.</p>
 </div>
-<p>The fix scans multi-line patterns against the whole file and maps each match back to its line. A regression fixture now proves it fires. The proof caught the tool lying about itself before anyone else could.</p>
+<p>The fix: scan multi-line patterns against the whole file and map each match back to its line. A regression fixture now proves it fires. The proof caught the tool overstating itself before anyone else could.</p>
 <p>This is the part I trust most: the gate does not care that I wrote it.</p>
 <h2 id="the-third-catch-the-detectors-were-the-problem">The third catch: the detectors were the problem</h2>
-<p>Fixtures prove a rule fires. They do not prove it fires on the right thing, so I ran the whole set against the repository it came from.</p>
+<p>Fixtures prove a rule can fire. They do not prove it fires on the right thing, so I ran the whole set against the repository it came from.</p>
 <p>Thirty-seven findings came back at <code>high</code>. About eight were real.</p>
 <p>That is the number nobody puts in a launch post, and it is the one that decides whether a tool survives contact with a team. A reviewer that opens with twenty-nine false alarms gets switched off in a week, and rightly.</p>
 <p>Here is what most of them were:</p>
@@ -307,20 +436,21 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
     .first()
     .isVisible({ timeout: 3000 })
     .catch(() =&gt; false);
-</code></pre><p>A deliberate probe. The rule counts <code>.isVisible({ timeout })</code> as a silent assertion because of an incident where exactly that line quietly asserted the wrong thing - but this one is guarded on the next line, so it cannot be silent. The scanner was reading one line at a time.</p>
-<p>Two more shapes: <code>'Email': 'email'</code> in a field map, read as a misspelt picklist label, and <code>map.get('password')</code>, read as a hardcoded credential. Both are values in code, not labels or secrets.</p>
-<p>Every one became a detector fix with a regression test - never a severity demotion in the shipped template. A rule that fires on clean code is a rule your team turns off, and then it protects nothing at all.</p>
-<p>When it is wrong, it is wrong in a way you can read, fix, and prove. That is why it is worth a pull request slot.</p>
+</code></pre><p>A deliberate probe, guarded by <code>.catch(() =&gt; false)</code> - so it cannot silently assert the wrong thing. The rule exists because of an incident where that same call was a silent assertion (scar #3), but the detector, reading naively, could not tell a guarded probe from an unguarded one.</p>
+<p>Two more shapes showed up: <code>'Email': 'email'</code> in a field map misread as a picklist label issue, and <code>map.get('password')</code> misread as a hardcoded credential. Values in code, not contract labels or secrets.</p>
+<p>Each misread became a detector fix with a regression test - not a severity demotion in the shipped template. A rule that fires on clean code is a rule your team turns off, and then it protects nothing.</p>
+<p>When it is wrong, it is wrong in a way you can read, fix, and prove. That is why it is worth a pull-request slot.</p>
 <h2 id="what-this-is-not">What this is not</h2>
-<p>It is not another AI code reviewer. The AI only touches it during extraction, under supervision, with receipts required. Everything after that is boring on purpose, and boring is what lets you trust a red build.</p>
-<p>Your rules file lives in your repo, reviewed and versioned like code. The scanner never leaves your machine; extraction is the one step where you decide what the model sees. If that sounds like your <code>.eslintrc</code>, except written by your worst weeks, that is exactly what it is.</p>
+<p>It is not another AI code reviewer. The <code>sfqa-scar</code> CLI does not use a model, does not need tokens, and does not send your code anywhere - review is local and deterministic. AI, if used at all, is only in an optional, human-reviewed drafting step via the shipped prompts.</p>
+<p>It also only sees patterns in text. It cannot tell you whether a retry is safe. It can only remind you of the last time one was not.</p>
+<p>Your rules file lives in your repo, reviewed and versioned like code. If that sounds like your <code>.eslintrc</code>, except written by your worst weeks, that is exactly what it is.</p>
 <h2 id="where-this-fits">Where this fits</h2>
-<p>This is packaged now: a zero-dependency CLI, a rule-set format, an extraction prompt, and a proof harness that proves the shipped rules fire and stay quiet before you trust a word I say. MIT.</p>
+<p>This is packaged now: a zero-dependency CLI, a rule-set format, an extraction/drafting prompt, and a proof harness that proves shipped rules fire and stay quiet before you trust a word I say. MIT.</p>
 <p>The replay above is mine, on our history. The fixture harness is the part you can run.</p>
 <p>There is more coming around this idea. This release is the reviewer on its own.</p>
 <div class="sc-box sc-caveat">
   <p class="sc-title">The scar reviewer is still being tested. Deliberately.</p>
-  <p>It is early (0.1), and the shipped set is a template: 18 of the 19 rules have a detector and are proven both ways; the nineteenth is listed as a gap, not counted as coverage. The public proof runs on synthetic fixtures, not a field trial. The next round is running it against repositories that have nothing to do with this one, measuring false positives honestly, and publishing those numbers whether or not they flatter me.</p>
+  <p>It is early (0.1). The shipped set is a template: 18 of the 19 rules have a detector and are proven both ways (fire on a positive fixture, stay silent on a clean one); the nineteenth is a documented gap, not counted as coverage. The public proof runs on synthetic fixtures, not a field trial. Next: run it against repositories unrelated to this one, measure false positives honestly, and publish those numbers whether or not they flatter me.</p>
 </div>
 <h2 id="what-it-looks-like-when-i-run-it">What it looks like when I run it</h2>
 <p>These are the commands, the inputs, and the outputs - the same loop I run in a repo.</p>
@@ -339,13 +469,14 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
 </span></span><span style="display:flex;"><span>| ST-001 | high | `test-lib/setup/env.ts:498` | `password: process.env.STAGING_MANAGER_PASSWORD \|\| &#39;&lt;redacted&gt;&#39;` |
 </span></span><span style="display:flex;"><span>| ST-004 | high | `test-pages/web/DealPage.ts:591` | `const spinnerExists = await … .isVisible({ timeout: 1000 });` |
 </span></span><span style="display:flex;"><span>| … | … | … | … |
-</span></span></code></pre></div><p>On the repo that mined the rules, that is 37 highs down to 11 once the detectors stopped misreading code, and down to 4 once I demoted two categories I am deliberately living with - in <em>my</em> <code>scar-tissue.json</code>, never the template, with the reason written into each rule. To review only what changed:</p>
+</span></span></code></pre></div><p>(I replaced the secret values with <code>&lt;redacted&gt;</code> for this post.)</p>
+<p>On the repo that mined the rules, that is 37 highs down to 11 once the detectors stopped misreading code, and down to 4 once I demoted two categories I am deliberately living with - in <em>my</em> <code>scar-tissue.json</code>, never the template, with the reason written into each rule. To review only what changed:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx sfqa-scar --base origin/main --fail-on high
 </span></span><span style="display:flex;"><span>npx sfqa-scar --staged --fail-on high
 </span></span></code></pre></div><details>
 <summary>Show me the commands: harvest, then new and prove</summary>
 <h3 id="2-harvest-the-incidents-nobody-wrote-a-rule-for">2. Harvest: the incidents nobody wrote a rule for</h3>
-<p><code>harvest</code> reads fix-shaped commits and local report artifacts, proposes a draft for each unclaimed incident, and hands the list back - it writes nothing unless you ask it to.</p>
+<p><code>harvest</code> reads fix-shaped commits and local report artifacts, proposes a draft for each unclaimed incident, and hands the list back - it writes nothing unless you ask it to. No AI tokens required.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ npx sfqa-scar harvest --since 2026-01-01
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>CANDIDATE 1/1
 </span></span><span style="display:flex;"><span>  commit : 402ef2d  2026-11-09
@@ -370,7 +501,7 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>what to <span style="color:#ff79c6">do</span> next
 </span></span><span style="display:flex;"><span>  1. open scar-tissue.json, replace the TODOs, and put the pattern in match.linePatterns
-</span></span><span style="display:flex;"><span>  2. not sure of the pattern? prompts/turn-incident-into-rule.md drafts it from the incident
+</span></span><span style="display:flex;"><span>  2. not sure of the pattern? prompts/turn-incident-into-rule.md drafts it from the incident <span style="color:#ff79c6">(</span>using an assistant of your choice<span style="color:#ff79c6">)</span>
 </span></span><span style="display:flex;"><span>  3. paste the bad line into scar-fixtures/positive/tests/st-020.ts
 </span></span><span style="display:flex;"><span>  4. paste the same code with the fix into scar-fixtures/negative/tests/st-020.ts
 </span></span><span style="display:flex;"><span>  5. prove just this rule: sfqa-scar prove --id ST-020
@@ -383,7 +514,7 @@ cc1f7b2   config/env.ts           SECRETS 16→4  PASS*
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;origin&#34;</span>: { <span style="color:#ff79c6">&#34;commit&#34;</span>: <span style="color:#ff79c6">null</span>, <span style="color:#ff79c6">&#34;summary&#34;</span>: <span style="color:#f1fa8c">&#34;TODO: what broke, and what it cost.&#34;</span> },
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;recommendation&#34;</span>: <span style="color:#f1fa8c">&#34;TODO: the fix that worked.&#34;</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Not sure of the pattern? Hand the incident to <code>prompts/turn-incident-into-rule.md</code> (in the package) and an assistant drafts the detector and both fixtures. Then prove it - <code>prove</code> is the part I trust, not the draft:</p>
+</span></span></code></pre></div><p>Not sure of the pattern? Hand the incident to <code>prompts/turn-incident-into-rule.md</code> (in the package) and an assistant can draft the detector and both fixtures. Then prove it - <code>prove</code> is the part to trust, not the draft:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ npx sfqa-scar prove --id ST-020
 </span></span><span style="display:flex;"><span>rule    severity  detector   positive   clean
 </span></span><span style="display:flex;"><span>ST-020  med       yes        fires      clean
